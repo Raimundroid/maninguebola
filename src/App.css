@@ -42,7 +42,7 @@
 } */
 
 .coming-soon-container {
-  background-color: rgb(128, 106, 67);
+  background-color: rgb(211, 208, 208);
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -52,9 +52,9 @@
 }
 
 .coming-soon-container h1 {
-  color: rgb(11, 255, 11);
+  color: rgb(0, 0, 0);
   font-size: 1rem;
 }
 .coming-soon-container p {
-  color: rgb(112, 59, 59);
+  color: rgb(131, 130, 130);
 }
