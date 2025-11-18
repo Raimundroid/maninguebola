@@ -1,0 +1,15 @@
+[
+  {
+    "position": 1,
+    "teamId": 1,
+    "played": 12,
+    "won": 9,
+    "drawn": 2,
+    "lost": 1,
+    "goalsFor": 34,
+    "goalsAgainst": 12,
+    "goalDifference": 22,
+    "points": 29,
+    "form": ["W", "W", "D", "W", "W"]
+  }
+]

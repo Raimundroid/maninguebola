@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "FC Eagles",
+    "shortName": "Eagles",
+    "logo": "/images/teams/eagles.png",
+    "founded": 2015,
+    "stadium": "Campo A",
+    "colors": {
+      "primary": "#FF0000",
+      "secondary": "#FFFFFF"
+    }
+  },
+  {
+    "id": 2,
+    "name": "United Lions",
+    "shortName": "Lions",
+    "logo": "/images/teams/lions.png",
+    "founded": 2018,
+    "stadium": "Campo Principal",
+    "colors": {
+      "primary": "#0000FF",
+      "secondary": "#FFFF00"
+    }
+  }
+]

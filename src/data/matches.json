@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "date": "2025-11-23",
+    "time": "15:00",
+    "homeTeamId": 1,
+    "awayTeamId": 2,
+    "homeScore": null,
+    "awayScore": null,
+    "status": "upcoming",
+    "location": "Campo A",
+    "referee": "João Silva"
+  }
+]
