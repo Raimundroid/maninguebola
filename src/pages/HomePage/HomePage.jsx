@@ -1,14 +1,14 @@
 import React from "react";
 
-const HomePage = () => {
+const Homepage = () => {
   return (
     <div>
       <h1>
-        Bem-vindo ao website oficial de ManingueBola⚽, onde a emocao do futebol
-        local vive!
+        Bem-vindo ao website oficial de ManingueBola⚽, onde encontrras toda a
+        emocao do futebol local!
       </h1>
     </div>
   );
 };
 
-export default HomePage;
+export default Homepage;
