@@ -40,21 +40,3 @@
 .read-the-docs {
   color: #888;
 } */
-
-.coming-soon-container {
-  background-color: rgb(211, 208, 208);
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  /* justify-content: center;
-  align-content: center; */
-  place-content: center; /*place-content is shorthand for align-content + justify-content*/
-}
-
-.coming-soon-container h1 {
-  color: rgb(0, 0, 0);
-  font-size: 1rem;
-}
-.coming-soon-container p {
-  color: rgb(131, 130, 130);
-}
