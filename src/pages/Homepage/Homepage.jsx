@@ -1,12 +1,16 @@
 import React from "react";
+import "./Homepage.css";
 
 const Homepage = () => {
   return (
-    <div>
-      <h1>
-        Bem-vindo ao website oficial de ManingueBola⚽, onde encontrras toda a
-        emocao do futebol local!!
-      </h1>
+    <div className="hero">
+      <h1>ManingueBola⚽</h1>
+
+      <p>Bem-vindo ao website ManingueBola!!!</p>
+      <p>
+        Acopanhe todos os jogos, resultados, e estatisticas do Futebol de
+        MORRUMBENE!
+      </p>
     </div>
   );
 };
