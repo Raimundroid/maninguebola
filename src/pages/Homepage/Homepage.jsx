@@ -8,7 +8,7 @@ const Homepage = () => {
 
       <p>Bem-vindo ao website ManingueBola!!!</p>
       <p>
-        Acopanhe todos os jogos, resultados, e estatisticas do Futebol de
+        Acompanhe todos os jogos, resultados, e estatisticas do Futebol de
         MORRUMBENE!
       </p>
     </div>
