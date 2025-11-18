@@ -5,7 +5,7 @@ const Homepage = () => {
     <div>
       <h1>
         Bem-vindo ao website oficial de ManingueBola⚽, onde encontrras toda a
-        emocao do futebol local!
+        emocao do futebol local!!
       </h1>
     </div>
   );
