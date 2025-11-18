@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import Homepage from "./pages/Homepage/Homepage.jsx";
 
 import MatchesPage from "./pages/MatchesPage/MatchesPage.jsx";
 import PlayersPage from "./pages/PlayersPage/PlayersPage.jsx";
@@ -18,7 +17,6 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Homepage />} />
             <Route path="/jogos" element={<MatchesPage />} />
             <Route path="/jogadores" element={<PlayersPage />} />
             <Route path="/classificacao" element={<StandingsPage />} />
