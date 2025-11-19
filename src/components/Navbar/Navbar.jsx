@@ -124,6 +124,55 @@ const Navbar = () => {
     { id: "statistics", path: "/estatistica", label: "Estatística", icon: "" },
   ];
 
+  // ==========================================
+  // EVENT HANDLERS
+  // ==========================================
+
+  /**
+   * toggleMenu: Opens or close the mobile hamburger menu
+   *
+   * When called:
+   * If menu is closed (false),it opens (becomes true)
+   * If menu is open (true),it closes (becomes false)
+   */
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle between true and false
+  };
+
+  /**
+   * handleNavClick:Called when a navigation link is clicked
+   *
+   * Purpose: Close the mobile menu after navigaton
+   * This ensures the menu does not stay open after the user selects a page
+   */
+  const handleNavClick = () => {
+    setIsMenuOpen(false); // Close mobile menu
+    // React Routers' NavLink handles navigation automatically
+  };
+
+  /**
+   * toggleTheme: Switches between light ad=nd dark themes
+   *
+   * Process:
+   * 1. Determine new theme (opposite of current)
+   * 2. Update state
+   * 3. Apply to document
+   * 4. Save to localstorage for persistence
+   */
+  const toggleTheme = () => {
+    // Calculate the opposite theme
+    const newTheme = theme === "light" ? "dark" : "light";
+
+    // Update component state
+    setTheme(newTheme);
+
+    // Apply theme to entire page via data attribute
+    document.documentElement.setAttribute("data-theme", newTheme);
+
+    // Save to localStorage so theme persists after page refresh
+    localStorage.setItem("theme", newTheme);
+  };
+
   return <div>Hello Hello2</div>;
 };
 
