@@ -245,10 +245,8 @@ const Navbar = () => {
        Max-width constraints keep content readable on large screens */}
       <div className="nav-container">
         {/* LOGO SECTION */}
-
         {/* Logo that links to home page
         Uses NavLink for routning, styles as a logo */}
-
         <NavLink to="/" className="logo" onClick={handleNavClick}>
           {/* Soccer ball Imoji as logo icon */}
           <span className="logo-icon">⚽</span>
@@ -257,6 +255,44 @@ const Navbar = () => {
         Hidden on every small screens (xs), shown on sm and up */}
           <span className="logo-text">ManingueBola</span>
         </NavLink>
+
+        {/* DESKTOP & MOBILE NAVIGATIONA LINKS */}
+        {/* Unordered list of navigation links
+        Behavior:
+        - Mobile (xm - sm): Vertical menu that slides in from left
+        - Desktop (m +): Horizontal row of links
+
+        The "nav-links--active" is added when when menu is open on mobile*/}
+        <ul className={`nav-links ${isMenuOpen ? "nav-links" : ""}`}>
+          {/* Loop through each navigation item and create a link
+           map() creates a list item for each entry in navItems array*/}
+          {navItems.map((item) => (
+            <li key={item.id}>
+              {/* NavLink from React Router automatically adda "active"class when route matches
+              Benefits of NavLink over regulat anchor (a) tag:
+              - Automatic active state detection
+              - No page reload (SPA navigation)
+              - Browser History management
+              - Built-in active style support*/}
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  // Conditional classes:
+                  // Base class "nav-link" is always present
+                  // "nav-link--active" is added when this route is active
+                  `nav-link ${isActive ? "nav-link--active" : ""}`
+                }
+                onClick={handleNavClick} // Close mobile menu on click
+              >
+                {/* Icon desplayed before the text */}
+                <span className="nav-link-icon">{item.icon}</span>
+
+                {/* Text label for the navigation  item */}
+                <span className="nav-link-text">{item.label}</span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
