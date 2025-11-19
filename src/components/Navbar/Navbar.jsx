@@ -49,3 +49,7 @@
 //    { id: "teams", path: "/teams", label: "Equipas", icon: "👥" },
 //    { id: "players", path: "/jogadores", label: "Jogadores", icon: "⭐" },
 //  ];
+
+import react, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
