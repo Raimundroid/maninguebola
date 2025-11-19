@@ -260,7 +260,7 @@ const Navbar = () => {
         {/* Unordered list of navigation links
         Behavior:
         - Mobile (xm - sm): Vertical menu that slides in from left
-        - Desktop (m +): Horizontal row of links
+        - Desktop (md +): Horizontal row of links
 
         The "nav-links--active" is added when when menu is open on mobile*/}
         <ul className={`nav-links ${isMenuOpen ? "nav-links" : ""}`}>
@@ -293,7 +293,69 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        {/* ACTION BUTTONS (Theme Toggle & Humberger Menu) */}
+
+        {/* Container for action buttons on the right
+        Contains: Theme toggle and  mpbile menu button*/}
+        <div className="nav-actions">
+          {/* THEME TOGGLE BUTTON */}
+          {/* Button to switch between dark and light themes
+          Visible on all screen sizes (mobile and desktop)
+
+          Uses CSS-based icons (Unicode characters) instead of icon library
+
+          Accessibity features:
+          - aria-label: Describes button for screen readers
+          - title: Shows tooltip on hover */}
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            title={theme === "light" ? "Mode escuro" : "Modo claro"}
+          >
+            {/* Conditional rendering of icon using unicode characters:
+            - Light theme: Show Moon icon ☾(suggests switching to dark mode)
+            - Drak theme: Show Moon icon ☀ (suggests switching to dark mode) */}
+            <span className="theme-icon">{theme === "light" ? "☾" : "☀"}</span>
+          </button>
+
+          {/* MOBILE HAMBURGER MENU BUTTON */}
+          {/* Hamburger menu button only visible on mobile devices (xs - sm)
+          Hidden on medium screens and up (md +)
+          Toggles the mobile navigation menu open/closed
+
+          Use CSS to create the hamburger icon (no icon library needed)
+
+          Accessibity features:
+          - aria-label: Describes button for screen readers
+          - aria-expanded: Tells screen readers if menu is open/closed
+          */}
+          <button
+            className={`hamburger ${isMenuOpen ? "hamburger--active" : ""}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+          >
+            {/* Hamburger icon container
+            The actual icon is created with CSS pseude-elements (::before, ::after) and the span itself forms the middle line
+
+            When active, CSS transforms these lines into an X shape*/}
+            <span className="hamburger-icon"></span>
+          </button>
+        </div>
       </div>
+
+      {/* MOBILE MENU OVERLAY */}
+      {/* Semi-transparent overlay that appears behind mobile menu
+
+      Purpose:
+      - Dims the content page behind the menu
+      - Provides a click target to close the menu
+      - Only renders when menu is open (conditional rendering)
+
+      When clicked: Closes the mobile menu*/}
+      {isMenuOpen && <div className="nav-overlay" onClick={toggleMenu}></div>}
     </nav>
   );
 };
