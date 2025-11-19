@@ -218,6 +218,25 @@ const Navbar = () => {
   // BODY SCROLL PREVENTION
   // ==========================================
 
+  /**
+   * useEffect hook to prevent scrolling when mobile menu is open
+   *
+   * Why: When the mobile menu is open, we do not want users to scroll the page behind it. this creates a better mobile experience
+   *
+   * How it works:
+   * - When menu opens: Set body overflow to "hidden" (prevents scroll)
+   * - When menu closes: Set bodu overflow to "unset" (allows scroll)
+   */
+  useEffect(() => {
+    if (isMenuOpen) {
+      //Prevent Scrolling
+      body.document.style.overflow = "hidden";
+    } else {
+      // Allow Scrolling
+      body.document.style.overflow = "unset";
+    }
+  }, [isMenuOpen]); //Runs whenever isMenuOpen changes
+
   return (
     <div>
       {" "}
@@ -225,7 +244,7 @@ const Navbar = () => {
         <li>Hello</li>
         <li>Hello2</li>
         <li>Hello3</li>
-        <li></li>
+        <li>Hello4</li>
         <li></li>
         <li></li>
       </ul>
