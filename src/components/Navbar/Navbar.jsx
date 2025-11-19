@@ -1,36 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <nav>
-//       <ul>
-//         <li>
-//           <Link to="/">Início</Link>
-//         </li>
-
-//         <li>
-//           <Link to="/jogos">Jogos</Link>
-//         </li>
-
-//         <li>
-//           <Link to="/jogadores">Jogadores</Link>
-//         </li>
-
-//         <li>
-//           <Link to="/classificacao">Classificação</Link>
-//         </li>
-
-//         <li>
-//           <Link to="/estatistica">Estatística</Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
 //  const navItems = [
 //    { id: "home", path: "/", label: "Início", icon: "🏠" },
 //    { id: "matches", path: "/jogos", label: "Jogos", icon: "⚽" },
@@ -132,7 +99,32 @@ const Navbar = () => {
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []); // Empty dependency array means this only runs once on mount
 
-  return <div>Hello</div>;
+  // ==========================================
+  // NAVIGATION ITEMS CONFIGURATION
+  // ==========================================
+
+  /**
+   * Array of navigation menu items
+   * Each item contains:
+   * - id: unique identifier (for React key prop)
+   * - path: the route path that React Router will navigate to
+   * - label: display text shown in the menu
+   * - icon: Imoji icom displayed next to the label
+   */
+  const navItems = [
+    { id: "home", path: "/", label: "Início", icon: "" },
+    { id: "matches", path: "/jogos", label: "Jogos", icon: "" },
+    { id: "players", path: "/jogadores", label: "Jogadores", icon: "" },
+    {
+      id: "standings",
+      path: "/classificacao",
+      label: "Classificação",
+      icon: "",
+    },
+    { id: "statistics", path: "/estatistica", label: "Estatística", icon: "" },
+  ];
+
+  return <div>Hello Hello2</div>;
 };
 
 export default Navbar;
