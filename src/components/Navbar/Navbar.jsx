@@ -173,7 +173,64 @@ const Navbar = () => {
     localStorage.setItem("theme", newTheme);
   };
 
-  return <div>Hello Hello2</div>;
+  // ==========================================
+  // CLICK OUTSIDE DETECTION
+  // ==========================================
+
+  /**
+   * useEffect hook  to close menu when clicking outside of it
+   *
+   * How it works:
+   * 1. Add a click listener to the entire document
+   * 2. When any click happens, check if it's outide the navbar
+   * 3. If outside and menu is opne, close the menu
+   * 4. Clenaup the listener when component unmounts
+   */
+  useEffect(() => {
+    /**
+     * handleClickOutside: Check if click is outside navbar
+     * @param {Event} event the cick event from the document
+     */
+    const handleClickOutside = (event) => {
+      // Get the navbar element from the DOM
+      const navbar = document.querySelector(".navbar");
+
+      // Check if:
+      // 1. Menu is currently opne
+      // 2. Navbar elemnt exists
+      // 3. The clicked element is not inside the navbar
+      if (isMenuOpen && navbar && !navbar.contains(event.target)) {
+        setIsMenuOpen(false); // Close the menu
+      }
+    };
+
+    // Add click listener to entire document
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup function: Remove listener when component anmounts
+    // This prevents memory leaks
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]); //Re-runs effect when isMenuOpen changes
+
+  // ==========================================
+  // BODY SCROLL PREVENTION
+  // ==========================================
+
+  return (
+    <div>
+      {" "}
+      <ul>
+        <li>Hello</li>
+        <li>Hello2</li>
+        <li>Hello3</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  );
 };
 
 export default Navbar;
