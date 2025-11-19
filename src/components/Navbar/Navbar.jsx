@@ -238,17 +238,27 @@ const Navbar = () => {
   }, [isMenuOpen]); //Runs whenever isMenuOpen changes
 
   return (
-    <div>
-      {" "}
-      <ul>
-        <li>Hello</li>
-        <li>Hello2</li>
-        <li>Hello3</li>
-        <li>Hello4</li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+    //Main navigation container
+    //Semantic nav for accessibility
+    <nav className="navbar">
+      {/* Inner container that centers content and adds padding
+       Max-width constraints keep content readable on large screens */}
+      <div className="nav-container">
+        {/* LOGO SECTION */}
+
+        {/* Logo that links to home page
+        Uses NavLink for routning, styles as a logo */}
+
+        <NavLink to="/" className="logo" onClick={handleNavClick}>
+          {/* Soccer ball Imoji as logo icon */}
+          <span className="logo-icon">⚽</span>
+
+          {/* Brand name text
+        Hidden on every small screens (xs), shown on sm and up */}
+          <span className="logo-text">ManingueBola</span>
+        </NavLink>
+      </div>
+    </nav>
   );
 };
 
