@@ -734,6 +734,62 @@
     font-size: 15px;
     gap: 6px;
   }
+
+  /* Show text labels on desktop */
+  .nav-link-text {
+    display: inline;
+  }
+  /* Desktop icon size*/
+  .nav-link-icon {
+    font-size: 18px;
+  }
+
+  /*
+    DESKTOP ACTIVE STATE:
+    Show bottom indicator line instead of left border
+  */
+  .nav-link--active {
+    /* Remove mobile styles */
+    background: none;
+    border-left: none;
+  }
+  /* Show bottom indicator line on desktop */
+  .nav-link--active::after {
+    display: block; /* Make visible on destop */
+  }
+
+  /* ==========================================
+     HIDE MOBILE-ONLY ELEMENTS
+     ========================================== */
+
+  /* Hide hamburger menu on desktop */
+  .hamburger {
+    display: none;
+  }
+
+  /* No overlay needed on desktop */
+  .nav-overlay {
+    display: none;
+  }
+
+  /* Larger theme toggle on desktop */
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ============================================
+   LG BREAKPOINT: ≥ 992px (Large devices)
+   ============================================
+
+   Standard desktops - increase spacing and sizing
+*/
+@media (min-width: 992px) {
+  /* More horizonatal padding for wider screens */
+  .nav-container {
+    padding: 0 24px;
+  }
 }
 
 /*
