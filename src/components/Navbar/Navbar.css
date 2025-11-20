@@ -246,7 +246,7 @@
     MOBILE: Hidden by default (translated off-screen to the left)
     transform: translateX(-100%) moves it completely off screen
   */
-  /* transform: translateX(-100%); */
+  transform: translateX(-100%);
 
   /* Smooth slide-in animation */
   transition: transform 300ms ease;
@@ -256,6 +256,16 @@
 
   /* Shadow for depth */
   box-shadow: 2px 0 16px var(--shadow);
+}
+
+/*
+  ACTIVE STATE: When menu is open on mobile
+  JavaScript adds this class when hamburger is clicked
+*/
+.nav-links--active {
+  transform: translateX(
+    0
+  ); /* Slide in to visible portion when hamburger menu is clicked */
 }
 /*
 =
