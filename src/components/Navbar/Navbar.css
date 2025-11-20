@@ -479,7 +479,10 @@
 
   /* Smooth transitions for interactive states */
   transition: all 300ms ease;
-}
+
+  /* Remove default button padding */
+  padding: 0;
+
 /*
   HOVER STATE: Interactive feedback
 */
@@ -576,7 +579,7 @@
   Creates the top part of the X
 */
 .hamburger--active .hamburger-icon::before {
-  top: 0; /* Mocve to center */
+  top: 0; /* Move to center */
   transform: rotate(45deg); /* Rotate to form X */
 }
 
@@ -585,7 +588,7 @@
   Creates the bottom part of the X
 */
 .hamburger--active .hamburger-icon::after {
-  bottom: 0; /* Mocve to center */
+  bottom: 0; /* Move to center */
   transform: rotate(-45deg); /* Rotate to form X */
 }
 
