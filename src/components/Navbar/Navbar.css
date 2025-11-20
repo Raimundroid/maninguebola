@@ -591,6 +591,46 @@
   bottom: 0; /* Move to center */
   transform: rotate(-45deg); /* Rotate to form X */
 }
+/* ============================================
+   MOBILE MENU OVERLAY
+   ============================================
+
+   Semi-transparent backdrop behind mobile menu
+   Dims the page content and provides a close target
+*/
+.nav-overlay {
+  /* MOBILE-FIRST: Base styles (initially not displayed) */
+  display: block;
+
+  /* Cover entire viewport */
+  position: fixed;
+  top: 56px; /* Satrt below navbar */
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.5);
+
+  /* Appears behind menu, but above page content */
+  z-index: 999;
+
+  /* Fade-in animation */
+  animation: fadeIn 300ms ease;
+}
+
+/*
+  FADE-IN ANIMATION: Smooth appearance of overlay
+  Goes from invisible to semi-transparent
+*/
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Invisible */
+  }
+  to {
+    opacity: 1; /* Full visible */
+  }
+}
 
 /*
 =
