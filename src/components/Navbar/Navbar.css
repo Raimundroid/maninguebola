@@ -368,6 +368,29 @@
   font-size: 22px;
   line-height: 1;
 }
+
+/*
+  NAVIGATION LINK TEXT: Label text
+  MOBILE-FIRST: Always shown on mobile
+  (Desktop hiding no longer needed since we show text on all sizes)
+*/
+.nav-link-text {
+  display: inline; /* Visible on all screen sizes */
+}
+
+/* ============================================
+   ACTION BUTTONS CONTAINER
+   ============================================
+
+   Container for theme toggle and hamburger menu buttons
+*/
+.nav-actions {
+  /* Flexbox for horizontal button layout */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between buttons */
+}
+
 /*
 =
 =
