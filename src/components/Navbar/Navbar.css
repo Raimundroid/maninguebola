@@ -817,6 +817,50 @@
 
    Large desktops - maximum spacing and sizing
 */
+@media (min-width: 1200px) {
+  /* Maximum space between links */
+  .nav-links {
+    gap: 40px;
+  }
+
+  /* Largest logo size */
+  .logo {
+    font-size: 24px;
+  }
+
+  /* Largest theme toggle */
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Larger theme icon */
+  .theme-icon {
+    font-size: 22px;
+  }
+}
+
+/* ============================================
+   XXL BREAKPOINT: ≥ 1400px (Extra extra large)
+   ============================================
+
+   Very large desktops - optional enhancements
+*/
+
+@media (min-width: 1400px) {
+  /* Could add additional enhancements for very large screens */
+  /* Currently using same styles as XL breakpoint */
+}
+
+/* ============================================
+   GLOBAL STYLES & UTILITIES
+   ============================================
+*/
+
+/*
+  SMOOTH SCROLLING: When clicking anchor links
+  Creates a smooth scroll animation instead of instant jump
+*/
 
 /*
 =
