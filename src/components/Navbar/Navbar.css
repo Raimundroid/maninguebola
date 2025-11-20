@@ -450,6 +450,37 @@
   align-items: center;
 }
 
+/* ============================================
+   HAMBURGER MENU BUTTON (CSS-BASED ICON)
+   ============================================
+
+   Three-line menu icon button for mobile navigation
+   MOBILE-FIRST: Visible on mobile, hidden on desktop
+   Uses pure CSS to create the hamburger icon (no icon library!)
+*/
+.hamburger {
+  /* MOBILE-FIRST: Visible on small screens */
+  display: flex; /* Show on mobile */
+
+  /* Sqaure button matching theme toggle */
+  width: 36px;
+  height: 36px;
+
+  /* Styling matching theme toggle */
+  background: none;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text);
+
+  /* Flexbox to center icon */
+  justify-content: center;
+  align-items: center;
+
+  /* Smooth transitions for interactive states */
+  transition: all 300ms ease;
+}
+
 /*
 =
 =
