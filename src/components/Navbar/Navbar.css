@@ -790,7 +790,33 @@
   .nav-container {
     padding: 0 24px;
   }
+
+  /* Larger logo */
+  .logo {
+    font-size: 22px;
+  }
+
+  .logo-icon {
+    font-size: 30px;
+  }
+
+  /* More space between navigation links */
+  .nav-links {
+    gap: 32px;
+  }
+
+  /* Slightly larger text */
+  .nav-link {
+    font-size: 16px;
+  }
 }
+
+/* ============================================
+   XL BREAKPOINT: ≥ 1200px (Extra large)
+   ============================================
+
+   Large desktops - maximum spacing and sizing
+*/
 
 /*
 =
