@@ -360,7 +360,14 @@
   /* MOBILE: This will be hidden */
   display: none;
 }
-
+/*
+  NAVIGATION LINK ICON: Emoji icons
+  Larger on mobile for easier tapping
+*/
+.nav-link-icon {
+  font-size: 22px;
+  line-height: 1;
+}
 /*
 =
 =
