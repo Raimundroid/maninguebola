@@ -206,6 +206,57 @@
 .logo-text {
   display: none; /* Hidden on mobile (xs) by default */
 }
+
+/* ============================================
+   NAVIGATION LINKS BASE STYLES
+   ============================================
+
+   Unordered list containing all navigation items
+   MOBILE-FIRST: Hidden by default, slides in when activated
+*/
+.nav-links {
+  /*
+    DESKTOP: Horizontal flexbox layout
+    MOBILE: Will be overridden to vertical layout
+  */
+  display: flex;
+  gap: 32px; /* Space between links on desktop */
+
+  /* Remove default list styling */
+  list-style: none;
+
+  /*
+    MOBILE: Fixed positioning for slide-in menu
+    These properties position it as a full-screen overlay
+  */
+  position: fixed;
+  top: 56px; /* Start below navbar*/
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* MOBILE: Stack links vertically */
+  flex-direction: column;
+  gap: 0; /* Remove gap on mobile*/
+
+  /* Background color */
+  background: var(--card-bg);
+
+  /*
+    MOBILE: Hidden by default (translated off-screen to the left)
+    transform: translateX(-100%) moves it completely off screen
+  */
+  /* transform: translateX(-100%); */
+
+  /* Smooth slide-in animation */
+  transition: transform 300ms ease;
+
+  /* Allow scrolling if menu content f too tall */
+  overflow-y: auto;
+
+  /* Shadow for depth */
+  box-shadow: 2px 0 16px var(--shadow);
+}
 /*
 =
 =
