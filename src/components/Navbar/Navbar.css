@@ -155,6 +155,41 @@
   height: 56px;
 }
 
+/* ============================================
+   LOGO STYLES
+   ============================================
+
+   Brand logo and name in top left corner
+   MOBILE-FIRST: Base styles for xs screens
+*/
+.logo {
+  /* Flexbox to align logo and text horizontally */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  /* Remove default line underline (but I don't think there is) */
+  text-decoration: none;
+
+  /* Typography */
+  font-size: 20px;
+  font-weight: 700; /* Bold */
+
+  /* Use primary brand color */
+  color: var(--primary);
+  color: gold; /* Test */
+
+  /* Smooth scale animation on hover */
+  transition: transform 200ms ease;
+}
+/*
+  HOVER STATE: Slightly enlarge logo when user hovers
+  Creates a subtle interactive feedback
+*/
+.logo:hover {
+  transform: scale(1.05); /* 5% larger */
+}
+
 /*
 =
 =
