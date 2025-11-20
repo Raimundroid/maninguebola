@@ -168,7 +168,7 @@
   align-items: center;
   gap: 8px;
 
-  /* Remove default line underline (but I don't think there is) */
+  /* Remove default link underline (but I don't think there is) */
   text-decoration: none;
 
   /* Typography */
@@ -277,6 +277,46 @@
 
   /* Border between the menu items */
   border-bottom: 1px solid var(--border);
+}
+
+/* ============================================
+   NAVIGATION LINK STYLES
+   ============================================
+
+   Individual navigation link styling
+   MOBILE-FIRST: Base mobile styles
+*/
+.nav-link {
+  /* Flexbox to align icons and text */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text on mobile */
+
+  /* Text color from CSS variables */
+  color: var(--text);
+
+  /* Remove default link underline (but I don't think there is) */
+  text-decoration: none;
+
+  /* Typography */
+  font-size: 16px;
+  font-weight: 500; /* Medium weight */
+
+  /*
+    MOBILE: Large tap target for touch screens
+    iOS recommends minimum 44px height
+  */
+  width: 100%;
+  padding: 20px 24px;
+
+  /* No border radius on mobile (full-width buttons) */
+  border-radius: 0;
+
+  /* Smooth transitions for interactive states */
+  transition: all 300ms ease;
+
+  /* Relalive positioning for te active indicator line */
+  position: relative;
 }
 
 /*
