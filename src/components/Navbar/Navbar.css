@@ -177,7 +177,6 @@
 
   /* Use primary brand color */
   color: var(--primary);
-  color: gold; /* Test */
 
   /* Smooth scale animation on hover */
   transition: transform 200ms ease;
