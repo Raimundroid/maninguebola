@@ -480,6 +480,13 @@
   /* Smooth transitions for interactive states */
   transition: all 300ms ease;
 }
+/*
+  HOVER STATE: Interactive feedback
+*/
+.hamburger:hover {
+  border-color: var(--primary);
+  background: var(--bg);
+}
 
 /*
 =
