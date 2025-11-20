@@ -628,7 +628,111 @@
     opacity: 0; /* Invisible */
   }
   to {
-    opacity: 1; /* Full visible */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================
+
+   Following mobile-first approach with Bootstrap 6 breakpoints
+   Each section enhances the base mobile styles for larger screens
+*/
+
+/* ============================================
+   SM BREAKPOINT: ≥ 576px (Small devices)
+   ============================================
+
+   Landscape phones and small tablets
+*/
+@media (min-width: 576px) {
+  /* Show brand name on landscape phone and up (sm +) */
+  .logo-text {
+    display: inline;
+  }
+
+  /* Slightly larger navigation container */
+  .nav-container {
+    height: 60px;
+  }
+
+  /* Update overlay position to match new navbar height */
+  .nav-overlay {
+    top: 60px;
+  }
+
+  /* Update menu position */
+  .nav-links {
+    top: 60px;
+  }
+}
+
+/* ============================================
+   MD BREAKPOINT: ≥ 768px (Medium devices)
+   ============================================
+
+   Tablets and small desktops - MAJOR LAYOUT SHIFT
+   Switches from mobile hamburger menu to desktop horizontal nav
+*/
+@media (min-width: 768px) {
+  /* Taller navbar for desktop */
+  .nav-container {
+    height: 64px;
+  }
+
+  /* ==========================================
+     DESKTOP NAVIGATION LAYOUT
+     ========================================== */
+
+  /*
+    Transform mobile slide-in menu to desktop horizontal layout
+    This is where the major responsive transformation happens
+  */
+  .nav-links {
+    /* eset mobile positioning */
+    position: static; /* Not fixed anymore*/
+
+    /* Horizontal layout for desktop */
+    flex-direction: row;
+    gap: 24px; /* Space between links */
+
+    /* No background needed (part of navbar) */
+    background: none;
+
+    /* a;ways visible on desktop */
+    transform: translateX(0);
+
+    /* Remove mobile properties */
+    box-shadow: none;
+    overflow-y: visible;
+  }
+
+  /* Reset list item width for horizontal layout */
+  .nav-link li {
+    width: auto; /* Not full width anymore*/
+    border-bottom: none; /* remove mobile borders */
+  }
+
+  /* ==========================================
+     DESKTOP LINK STYLES
+     ========================================== */
+
+  /*
+    Transform mobile full-width links to desktop compact style
+  */
+
+  .nav-link {
+    /* Compact padding for desktop */
+    width: auto; /* Not full width anymore*/
+    padding: 8px 12px;
+
+    /* Rounded corners for desktop */
+    border-radius: 8px;
+
+    /* Smaller text and spacing */
+    font-size: 15px;
+    gap: 6px;
   }
 }
 
