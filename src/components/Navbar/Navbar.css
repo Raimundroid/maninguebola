@@ -498,6 +498,68 @@
 }
 
 /*
+  HAMBURGER ICON: Container for the three lines
+  The actual lines are created with CSS pseudo-elements
+*/
+.hamburger-icon {
+  /* Position for pseudo-elements */
+  position: relative;
+
+  /* The middle line */
+  width: 20px;
+  height: 2px;
+  background: currentColor; /* Uses parents's color */
+
+  /* Smooth transitions for interactive states */
+  transition: all 300ms ease;
+
+  /* Display block so pseudo-elements work */
+  display: block;
+}
+
+/*
+  TOP LINE: Created with ::before pseudo-element
+  Positioned above the middle line
+*/
+.hamburger-icon::before {
+  content: ""; /* Required for pseudo-elemnt */
+  position: absolute;
+
+  /* Same size as middle line */
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+
+  /* Position above middle line */
+  top: -6px;
+  left: 0;
+
+  /* Smooth transitions for interactive states */
+  transition: all 300ms ease;
+}
+
+/*
+  BOTTOM LINE: Created with ::after pseudo-element
+  Positioned below the middle line
+*/
+.hamburger-icon::after {
+  content: ""; /* Required for pseudo-elemnt */
+  position: absolute;
+
+  /* Same size as middle line */
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+
+  /* Position below middle line */
+  bottom: -6px;
+  left: 0;
+
+  /* Smooth transitions for interactive states */
+  transition: all 300ms ease;
+}
+
+/*
 =
 =
 =
