@@ -559,6 +559,36 @@
   transition: all 300ms ease;
 }
 
+/* ============================================
+   HAMBURGER TO X ANIMATION
+   ============================================
+
+   When menu is active, transform hamburger into an X
+*/
+/*
+  ACTIVE STATE: Middle line disappears (transparent)
+*/
+.hamburger--active .hamburger-icon {
+  background: transparent;
+}
+/*
+  ACTIVE STATE: Top line rotates and moves to center
+  Creates the top part of the X
+*/
+.hamburger--active .hamburger-icon::before {
+  top: 0; /* Mocve to center */
+  transform: rotate(45deg); /* Rotate to form X */
+}
+
+/*
+  ACTIVE STATE: Bottom line rotates and moves to center
+  Creates the bottom part of the X
+*/
+.hamburger--active .hamburger-icon::after {
+  bottom: 0; /* Mocve to center */
+  transform: rotate(-45deg); /* Rotate to form X */
+}
+
 /*
 =
 =
