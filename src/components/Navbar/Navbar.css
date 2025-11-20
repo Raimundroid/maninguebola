@@ -97,7 +97,81 @@
   --shadow-hover: rgba(0, 0, 0, 0.4);
 }
 
+/* ============================================
+   NAVIGATION BAR BASE STYLES
+   ============================================
+
+   Main container for the entire navigation bar
+   MOBILE-FIRST: Base styles for xs screens (< 576px)
+*/
+.navbar {
+  /* Use CSS variable for background color (theme-aware) */
+  background: var(--card-bg);
+
+  /* Drop shadow for depth perception */
+  box-shadow: 0 2px 8px var(--shadow);
+
+  /*
+    Sticky positioning keeps navbar at top while scrolling
+    - Normal flow until user scrolls
+    - Then "sticks" to top: 0
+    - z-index: 1000 ensures it stays above page content
+  */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* Smooth trnsitions when theme changes */
+  transition: background 300ms ease, box-shadow 300ms ease;
+}
+
+/* ============================================
+   NAVIGATION CONTAINER
+   ============================================
+
+   Inner container that constrains width and centers content
+   MOBILE-FIRST: Base styles for xs screens
+*/
+.nav-container {
+  /* Maximum width prevnts navbar from getting too wide on large screens */
+  max-width: 1200px;
+
+  /* Center the container horizontally */
+  margin: 0 auto;
+
+  /* Horizonatal padding for mobile screens  */
+  padding: 0 16px;
+
+  /*
+    Flexbox for horizontal layout
+    - justify-content: space-between pushes items to edges
+    - align-items: center vertically centers all items
+  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Fixed hight for consitency on mobile */
+  height: 56px;
+}
+
 /*
+=
+=
+=
+=
+=
+=
+=
+==
+=
+=
+=
+=
+==
+ */
+/*
+====================XXXX=======================
 ==============================================
  LINKS NOT CLICKABLE ON MOBILE TRUOBLESHOOTING
 =============================================

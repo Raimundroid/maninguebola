@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -91,7 +91,7 @@ const Navbar = () => {
    * - id: unique identifier (for React key prop)
    * - path: the route path that React Router will navigate to
    * - label: display text shown in the menu
-   * - icon: Imoji icon displayed next to the label
+   * - icon: Emoji icon displayed next to the label
    */
   const navItems = [
     { id: "home", path: "/", label: "Início", icon: "🏠" },
@@ -217,10 +217,10 @@ const Navbar = () => {
   useEffect(() => {
     if (isMenuOpen) {
       //Prevent Scrolling
-      body.document.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
     } else {
       // Allow Scrolling
-      body.document.style.overflow = "unset";
+      document.body.style.overflow = "unset";
     }
   }, [isMenuOpen]); //Runs whenever isMenuOpen changes
 
@@ -235,7 +235,7 @@ const Navbar = () => {
         {/* Logo that links to home page
         Uses NavLink for routning, styles as a logo */}
         <NavLink to="/" className="logo" onClick={handleNavClick}>
-          {/* Soccer ball Imoji as logo icon */}
+          {/* Soccer ball Emoji as logo icon */}
           <span className="logo-icon">⚽</span>
 
           {/* Brand name text
