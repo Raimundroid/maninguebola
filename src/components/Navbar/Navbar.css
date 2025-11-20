@@ -34,7 +34,40 @@
    - Single source of truth for colors
    - Easy to maintain and update
 */
+:root {
+  /* Primary brand color: used for buttons, links, active states */
+  --primary: #3b82f6;
 
+  /* Secondary color: used for headings, important text */
+  --secondary: #1e293b;
+
+  /* Main text color for body content */
+  --text: #3b82f6;
+
+  /* Lighter text color for secondary information */
+  --text-light: #64748b;
+
+  /* Border color for deviders and outlines */
+  --border: #e2e8f0;
+
+  /* Page background color */
+  --bg: #f8fafc;
+
+  /* Card and navbar backgound color */
+  --card-bg: #ffffff;
+
+  /* Shadow color for elevation effects */
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  /* Darker shadow for hover effects */
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+/*
+==============================================
+ LINKS NOT CLICKABLE ON MOBILE TRUOBLESHOOTING
+=============================================
+ */
 /* FROM GOOGLE AI SEARCH MODE */
 
 /* Since the previous suggestions didn't resolve the issue, the problem likely lies in the JavaScript logic that prevents body scrolling or a residual issue with z-index in a specific configuration that wasn't immediately apparent.
