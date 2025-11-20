@@ -198,7 +198,14 @@
   font-size: 28px;
   line-height: 1; /* Prevents extra space above/below */
 }
-
+/*
+  LOGO TEXT: "ManingueBola" brand name
+  MOBILE-FIRST: Hidden on xs screens to save space
+  Will be shown on sm screens and up (see media query below)
+*/
+.logo-text {
+  display: none; /* Hidden on mobile (xs) by default */
+}
 /*
 =
 =
