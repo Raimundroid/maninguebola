@@ -320,6 +320,28 @@
 }
 
 /*
+  HOVER STATE: Interactive feedback
+  Changes color and background when hovering
+*/
+.nav-link:hover {
+  color: var(--primary);
+  background: var(--bg);
+}
+
+/*
+  ACTIVE STATE: Currently selected page
+  Applied by React Router's NavLink when route matches
+*/
+.nav-link--active {
+  color: var(--primary); /* Highlight color */
+  font-weight: 600; /* Slightly bolder */
+
+  /* MOBILE: Left border indicator */
+  background: var(--bg);
+  border-left: 4px solid var(--primary);
+}
+
+/*
 =
 =
 =
