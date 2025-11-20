@@ -1,3 +1,40 @@
+/* ============================================
+   RESPONSIVE NAVIGATION STYLES
+   ============================================
+
+   This stylesheet provides a mobile-first responsive design
+   for the navigation bar component using Bootstrap's 6 breakpoints.
+
+   INCLUDES CSS-BASED ICONS (No icon library needed!)
+
+   MOBILE-FIRST APPROACH:
+   Base styles are designed for mobile devices first (xs: < 576px)
+   Then enhanced for larger screens using min-width media queries
+
+   BOOTSTRAP 6 BREAKPOINTS:
+   - xs: < 576px    (Extra small - phones in portrait)
+   - sm: ≥ 576px    (Small - phones in landscape)
+   - md: ≥ 768px    (Medium - tablets)
+   - lg: ≥ 992px    (Large - desktops)
+   - xl: ≥ 1200px   (Extra large - large desktops)
+   - xxl: ≥ 1400px  (Extra extra large - larger desktops)
+*/
+
+/* ============================================
+   CSS CUSTOM PROPERTIES (CSS Variables)
+   ============================================
+
+   :root selector targets the HTML document root
+   These variables define the light theme colors
+   They can be accessed anywhere in the CSS using var(--variable-name)
+
+   BENEFITS:
+   - Easy theme switching
+   - Consistent colors throughout
+   - Single source of truth for colors
+   - Easy to maintain and update
+*/
+
 /* FROM GOOGLE AI SEARCH MODE */
 
 /* Since the previous suggestions didn't resolve the issue, the problem likely lies in the JavaScript logic that prevents body scrolling or a residual issue with z-index in a specific configuration that wasn't immediately apparent.
