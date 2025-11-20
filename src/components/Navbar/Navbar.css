@@ -267,6 +267,18 @@
     0
   ); /* Slide in to visible portion when hamburger menu is clicked */
 }
+
+/*
+  MOBILE: List items span full width
+  Each navigation link takes up the entire menu width
+*/
+.nav-links li {
+  width: 100%;
+
+  /* Border between the menu items */
+  border-bottom: 1px solid var(--border);
+}
+
 /*
 =
 =
