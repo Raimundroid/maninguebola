@@ -431,6 +431,26 @@
 }
 
 /*
+  ACTIVE STATE: Visual feedback when clicking
+  Scales down slightly for tactile feedback
+*/
+.theme-toggle:active {
+  transform: rotate(15deg) scale(0.95);
+}
+
+/*
+  THEME ICON: Sun/Moon Unicode character
+  Styled to be visible and clear
+*/
+.theme-icon {
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
 =
 =
 =
