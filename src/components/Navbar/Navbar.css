@@ -53,7 +53,7 @@
   /* Page background color */
   --bg: #f8fafc;
 
-  /* Card and navbar backgound color */
+  /* Card and navbar background color */
   --card-bg: #ffffff;
 
   /* Shadow color for elevation effects */
@@ -61,6 +61,40 @@
 
   /* Darker shadow for hover effects */
   --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   ============================================
+
+   When data-theme="dark" is set on the HTML element,
+   these variables override the light theme colors
+
+   HOW IT WORKS:
+   JavaScript sets document.documentElement.setAttribute("data-theme", "dark")
+   This makes all elements use these dark theme colors
+*/
+[data-theme="dark"] {
+  /* Light text for dark backgrounds */
+  --text: #f1f5f9;
+
+  /* Slightly darker text fo secondary information */
+  --text-light: #94a3b8;
+
+  /* Lighter borders that show up on dark backgrounds */
+  --border: #334155;
+
+  /* Very dark background */
+  --bg: #0f172a;
+
+  /* Slightly lighter background for cards */
+  --card-bg: #1e293b;
+
+  /* Darker, more prominent shadows */
+  --shadow: rgba(0, 0, 0, 0.3);
+
+  /* Even darker shadow for hover effects */
+  --shadow-hover: rgba(0, 0, 0, 0.4);
 }
 
 /*
