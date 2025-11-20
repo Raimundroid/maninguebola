@@ -489,6 +489,15 @@
 }
 
 /*
+  ACTIVE STATE: When menu is open
+  Highlights the button to show menu is active
+*/
+.hamburger--active {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/*
 =
 =
 =
