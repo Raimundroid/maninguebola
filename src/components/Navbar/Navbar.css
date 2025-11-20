@@ -256,6 +256,14 @@
 
   /* Shadow for depth */
   box-shadow: 2px 0 16px var(--shadow);
+
+  /***********************Links not clickable on mobile hamburger menu solution*************************/
+  /** MOBILE FIX: Ensure links are always clickable **/
+  pointer-events: auto;
+
+  /** Also ensure z-index is high enough **/
+  z-index: 1001; /** Higher than navbar's z-index: 1000 **/
+  /***********************************************/
 }
 
 /*
@@ -690,17 +698,17 @@
     This is where the major responsive transformation happens
   */
   .nav-links {
-    /* eset mobile positioning */
+    /* Reset mobile positioning */
     position: static; /* Not fixed anymore*/
 
     /* Horizontal layout for desktop */
     flex-direction: row;
-    gap: 24px; /* Space between links */
+    gap: 2px; /* Space between links */ /*og: 24px*/
 
     /* No background needed (part of navbar) */
     background: none;
 
-    /* a;ways visible on desktop */
+    /* Always visible on desktop */
     transform: translateX(0);
 
     /* Remove mobile properties */
@@ -725,14 +733,14 @@
   .nav-link {
     /* Compact padding for desktop */
     width: auto; /* Not full width anymore*/
-    padding: 8px 12px;
+    padding: 8px; /*og: 8px 12px*/
 
     /* Rounded corners for desktop */
     border-radius: 8px;
 
     /* Smaller text and spacing */
-    font-size: 15px;
-    gap: 6px;
+    font-size: 14px; /*og: 15px*/
+    gap: 1px; /*og: 6px*/
   }
 
   /* Show text labels on desktop */
@@ -741,7 +749,7 @@
   }
   /* Desktop icon size*/
   .nav-link-icon {
-    font-size: 18px;
+    font-size: 16px; /*og: 18px*/
   }
 
   /*
@@ -774,8 +782,8 @@
 
   /* Larger theme toggle on desktop */
   .theme-toggle {
-    width: 40px;
-    height: 40px;
+    width: 38px; /*og: 40px*/
+    height: 38px; /*og: 40px*/
   }
 }
 
@@ -861,148 +869,79 @@
   SMOOTH SCROLLING: When clicking anchor links
   Creates a smooth scroll animation instead of instant jump
 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   ACCESSIBILITY FEATURES
+   ============================================
+
+   Focus states for keyboard navigation
+   Required for WCAG compliance
+*/
 
 /*
-=
-=
-=
-=
-=
-=
-=
-==
-=
-=
-=
-=
-==
- */
-/*
-====================XXXX=======================
-==============================================
- LINKS NOT CLICKABLE ON MOBILE TRUOBLESHOOTING
-=============================================
- */
-/* FROM GOOGLE AI SEARCH MODE */
+  FOCUS VISIBLE: Shows outline when navigating with keyboard
+  :focus-visible only shows outline for keyboard, not mouse clicks
+  This is better UX than :focus which shows for both
+*/
+.nav-link:focus-visible,
+.theme-toggle:focus-visible,
+.hamburger:focus-visible {
+  /* Primary color outline */
+  outline: 2px solid var(--primary);
 
-/* Since the previous suggestions didn't resolve the issue, the problem likely lies in the JavaScript logic that prevents body scrolling or a residual issue with z-index in a specific configuration that wasn't immediately apparent.
-Here are further steps and potential fixes based on common mobile menu issues:*/
+  /* Space between element and outline */
+  outline-offset: 2px;
+}
 
-/*
-1. The Body Scroll Prevention Issue
-Your JavaScript uses document.body.style.overflow = "hidden"; to stop scrolling. This sometimes interacts poorly with fixed or sticky elements (like your navbar) on some mobile browsers, which might break the clickability of items within those elements.
-Potential Fix: Use a CSS class for the body overflow instead of inline styles. */
+/* ============================================
+   REDUCED MOTION PREFERENCES
+   ============================================
 
-/* In your JavaScript:
-Modify the useEffect hook to add/remove a class from the body element instead of directly changing the style: */
-
-/*javascript*/
-
-/* useEffect(() => {
-  if (isMenuOpen) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
+   Respects user's system preference for reduced motion
+   Important for accessibility (motion sensitivity, vestibular disorders)
+*/
+@media (prefers-reduced-motion: reduce) {
+  /*
+    Disable all animations and transitions for users who prefer reduced motion
+    This is an accessibility feature for users with motion sensitivity
+  */
+  * {
+    animation-duration: 0.01s !important; /* Nearly instant */
+    animation-iteration-count: 1 !important; /* Run once only */
+    transition-duration: 0.01s !important; /* Nearly instant */
   }
-}, [isMenuOpen]); */
+}
 
-/* Use code with caution. */
+/* ============================================
+   PRINT STYLES
+   ============================================
 
-/* In your Navbar.css:
-Add this CSS rule: */
+   Optimize navbar for printing
+*/
 
-/* css */
+@media print {
+  /*
+    Remove sticky positioning for printing
+    Sticky elements can cause issues with print layouts
+  */
+  .navbar {
+    position: relative;
+    box-shadow: none; /* No shadow needed in print */
+  }
 
-/* .no-scroll {
-  overflow: hidden;
-  ** Optional: Add an alternative to prevent "jumping" when scrollbar disappears **
-  padding-right: 15px;
-} */
-/* Use code with caution. */
+  /*
+    Hide interactive elements that don't make sense in print
+  */
+  .nav-actions,
+  .hamburger {
+    display: none;
+  }
+}
 
-/* 2. Z-Index Conflict (The "Click-Outside" Detector)
-The handleClickOutside function uses document.querySelector(".navbar") to detect clicks. The issue might be that when the menu is open, the menu itself (.nav-links--active) is a child of the <nav class="navbar"> container. Clicking a link might be interpreted by the code as a click inside the navbar, but perhaps the event propagation is being stopped prematurely.
-Potential Fix: Simplify click detection or increase Z-index on links.
-Ensure your links have a high z-index relative to other page content: */
-
-/* css */
-/* In Navbar.css */
-
-/* Ensure the active menu is clearly on top of everything else */
-/* .nav-links--active {
-  transform: translateX(0);
-  z-index: 1001; ** Make sure this is higher than anything else **
-} */
-
-/* .navbar {
-  ** ... existing styles ... **
-  z-index: 1000; ** Main navbar container **
-} */
-
-/* Ensure links themselves are high enough */
-/* .nav-link {
-  ** ... existing styles ... **
-  pointer-events: auto; ** Already suggested, but crucial **
-  position: relative; ** Sometimes needed for z-index to work correctly **
-  z-index: 1002; ** Even higher than the menu container **
-} */
-
-/* Use code with caution. */
-
-/* 3. Debugging on Mobile
-If you haven't already, use browser developer tools on a desktop and activate the mobile simulator (usually an icon in the top left of the dev tools panel). This is crucial for seeing exactly which element is receiving the click events using the "inspect element" feature.
-If it's still not working, a different element you haven't shared (part of your main page content, or another component) might be positioned over the menu links when in the mobile view. The inspection tool will reveal what is at the top of the "stack" when you click. */
-
-/* FROM CLAUDE AI */
-
-/* Looking at the code, the issue is that on mobile, the navigation links are fixed positioned and cover the entire screen, but they're initially hidden off-screen with transform: translateX(-100%).
-When you click a link, the mobile menu is still open and blocking interactions.
-🔧 Solution: Add this to the CSS
-Location: In the Navbar.css file, find the .nav-links section (around line 140-165) and add this property: */
-
-/* css */
-/* .nav-links {
- ** ... existing properties ... **
-
- ** ADD THIS LINE - ensures links are clickable even when menu is closing**
-  pointer-events: auto;
-} */
-
-/* Better Solution: Update the media query
-Actually, the real issue is that the mobile menu stays open after clicking. The handleNavClick() function should close it, but there might be a React state timing issue.
-Location: In the JSX component, find the handleNavClick function (around line 110) and update it: */
-
-/* jsx */
-/**
- * handleNavClick: Called when a navigation link is clicked
- *
- * Purpose: Close the mobile menu after navigation
- * This ensures the menu doesn't stay open after the user selects a page
- *
- * MOBILE FIX: Added small delay to ensure navigation happens before closing
- */
-
-/* const handleNavClick = () => {
-  // Use setTimeout to ensure the navigation happens first
-  // Then close the menu after a tiny delay
-  setTimeout(() => {
-    setIsMenuOpen(false); // Close mobile menu
-  }, 100); // 100ms delay ensures smooth transition
-}; */
-
-/* Alternative Quick Fix (Recommended):
-Location: In the CSS file, find .nav-links mobile section and ensure this is present: */
-
-/* css */
-/* Around line 140-165 in the .nav-links section */
-/* .nav-links {
-  ** ... existing code ... **
-
-  ** MOBILE FIX: Ensure links are always clickable **
-  pointer-events: auto;
-
-  ** Also ensure z-index is high enough **
-  z-index: 1001; ** Higher than navbar's z-index: 1000 **
-} */
-
-/* Try the setTimeout solution first - that's the cleanest fix! The links should work immediately after clicking. 🎯 */
+/* ============================================
+   END OF STYLESHEET
+   ============================================
+*/
