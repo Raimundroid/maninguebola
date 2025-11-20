@@ -191,6 +191,15 @@
 }
 
 /*
+  LOGO ICON: Soccer ball emoji
+  Larger than the text for visual impact
+*/
+.logo-icon {
+  font-size: 28px;
+  line-height: 1; /* Prevents extra space above/below */
+}
+
+/*
 =
 =
 =
