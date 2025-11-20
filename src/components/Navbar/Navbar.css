@@ -342,6 +342,26 @@
 }
 
 /*
+  DESKTOP: Active indicator line below link
+  Pseudo-element creates a colored line under active link
+  MOBILE: Hidden (see below)
+*/
+.nav-link--active::after {
+  content: ""; /* Required for pseudo-element */
+  position: absolute;
+  bottom: -20px; /* Position below the link */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for true center */
+  width: 40px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+
+  /* MOBILE: This will be hidden */
+  display: none;
+}
+
+/*
 =
 =
 =
