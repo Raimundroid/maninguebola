@@ -1,27 +1,8 @@
-//  const navItems = [
-//    { id: "home", path: "/", label: "Início", icon: "🏠" },
-//    { id: "matches", path: "/jogos", label: "Jogos", icon: "⚽" },
-//    {
-//      id: "standings",
-//      path: "/classificacao",
-//      label: "Classificação",
-//      icon: "🏆",
-//    },
-//    {
-//      id: "ststistics",
-//      path: "/estatistica",
-//      label: "Estatística",
-//      icon: "📊",
-//    },
-//    { id: "teams", path: "/teams", label: "Equipas", icon: "👥" },
-//    { id: "players", path: "/jogadores", label: "Jogadores", icon: "⭐" },
-//  ];
-
 import react, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-/*
+/**
  * ============================================
  * RESPONSIVE NAVIGATION BAR COMPONENT
  * ============================================
@@ -33,7 +14,7 @@ import "./Navbar.css";
  * - Dark/Light theme toggle with localStorage persistence
  * - Active page highlighting using React Router's NavLink
  * - Sticky navigation that stays at the top while scrolling
- * - Mobile-first responsive design using Bootstrap 6 breakpoints
+ * - Mobile-first responsive design using Bootstrap's 6 breakpoints
  * - Accessibility features (ARIA labels, keyboard navigation, focus states)
  * - Click-outside detection to close mobile menu
  * - Body scroll prevention when mobile menu is open
@@ -78,6 +59,7 @@ const Navbar = () => {
 
   /**
    * useEffect hook that runs once when the component first loads
+   *
    * Purpose: load the saved theme from localStorage (if it exists)
    *
    * How it works:
@@ -109,19 +91,24 @@ const Navbar = () => {
    * - id: unique identifier (for React key prop)
    * - path: the route path that React Router will navigate to
    * - label: display text shown in the menu
-   * - icon: Imoji icom displayed next to the label
+   * - icon: Imoji icon displayed next to the label
    */
   const navItems = [
-    { id: "home", path: "/", label: "Início", icon: "" },
-    { id: "matches", path: "/jogos", label: "Jogos", icon: "" },
-    { id: "players", path: "/jogadores", label: "Jogadores", icon: "" },
+    { id: "home", path: "/", label: "Início", icon: "🏠" },
+    { id: "matches", path: "/jogos", label: "Jogos", icon: "⚽" },
+    { id: "players", path: "/jogadores", label: "Jogadores", icon: "👥" },
     {
       id: "standings",
       path: "/classificacao",
       label: "Classificação",
-      icon: "",
+      icon: "🏆",
     },
-    { id: "statistics", path: "/estatistica", label: "Estatística", icon: "" },
+    {
+      id: "statistics",
+      path: "/estatistica",
+      label: "Estatística",
+      icon: "📊",
+    },
   ];
 
   // ==========================================
@@ -142,7 +129,7 @@ const Navbar = () => {
   /**
    * handleNavClick:Called when a navigation link is clicked
    *
-   * Purpose: Close the mobile menu after navigaton
+   * Purpose: Close the mobile menu after navigation
    * This ensures the menu does not stay open after the user selects a page
    */
   const handleNavClick = () => {
@@ -151,13 +138,13 @@ const Navbar = () => {
   };
 
   /**
-   * toggleTheme: Switches between light ad=nd dark themes
+   * toggleTheme: Switches between light and dark themes
    *
    * Process:
    * 1. Determine new theme (opposite of current)
    * 2. Update state
    * 3. Apply to document
-   * 4. Save to localstorage for persistence
+   * 4. Save to localStorage for persistence
    */
   const toggleTheme = () => {
     // Calculate the opposite theme
@@ -183,8 +170,8 @@ const Navbar = () => {
    * How it works:
    * 1. Add a click listener to the entire document
    * 2. When any click happens, check if it's outide the navbar
-   * 3. If outside and menu is opne, close the menu
-   * 4. Clenaup the listener when component unmounts
+   * 3. If outside and menu is open, close the menu
+   * 4. Cleanup the listener when component unmounts
    */
   useEffect(() => {
     /**
@@ -196,7 +183,7 @@ const Navbar = () => {
       const navbar = document.querySelector(".navbar");
 
       // Check if:
-      // 1. Menu is currently opne
+      // 1. Menu is currently open
       // 2. Navbar elemnt exists
       // 3. The clicked element is not inside the navbar
       if (isMenuOpen && navbar && !navbar.contains(event.target)) {
@@ -225,7 +212,7 @@ const Navbar = () => {
    *
    * How it works:
    * - When menu opens: Set body overflow to "hidden" (prevents scroll)
-   * - When menu closes: Set bodu overflow to "unset" (allows scroll)
+   * - When menu closes: Set body overflow to "unset" (allows scroll)
    */
   useEffect(() => {
     if (isMenuOpen) {
@@ -239,7 +226,7 @@ const Navbar = () => {
 
   return (
     //Main navigation container
-    //Semantic nav for accessibility
+    //Semantic nav tag for accessibility
     <nav className="navbar">
       {/* Inner container that centers content and adds padding
        Max-width constraints keep content readable on large screens */}
@@ -262,17 +249,18 @@ const Navbar = () => {
         - Mobile (xm - sm): Vertical menu that slides in from left
         - Desktop (md +): Horizontal row of links
 
-        The "nav-links--active" is added when when menu is open on mobile*/}
-        <ul className={`nav-links ${isMenuOpen ? "nav-links" : ""}`}>
+        The "nav-links--active" is added when menu is open on mobile*/}
+        <ul className={`nav-links ${isMenuOpen ? "nav-links--active" : ""}`}>
           {/* Loop through each navigation item and create a link
            map() creates a list item for each entry in navItems array*/}
           {navItems.map((item) => (
             <li key={item.id}>
-              {/* NavLink from React Router automatically adda "active"class when route matches
+              {/* NavLink from React Router automatically adds "active"class when route matches
+
               Benefits of NavLink over regulat anchor (a) tag:
               - Automatic active state detection
               - No page reload (SPA navigation)
-              - Browser History management
+              - Browser history management
               - Built-in active style support*/}
               <NavLink
                 to={item.path}
@@ -297,7 +285,7 @@ const Navbar = () => {
         {/* ACTION BUTTONS (Theme Toggle & Humberger Menu) */}
 
         {/* Container for action buttons on the right
-        Contains: Theme toggle and  mpbile menu button*/}
+        Contains: Theme toggle and  mobile menu button*/}
         <div className="nav-actions">
           {/* THEME TOGGLE BUTTON */}
           {/* Button to switch between dark and light themes
@@ -305,18 +293,18 @@ const Navbar = () => {
 
           Uses CSS-based icons (Unicode characters) instead of icon library
 
-          Accessibity features:
+          Accessibility features:
           - aria-label: Describes button for screen readers
           - title: Shows tooltip on hover */}
           <button
             className="theme-toggle"
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            title={theme === "light" ? "Mode escuro" : "Modo claro"}
+            title={theme === "light" ? "Modo escuro" : "Modo claro"}
           >
             {/* Conditional rendering of icon using unicode characters:
-            - Light theme: Show Moon icon ☾(suggests switching to dark mode)
-            - Drak theme: Show Moon icon ☀ (suggests switching to dark mode) */}
+            - Light theme: Show Moon icon ☾ (suggests switching to dark mode)
+            - Dark theme: Show Sun icon ☀ (suggests switching to dark mode) */}
             <span className="theme-icon">{theme === "light" ? "☾" : "☀"}</span>
           </button>
 
@@ -327,7 +315,7 @@ const Navbar = () => {
 
           Use CSS to create the hamburger icon (no icon library needed)
 
-          Accessibity features:
+          Accessibility features:
           - aria-label: Describes button for screen readers
           - aria-expanded: Tells screen readers if menu is open/closed
           */}
@@ -338,7 +326,7 @@ const Navbar = () => {
             aria-expanded={isMenuOpen}
           >
             {/* Hamburger icon container
-            The actual icon is created with CSS pseude-elements (::before, ::after) and the span itself forms the middle line
+            The actual icon is created with CSS pseudo-elements (::before, ::after) and the span itself forms the middle line
 
             When active, CSS transforms these lines into an X shape*/}
             <span className="hamburger-icon"></span>

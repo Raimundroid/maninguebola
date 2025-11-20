@@ -1,3 +1,5 @@
+/* FROM GOOGLE AI SEARCH MODE */
+
 /* Since the previous suggestions didn't resolve the issue, the problem likely lies in the JavaScript logic that prevents body scrolling or a residual issue with z-index in a specific configuration that wasn't immediately apparent.
 Here are further steps and potential fixes based on common mobile menu issues:*/
 
@@ -65,3 +67,57 @@ Ensure your links have a high z-index relative to other page content: */
 /* 3. Debugging on Mobile
 If you haven't already, use browser developer tools on a desktop and activate the mobile simulator (usually an icon in the top left of the dev tools panel). This is crucial for seeing exactly which element is receiving the click events using the "inspect element" feature.
 If it's still not working, a different element you haven't shared (part of your main page content, or another component) might be positioned over the menu links when in the mobile view. The inspection tool will reveal what is at the top of the "stack" when you click. */
+
+/* FROM CLAUDE AI */
+
+/* Looking at the code, the issue is that on mobile, the navigation links are fixed positioned and cover the entire screen, but they're initially hidden off-screen with transform: translateX(-100%).
+When you click a link, the mobile menu is still open and blocking interactions.
+🔧 Solution: Add this to the CSS
+Location: In the Navbar.css file, find the .nav-links section (around line 140-165) and add this property: */
+
+/* css */
+/* .nav-links {
+ ** ... existing properties ... **
+
+ ** ADD THIS LINE - ensures links are clickable even when menu is closing**
+  pointer-events: auto;
+} */
+
+/* Better Solution: Update the media query
+Actually, the real issue is that the mobile menu stays open after clicking. The handleNavClick() function should close it, but there might be a React state timing issue.
+Location: In the JSX component, find the handleNavClick function (around line 110) and update it: */
+
+/* jsx */
+/**
+ * handleNavClick: Called when a navigation link is clicked
+ *
+ * Purpose: Close the mobile menu after navigation
+ * This ensures the menu doesn't stay open after the user selects a page
+ *
+ * MOBILE FIX: Added small delay to ensure navigation happens before closing
+ */
+
+/* const handleNavClick = () => {
+  // Use setTimeout to ensure the navigation happens first
+  // Then close the menu after a tiny delay
+  setTimeout(() => {
+    setIsMenuOpen(false); // Close mobile menu
+  }, 100); // 100ms delay ensures smooth transition
+}; */
+
+/* Alternative Quick Fix (Recommended):
+Location: In the CSS file, find .nav-links mobile section and ensure this is present: */
+
+/* css */
+/* Around line 140-165 in the .nav-links section */
+/* .nav-links {
+  ** ... existing code ... **
+
+  ** MOBILE FIX: Ensure links are always clickable **
+  pointer-events: auto;
+
+  ** Also ensure z-index is high enough **
+  z-index: 1001; ** Higher than navbar's z-index: 1000 **
+} */
+
+/* Try the setTimeout solution first - that's the cleanest fix! The links should work immediately after clicking. 🎯 */
