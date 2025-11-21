@@ -142,7 +142,7 @@
 */
 .logo-text {
   display: inline; /* Not Hidden on mobile (xs) by default */
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* ============================================
@@ -285,7 +285,6 @@
   /* MOBILE: Left border indicator */
   background: var(--bg);
   border-left: 4px solid var(--primary);
-  background: ;
 }
 
 /*
@@ -597,7 +596,8 @@
   /* Show brand name on landscape phone and up (sm +) */
   .logo-text {
     display: inline;
-    font-size: 16px;
+    font-size: 18px;
+    color: red;
   }
 
   /* Slightly larger navigation container */
@@ -638,15 +638,20 @@
     This is where the major responsive transformation happens
   */
 
-  /* Reduce the logo (logo and text container)*/
+  /* Resize the logo (logo and text container)*/
   .logo {
     gap: 2px;
     font-size: 18px;
   }
 
-  /* Reduce the logo size */
+  /* Resize the logo icon size */
   .logo-icon {
     font-size: 26px;
+  }
+  /* Resize the logo text size */
+  .logo-text {
+    font-size: 20px;
+    color: green;
   }
 
   .nav-links {
