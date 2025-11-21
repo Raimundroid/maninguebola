@@ -305,7 +305,9 @@ const Navbar = () => {
             {/* Conditional rendering of icon using unicode characters:
             - Light theme: Show Moon icon ☾ (suggests switching to dark mode)
             - Dark theme: Show Sun icon ☀ (suggests switching to dark mode) */}
-            <span className="theme-icon">{theme === "light" ? "☾" : "☀"}</span>
+            <span className="theme-icon">
+              {theme === "light" ? "☀️" : "🌙"}
+            </span>
           </button>
 
           {/* MOBILE HAMBURGER MENU BUTTON */}
