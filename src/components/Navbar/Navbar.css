@@ -117,7 +117,7 @@
   color: var(--primary);
 
   /* Smooth scale animation on hover */
-  transition: transform 200ms ease;
+  transition: transform 300ms ease;
 }
 /*
   HOVER STATE: Slightly enlarge logo when user hovers
@@ -141,7 +141,8 @@
   Will be shown on sm screens and up (see media query below)
 */
 .logo-text {
-  display: none; /* Hidden on mobile (xs) by default */
+  display: inline; /* Not Hidden on mobile (xs) by default */
+  font-size: 12px;
 }
 
 /* ============================================
@@ -284,6 +285,7 @@
   /* MOBILE: Left border indicator */
   background: var(--bg);
   border-left: 4px solid var(--primary);
+  background: ;
 }
 
 /*
@@ -294,10 +296,10 @@
 .nav-link--active::after {
   content: ""; /* Required for pseudo-element */
   position: absolute;
-  bottom: -20px; /* Position below the link */
+  bottom: -8px; /* Position below the link */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust for true center */
-  width: 40px;
+  width: 50%;
   height: 3px;
   background: var(--primary);
   border-radius: 2px;
@@ -595,6 +597,7 @@
   /* Show brand name on landscape phone and up (sm +) */
   .logo-text {
     display: inline;
+    font-size: 16px;
   }
 
   /* Slightly larger navigation container */
@@ -634,6 +637,18 @@
     Transform mobile slide-in menu to desktop horizontal layout
     This is where the major responsive transformation happens
   */
+
+  /* Reduce the logo (logo and text container)*/
+  .logo {
+    gap: 2px;
+    font-size: 18px;
+  }
+
+  /* Reduce the logo size */
+  .logo-icon {
+    font-size: 26px;
+  }
+
   .nav-links {
     /* Reset mobile positioning */
     position: static; /* Not fixed anymore*/
@@ -719,8 +734,8 @@
 
   /* Larger theme toggle on desktop */
   .theme-toggle {
-    width: 38px; /*og: 40px*/
-    height: 38px; /*og: 40px*/
+    width: 32px; /*og: 40px*/
+    height: 32px; /*og: 40px*/
   }
 }
 
