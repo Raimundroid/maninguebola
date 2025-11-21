@@ -306,7 +306,7 @@ const Navbar = () => {
             - Light theme: Show Moon icon ☾ (suggests switching to dark mode)
             - Dark theme: Show Sun icon ☀ (suggests switching to dark mode) */}
             <span className="theme-icon">
-              {theme === "light" ? "☀️" : "🌙"}
+              {theme === "light" ? "🌙" : "☀️"}
             </span>
           </button>
 
