@@ -1,0 +1,58 @@
+/* ============================================
+   _animations.css - Reusable Animations
+   ============================================
+
+   Purpose: Keyframe animations that can be reused across components.
+
+   Can be used by any component
+*/
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide In From Left */
+/* @keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+} */
+
+/* Slide In From Right */
+/* @keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+} */
+
+/* Bounce Animation */
+/* @keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+} */
+
+/* Utility classes for animations */
+/* .animate-fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.3s ease;
+} */

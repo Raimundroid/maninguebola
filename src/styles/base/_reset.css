@@ -1,3 +1,14 @@
+/* ============================================
+   _reset.css - CSS Reset
+   ============================================
+
+   Purpose: Removes browser default styles for consistency across browsers.
+
+   Removes inconsistent browser defaults
+   Import AFTER variables, BEFORE other styles
+*/
+
+/* Box sizing for all elements */
 *,
 ::before,
 ::after {
@@ -6,6 +17,10 @@
   box-sizing: border-box;
 }
 
+/*
+  SMOOTH SCROLLING: When clicking anchor links
+  Creates a smooth scroll animation instead of instant jump
+*/
 html {
   scroll-behavior: smooth;
 }
@@ -20,6 +35,7 @@ body {
   background-color: var(--bg);
 }
 
+/* Remove list styles */
 ul,
 ol {
   list-style: none;

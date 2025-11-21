@@ -1,0 +1,26 @@
+/* ============================================
+   _reduced-motion.css - Reduced Motion
+   ============================================
+
+   Purpose: Respects users who prefer reduced motion (accessibility).
+
+   Disables animations for users with motion sensitivity
+
+   Respects user's system preference for reduced motion
+   Important for accessibility (motion sensitivity, vestibular disorders)
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  /*
+    Disable all animations and transitions for users who prefer reduced motion
+    This is an accessibility feature for users with motion sensitivity
+  */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important; /* Nearly instant */
+    animation-iteration-count: 1 !important; /* Run once only */
+    transition-duration: 0.01ms !important; /* Nearly instant */
+    scroll-behavior: auto !important;
+  }
+}

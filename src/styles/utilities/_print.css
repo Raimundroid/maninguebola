@@ -1,0 +1,42 @@
+/* ============================================
+   _print.css - Print Styles
+   ============================================
+
+
+   Purpose: Optimizes the page when users print it.
+
+   Optimizes layout for printing
+   Hides unnecessary elements
+*/
+
+@media print {
+  /*
+    Remove sticky positioning for printing
+    Sticky elements can cause issues with print layouts
+  */
+  .navbar {
+    position: relative;
+    box-shadow: none; /* No shadow needed in print */
+  }
+
+  /*
+    Hide interactive elements that don't make sense in print
+  */
+  .nav-actions,
+  .hamburger,
+  .theme-toggle {
+    display: none;
+  }
+
+  /* Hide overlays and mobile menus */
+  .nav-overlay {
+    display: none;
+  }
+
+  /* Ensure links show their URLs */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
