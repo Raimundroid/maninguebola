@@ -1,12 +1,41 @@
-*,
+/* ============================================
+   index.css - Main Entry Point
+   ============================================
+
+   This file ONLY imports other stylesheets
+   No actual CSS rules here!
+
+   ORDER MATTERS:
+   1. Variables (design tokens)
+   2. Reset (normalize browsers)
+   3. Base (typography, global elements)
+   4. Utilities (helpers)
+*/
+
+/* 1. Design Tokens */
+@import "./base/_variables.css";
+
+/* 2. Reset & Normalize */
+@import "./base/_reset.css";
+
+/* 3. Base Element Styles */
+@import "./base/_typography.css";
+@import "./base/_buttons.css";
+@import "./base/_links.css";
+
+/* 4. Utilities */
+@import "./utilities/_accessibility.css";
+@import "./utilities/_animations.css";
+@import "./utilities/_reduced-motion.css";
+@import "./utilities/_print.css";
+/* *,
 ::before,
 ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
+} */
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -19,31 +48,24 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
+} */
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
+} */
+/* body {
   margin: 0;
-  /* display: grid;
-  place-items: center; */
+  display: grid;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+  background-color: red;
+} */
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -60,7 +82,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
