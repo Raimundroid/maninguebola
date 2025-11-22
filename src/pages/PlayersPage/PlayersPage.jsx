@@ -7,8 +7,7 @@ const PlayersPage = () => {
   return (
     <div style={styles.thisContainer}>
       <div className="hero">
-        <h1>JOGOS</h1>
-
+        <h1>JOGADORES</h1>
         <p>Bem-vindo aos JOGADORES!!!</p>
         <p>Veja todos os jogadores de Futebol de MORRUMBENE!</p>
       </div>
