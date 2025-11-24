@@ -10,6 +10,8 @@ import StatisticsPage from "./pages/StatisticsPage/StatisticsPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
+import { players } from "./data/sampleData.js";
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +22,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/jogos" element={<MatchesPage />} />
-            <Route path="/jogadores" element={<PlayersPage />} />
+            <Route
+              path="/jogadores"
+              element={<PlayersPage players={players} />}
+            />
             <Route path="/classificacao" element={<StandingsPage />} />
             <Route path="/estatistica" element={<StatisticsPage />} />
           </Routes>
