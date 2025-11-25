@@ -30,6 +30,8 @@ export const teams = {
     id: "tigers",
     name: "Sporting Tigers",
     abbr: "ST",
+    position: "1",
+    points: "100",
   },
 };
 

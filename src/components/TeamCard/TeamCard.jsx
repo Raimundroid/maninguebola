@@ -49,11 +49,13 @@
 
 //   return (
 //     <div style={styles.card} onClick={() => onClick?.(team)}>
+
 //       <div style={styles.logo}>{team.abbr}</div>
 //       <div style={styles.name}>{team.name}</div>
 //       <div style={styles.info}>
 //         {team.position}º Lugar • {team.points} Pontos
 //       </div>
+
 //     </div>
 //   );
 // };
@@ -125,6 +127,7 @@
 //       onMouseEnter={() => setIsHovered(true)}
 //       onMouseLeave={() => setIsHovered(false)}
 //     >
+
 //       <div style={styles.logo}>{team.abbr}</div>
 //       <div style={styles.name}>{team.name}</div>
 //       {/* Only show stats if they exist */}
@@ -132,75 +135,6 @@
 //         <div style={styles.info}>
 //           {team.position && `${team.position}º Lugar`}
 //           {team.position && team.points && " • "}
-//           {team.points && `${team.points} Pontos`}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// ///////////////////////////////
-//==================================
-//COMMENTED CODE
-// ================================
-//===================================
-
-//   return (
-//     // Main card container
-//     // onClick with arrow function: when clicked, call onClick function with team data
-//     // The ?. is optional chaining - only calls onClick if it exists
-
-//     <div
-//       className="team-card"
-
-// Conditionally add 'hovered' class when mouse is over the card
-// This allows CSS to apply hover styles
-
-//       style={{
-//         // Apply base card styles
-//         ...teamCardStyles.card,
-//         // If hovered, also apply hover styles (spread operator merges objects)
-//         ...(isHovered ? teamCardStyles.cardHover : {}),
-//       }}
-
-//       onClick={() => onClick?.(team)}
-//       // Event handlers for mouse hover
-//       // When mouse enters card area, set isHovered to true
-//       onMouseEnter={() => setIsHovered(true)}
-//       // When mouse leaves card area, set isHovered to false
-//       onMouseLeave={() => setIsHovered(false)}
-//     >
-
-//-------------------------------------------
-//       {/* Logo box - displays team abbreviation */}
-
-//       <div className="team-logo" style={teamCardStyles.logo}>
-//         {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
-//         {team.abbr}
-//       </div>
-//-------------------------------------------------
-
-//       {/* Team name display */}
-//       <div className="team-name" style={teamCardStyles.name}>
-//         {/* Display the full team name (e.g., "FC Eagles") */}
-//         {team.name}
-//       </div>
-
-//       {/*
-//         Conditional rendering of team stats
-//         Only show this section if position OR points exist
-//         The && operator means: if left side is true, render right side
-//         The || operator means: true if EITHER position OR points exist
-//       */}
-//       {(team.position || team.points) && (
-//         <div className="team-info" style={teamCardStyles.info}>
-//           {/* Show position if it exists */}
-//           {team.position && `${team.position}º Lugar`}
-
-//           {/* Show separator bullet if BOTH position AND points exist */}
-//           {team.position && team.points && " • "}
-
-//           {/* Show points if they exist */}
 //           {team.points && `${team.points} Pontos`}
 //         </div>
 //       )}
@@ -244,7 +178,7 @@ const TeamCard = ({ team, onClick }) => {
     // onClick with arrow function: when clicked, call onClick function with team data
     // The ?. is optional chaining - only calls onClick if it exists
 
-    <div className="team-card">
+    <div className="team-card" onClick={() => onClick?.(team)}>
       {/* Logo box - displays team abbreviation */}
       <div className="team-logo">
         {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
@@ -256,6 +190,25 @@ const TeamCard = ({ team, onClick }) => {
         {/* Display the full team name (e.g., "FC Eagles") */}
         {team.name}
       </div>
+
+      {/*
+//         Conditional rendering of team stats
+//         Only show this section if position OR points exist
+//         The && operator means: if left side is true, render right side
+//         The || operator means: true if EITHER position OR points exist
+//       */}
+      {(team.position || team.points) && (
+        <div className="teams-info">
+          {/* Show position if it exists */}
+          {team.position && `${team.position}º Lugar`}
+
+          {/* Show separator bullet if BOTH position AND points exist */}
+          {team.position && team.points && " • "}
+
+          {/* Show points if they exist */}
+          {team.points && `${team.points} Pontos`}
+        </div>
+      )}
     </div>
   );
 };
