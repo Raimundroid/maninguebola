@@ -1,22 +1,23 @@
-// ============================================
-// TeamsGrid Styles
-// ============================================
-const teamsGridStyles = {
-  grid: {
-    // CSS Grid layout
-    display: 'grid',
-    
-    // Responsive columns:
-    // - repeat: create multiple columns
-    // - auto-fit: automatically fit as many columns as possible
-    // - minmax(150px, 1fr): each column is at least 150px, max 1 fraction of available space
-    // Result: cards automatically wrap to new rows on smaller screens
-    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-    
-    // Space between grid items (cards)
-    gap: '16px',
-    
-    // Space below the grid
-    marginBottom: '32px',
-  },
-};
+/*
+============================================
+TeamsGrid Styles
+============================================ */
+
+.teams-grid {
+  /* CSS Grid layout */
+  display: grid;
+
+  /*Responsive columns:
+    - repeat: create multiple columns
+    - auto-fit: automatically fit as many columns as possible
+    - minmax(150px, 1fr): each column is at least 150px, max 1 fraction of available space
+
+    Result: cards automatically wrap to new rows on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  /* Space between grid items (cards) */
+  gap: 16px;
+
+  /* Space below the grid */
+  margin-bottom: 32px;
+}

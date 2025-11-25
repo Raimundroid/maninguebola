@@ -144,81 +144,81 @@
 //WORKING CODE
 // ================================
 //===================================
-// import React from "react";
+import React from "react";
 
-// // ============================================
-// // TeamCard.jsx (Extract to separate file)
-// // ============================================
-// // Individual team card component
-// // Props:
-// //   - team: team object with id, name, abbr
-// //   - onClick: function to call when card is clicked
+// ============================================
+// TeamCard.jsx (Extract to separate file)
+// ============================================
+// Individual team card component
+// Props:
+//   - team: team object with id, name, abbr
+//   - onClick: function to call when card is clicked
 
-// const TeamCard = ({ team, onClick }) => {
-//   const styles = {
-//     card: {
-//       background: "var(--card-bg, #ffffff)",
-//       padding: "20px",
-//       borderRadius: "12px",
-//       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-//       textAlign: "center",
-//       cursor: "pointer",
-//       transition: "all 0.3s",
-//     },
-//     cardHover: {
-//       transform: "translateY(-4px)",
-//       boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-//     },
-//     logo: {
-//       width: "64px",
-//       height: "64px",
-//       margin: "0 auto 12px",
-//       fontSize: "24px",
-//       background: "var(--border, #e0e0e0)",
-//       borderRadius: "8px",
-//       display: "flex",
-//       alignItems: "center",
-//       justifyContent: "center",
-//       fontWeight: "700",
-//       color: "var(--text-light, #666)",
-//     },
-//     name: {
-//       fontSize: "18px",
-//       marginBottom: "8px",
-//       fontWeight: "600",
-//       color: "var(--text, #333)",
-//     },
-//     info: {
-//       fontSize: "13px",
-//       color: "var(--text-light, #666)",
-//       fontWeight: "500",
-//     },
-//   };
+const TeamCard = ({ team, onClick }) => {
+  const styles = {
+    card: {
+      background: "var(--card-bg, #ffffff)",
+      padding: "20px",
+      borderRadius: "12px",
+      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+      textAlign: "center",
+      cursor: "pointer",
+      transition: "all 0.3s",
+    },
+    cardHover: {
+      transform: "translateY(-4px)",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    },
+    logo: {
+      width: "64px",
+      height: "64px",
+      margin: "0 auto 12px",
+      fontSize: "24px",
+      background: "var(--border, #e0e0e0)",
+      borderRadius: "8px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: "700",
+      color: "var(--text-light, #666)",
+    },
+    name: {
+      fontSize: "18px",
+      marginBottom: "8px",
+      fontWeight: "600",
+      color: "var(--text, #333)",
+    },
+    info: {
+      fontSize: "13px",
+      color: "var(--text-light, #666)",
+      fontWeight: "500",
+    },
+  };
 
-//   const [isHovered, setIsHovered] = React.useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
 
-//   return (
-//     <div
-//       style={{
-//         ...styles.card,
-//         ...(isHovered ? styles.cardHover : {}),
-//       }}
-//       onClick={() => onClick?.(team)}
-//       onMouseEnter={() => setIsHovered(true)}
-//       onMouseLeave={() => setIsHovered(false)}
-//     >
-//       <div style={styles.logo}>{team.abbr}</div>
-//       <div style={styles.name}>{team.name}</div>
-//       {/* Only show stats if they exist */}
-//       {(team.position || team.points) && (
-//         <div style={styles.info}>
-//           {team.position && `${team.position}º Lugar`}
-//           {team.position && team.points && " • "}
-//           {team.points && `${team.points} Pontos`}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
+  return (
+    <div
+      style={{
+        ...styles.card,
+        ...(isHovered ? styles.cardHover : {}),
+      }}
+      onClick={() => onClick?.(team)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div style={styles.logo}>{team.abbr}</div>
+      <div style={styles.name}>{team.name}</div>
+      {/* Only show stats if they exist */}
+      {(team.position || team.points) && (
+        <div style={styles.info}>
+          {team.position && `${team.position}º Lugar`}
+          {team.position && team.points && " • "}
+          {team.points && `${team.points} Pontos`}
+        </div>
+      )}
+    </div>
+  );
+};
 
-// export default TeamCard;
+export default TeamCard;
