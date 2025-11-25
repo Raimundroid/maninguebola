@@ -123,13 +123,6 @@ const teamCardStyles = {
 
 
   logo: {
-    // Rounded corners for logo box
-    borderRadius: '8px',
-
-    // Flexbox for centering content
-    display: 'flex',
-    alignItems: 'center',      // Center vertically
-    justifyContent: 'center',  // Center horizontally
 
     // Bold text
     fontWeight: '700',
@@ -157,6 +150,14 @@ const teamCardStyles = {
 
   /* Background color */
   background: var(--border, #e0e0e0);
+
+  /* Rounded corners for logo box */
+  border-radius: 8px;
+
+  /* Flexbox for centering content */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Team name styling */
