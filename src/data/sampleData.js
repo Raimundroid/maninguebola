@@ -1,4 +1,39 @@
 // ============================================
+// data/sampleData.js
+// ============================================
+//
+// This file contains sample data for the football app.
+// In a real app, this data would come from an API.
+//
+// DATA STRUCTURE EXPLANATION:
+// ---------------------------
+// Each data type has a specific shape (structure) that components expect.
+// Keep this consistent when connecting to your real API.
+
+// ============================================
+// TEAMS DATA
+// ============================================
+// Base team objects - reused in other data structures
+// Using an object (not array) for easy lookup by key
+export const teams = {
+  eagles: {
+    id: "eagles", // Unique identifier
+    name: "FC Eagles", // Full team name
+    abbr: "FE", // Abbreviation for logos
+  },
+  lions: {
+    id: "lions",
+    name: "United Lions",
+    abbr: "UL",
+  },
+  tigers: {
+    id: "tigers",
+    name: "Sporting Tigers",
+    abbr: "ST",
+  },
+};
+
+// ============================================
 // PLAYERS DATA
 // ============================================
 // Top scorers list - should be sorted by goals (descending)
@@ -43,5 +78,13 @@ export const players = [
     goals: 10,
     assists: 3,
     matches: 13,
+  },
+  {
+    id: 6,
+    name: "Jaime Bonde",
+    team: "Sporting Tigers",
+    goals: 8,
+    assists: 6,
+    matches: 12,
   },
 ];

@@ -639,17 +639,16 @@
 
   /* Resize the logo (logo and text container)*/
   .logo {
-    gap: 2px;
-    font-size: 18px;
+    gap: 1px;
   }
 
   /* Resize the logo icon size */
   .logo-icon {
-    font-size: 26px;
+    font-size: 24px;
   }
   /* Resize the logo text size */
   .logo-text {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .nav-links {
@@ -688,7 +687,7 @@
   .nav-link {
     /* Compact padding for desktop */
     width: auto; /* Not full width anymore*/
-    padding: 10px 8px; /*og: 8px 12px*/
+    padding: 10px 6px; /*og: 8px 12px*/
 
     /* Rounded corners for desktop */
     border-radius: 8px;
@@ -701,10 +700,11 @@
   /* Show text labels on desktop */
   .nav-link-text {
     display: inline;
+    font-size: 14px;
   }
   /* Desktop icon size*/
   .nav-link-icon {
-    font-size: 14px; /*og: 18px*/
+    font-size: 13px; /*og: 18px*/
   }
 
   /*
@@ -770,6 +770,9 @@
 
   /* Slightly larger text */
   .nav-link {
+    font-size: 16px;
+  }
+  .nav-link-text {
     font-size: 16px;
   }
 }

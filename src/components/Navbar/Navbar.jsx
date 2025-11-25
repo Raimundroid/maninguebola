@@ -109,6 +109,12 @@ const Navbar = () => {
       label: "Estatística",
       icon: "📊",
     },
+    {
+      id: "teams",
+      path: "/equipas",
+      label: "Equipas",
+      icon: "🎽",
+    },
   ];
 
   // ==========================================

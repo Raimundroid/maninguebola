@@ -1,27 +1,24 @@
 .players-container {
   background: var(--card-bg);
-  border-radius: 12px; /*not noticible due to margin-block: 1rem;*/
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  margin-block: 1rem; /*mine*/
-  min-height: 60vh; /*mine*/
 }
 .players-table {
-  width: 98%; /*og: 100%*/
+  width: 100%;
   border-collapse: collapse;
-  margin-inline: auto; /*mine*/
 }
 
 th {
   background: var(--primary);
   color: white;
-  padding: 12px 8px;
+  padding: 12px 6px; /*og: 12px 8px*/
   text-align: left;
   font-size: 12px;
   font-weight: 600;
 }
 td {
-  padding: 12px 8px;
+  padding: 12px 6px; /*og: 12px 8px*/
   border: 1px solid var(--border);
   font-size: 14px;
   color: var(--text);

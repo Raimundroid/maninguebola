@@ -1,0 +1,91 @@
+// ============================================
+// CSS STYLES (as JavaScript objects)
+// ============================================
+// Note: These would normally be in separate .css files
+// They're here as JS objects for demonstration
+// In your project, move these to proper CSS files
+
+// ============================================
+// TeamCard Styles
+// ============================================
+const teamCardStyles = {
+  // Base card styling
+  card: {
+    // Background color (uses CSS variable with fallback)
+    background: 'var(--card-bg, #ffffff)',
+
+    // Internal spacing inside the card
+    padding: '20px',
+
+    // Rounded corners
+    borderRadius: '12px',
+
+    // Drop shadow for depth
+    // Format: horizontal vertical blur color
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+
+    // Center all text inside the card
+    textAlign: 'center',
+
+    // Show pointer cursor on hover to indicate clickability
+    cursor: 'pointer',
+
+    // Smooth animation for all property changes
+    // Format: property duration timing-function
+    transition: 'all 0.3s',
+  },
+
+  // Styles applied when card is hovered
+  cardHover: {
+    // Move card up slightly (negative Y value = up)
+    transform: 'translateY(-4px)',
+
+    // Increase shadow for "lifted" effect
+    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+  },
+
+  // Logo box styling
+  logo: {
+    // Fixed dimensions for consistent appearance
+    width: '64px',
+    height: '64px',
+
+    // Center horizontally with auto margins
+    margin: '0 auto 12px',
+
+    // Text size for abbreviation
+    fontSize: '24px',
+
+    // Background color
+    background: 'var(--border, #e0e0e0)',
+
+    // Rounded corners for logo box
+    borderRadius: '8px',
+
+    // Flexbox for centering content
+    display: 'flex',
+    alignItems: 'center',      // Center vertically
+    justifyContent: 'center',  // Center horizontally
+
+    // Bold text
+    fontWeight: '700',
+
+    // Text color
+    color: 'var(--text-light, #666)',
+  },
+
+  // Team name styling
+  name: {
+    fontSize: '18px',
+    marginBottom: '8px',
+    fontWeight: '600',
+    color: 'var(--text, #333)',
+  },
+
+  // Stats info styling (position and points)
+  info: {
+    fontSize: '13px',
+    color: 'var(--text-light, #666)',
+    fontWeight: '500',
+  },
+};

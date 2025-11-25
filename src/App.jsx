@@ -6,11 +6,12 @@ import MatchesPage from "./pages/MatchesPage/MatchesPage.jsx";
 import PlayersPage from "./pages/PlayersPage/PlayersPage.jsx";
 import StandingsPage from "./pages/StandingsPage/StandingsPage.jsx";
 import StatisticsPage from "./pages/StatisticsPage/StatisticsPage.jsx";
+import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
 
 import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
-import { players } from "./data/sampleData.js";
+import { players, teams } from "./data/sampleData.js";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             />
             <Route path="/classificacao" element={<StandingsPage />} />
             <Route path="/estatistica" element={<StatisticsPage />} />
+            <Route path="/equipas" element={<TeamsPage teams={teams} />} />
           </Routes>
         </main>
 
