@@ -178,6 +178,7 @@
 //         {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
 //         {team.abbr}
 //       </div>
+//-------------------------------------------------
 
 //       {/* Team name display */}
 //       <div className="team-name" style={teamCardStyles.name}>
@@ -244,9 +245,16 @@ const TeamCard = ({ team, onClick }) => {
     // The ?. is optional chaining - only calls onClick if it exists
 
     <div className="team-card">
+      {/* Logo box - displays team abbreviation */}
       <div className="team-logo">
         {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
         {team.abbr}
+      </div>
+
+      {/* Team name display */}
+      <div className="team-name">
+        {/* Display the full team name (e.g., "FC Eagles") */}
+        {team.name}
       </div>
     </div>
   );
