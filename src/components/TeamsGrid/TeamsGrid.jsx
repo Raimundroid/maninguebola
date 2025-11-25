@@ -1,19 +1,3 @@
-// const TeamsGrid = ({ teams, onTeamClick }) => {
-//   const styles = {
-//     grid: {
-//       display: "grid",
-//       gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-//       gap: "16px",
-//       marginBottom: "32px",
-//     },
-//   };
-
-// ///////////////////////////////
-//==================================
-// TRANSSCRIPTED CODE
-// ================================
-//===================================
-
 // ============================================
 // TeamsGrid.jsx
 // ============================================

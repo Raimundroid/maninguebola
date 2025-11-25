@@ -1,23 +1,5 @@
 import React from "react";
 
-// const TeamsPage = () => {
-//   const styles = {
-//     thisContainer: { minHeight: "60vh", marginTop: "1rem" },
-//   };
-//   return (
-//     <div style={styles.thisContainer}>
-//       <div className="hero">
-//         <h1>EQUIPAS</h1>
-
-//         <p>Bem-vindo as EQUIPAS!!!</p>
-//         <p>Veja todas as EQUIPAS do Futebol de MORRUMBENE!</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TeamsPage;
-
 // ============================================
 // pages/TeamsPage.jsx
 // ============================================
@@ -53,7 +35,7 @@ const TeamsPage = ({ teams }) => {
 
   return (
     <div style={styles.container}>
-      <PageIndicator icon="👥" title="Equipas" />
+      <PageIndicator icon="🎽" title="Equipas" />
       <TeamsGrid teams={teams} onTeamClick={handleTeamClick} />
     </div>
   );

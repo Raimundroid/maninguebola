@@ -1,5 +1,3 @@
-// import React from "react";
-
 // ///////////////////////////////
 //==================================
 //1ST CODE
@@ -65,8 +63,6 @@
 //WORKING CODE
 // ================================
 //===================================
-
-// import React from "react";
 
 // // ============================================
 // // TeamCard.jsx (Extract to separate file)
@@ -143,55 +139,30 @@
 //   );
 // };
 
-// export default TeamCard;
-
 // ///////////////////////////////
 //==================================
 //COMMENTED CODE
 // ================================
 //===================================
-// // ============================================
-// // TeamCard.jsx
-// // ============================================
-// // Individual team card component that displays a single team's information
-// //
-// // This component shows:
-// // - Team abbreviation in a logo box
-// // - Full team name
-// // - Optional position and points (if provided in team data)
-// //
-// // Props:
-// //   - team: object containing team data
-// //     {
-// //       id: string (unique identifier),
-// //       name: string (full team name),
-// //       abbr: string (abbreviation for display),
-// //       position?: number (optional league position),
-// //       points?: number (optional points total)
-// //     }
-// //   - onClick: function that gets called when the card is clicked
-// //              receives the team object as parameter
-
-// const TeamCard = ({ team, onClick }) => {
-//   // State to track if mouse is hovering over the card
-//   // This allows us to apply hover effects
-//   // useState returns [currentValue, functionToUpdateValue]
-//   const [isHovered, setIsHovered] = React.useState(false);
 
 //   return (
 //     // Main card container
 //     // onClick with arrow function: when clicked, call onClick function with team data
 //     // The ?. is optional chaining - only calls onClick if it exists
+
 //     <div
 //       className="team-card"
-//       // Conditionally add 'hovered' class when mouse is over the card
-//       // This allows CSS to apply hover styles
+
+// Conditionally add 'hovered' class when mouse is over the card
+// This allows CSS to apply hover styles
+
 //       style={{
 //         // Apply base card styles
 //         ...teamCardStyles.card,
 //         // If hovered, also apply hover styles (spread operator merges objects)
 //         ...(isHovered ? teamCardStyles.cardHover : {}),
 //       }}
+
 //       onClick={() => onClick?.(team)}
 //       // Event handlers for mouse hover
 //       // When mouse enters card area, set isHovered to true
@@ -199,7 +170,10 @@
 //       // When mouse leaves card area, set isHovered to false
 //       onMouseLeave={() => setIsHovered(false)}
 //     >
+
+//-------------------------------------------
 //       {/* Logo box - displays team abbreviation */}
+
 //       <div className="team-logo" style={teamCardStyles.logo}>
 //         {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
 //         {team.abbr}
@@ -233,18 +207,49 @@
 //   );
 // };
 
-// export default TeamCard;
-
 // ///////////////////////////////
 //==================================
-// TRANSSCRIPTED CODE
+// TRANSCRIPTED CODE
 // ================================
 //===================================
 
+// ============================================
+// TeamCard.jsx
+// ============================================
+// Individual team card component that displays a single team's information
+//
+// This component shows:
+// - Team abbreviation in a logo box
+// - Full team name
+// - Optional position and points (if provided in team data)
+//
+// Props:
+//   - team: object containing team data
+//     {
+//       id: string (unique identifier),
+//       name: string (full team name),
+//       abbr: string (abbreviation for display),
+//       position?: number (optional league position),
+//       points?: number (optional points total)
+//     }
+//   - onClick: function that gets called when the card is clicked
+//              receives the team object as parameter
+
 import React from "react";
 
-const TeamCard = () => {
-  return <div>hh</div>;
+const TeamCard = ({ team, onClick }) => {
+  return (
+    // Main card container
+    // onClick with arrow function: when clicked, call onClick function with team data
+    // The ?. is optional chaining - only calls onClick if it exists
+
+    <div className="team-card">
+      <div className="team-logo">
+        {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
+        {team.abbr}
+      </div>
+    </div>
+  );
 };
 
 export default TeamCard;
