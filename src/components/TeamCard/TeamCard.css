@@ -1,3 +1,79 @@
+/*  const styles = {
+//     card: {
+//       background: "var(--card-bg)",
+//       padding: "20px",
+//       borderRadius: "12px",
+//       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+//       textAlign: "center",
+//       cursor: "pointer",
+//       transition: "all 0.3s",
+//     },
+//     logo: {
+//       width: "64px",
+//       height: "64px",
+//       margin: "0 auto 12px",
+//       fontSize: "24px",
+//       background: "var(--border)",
+//       borderRadius: "8px",
+//       display: "flex",
+//       alignItems: "center",
+//       justifyContent: "center",
+//       fontWeight: "700",
+//       color: "var(--text-light)",
+//     },
+//     name: {
+//       fontSize: "18px",
+//       marginBottom: "8px",
+//       fontWeight: "600",
+//       color: "var(--text)",
+//     },
+//     info: {
+//       fontSize: "13px",
+//       color: "var(--text-light)",
+//       fontWeight: "500",
+//     },
+//   }; */
+
+/* const styles = {
+//     card: {
+//       background: "var(--card-bg, #ffffff)",
+//       padding: "20px",
+//       borderRadius: "12px",
+//       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+//       textAlign: "center",
+//       cursor: "pointer",
+//       transition: "all 0.3s",
+//     },
+//     cardHover: {
+//       transform: "translateY(-4px)",
+//       boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+//     },
+//     logo: {
+//       width: "64px",
+//       height: "64px",
+//       margin: "0 auto 12px",
+//       fontSize: "24px",
+//       background: "var(--border, #e0e0e0)",
+//       borderRadius: "8px",
+//       display: "flex",
+//       alignItems: "center",
+//       justifyContent: "center",
+//       fontWeight: "700",
+//       color: "var(--text-light, #666)",
+//     },
+//     name: {
+//       fontSize: "18px",
+//       marginBottom: "8px",
+//       fontWeight: "600",
+//       color: "var(--text, #333)",
+//     },
+//     info: {
+//       fontSize: "13px",
+//       color: "var(--text-light, #666)",
+//       fontWeight: "500",
+//     },
+//   }; */
+
 /* // ============================================
 // CSS STYLES (as JavaScript objects)
 // ============================================
@@ -89,6 +165,18 @@ const teamCardStyles = {
     fontWeight: '500',
   },
 }; */
-.team-logo {
+.team-card {
   background-color: red;
+}
+
+.team-logo {
+  background-color: aqua;
+}
+
+.team-name {
+  background-color: yellow;
+}
+
+.team-info {
+  background-color: blue;
 }
