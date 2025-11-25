@@ -20,6 +20,8 @@ export const teams = {
     id: "eagles", // Unique identifier
     name: "FC Eagles", // Full team name
     abbr: "FE", // Abbreviation for logos
+    position: "1",
+    points: "100",
   },
   lions: {
     id: "lions",
@@ -30,8 +32,6 @@ export const teams = {
     id: "tigers",
     name: "Sporting Tigers",
     abbr: "ST",
-    position: "1",
-    points: "100",
   },
 };
 
