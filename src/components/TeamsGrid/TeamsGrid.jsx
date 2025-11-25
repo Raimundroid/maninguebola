@@ -72,10 +72,10 @@ const TeamsGrid = ({ teams, onTeamClick }) => {
           // We use team.id because it's unique for each team
           key={team.id}
           // Pass the current team's data to the TeamCard component
-          //   team={team}
+          team={team}
           // Pass the click handler function down to TeamCard
           // When a card is clicked, this function will be called
-          //   onClick={onTeamClick}
+          onClick={onTeamClick}
         />
       ))}
     </div>
