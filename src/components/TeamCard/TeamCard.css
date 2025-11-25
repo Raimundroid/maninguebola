@@ -120,21 +120,9 @@ const teamCardStyles = {
     boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
   },
 
-  // Logo box styling
+
+
   logo: {
-    // Fixed dimensions for consistent appearance
-    width: '64px',
-    height: '64px',
-
-    // Center horizontally with auto margins
-    margin: '0 auto 12px',
-
-    // Text size for abbreviation
-    fontSize: '24px',
-
-    // Background color
-    background: 'var(--border, #e0e0e0)',
-
     // Rounded corners for logo box
     borderRadius: '8px',
 
@@ -150,33 +138,116 @@ const teamCardStyles = {
     color: 'var(--text-light, #666)',
   },
 
-  // Team name styling
-  name: {
-    fontSize: '18px',
-    marginBottom: '8px',
-    fontWeight: '600',
-    color: 'var(--text, #333)',
-  },
 
-  // Stats info styling (position and points)
-  info: {
-    fontSize: '13px',
-    color: 'var(--text-light, #666)',
-    fontWeight: '500',
-  },
-}; */
+ */
 .team-card {
-  background-color: red;
 }
 
+/* Logo box styling */
 .team-logo {
-  background-color: aqua;
+  /* Fixed dimensions for consistent appearance */
+  width: 64px;
+  height: 64px;
+
+  /* Center horizontally with auto margins */
+  margin: 0 auto 12px;
+
+  /* Text size for abbreviation */
+  font-size: 24px;
+
+  /* Background color */
+  background: var(--border, #e0e0e0);
 }
 
+/* Team name styling */
 .team-name {
-  background-color: yellow;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text, #333);
 }
 
+/* Stats info styling (position and points) */
 .team-info {
-  background-color: blue;
+  font-size: 13px;
+  color: var(--text-light, #666);
+  font-weight: 500;
+}
+/* ============================================
+   _variables.css - CSS Custom Properties
+   ============================================
+
+   Purpose: Single source of truth for colors, spacing, fonts. Easy to update site-wide themes.
+
+   Contains all design tokens (colors, spacing, shadows)
+   Import this FIRST in your main stylesheet
+*/
+
+:root {
+  /* Primary brand color: used for buttons, links, active states */
+  --primary: #3b82f6;
+
+  /* Secondary color: used for headings, important text */
+  --secondary: #1e293b;
+
+  /* Main text color for body content */
+  --text: #3b82f6;
+
+  /* Lighter text color for secondary information */
+  --text-light: #64748b;
+
+  /* Border color for deviders and outlines */
+  --border: #e2e8f0;
+
+  /* Page background color */
+  --bg: #f8fafc;
+
+  /* Card and navbar background color */
+  --card-bg: #ffffff;
+
+  /* Shadow color for elevation effects */
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  /* Darker shadow for hover effects */
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+
+  /* NEED CREATION */
+  /* --color-link
+  --color-link-hover */
+  /* --color-button-bg */
+  /* --bt-border-color */
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+   ============================================
+
+   When data-theme="dark" is set on the HTML element,
+   these variables override the light theme colors
+
+   HOW IT WORKS:
+   JavaScript sets document.documentElement.setAttribute("data-theme", "dark")
+   This makes all elements use these dark theme colors
+*/
+[data-theme="dark"] {
+  /* Light text for dark backgrounds */
+  --text: #f1f5f9;
+
+  /* Slightly darker text fo secondary information */
+  --text-light: #94a3b8;
+
+  /* Lighter borders that show up on dark backgrounds */
+  --border: #334155;
+
+  /* Very dark background */
+  --bg: #0f172a;
+
+  /* Slightly lighter background for cards */
+  --card-bg: #1e293b;
+
+  /* Darker, more prominent shadows */
+  --shadow: rgba(0, 0, 0, 0.3);
+
+  /* Even darker shadow for hover effects */
+  --shadow-hover: rgba(0, 0, 0, 0.4);
 }
