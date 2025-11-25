@@ -1,5 +1,3 @@
-import React from "react";
-
 // ============================================
 // pages/TeamsPage.jsx
 // ============================================
@@ -7,12 +5,12 @@ import React from "react";
 // Props:
 //   - teams: array of team objects
 //
-// With React Router, you'd typically use useNavigate() to navigate
-// to a team detail page when a card is clicked
-
+// With React Router, you'd typically use useNavigate() to navigate to a team detail page when a card is clicked
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import TeamsGrid from "../../components/TeamsGrid/TeamsGrid";
+import "./TeamsPage.css";
 
 const TeamsPage = ({ teams }) => {
   // useNavigate is React Router's hook for programmatic navigation
@@ -24,17 +22,8 @@ const TeamsPage = ({ teams }) => {
     navigate(`/equipas/${team.id}`);
   };
 
-  const styles = {
-    container: {
-      maxWidth: "1200px",
-      margin: "0 auto",
-      padding: "24px 16px",
-      minHeight: "60vh",
-    },
-  };
-
   return (
-    <div style={styles.container}>
+    <div className="teams-page-container">
       <PageIndicator icon="🎽" title="Equipas" />
       <TeamsGrid teams={teams} onTeamClick={handleTeamClick} />
     </div>
