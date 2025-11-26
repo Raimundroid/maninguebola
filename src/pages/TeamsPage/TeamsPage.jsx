@@ -1,5 +1,5 @@
 // ============================================
-// pages/TeamsPage.jsx
+// TeamsPage.jsx
 // ============================================
 // Displays all teams in a grid of clickable cards
 // Props:

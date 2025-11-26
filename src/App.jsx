@@ -11,7 +11,7 @@ import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
-import { players, teams } from "./data/sampleData.js";
+import { players, teams, standings } from "./data/sampleData.js";
 
 function App() {
   return (
@@ -27,7 +27,10 @@ function App() {
               path="/jogadores"
               element={<PlayersPage players={players} />}
             />
-            <Route path="/classificacao" element={<StandingsPage />} />
+            <Route
+              path="/classificacao"
+              element={<StandingsPage standings={standings} />}
+            />
             <Route path="/estatistica" element={<StatisticsPage />} />
             <Route path="/equipas" element={<TeamsPage teams={teams} />} />
           </Routes>

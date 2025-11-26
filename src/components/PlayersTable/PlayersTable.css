@@ -2,14 +2,14 @@
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 .players-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-th {
+.players-table th {
   background: var(--primary);
   color: white;
   padding: 12px 6px; /*og: 12px 8px*/
@@ -17,13 +17,13 @@ th {
   font-size: 12px;
   font-weight: 600;
 }
-td {
+.players-table td {
   padding: 12px 6px; /*og: 12px 8px*/
-  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   font-size: 14px;
   color: var(--text);
 }
-.position {
+.players-table .position {
   font-weight: 700;
   color: var(--primary);
 }

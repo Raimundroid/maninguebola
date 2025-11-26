@@ -1,0 +1,55 @@
+.standings-table-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.standings-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px 5px; /*og: 12px 8px*/
+  text-align: left;
+  font-size: 11px; /*og: 14px*/
+  font-weight: 600;
+}
+.standings-table td {
+  padding: 12px 5px; /*og: 12px 8px*/
+  border-bottom: 1px solid var(--border);
+  font-size: 13px; /*og: 14px*/
+  color: var(--text);
+}
+
+.standings-table .position {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.standings-table .team-cell {
+  display: flex;
+  align-items: center;
+  gap: 5px; /*og: 8px*/
+}
+
+.standings-table .team-logo {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  background: var(--border);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text-light);
+}
+.standings-table .team-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+}

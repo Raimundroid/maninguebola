@@ -1,17 +1,20 @@
+// ============================================
+// StandingsPage.jsx
+// ============================================
+// Displays the league standings table
+// Props:
+//   - standings: array of team objects with their statistics
+
 import React from "react";
+import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
+import StandingsTable from "../../components/StandingsTable/StandingsTable";
+import "./StandingsPage.css";
 
-const StandingsPage = () => {
-  const styles = {
-    thisContainer: { minHeight: "60vh", marginTop: "1rem" },
-  };
+const StandingsPage = ({ standings }) => {
   return (
-    <div style={styles.thisContainer}>
-      <div className="hero">
-        <h1>CLASSIFICACOES</h1>
-
-        <p>Bem-vindo as CLASSIFICACOES!!!</p>
-        <p>Veja a Tabela de Classificaoes do Futebol de MORRUMBENE!</p>
-      </div>
+    <div className="standigs-page-container">
+      <PageIndicator icon="🏆" title="Classificação" />
+      <StandingsTable standings={standings} />
     </div>
   );
 };

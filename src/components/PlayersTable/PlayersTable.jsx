@@ -31,7 +31,7 @@ const PlayersTable = ({ players }) => {
           {players.map((player, index) => (
             <tr key={player.id}>
               <td>
-                <span>{index + 1}</span>
+                <span className="position">{index + 1}</span>
               </td>
               <td>
                 <strong>{player.name}</strong>

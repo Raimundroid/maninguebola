@@ -40,7 +40,7 @@ TeamCard Styles
 }
 
 /* Logo box styling */
-.team-logo {
+.team-card .team-logo {
   /* Fixed dimensions for consistent appearance */
   width: 64px;
   height: 64px;
@@ -70,7 +70,7 @@ TeamCard Styles
 }
 
 /* Team name styling */
-.team-name {
+.team-card .team-name {
   font-size: 18px;
   margin-bottom: 8px;
   font-weight: 600;
@@ -78,7 +78,7 @@ TeamCard Styles
 }
 
 /* Stats info styling (position and points) */
-.team-info {
+.team-card .team-info {
   font-size: 13px;
   color: var(--text-light, #666);
   font-weight: 500;
