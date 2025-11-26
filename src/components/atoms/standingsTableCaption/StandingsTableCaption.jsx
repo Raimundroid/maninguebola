@@ -4,14 +4,53 @@ import "./StandingsTableCaption.css";
 const StandingsTableCaption = () => {
   return (
     <div className="standings-table-caption">
-      <p>J - Jogos</p>
-      <p>V - Vitórias</p>
-      <p>E - Empates</p>
-      <p>D - Derrotas</p>
-      <p>GM - Golos Marcados</p>
-      <p>GS - Golos Sofridos</p>
-      <p>DG - Diferença de Golos</p>
-      <p>Pts - Pontos</p>
+      <div className="caption-item">
+        <span className="caption-abbr">J</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Jogos</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">V</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Vitórias</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">E</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Empates</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">D</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Derrotas</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">GM</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Golos Marcados</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">GS</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Golos Sofridos</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">DG</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Diferença de Golos</span>
+      </div>
+
+      <div className="caption-item">
+        <span className="caption-abbr">Pts</span>
+        <span className="caption-dash">-</span>
+        <span className="caption-text">Pontos</span>
+      </div>
     </div>
   );
 };

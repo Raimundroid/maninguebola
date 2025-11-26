@@ -31,7 +31,7 @@
 }
 
 .standings-table .team-cell {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px; /*og: 8px*/
 }
