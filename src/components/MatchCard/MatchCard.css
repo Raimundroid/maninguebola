@@ -72,13 +72,11 @@
 }
 
 .match-card .teams .team .team-name {
-  /* font-size: 14px; */
-  /* teamName: {
-      fontSize: "14px",
-      fontWeight: "600",
-      textAlign: "center",
-      color: "var(--text)",
-    } */
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  color: red;
 }
 .match-card .teams .score {
   /* font-size: 32px; */

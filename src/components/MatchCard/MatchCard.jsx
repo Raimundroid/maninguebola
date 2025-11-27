@@ -50,12 +50,8 @@ const MatchCard = ({ match }) => {
         {/* -------------------------------------------------------- */}
         {/* -------------------------------------------------------- */}
         <div className="team">
-          <div /*style={styles.teamLogo}*/ className="team-logo">
-            {homeTeam.abbr}
-          </div>
-          <div /*style={styles.teamName}*/ className="team-name">
-            {homeTeam.name}
-          </div>
+          <div className="team-logo">{homeTeam.abbr}</div>
+          <div className="team-name">{homeTeam.name}</div>
         </div>
         {/* Score (center) - shows VS if upcoming, actual score otherwise */}
         {/* -------------------------------------------------------- */}
