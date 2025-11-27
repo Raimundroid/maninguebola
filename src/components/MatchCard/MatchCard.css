@@ -92,13 +92,10 @@
 }
 
 .match-card .info {
-  /* font-size: 12px; */
-  /* info: {
-      fontSize: "12px",
-      color: "var(--text-light)",
-      paddingTop: "12px",
-      borderTop: "1px solid var(--border)",
-    } */
+  font-size: 12px;
+  color: var(--text-light);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
 }
 
 .match-card .teams .score .score-separator {
