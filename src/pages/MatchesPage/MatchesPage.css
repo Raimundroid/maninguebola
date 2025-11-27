@@ -1,17 +1,14 @@
 .matches-page-container {
-  /* container: {
-      maxWidth: "1200px",
-      margin: "0 auto",
-      padding: "24px 16px",
-    } */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  min-height: 60vh;
 }
 
 .matches-page-container .empty-state {
-  /* emptyState: {
-      background: "var(--card-bg)",
-      padding: "48px 24px",
-      borderRadius: "12px",
-      textAlign: "center",
-      color: "var(--text-light)",
-    } */
+  background: var(--card-bg);
+  padding: 24px 48px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--text-light);
 }

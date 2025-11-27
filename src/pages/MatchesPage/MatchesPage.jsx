@@ -45,6 +45,7 @@ import { useState, useMemo } from "react";
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import FilterButtons from "../../components/atoms/filterButtons/FilterButtons";
 import MatchesGrid from "../../components/MatchesGrid/MatchesGrid";
+import "./MatchesPage.css";
 
 // Define filter options as a constant outside the component
 // This prevents recreating the array on every render
@@ -79,10 +80,8 @@ const MatchesPage = ({ matches }) => {
   // - Component re-renders for other reasons (parent updates, etc.)
   // - Filter hasn't changed, so why filter again?
 
+  // This code only runs when 'matches' or 'activeFilter' changes
   const filteredMatches = useMemo(() => {
-    // This code only runs when 'matches' or 'activeFilter' changes
-    //console.log("Filtering matches..."); // You can add this to see when it runs
-
     // If 'all' is selected, return all matches (no filtering needed)
     if (activeFilter === "all") {
       return matches;
