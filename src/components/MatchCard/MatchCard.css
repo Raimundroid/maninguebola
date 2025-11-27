@@ -55,13 +55,10 @@
 }
 
 .match-card .teams .team {
-  /* display: flex; */
-  /* team: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: "8px",
-    } */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 .match-card .teams .team .team-logo {
   /* width: 48px;

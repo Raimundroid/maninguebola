@@ -49,7 +49,7 @@ const MatchCard = ({ match }) => {
         {/* ------------------------LEFT-------------------------------- */}
         {/* -------------------------------------------------------- */}
         {/* -------------------------------------------------------- */}
-        <div /*style={styles.team}*/ className="team">
+        <div className="team">
           <div /*style={styles.teamLogo}*/ className="team-logo">
             {homeTeam.abbr}
           </div>
@@ -80,11 +80,11 @@ const MatchCard = ({ match }) => {
         {/* -------------------------------------------------------- */}
         {/* -------------------------------------------------------- */}
         {/* ------------------------RIGHT-------------------------------- */}
-        <div /*style={styles.team}*/ className="team-name">
+        <div /*style={styles.team}*/ className="team">
           <div /*style={styles.teamLogo}*/ className="team-logo">
             {awayTeam.abbr}
           </div>
-          <div /*style={styles.teamName}*/ className="team-logo">
+          <div /*style={styles.teamName}*/ className="team-name">
             {awayTeam.name}
           </div>
         </div>
