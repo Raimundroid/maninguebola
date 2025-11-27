@@ -8,9 +8,10 @@
 }
 
 /* Add green left border if live*/
-/* .match-card--live {
+.match-card--live {
   border-left: 4px solid var(--success, green);
 }
+/*
 .match-card:hover {
   cursor: pointer;
 } */
