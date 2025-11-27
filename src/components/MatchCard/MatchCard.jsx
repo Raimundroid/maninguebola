@@ -7,21 +7,6 @@
 
 import "./MatchCard.css";
 
-// export const matchesData = [
-//   {
-//     id: 1, // Unique ID for React keys
-//     homeTeam: teams.lions, // Reference to team object
-//     awayTeam: teams.tigers,
-//     homeScore: 1, // Only for live/finished
-//     awayScore: 1,
-//     date: "Sáb, 16 Nov", // Formatted date string
-//     time: "14:00",
-//     status: "live", // 'live' | 'finished' | 'upcoming'
-//     minute: 67, // Current minute (only for live)
-//     venue: "Campo Principal",
-//     info: "85 espectadores", // Optional extra info
-//   },]
-
 const MatchCard = ({ match }) => {
   // Destructure all properties we need from the match object
   // This is cleaner than writing match.homeTeam, match.awayTeam, etc.
@@ -42,11 +27,7 @@ const MatchCard = ({ match }) => {
   const isLive = status === "live";
 
   return (
-    <div
-      /*style={styles.card}*/ className={`match-card ${
-        isLive ? "match-card--live" : ""
-      }`}
-    >
+    <div className={`match-card ${isLive ? "match-card--live" : ""}`}>
       {/* Only show live badge if match is currently being played */}
       {isLive && (
         <div /*style={styles.liveBadge}*/ className="active-badge">
