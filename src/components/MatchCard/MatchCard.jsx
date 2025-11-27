@@ -80,13 +80,9 @@ const MatchCard = ({ match }) => {
         {/* -------------------------------------------------------- */}
         {/* -------------------------------------------------------- */}
         {/* ------------------------RIGHT-------------------------------- */}
-        <div /*style={styles.team}*/ className="team">
-          <div /*style={styles.teamLogo}*/ className="team-logo">
-            {awayTeam.abbr}
-          </div>
-          <div /*style={styles.teamName}*/ className="team-name">
-            {awayTeam.name}
-          </div>
+        <div className="team">
+          <div className="team-logo">{awayTeam.abbr}</div>
+          <div className="team-name">{awayTeam.name}</div>
         </div>
       </div>
 
