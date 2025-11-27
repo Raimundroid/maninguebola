@@ -1,0 +1,17 @@
+.matches-page-container {
+  /* container: {
+      maxWidth: "1200px",
+      margin: "0 auto",
+      padding: "24px 16px",
+    } */
+}
+
+.matches-page-container .empty-state {
+  /* emptyState: {
+      background: "var(--card-bg)",
+      padding: "48px 24px",
+      borderRadius: "12px",
+      textAlign: "center",
+      color: "var(--text-light)",
+    } */
+}

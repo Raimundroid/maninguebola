@@ -1,0 +1,48 @@
+/* ============================================
+   FilterButtons.css
+   ============================================
+   Styles for filter button group component
+   ============================================ 
+*/
+
+/* Container for all filter buttons */
+.filter-buttons-container {
+  display: flex;
+  gap: 12px; /* Space between buttons */
+  margin-bottom: 24px;
+  flex-wrap: wrap; /* Wrap to next line on small screens */
+}
+
+/* Base button styles (inactive state) */
+.filter-buttons-container .filter-button {
+  /* Spacing */
+  padding: 8px 16px;
+
+  /* Border and background */
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+
+  /* Typography */
+  font-weight: 500;
+
+  /* Animation */
+  transition: all 300ms;
+}
+/* Hover state for all buttons */
+.filter-buttons-container .filter-button:hover {
+  /* Cursor behavior on hover */
+  cursor: pointer;
+
+  /* Add hover effect (optional)*/
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Active/selected button state */
+.filter-buttons-container .filter-button--active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}

@@ -279,3 +279,81 @@ export const standings = calculateStandings(rawStandings);
 //     points: 18,
 //   },
 // ];
+
+// ============================================
+// MATCHES DATA
+// ============================================
+// Array of match objects
+// 'status' field is CRITICAL for filtering:
+//   - 'live': currently playing
+//   - 'finished': completed matches
+//   - 'upcoming': future matches
+export const matchesData = [
+  {
+    id: 1, // Unique ID for React keys
+    homeTeam: teams.lions, // Reference to team object
+    awayTeam: teams.tigers,
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "Sáb, 16 Nov", // Formatted date string
+    time: "14:00",
+    status: "live", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo Principal",
+    info: "85 espectadores", // Optional extra info
+  },
+  {
+    id: 2,
+    homeTeam: teams.eagles,
+    awayTeam: teams.lions,
+    homeScore: 3,
+    awayScore: 2,
+    date: "Sáb, 9 Nov",
+    time: "15:00",
+    status: "finished",
+    venue: "Campo A",
+    info: "⚽ Miguel Santos (2), Tomás Ferreira",
+  },
+  {
+    id: 3,
+    homeTeam: teams.tigers,
+    awayTeam: teams.eagles,
+    homeScore: 1,
+    awayScore: 1,
+    date: "Dom, 3 Nov",
+    time: "16:00",
+    status: "finished",
+    venue: "Campo B",
+    // 'info' is optional - can be omitted
+  },
+  {
+    id: 4,
+    homeTeam: teams.eagles,
+    awayTeam: teams.tigers,
+    // No scores for upcoming matches
+    date: "Sáb, 23 Nov",
+    time: "15:00",
+    status: "upcoming",
+    venue: "Campo A",
+  },
+  {
+    id: 5,
+    homeTeam: teams.lions,
+    awayTeam: teams.tigers,
+    date: "Dom, 24 Nov",
+    time: "16:00",
+    status: "upcoming",
+    venue: "Campo B",
+  },
+];
+
+// ============================================
+// STATS DATA
+// ============================================
+// Quick statistics for the home page
+export const statsData = [
+  { value: "36", label: "Jogos Realizados" },
+  { value: "142", label: "Golos Marcados" },
+  { value: "8", label: "Equipas" },
+  { value: "3.9", label: "Golos/Jogo" },
+];
