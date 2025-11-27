@@ -76,18 +76,14 @@
   font-weight: 600;
   text-align: center;
   color: var(--text);
-  color: red;
 }
 .match-card .teams .score {
-  /* font-size: 32px; */
-  /* score: {
-      fontSize: "32px",
-      fontWeight: "700",
-      display: "flex",
-      alignItems: "center",
-      gap: "8px",
-      color: "var(--text)",
-    } */
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
 }
 
 .match-card .teams .vs {
@@ -110,5 +106,5 @@
 
 .match-card .teams .score .score-separator {
   color: var(--text-light);
-  color: red;
+  color: yellow;
 }

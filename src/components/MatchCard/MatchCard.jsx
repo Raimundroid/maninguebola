@@ -57,7 +57,7 @@ const MatchCard = ({ match }) => {
         {/* -------------------------------------------------------- */}
         {/* ------------------------CENTER-------------------------------- */}
         {/* -------------------------------------------------------- */}
-        <div /*style={styles.score}*/ className="score">
+        <div className="score">
           {status === "upcoming" ? (
             <span /*style={styles.vs}*/ className="vs">VS</span>
           ) : (
