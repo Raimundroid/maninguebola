@@ -87,11 +87,8 @@
 }
 
 .match-card .teams .vs {
-  /* font-size: 16px; */
-  /* vs: {
-      fontSize: "16px",
-      color: "var(--text-light)",
-    } */
+  font-size: 16px;
+  color: var(--text-light);
 }
 
 .match-card .info {
@@ -106,5 +103,4 @@
 
 .match-card .teams .score .score-separator {
   color: var(--text-light);
-  color: yellow;
 }
