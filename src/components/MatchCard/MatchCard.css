@@ -46,14 +46,12 @@
 }
 
 .match-card .teams {
-  /* display: grid; */
-  /* teams: {
-      display: "grid",
-      gridTemplateColumns: "1fr auto 1fr",
-      gap: "16px",
-      alignItems: "center",
-      marginBottom: "12px",
-    } */
+  background-color: rgb(88, 72, 72);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .match-card .teams .team {

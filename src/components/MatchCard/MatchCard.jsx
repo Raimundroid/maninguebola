@@ -44,8 +44,11 @@ const MatchCard = ({ match }) => {
       </div>
 
       {/* Teams and score section - 3 column grid */}
-      <div /*style={styles.teams}*/ className="teams">
+      <div className="teams">
         {/* Home team (left) */}
+        {/* ------------------------LEFT-------------------------------- */}
+        {/* -------------------------------------------------------- */}
+        {/* -------------------------------------------------------- */}
         <div /*style={styles.team}*/ className="team">
           <div /*style={styles.teamLogo}*/ className="team-logo">
             {homeTeam.abbr}
@@ -55,6 +58,9 @@ const MatchCard = ({ match }) => {
           </div>
         </div>
         {/* Score (center) - shows VS if upcoming, actual score otherwise */}
+        {/* -------------------------------------------------------- */}
+        {/* ------------------------CENTER-------------------------------- */}
+        {/* -------------------------------------------------------- */}
         <div /*style={styles.score}*/ className="score">
           {status === "upcoming" ? (
             <span /*style={styles.vs}*/ className="vs">VS</span>
@@ -71,6 +77,9 @@ const MatchCard = ({ match }) => {
           )}
         </div>
         {/* Away team (right) */}
+        {/* -------------------------------------------------------- */}
+        {/* -------------------------------------------------------- */}
+        {/* ------------------------RIGHT-------------------------------- */}
         <div /*style={styles.team}*/ className="team-name">
           <div /*style={styles.teamLogo}*/ className="team-logo">
             {awayTeam.abbr}
