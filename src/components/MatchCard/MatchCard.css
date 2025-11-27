@@ -40,12 +40,9 @@
 }
 
 .match-card .datetime {
-  /* font-size: 13px; */
-  /* datetime: {
-      fontSize: "13px",
-      color: "var(--text-light)",
-      marginBottom: "16px",
-    } */
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 16px;
 }
 
 .match-card .teams {

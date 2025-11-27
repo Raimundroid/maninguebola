@@ -36,9 +36,11 @@ const MatchCard = ({ match }) => {
         </div>
       )}
 
-      {/* Date and time - show FINALIZADO if match is finished */}
-      <div /*style={styles.datetime}*/ className="datetime">
-        {date} • {time} {status === "finished" && "• FINALIZADO"}
+      {/* Date and time - show FINALIZADO if match is finished  or (||) show PRÓXIMO if match is upcoming*/}
+      <div className="datetime">
+        {date} • {time}
+        {(status === "finished" && " • FINALIZADO") ||
+          (status === "upcoming" && " • PRÓXIMO")}
       </div>
 
       {/* Teams and score section - 3 column grid */}
