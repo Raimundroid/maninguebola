@@ -30,8 +30,8 @@ const MatchCard = ({ match }) => {
     <div className={`match-card ${isLive ? "match-card--live" : ""}`}>
       {/* Only show live badge if match is currently being played */}
       {isLive && (
-        <div /*style={styles.liveBadge}*/ className="active-badge">
-          <span /*style={styles.pulseDot}*/ className="pulse-dot"></span>
+        <div className="active-badge">
+          <span className="pulse-dot"></span>
           AO VIVO {/*  {minute}' */}
         </div>
       )}
