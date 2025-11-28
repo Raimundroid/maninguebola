@@ -67,8 +67,8 @@ const Homepage = ({ matches, stats }) => {
       <MatchesGrid matches={upcomingMatches} />
 
       {/* Statistics section */}
-      {/* <SectionHeader title="Estatísticas Rápidas" />
-      <StatsGrid stats={stats} /> */}
+      <SectionHeader title="Estatísticas Rápidas" />
+      <StatsGrid stats={stats} />
     </div>
   );
 };
