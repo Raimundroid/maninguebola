@@ -11,6 +11,7 @@ import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
 
 import Footer from "./components/Footer/Footer.jsx";
 import Error404 from "./components/Error404/Error404.jsx";
+import ScrollToTop from "./utils/ScrollToTop/ScrollToTop.jsx";
 import "./App.css";
 
 import {
@@ -46,6 +47,7 @@ function App() {
 
     // <ThemeProvider>
     <BrowserRouter>
+      <ScrollToTop /> {/* This fixes all navigation scrolling */}
       <div>
         <Navbar />
 
