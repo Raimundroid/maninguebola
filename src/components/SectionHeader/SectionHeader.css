@@ -1,0 +1,20 @@
+.section-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header-container .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.section-header-container .link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}

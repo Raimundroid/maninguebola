@@ -83,8 +83,8 @@ const MatchCard = ({ match }) => {
       </div>
 
       {/* Venue and additional info */}
-      <div /*style={styles.info}*/ className="info">
-        📍 {venue} {info && `• ${info}`}
+      <div className="info">
+        🥅 {venue} {info && `• ${info}`}
       </div>
     </div>
   );

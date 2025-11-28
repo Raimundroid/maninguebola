@@ -694,7 +694,7 @@
 
     /* Smaller text and spacing */
     font-size: 14px; /*og: 15px*/
-    gap: 2px; /*og: 6px*/
+    gap: 1px; /*og: 6px*/
   }
 
   /* Show text labels on desktop */
@@ -704,7 +704,7 @@
   }
   /* Desktop icon size*/
   .nav-link-icon {
-    font-size: 13px; /*og: 18px*/
+    font-size: 11px; /*og: 18px*/
   }
 
   /*

@@ -10,6 +10,7 @@ import StatisticsPage from "./pages/StatisticsPage/StatisticsPage.jsx";
 import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
 
 import Footer from "./components/Footer/Footer.jsx";
+import Error404 from "./components/Error404/Error404.jsx";
 import "./App.css";
 
 import {
@@ -56,7 +57,7 @@ function App() {
                 <>
                   {/* Hero component - only on home page */}
                   <Hero />
-                  {/* <Homepage matches={matchesData} stats={statsData} /> */}
+                  <Homepage matches={matchesData} stats={statsData} />
                 </>
               }
             />
@@ -83,14 +84,7 @@ function App() {
             />
 
             {/* 404 - Catch all unmatched routes */}
-            <Route
-              path="*"
-              element={
-                <div style={{ padding: "48px", textAlign: "center" }}>
-                  <h1>404 - Página não encontrada</h1>
-                </div>
-              }
-            />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </main>
 

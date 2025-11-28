@@ -352,8 +352,15 @@ export const matchesData = [
 // ============================================
 // Quick statistics for the home page
 export const statsData = [
-  { value: "36", label: "Jogos Realizados" },
-  { value: "142", label: "Golos Marcados" },
-  { value: "8", label: "Equipas" },
-  { value: "3.9", label: "Golos/Jogo" },
+  { value: "0", label: "Jogos Realizados" },
+  { value: "0", label: "Golos Marcados" },
+  { value: "0", label: "Equipas" },
+  { value: "0", label: "Golos/Jogo" },
 ];
+
+// export const statsData = [
+//   { value: "36", label: "Jogos Realizados" },
+//   { value: "142", label: "Golos Marcados" },
+//   { value: "8", label: "Equipas" },
+//   { value: "3.9", label: "Golos/Jogo" },
+// ];

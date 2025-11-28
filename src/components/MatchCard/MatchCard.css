@@ -11,8 +11,8 @@
 .match-card--live {
   border-left: 4px solid var(--success, green);
 }
-/*
-.match-card:hover {
+
+/* .match-card:hover {
   cursor: pointer;
 } */
 

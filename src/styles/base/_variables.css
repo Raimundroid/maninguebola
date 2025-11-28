@@ -29,6 +29,9 @@
   /* Secondary color: used for headings, important text */
   --secondary: #1e293b;
 
+  /* Success color: indicates success (used in "live" matches' card) */
+  --success: #22c55e;
+
   /* Main text color for body content */
   --text: #3b82f6;
 

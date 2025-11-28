@@ -11,10 +11,11 @@
 // it from a parent/context. Navigation is handled by React Router's
 // Link component or useNavigate hook instead of onNavigate prop.
 
-import { Link } from "react-router-dom"; // For React Router navigation
+// import { Link } from "react-router-dom"; // For React Router navigation
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import MatchesGrid from "../../components/MatchesGrid/MatchesGrid";
 import StatsGrid from "../../components/StatsGrid/StatsGrid";
+import "./Homepage.css";
 
 const Homepage = ({ matches, stats }) => {
   // Filter matches by their status
@@ -27,46 +28,47 @@ const Homepage = ({ matches, stats }) => {
     .filter((m) => m.status === "upcoming")
     .slice(0, 2);
 
-  // Embedded styles
-  const styles = {
-    container: {
-      maxWidth: "1200px",
-      margin: "0 auto",
-      padding: "24px 16px",
-    },
-  };
-
   return (
-    <div style={styles.container}>
+    <div className="homepage-container">
       {/* Your existing Hero component goes here */}
 
       {/* Live matches section - only show if there are live matches */}
       {/* Conditional rendering: {condition && <Component />} */}
       {liveMatches.length > 0 && (
         <>
-          <SectionHeader title="🔴 Ao Vivo Agora" />
+          <SectionHeader
+            title="🔴 Ao Vivo Agora"
+            linkTo={"/jogos"}
+            linkText={"Ver mais"}
+          />
           <MatchesGrid matches={liveMatches} />
         </>
       )}
 
       {/* Recent results section */}
       {/* With React Router, use Link component for navigation */}
-      <SectionHeader title="Resultados Recentes" />
-      <Link
-        to="/matches"
-        style={{ color: "var(--primary)", textDecoration: "none" }}
-      >
+      <SectionHeader
+        title="Resultados Recentes"
+        linkTo={"/jogos"}
+        linkText={"Ver todos"}
+      />
+      {/* <Link to="/jogos" className="link">
         Ver todos →
-      </Link>
+      </Link> */}
+
       <MatchesGrid matches={recentMatches} />
 
       {/* Upcoming matches section */}
-      <SectionHeader title="Próximos Jogos" />
+      <SectionHeader
+        title="Próximos Jogos"
+        linkTo={"/jogos"}
+        linkText={"Ver mais"}
+      />
       <MatchesGrid matches={upcomingMatches} />
 
       {/* Statistics section */}
-      <SectionHeader title="Estatísticas Rápidas" />
-      <StatsGrid stats={stats} />
+      {/* <SectionHeader title="Estatísticas Rápidas" />
+      <StatsGrid stats={stats} /> */}
     </div>
   );
 };
