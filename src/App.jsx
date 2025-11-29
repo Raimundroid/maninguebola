@@ -81,7 +81,7 @@ function App() {
             {/* Team detail page - shows at "/teams/eagles", "/teams/lions", etc.
                 :id is a URL parameter - accessible via useParams() hook */}
             <Route
-              path="/teams/:id"
+              path="/equipas/:id"
               element={<div>Team Detail Page (to be implemented)</div>}
             />
 
