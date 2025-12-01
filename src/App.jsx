@@ -8,6 +8,7 @@ import PlayersPage from "./pages/PlayersPage/PlayersPage.jsx";
 import StandingsPage from "./pages/StandingsPage/StandingsPage.jsx";
 import StatisticsPage from "./pages/StatisticsPage/StatisticsPage.jsx";
 import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
+import TeamDetailPage from "./components/TeamDetailPage/TeamDetailPage.jsx";
 
 import Footer from "./components/Footer/Footer.jsx";
 import Error404 from "./components/Error404/Error404.jsx";
@@ -21,6 +22,23 @@ import {
   matchesData,
   statsData,
 } from "./data/sampleData.js";
+
+// ===============================================
+// 🔑 DATA TRANSFORMATION: LOOKUP LOGIC HERE (Once)
+// ===============================================
+const getEnrichedMatches = (rawMatches, teamLookup) => {
+  return rawMatches.map((match) => {
+    // Resolve the Foreign Keys (IDs) to full Team objects
+    const homeTeamDetails = teamLookup[match.homeTeamId];
+    const awayTeamDetails = teamLookup[match.awayTeamId];
+
+    // Return the new, enriched match object
+    return { ...match, homeTeam: homeTeamDetails, awayTeam: awayTeamDetails };
+  });
+};
+
+// The fully enriched array that will be passed down
+const enrichedMatches = getEnrichedMatches(matchesData, teams);
 
 function App() {
   {
@@ -59,17 +77,17 @@ function App() {
                 <>
                   {/* Hero component - only on home page */}
                   <Hero />
-                  <Homepage matches={matchesData} stats={statsData} />
+                  <Homepage matches={enrichedMatches} stats={statsData} />
                 </>
               }
             />
             <Route
               path="/jogos"
-              element={<MatchesPage matches={matchesData} />}
+              element={<MatchesPage matches={enrichedMatches} />}
             />
             <Route
               path="/jogadores"
-              element={<PlayersPage players={players} />}
+              element={<PlayersPage players={players} teams={teams} />}
             />
             <Route
               path="/classificacao"
@@ -80,10 +98,17 @@ function App() {
 
             {/* Team detail page - shows at "/teams/eagles", "/teams/lions", etc.
                 :id is a URL parameter - accessible via useParams() hook */}
-            <Route
-              path="/equipas/:id"
-              element={<div>Team Detail Page (to be implemented)</div>}
-            />
+            {/* <Route
+              path="/equipas/:teamId"
+              element={
+                <TeamDetailPage
+                  teams={teams}
+                  players={players}
+                  matches={enrichedMatches}
+                  standings={standings}
+                />
+              }
+            /> */}
 
             {/* 404 - Catch all unmatched routes */}
             <Route path="*" element={<Error404 />} />

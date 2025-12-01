@@ -10,6 +10,80 @@
 // Each data type has a specific shape (structure) that components expect.
 // Keep this consistent when connecting to your real API.
 
+// Sample data
+// const teams = [
+//   {
+//     id: "eagles",
+//     name: "FC Eagles",
+//     shortName: "Eagles",/////not added
+//     logo: "https://via.placeholder.com/100/FF0000/FFFFFF?text=E",
+//     founded: 2015,
+//     stadium: "Campo A",
+//     colors: { primary: "#FF0000", secondary: "#FFFFFF" },
+//     contact: { captain: "João Silva", phone: "+258 84 123 4567" }
+//   },
+//   {
+//     id: "lions",
+//     name: "United Lions",
+//     shortName: "Lions",
+//     logo: "https://via.placeholder.com/100/0000FF/FFFFFF?text=L",
+//     founded: 2018,
+//     stadium: "Campo Principal",
+//     colors: { primary: "#0000FF", secondary: "#FFFF00" }
+//   },
+//   {
+//     id: "tigers",
+//     name: "Sporting Tigers",
+//     shortName: "Tigers",
+//     logo: "https://via.placeholder.com/100/00FF00/FFFFFF?text=T",
+//     founded: 2020,
+//     stadium: "Campo B",
+//     colors: { primary: "#00FF00", secondary: "#000000" }
+//   }
+// ];
+
+// const matches = [
+//   {
+//     id: 1,
+//     date: "2025-11-09",
+//     time: "15:00",
+//     homeTeamId: "eagles",
+//     awayTeamId: "lions",
+//     homeScore: 3,
+//     awayScore: 2,
+//     status: "finished",
+//     location: "Campo A",
+//   },
+//   {
+//     id: 2,
+//     date: "2025-11-16",
+//     time: "16:30",
+//     homeTeamId: "tigers",
+//     awayTeamId: "eagles",
+//     homeScore: null,
+//     awayScore: null,
+//     status: "upcoming",
+//     location: "Campo B",
+//   },
+//   {
+//     id: 3,
+//     date: "2025-11-02",
+//     time: "14:00",
+//     homeTeamId: "eagles",
+//     awayTeamId: "tigers",
+//     homeScore: 2,
+//     awayScore: 1,
+//     status: "finished",
+//     location: "Campo A",
+//   },
+// ];
+
+// const standings = [
+//   { position: 1, teamId: "eagles", played: 12, won: 9, drawn: 2, lost: 1, goalsFor: 34, goalsAgainst: 12, goalDifference: 22, points: 29, form: ["W", "W", "D", "W", "W"] },
+//   { position: 2, teamId: "lions", played: 12, won: 8, drawn: 1, lost: 3, goalsFor: 28, goalsAgainst: 15, goalDifference: 13, points: 25, form: ["L", "W", "W", "W", "D"] },
+//   { position: 3, teamId: "tigers", played: 11, won: 5, drawn: 3, lost: 3, goalsFor: 22, goalsAgainst: 18, goalDifference: 4, points: 18, form: ["D", "L", "W", "D", "W"] }
+// ];
+
 // ============================================
 // TEAMS DATA
 // ============================================
@@ -20,18 +94,49 @@ export const teams = {
     id: "eagles", // Unique identifier
     name: "FC Eagles", // Full team name
     abbr: "FE", // Abbreviation for logos
-    position: "1",
-    points: "100",
+    // position: "1",
+    // points: "99", /////
+    founded: 2010,
+    stadium: "Eagles Arena A",
+    logo: "/logos/eagles.png",
+    colors: { primary: "#0033cc", secondary: "#ffcc00" },
+    contact: {
+      captain: "Jaime Paulo",
+      phone: "+258 82 12 34 567",
+      email: "eagles@example.com",
+    },
   },
   lions: {
     id: "lions",
     name: "United Lions",
     abbr: "UL",
+    // position: "2",
+    // points: "75", /////
+    founded: 2015,
+    stadium: "Lions Den",
+    logo: "/logos/eagles.png",
+    colors: { primary: "#FF0000", secondary: "#14ca14ff" },
+    contact: {
+      captain: "Borge Papalo",
+      phone: "+258 82 12 34 568",
+      email: "lions@example.com",
+    },
   },
   tigers: {
     id: "tigers",
     name: "Sporting Tigers",
     abbr: "ST",
+    // position: "3",
+    // points: "50", /////
+    founded: 2012,
+    stadium: "Tigers Cave",
+    logo: "/logos/eagles.png",
+    colors: { primary: "#00FF00", secondary: "#000000" },
+    contact: {
+      captain: "Pedro Santos",
+      phone: "+258 82 12 34 569",
+      email: "tigers@example.com",
+    },
   },
 };
 
@@ -40,54 +145,188 @@ export const teams = {
 // ============================================
 // Top scorers list - should be sorted by goals (descending)
 // before: playerData
+
 export const players = [
   {
     id: 1,
     name: "Miguel Santos",
-    team: "FC Eagles",
-    goals: 18,
-    assists: 7,
-    matches: 12,
+    teamId: "eagles", //new
+    number: 10, //new
+    position: "Forward", //new Defender || Midfielder || Forward
+    photo: "players/miguel.jpg", //new
+    stats: {
+      //new
+      appearances: 12,
+      goals: 18,
+      assists: 7,
+      yellowCards: 2,
+      redCards: 0,
+    },
   },
   {
     id: 2,
     name: "José Lima",
-    team: "United Lions",
-    goals: 15,
-    assists: 9,
-    matches: 14,
+    teamId: "lions",
+    number: 7,
+    position: "Forward",
+    photo: "players/miguel.jpg",
+    stats: {
+      appearances: 14,
+      goals: 15,
+      assists: 9,
+      yellowCards: 3,
+      redCards: 0,
+    },
   },
   {
     id: 3,
     name: "Rui Almeida",
-    team: "Sporting Tigers",
-    goals: 14,
-    assists: 5,
-    matches: 11,
+    teamId: "tigers",
+    number: 10,
+    position: "Forward",
+    photo: "players/rui.jpg",
+    stats: {
+      appearances: 11,
+      goals: 14,
+      assists: 5,
+      yellowCards: 2,
+      redCards: 0,
+    },
   },
   {
     id: 4,
     name: "Tomás Ferreira",
-    team: "FC Eagles",
-    goals: 12,
-    assists: 4,
-    matches: 10,
+    teamId: "eagles",
+    number: 9,
+    position: "Midfielder",
+    photo: "players/tomas.jpg",
+    stats: {
+      appearances: 10,
+      goals: 12,
+      assists: 4,
+      yellowCards: 1,
+      redCards: 0,
+    },
   },
   {
     id: 5,
     name: "Ricardo Nunes",
-    team: "United Lions",
-    goals: 10,
-    assists: 3,
-    matches: 13,
+    teamId: "lions",
+    number: 11,
+    position: "Midfielder",
+    photo: "players/ricardo.jpg",
+    stats: {
+      appearances: 13,
+      goals: 10,
+      assists: 3,
+      yellowCards: 1,
+      redCards: 1,
+    },
   },
   {
     id: 6,
-    name: "Jaime Bonde",
-    team: "Sporting Tigers",
-    goals: 8,
-    assists: 6,
-    matches: 12,
+    name: "Jaime Paraiso",
+    teamId: "tigers",
+    number: 1,
+    position: "Midfielder",
+    photo: "players/jaime.jpg",
+    stats: {
+      appearances: 12,
+      goals: 3,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 7,
+    name: "Pablo Picasso",
+    teamId: "eagles",
+    number: 1,
+    position: "Defender",
+    photo: "players/carlos.jpg",
+    stats: {
+      appearances: 12,
+      goals: 0,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 8,
+    name: "Domingos Samuel",
+    teamId: "lions",
+    number: 1,
+    position: "Defender",
+    photo: "players/carlos.jpg",
+    stats: {
+      appearances: 10,
+      goals: 5,
+      assists: 2,
+      yellowCards: 2,
+      redCards: 1,
+    },
+  },
+  {
+    id: 9,
+    name: "Armando Titos",
+    teamId: "tigers",
+    number: 1,
+    position: "Defender",
+    photo: "players/carlos.jpg",
+    stats: {
+      appearances: 12,
+      goals: 0,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 10,
+    name: "Carlos Mendes",
+    teamId: "eagles",
+    number: 1,
+    position: "Goalkeeper",
+    photo: "players/carlos.jpg",
+    stats: {
+      appearances: 12,
+      goals: 0,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 11,
+    name: "Manuel Paredes",
+    teamId: "lions",
+    number: 1,
+    position: "Goalkeeper",
+    photo: "players/carlos.jpg",
+    stats: {
+      appearances: 10,
+      goals: 5,
+      assists: 2,
+      yellowCards: 2,
+      redCards: 1,
+    },
+  },
+  {
+    id: 12,
+    name: "Alfredo Maestro",
+    teamId: "tigers",
+    number: 1,
+    position: "Goalkeeper",
+    photo: "players/carlos.jpg",
+    stats: {
+      appearances: 12,
+      goals: 0,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
   },
 ];
 
@@ -176,7 +415,10 @@ const calculateStandings = (standings) => {
 const rawStandings = [
   {
     id: "eagles",
-    ...teams.eagles, // Copies: name, abbr from teams.eagles
+    // Only spread fields needed for the table display (Name, Abbr, Logo)
+    name: teams.eagles.name,
+    abbr: teams.eagles.abbr,
+    logo: teams.eagles.logo,
     played: 12,
     wins: 9,
     draws: 2,
@@ -188,7 +430,11 @@ const rawStandings = [
   },
   {
     id: "lions",
-    ...teams.lions,
+    // Spreading only minimal team details to avoid data bloat.
+    // Only spread fields needed for the table display (Name, Abbr, Logo)
+    name: teams.lions.name,
+    abbr: teams.lions.abbr,
+    logo: teams.lions.logo,
     played: 12,
     wins: 8,
     draws: 1,
@@ -200,7 +446,10 @@ const rawStandings = [
   },
   {
     id: "tigers",
-    ...teams.tigers,
+    // Only spread fields needed for the table display (Name, Abbr, Logo)
+    name: teams.tigers.name,
+    abbr: teams.tigers.abbr,
+    logo: teams.tigers.logo,
     played: 11,
     wins: 5,
     draws: 3,
@@ -288,14 +537,17 @@ export const standings = calculateStandings(rawStandings);
 //   - 'live': currently playing
 //   - 'finished': completed matches
 //   - 'upcoming': future matches
+
 export const matchesData = [
   {
     id: 1, // Unique ID for React keys
-    homeTeam: teams.lions, // Reference to team object
-    awayTeam: teams.tigers,
+    // homeTeam: teams.lions, // Reference to team object
+    // awayTeam: teams.tigers,
+    homeTeamId: "lions", //new
+    awayTeamId: "tigers", //new
     homeScore: 1, // Only for live/finished
     awayScore: 1,
-    date: "Sáb, 16 Nov", // Formatted date string
+    date: "2025-11-16", // ISO Format
     time: "14:00",
     status: "live", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
@@ -304,11 +556,13 @@ export const matchesData = [
   },
   {
     id: 2,
-    homeTeam: teams.eagles,
-    awayTeam: teams.lions,
+    // homeTeam: teams.eagles,
+    // awayTeam: teams.lions,
+    homeTeamId: "eagles", //new
+    awayTeamId: "lions", //new
     homeScore: 3,
     awayScore: 2,
-    date: "Sáb, 9 Nov",
+    date: "2025-11-16", // ISO Format
     time: "15:00",
     status: "finished",
     venue: "Campo A",
@@ -316,11 +570,13 @@ export const matchesData = [
   },
   {
     id: 3,
-    homeTeam: teams.tigers,
-    awayTeam: teams.eagles,
+    // homeTeam: teams.tigers,
+    // awayTeam: teams.eagles,
+    homeTeamId: "tigers", //new
+    awayTeamId: "eagles", //new
     homeScore: 1,
     awayScore: 1,
-    date: "Dom, 3 Nov",
+    date: "2025-11-03", // ISO Format
     time: "16:00",
     status: "finished",
     venue: "Campo B",
@@ -328,19 +584,23 @@ export const matchesData = [
   },
   {
     id: 4,
-    homeTeam: teams.eagles,
-    awayTeam: teams.tigers,
+    // homeTeam: teams.eagles,
+    // awayTeam: teams.tigers,
+    homeTeamId: "eagles", //new
+    awayTeamId: "tigers", //new
     // No scores for upcoming matches
-    date: "Sáb, 23 Nov",
+    date: "2025-11-23", // ISO Format
     time: "15:00",
     status: "upcoming",
     venue: "Campo A",
   },
   {
     id: 5,
-    homeTeam: teams.lions,
-    awayTeam: teams.tigers,
-    date: "Dom, 24 Nov",
+    // homeTeam: teams.lions,
+    // awayTeam: teams.tigers,
+    homeTeamId: "lions", //new
+    awayTeamId: "tigers", //new
+    date: "2025-11-24", // ISO Format
     time: "16:00",
     status: "upcoming",
     venue: "Campo B",
@@ -364,3 +624,43 @@ export const statsData = [
 //   { value: "8", label: "Equipas" },
 //   { value: "3.9", label: "Golos/Jogo" },
 // ];
+
+// // --- NEW HELPER FUNCTION: Calculate Quick Stats ---
+// const calculateStats = (matches, teams) => {
+//   // 1. Identify matches that have been played (finished or live)
+//   const playedMatches = matches.filter(
+//     (match) => match.status === "finished" || match.status === "live"
+//   );
+
+//   // 2. Total Matches Played
+//   const totalMatchesPlayed = playedMatches.length;
+
+//   // 3. Total Goals Scored
+//   const totalGoalsScored = playedMatches.reduce((sum, match) => {
+//     // Check if scores exist (upcoming matches won't have scores)
+//     const home = match.homeScore || 0;
+//     const away = match.awayScore || 0;
+//     return sum + home + away;
+//   }, 0);
+
+//   // 4. Total Teams (using the object keys)
+//   const totalTeams = Object.keys(teams).length;
+
+//   // 5. Goals/Game
+//   const goalsPerGame =
+//     totalMatchesPlayed > 0
+//       ? (totalGoalsScored / totalMatchesPlayed).toFixed(1)
+//       : "0";
+
+//   // Structure the data for the component display
+//   return [
+//     { value: String(totalMatchesPlayed), label: "Jogos Realizados" },
+//     { value: String(totalGoalsScored), label: "Golos Marcados" },
+//     { value: String(totalTeams), label: "Equipas" },
+//     { value: goalsPerGame, label: "Golos/Jogo" },
+//   ];
+// };
+
+// // --- PROCESSED STATS DATA (EXPORT THIS) ---
+// // Note: This relies on the teams and matchesData being available in scope.
+// export const statsData = calculateStats(matchesData, teams);
