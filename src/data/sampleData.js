@@ -358,11 +358,29 @@ export const players = [
 // RETURNS:
 //   New array with calculated fields added to each team
 
+// tigers: {
+//     id: "tigers",
+//     name: "Sporting Tigers",
+//     abbr: "ST",
+//     // position: "3",
+//     // points: "50", /////
+//     founded: 2012,
+//     stadium: "Tigers Cave",
+//     logo: "/logos/eagles.png",
+//     colors: { primary: "#00FF00", secondary: "#000000" },
+//     contact: {
+//       captain: "Pedro Santos",
+//       phone: "+258 82 12 34 569",
+//       email: "tigers@example.com",
+//     },
+//   },
+
 const calculateStandings = (standings) => {
   // Map through each team and add calculated fields
   // .map() creates a NEW array, doesn't modify the original
-  return standings.map((team) => ({
-    // Spread operator (...) copies all existing properties from team
+
+  const calculated = standings.map((team) => ({
+    // Spread operator (...) copies all existing properties from team, ensuring all data points required by the component are present,
     ...team,
     // CALCULATION 1: Goal Difference
     // Formula: Goals Scored - Goals Conceded
@@ -376,20 +394,177 @@ const calculateStandings = (standings) => {
     // Formula: (Wins × 3) + (Draws × 1)
     // Example: (9 × 3) + (2 × 1) = 27 + 2 = 29 points
     points: team.wins * 3 + team.draws * 1,
-
-    // Win percentage
-    // winRate: team.played > 0 ? ((team.wins / team.played) * 100).toFixed(1) : 0,
-
-    // Points per game
-    // pointsPerGame:
-    //   team.played > 0
-    //     ? ((team.wins * 3 + team.draws) / team.played).toFixed(2)
-    //     : 0,
-
-    // Form (last 5 games) - would need additional data
-    // form: calculateForm(team.recentResults),
   }));
+
+  // Sort (Rank) the teams
+  // Sorting Criteria: Points (highest) > Goal Diff (highest) > Goals For (highest)
+  calculated.sort((a, b) => {
+    // CRITERIA 1: Points (Highest points first)
+    if (b.poinst !== a.points) return b.points - a.points;
+    // CRITERIA 2: Goal Difference (If points are tied, best GD wins)
+    if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
+    // CRITERIA 3: Goals Scored (If points and GD are tied, most goals wins)
+    return b.goalsFor - a.goalsFor;
+  });
+
+  //    return calculated.map((team, index) => ({
+  //   ...team,
+  //   // Assign position (1-based index) after sorting
+  //   position: index + 1,
+  // }));
+
+  // Assign Final Rank/Position (map)
+  return calculated.map((team, index) => ({
+    ...team,
+    // Assign position (1-based index) after sorting
+    position: index + 1,
+  }));
+
+  // Win percentage
+  // winRate: team.played > 0 ? ((team.wins / team.played) * 100).toFixed(1) : 0,
+
+  // Points per game
+  // pointsPerGame:
+  //   team.played > 0
+  //     ? ((team.wins * 3 + team.draws) / team.played).toFixed(2)
+  //     : 0,
+
+  // Form (last 5 games) - would need additional data
+  // form: calculateForm(team.recentResults),
 };
+//===========================================================
+
+// /**  BEST SCORERS HEPLER FUNCTION
+//  * Filters and sorts players to find top scorers.
+//  * @param {Array<Object>} players - The full array of player objects.
+//  * @param {number} [limit=10] - The maximum number of top players to return.
+//  * @returns {Array<Object>} The sorted list of top goal scorers.
+//  */
+// const getTopScorers = (players, limit = 10) => {
+//   return players
+//     // 1. Filter: Only include players with goals recorded
+//     .filter(player => player.stats?.goals > 0)
+
+//     // 2. Sort: By goals (descending)
+//     .sort((a, b) => b.stats.goals - a.stats.goals)
+
+//     // 3. Limit: Take the top N players
+//     .slice(0, limit);
+// };*/
+
+//==================OR=================
+//======================================
+
+// // ============================================
+// // HELPER: Get Top Scorers
+// // ============================================
+// // This function takes the full list of players and returns a sorted list
+// // of the best goal scorers.
+// //
+// // Parameters:
+// // - allPlayers: The array of player objects
+// // - limit: How many players to show (default is 5)
+// export const getTopScorers = (allPlayers, limit = 5) => {
+//   return allPlayers
+//     // 1. FILTER: Only keep players who have actually scored (goals > 0)
+//     // We use optional chaining (?.) just in case 'stats' is missing
+//     .filter((player) => player.stats?.goals > 0)
+
+//     // 2. SORT: Compare goals. 'b - a' sorts Descending (Highest to Lowest)
+//     .sort((a, b) => b.stats.goals - a.stats.goals)
+
+//     // 3. SLICE: Cut the array to only return the top 'limit' (e.g., top 5)
+//     .slice(0, limit);
+// };
+
+// // ============================================
+// // HELPER: Get Top Assisters
+// // ============================================
+// // Exactly the same logic as scorers, but looking at 'assists'
+// export const getTopAssisters = (allPlayers, limit = 5) => {
+//   return allPlayers
+//     // 1. Filter out players with 0 assists
+//     .filter((player) => player.stats?.assists > 0)
+
+//     // 2. Sort by assists (Highest to Lowest)
+//     .sort((a, b) => b.stats.assists - a.stats.assists)
+
+//     // 3. Keep only the top 'limit'
+//     .slice(0, limit);
+// };
+
+//===========================================================
+//===========================|============================================
+//=======================================================
+
+// /** BEST ASSISTS HEPLER FUNCTION
+//  * Filters and sorts players to find top assisters.
+//  * @param {Array<Object>} players - The full array of player objects.
+//  * @param {number} [limit=10] - The maximum number of top players to return.
+//  * @returns {Array<Object>} The sorted list of top assisters.
+//  */
+// const getTopAssisters = (players, limit = 10) => {
+//   return players
+//     // 1. Filter: Only include players with assists recorded
+//     .filter(player => player.stats?.assists > 0)
+
+//     // 2. Sort: By assists (descending)
+//     .sort((a, b) => b.stats.assists - a.stats.assists)
+
+//     // 3. Limit: Take the top N players
+//     .slice(0, limit);
+// };*/
+
+//==================OR=================
+//======================================
+
+// // ============================================
+// // HELPER: Get Top Scorers
+// // ============================================
+// // This function takes the full list of players and returns a sorted list
+// // of the best goal scorers.
+// //
+// // Parameters:
+// // - allPlayers: The array of player objects
+// // - limit: How many players to show (default is 5)
+// export const getTopScorers = (allPlayers, limit = 5) => {
+//   return allPlayers
+//     // 1. FILTER: Only keep players who have actually scored (goals > 0)
+//     // We use optional chaining (?.) just in case 'stats' is missing
+//     .filter((player) => player.stats?.goals > 0)
+
+//     // 2. SORT: Compare goals. 'b - a' sorts Descending (Highest to Lowest)
+//     .sort((a, b) => b.stats.goals - a.stats.goals)
+
+//     // 3. SLICE: Cut the array to only return the top 'limit' (e.g., top 5)
+//     .slice(0, limit);
+// };
+
+// // ============================================
+// // HELPER: Get Top Assisters
+// // ============================================
+// // Exactly the same logic as scorers, but looking at 'assists'
+// export const getTopAssisters = (allPlayers, limit = 5) => {
+//   return allPlayers
+//     // 1. Filter out players with 0 assists
+//     .filter((player) => player.stats?.assists > 0)
+
+//     // 2. Sort by assists (Highest to Lowest)
+//     .sort((a, b) => b.stats.assists - a.stats.assists)
+
+//     // 3. Keep only the top 'limit'
+//     .slice(0, limit);
+// };
+
+// IMPLENTATION
+// // Example in App.jsx
+
+// // Assuming 'playersData' is imported
+// Players Lists: We pass the raw players array into our helpers
+// const topScorers = getTopScorers(players, 5); // Get top 5
+// const topAssisters = getTopAssisters(players, 5); // Get top 5
+
+// // ... then pass these arrays down to the relevant components (e.g., StatsPage)
 
 // ============================================
 // RAW STANDINGS DATA
@@ -425,6 +600,7 @@ const rawStandings = [
     losses: 1,
     goalsFor: 34,
     goalsAgainst: 12,
+    form: ["W", "W", "W", "W", "W"],
     // goalDiff will be calculated: 34 - 12 = 22
     // points will be calculated: (9 × 3) + (2 × 1) = 29
   },
@@ -441,6 +617,7 @@ const rawStandings = [
     losses: 3,
     goalsFor: 28,
     goalsAgainst: 15,
+    form: ["W", "D", "W", "L", "W"],
     // goalDiff will be calculated: 28 - 15 = 13
     // points will be calculated: (8 × 3) + (1 × 1) = 25
   },
@@ -456,6 +633,7 @@ const rawStandings = [
     losses: 3,
     goalsFor: 22,
     goalsAgainst: 18,
+    form: ["L", "W", "D", "W", "L"],
     // goalDiff will be calculated: 22 - 18 = 4
     // points will be calculated: (5 × 3) + (3 × 1) = 18
   },

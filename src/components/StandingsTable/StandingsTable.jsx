@@ -87,7 +87,7 @@ const StandingsTable = ({ standings }) => {
           {standings.map((team, index) => (
             <tr key={team.id || index}>
               <td>
-                <span className="position">{index + 1}</span>
+                <span className="position">{team.position}</span>
               </td>
               <td>
                 <div className="team-cell">

@@ -40,6 +40,25 @@ const getEnrichedMatches = (rawMatches, teamLookup) => {
 // The fully enriched array that will be passed down
 const enrichedMatches = getEnrichedMatches(matchesData, teams);
 
+// // Step 1: Convert the teams object into an array for easier mapping
+// const teamsArray = Object.values(teams);
+
+// // Step 2: Create a Standings Lookup Map for quick access (optional, but fast)
+// const standingsMap = standings.reduce((map, item) => {
+//   map[item.id] = item;
+//   return map;
+// }, {});
+
+// // Step 3: ENRICH the teams with standing data
+// const enrichedTeams = teamsArray.map((team) => {
+//   const teamStandings = standingsMap[team.id] || {}; // Find the standing for this team
+
+//   return {
+//     ...team, // Basic team details (name, logo, abbr)
+//     ...teamStandings, // Add all calculated stats (position, points, goalDiff, etc.)
+//   };
+// });
+
 function App() {
   {
     /* ============================================

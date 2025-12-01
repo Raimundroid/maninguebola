@@ -1,24 +1,3 @@
-//   return (
-//     <div
-//       style={{
-//         ...styles.card,
-//         ...(isHovered ? styles.cardHover : {}),
-//       }}
-//       onClick={() => onClick?.(team)}
-
-//       <div style={styles.logo}>{team.abbr}</div>
-//       <div style={styles.name}>{team.name}</div>
-//       {/* Only show stats if they exist */}
-
-//       {(team.position || team.points) && (
-//         <div style={styles.info}>
-//           {team.position && `${team.position}º Lugar`}
-//           {team.position && team.points && " • "}
-//           {team.points && `${team.points} Pontos`}
-//         </div>
-//       )}
-//     </div>
-
 // ============================================
 // TeamCard.jsx
 // ============================================
@@ -86,15 +65,3 @@ const TeamCard = ({ team, onClick }) => {
 };
 
 export default TeamCard;
-
-{
-  /* <div style={styles.card} onClick={() => onClick?.(team)}>
-
-  <div style={styles.logo}>{team.abbr}</div>
-  <div style={styles.name}>{team.name}</div>
-
-  <div style={styles.info}>
-    {team.position}º Lugar • {team.points} Pontos
-  </div>
-</div>; */
-}
