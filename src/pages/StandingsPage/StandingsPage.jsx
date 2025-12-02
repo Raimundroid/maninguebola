@@ -40,3 +40,14 @@ const StandingsPage = ({ standings }) => {
 };
 
 export default StandingsPage;
+// For the long table:
+{
+  /* <TableCaption
+  dash={"-"}
+  items={[
+    { abbr: "J", text: "Jogos" },
+    { abbr: "V", text: "Vitórias" },
+    // ... all 8 items
+  ]}
+/> */
+}

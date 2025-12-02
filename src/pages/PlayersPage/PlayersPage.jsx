@@ -23,3 +23,15 @@ const PlayersPage = ({ players = [] /*,teams = {}*/ }) => {
 };
 
 export default PlayersPage;
+// For the short table:
+{
+  /* <TableCaption
+  dash={"-=="}
+  items={[
+    { abbr: "J", text: "Jogos" },
+    { abbr: "V", text: "Vitórias" },
+    { abbr: "E", text: "Empates" },
+    { abbr: "D", text: "Derrotas" },
+  ]}
+/> */
+}

@@ -132,9 +132,9 @@ const getEnrichedMatches = (rawMatches, teamLookup, standingsLookup) => {
  *   standing: {                    // Added!
  *     position: 2,
  *     points: 33,
- *     won: 10,
- *     drawn: 3,
- *     lost: 2,
+ *     wins: 10,
+ *     draws: 3,
+ *     losses: 2,
  *     goalsFor: 32,
  *     goalsAgainst: 15,
  *     // ... etc
@@ -145,9 +145,9 @@ const getEnrichedMatches = (rawMatches, teamLookup, standingsLookup) => {
  * instead of finding the standing in a separate array!
  */
 
-const getEnrichedTeams = (teams, standingsLookup) => {
+const getEnrichedTeams = (teamsArray, standingsLookup) => {
   // Go through each team and add its standings
-  return teams.map((team) => {
+  return teamsArray.map((team) => {
     // Look up this team's standings using its ID
     const standing = standingsLookup[team.id];
 
@@ -159,7 +159,7 @@ const getEnrichedTeams = (teams, standingsLookup) => {
         // Default values if this team has no standings yet
         position: "-", //calculated
         points: 0, //calculated
-        played: 0,
+        played: 10,
         wins: 0,
         draws: 0,
         losses: 0,
@@ -219,8 +219,9 @@ function App() {
   const teamLookup = teams;
 
   // Standings lookup: { 1: {team1 standings}, 2: {team2 standings}, ... }
-  // Note: standings use 'teamId' as the key, not 'id'!
-  const standingsLookup = createLookup(standings, "teamId");
+  // // Note: standings use 'teamId' as the key, not 'id'!
+  // const standingsLookup = createLookup(standings, "teamId");
+  const standingsLookup = createLookup(standings, "id");
 
   // Player lookup: { 1: {player1 data}, 2: {player2 data}, ... }
   const playerLookup = createLookup(players, "id");
@@ -321,36 +322,27 @@ function App() {
               path="/classificacao"
               element={
                 <StandingsPage
-                  standings={enrichedTeams} /*standings={standings}*/
+                  /*standings={enrichedTeams}*/ standings={standings}
                 />
               }
             />
             <Route path="/estatistica" element={<StatisticsPage />} />
             <Route
               path="/equipas"
-              element={
-                <TeamsPage standings={enrichedTeams} /*teams={teams} */ />
-              }
+              element={<TeamsPage /*teams={teams}*/ teams={enrichedTeams} />}
             />
-
             {/* Team detail page - shows at "/teams/eagles", "/teams/lions", etc.
                 :id is a URL parameter - accessible via useParams() hook */}
             {/* <Route
               path="/equipas/:teamId"
               element={
                 <TeamDetailPage
-                  teams={enrichedTeams}
-                  // teams={teams}
-                  players={enrichedPlayers}
-                  // players={players}
-                  matches={enrichedMatches}
-                  // matches={matchesData}
-                  standings={enrichedTeams}
-                  // standings={standings}
-                />
-              }
-            /> */}
-
+                  teams={enrichedTeams} //teams + standings
+                  players={enrichedPlayers} //players + teams
+                  matches={enrichedMatches} //matches + teams + standings
+                  //standings={enrichedTeams}
+                /> */}
+            } />
             {/* 404 - Catch all unmatched routes */}
             <Route path="*" element={<Error404 />} />
           </Routes>

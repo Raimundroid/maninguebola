@@ -12,7 +12,7 @@ import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import TeamsGrid from "../../components/TeamsGrid/TeamsGrid";
 import "./TeamsPage.css";
 
-const TeamsPage = ({ teams }) => {
+const TeamsPage = ({ teams /* = []*/ }) => {
   // useNavigate is React Router's hook for programmatic navigation
   const navigate = useNavigate();
 

@@ -138,6 +138,22 @@ export const teams = {
       email: "tigers@example.com",
     },
   },
+  cats: {
+    id: "cats",
+    name: "Thunder Cats",
+    abbr: "TC",
+    // position: "3",
+    // points: "50", /////
+    founded: 2009,
+    stadium: "Cats House",
+    logo: "/logos/cats.png",
+    colors: { primary: "#003cffff", secondary: "#df0c0cff" },
+    contact: {
+      captain: "Rafael Montes",
+      phone: "+258 82 12 34 560",
+      email: "cats@example.com",
+    },
+  },
 };
 
 // ============================================
@@ -328,6 +344,66 @@ export const players = [
       redCards: 0,
     },
   },
+  {
+    id: 13,
+    name: "Peter Parker",
+    teamId: "cats",
+    number: 2,
+    position: "Goalkeeper",
+    photo: "players/peter.jpg",
+    stats: {
+      appearances: 10,
+      goals: 0,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 14,
+    name: "Tony Stark",
+    teamId: "cats",
+    number: 4,
+    position: "Midfielder",
+    photo: "players/tony.jpg",
+    stats: {
+      appearances: 11,
+      goals: 5,
+      assists: 8,
+      yellowCards: 2,
+      redCards: 1,
+    },
+  },
+  {
+    id: 15,
+    name: "Clark Kent",
+    teamId: "cats",
+    number: 9,
+    position: "Forward",
+    photo: "players/clark.jpg",
+    stats: {
+      appearances: 9,
+      goals: 20,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 16,
+    name: "Bruce Wayne",
+    teamId: "cats",
+    number: 1,
+    position: "Defender",
+    photo: "players/bruce.jpg",
+    stats: {
+      appearances: 12,
+      goals: 2,
+      assists: 6,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
 ];
 
 // ============================================
@@ -400,7 +476,7 @@ const calculateStandings = (standings) => {
   // Sorting Criteria: Points (highest) > Goal Diff (highest) > Goals For (highest)
   calculated.sort((a, b) => {
     // CRITERIA 1: Points (Highest points first)
-    if (b.poinst !== a.points) return b.points - a.points;
+    if (b.points !== a.points) return b.points - a.points;
     // CRITERIA 2: Goal Difference (If points are tied, best GD wins)
     if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
     // CRITERIA 3: Goals Scored (If points and GD are tied, most goals wins)
@@ -412,6 +488,15 @@ const calculateStandings = (standings) => {
   //   // Assign position (1-based index) after sorting
   //   position: index + 1,
   // }));
+
+  // return calculated.map((team, index) => {
+  //   const isUnranked = team.played === 0;
+
+  //   return {
+  //     ...team,
+  //     // 💡 REFINEMENT: If played is 0, assign position "-", otherwise assign the rank (index + 1)
+  //     position: isUnranked ? "-" : index + 1,
+  //   };
 
   // Assign Final Rank/Position (map)
   return calculated.map((team, index) => ({
@@ -634,6 +719,22 @@ const rawStandings = [
     goalsFor: 22,
     goalsAgainst: 18,
     form: ["L", "W", "D", "W", "L"],
+    // goalDiff will be calculated: 22 - 18 = 4
+    // points will be calculated: (5 × 3) + (3 × 1) = 18
+  },
+  {
+    id: "cats",
+    // Only spread fields needed for the table display (Name, Abbr, Logo)
+    name: teams.cats.name,
+    abbr: teams.cats.abbr,
+    logo: teams.cats.logo,
+    played: 11,
+    wins: 11,
+    draws: 0,
+    losses: 0,
+    goalsFor: 36,
+    goalsAgainst: 8,
+    form: ["W", "W", "W", "W", "L"],
     // goalDiff will be calculated: 22 - 18 = 4
     // points will be calculated: (5 × 3) + (3 × 1) = 18
   },
