@@ -24,42 +24,234 @@ import {
 } from "./data/sampleData.js";
 
 // ===============================================
-// 🔑 DATA TRANSFORMATION: LOOKUP LOGIC HERE (Once)
+// 🔑 DATA ENRICHMENT FUNCTIONS
 // ===============================================
-const getEnrichedMatches = (rawMatches, teamLookup) => {
+// These functions take your raw data and add extra information to it
+// Think of it like adding toppings to a pizza - the pizza is still there,
+// but now it has everything you need in one place!
+
+/**
+ * Creates a lookup object (also called a dictionary or map)
+ *
+ * WHY? Finding items in an array is slow (you have to check each item)
+ * A lookup object is super fast - you just use the ID as a key!
+ *
+ * Example input:  [{ id: 1, name: "Eagles" }, { id: 2, name: "Lions" }]
+ * Example output: {
+ *   1: { id: 1, name: "Eagles" },
+ *   2: { id: 2, name: "Lions" }
+ * }
+ *
+ * Now instead of: teams.find(t => t.id === 1)  // Slow!
+ * You can do:     teamLookup[1]                 // Fast!
+ */
+
+// Define the Helper (Only for Arrays)
+const createLookup = (array, keyField = "id") => {
+  //reduce() goes through each item and builds up a new object
+
+  if (!Array.isArray(array)) return {}; // Safety check
+
+  return array.reduce((lookup, item) => {
+    // Use the item's ID (or other key) as the property name
+    // Example: lookup[1] = { id: 1, name: "Eagles" }
+    lookup[item[keyField]] = item;
+    return lookup;
+  }, {}); // Start with an empty object {}
+};
+
+// const createLookup = (array, keyField = "id") => {
+//   // reduce() goes through each item and builds up a new object
+//   return array.reduce((lookup, item) => {
+//     // Use the item's ID (or other key) as the property name
+//     // Example: lookup[1] = { id: 1, name: "Eagles" }
+//     lookup[item[keyField]] = item;
+//     return lookup;
+//   }, {}); // Start with an empty object {}
+// };
+
+//==================matches + teams + standings================
+
+/**
+ * Enriches matches with full team details and standings
+ *
+ * BEFORE: match = { homeTeamId: 1, awayTeamId: 2, score: "2-1" }
+ * AFTER:  match = {
+ *   homeTeamId: 1,
+ *   awayTeamId: 2,
+ *   score: "2-1",
+ *   homeTeam: { id: 1, name: "Eagles", logo: "..." },      // Full team object!
+ *   awayTeam: { id: 2, name: "Lions", logo: "..." },       // Full team object!
+ *   homeTeamStanding: { position: 2, points: 33, ... },    // Full standings!
+ *   awayTeamStanding: { position: 1, points: 38, ... }     // Full standings!
+ * }
+ *  *
+ * WHY? Now your MatchCard component can directly access team.name, team.logo, etc.
+ * without having to search through arrays or pass extra props!
+ */
+
+const getEnrichedMatches = (rawMatches, teamLookup, standingsLookup) => {
+  // Go through each match and add extra information
   return rawMatches.map((match) => {
-    // Resolve the Foreign Keys (IDs) to full Team objects
+    // Look up the home team using its ID
+    // Instead of: teams.find(t => t.id === match.homeTeamId)
+    // We use:     teamLookup[match.homeTeamId]  (much faster!)
     const homeTeamDetails = teamLookup[match.homeTeamId];
+
+    // Look up the away team using its ID
     const awayTeamDetails = teamLookup[match.awayTeamId];
 
-    // Return the new, enriched match object
-    return { ...match, homeTeam: homeTeamDetails, awayTeam: awayTeamDetails };
+    // Look up the home team's standings (position, points, etc.)
+    const homeTeamStanding = standingsLookup[match.homeTeamId];
+
+    // Look up the away team's standings
+    const awayTeamStanding = standingsLookup[match.awayTeamId];
+
+    // Return a new match object with all the original data PLUS the extra info
+    // The ... (spread operator) copies all existing properties
+    return {
+      ...match, // Keep all original match data
+      homeTeam: homeTeamDetails, // Add full home team object
+      awayTeam: awayTeamDetails, // Add full away team object
+      homeTeamStanding: homeTeamStanding, // Add home team standings
+      awayTeamStanding: awayTeamStanding, // Add home away standings
+    };
   });
 };
 
-// The fully enriched array that will be passed down
-const enrichedMatches = getEnrichedMatches(matchesData, teams);
+//====================teams + standings==============
 
-// // Step 1: Convert the teams object into an array for easier mapping
-// const teamsArray = Object.values(teams);
+/**
+ * Enriches teams with their standings data
+ *
+ * BEFORE: team = { id: 1, name: "Eagles", stadium: "National Stadium" }
+ * AFTER:  team = {
+ *   id: 1,
+ *   name: "Eagles",
+ *   stadium: "National Stadium",
+ *   standing: {                    // Added!
+ *     position: 2,
+ *     points: 33,
+ *     won: 10,
+ *     drawn: 3,
+ *     lost: 2,
+ *     goalsFor: 32,
+ *     goalsAgainst: 15,
+ *     // ... etc
+ *   }
+ * }
+ *
+ * WHY? Now in TeamsPage you can do: team.standing.position
+ * instead of finding the standing in a separate array!
+ */
 
-// // Step 2: Create a Standings Lookup Map for quick access (optional, but fast)
-// const standingsMap = standings.reduce((map, item) => {
-//   map[item.id] = item;
-//   return map;
-// }, {});
+const getEnrichedTeams = (teams, standingsLookup) => {
+  // Go through each team and add its standings
+  return teams.map((team) => {
+    // Look up this team's standings using its ID
+    const standing = standingsLookup[team.id];
 
-// // Step 3: ENRICH the teams with standing data
-// const enrichedTeams = teamsArray.map((team) => {
-//   const teamStandings = standingsMap[team.id] || {}; // Find the standing for this team
+    // Return a new team object with standings included
+    return {
+      ...team, // Keep all original team data (name, stadium, logo, etc.)
+      // Add the standings data, or provide defaults if standings don't exist
+      standing: standing || {
+        // Default values if this team has no standings yet
+        position: "-", //calculated
+        points: 0, //calculated
+        played: 0,
+        wins: 0,
+        draws: 0,
+        losses: 0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        goalDiff: 0, //calculated
+        form: [],
+      },
+    };
+  });
+};
 
-//   return {
-//     ...team, // Basic team details (name, logo, abbr)
-//     ...teamStandings, // Add all calculated stats (position, points, goalDiff, etc.)
-//   };
-// });
+//====================players + teams==============
+
+/**
+ * Enriches players with their team details
+ *
+ * BEFORE: player = { id: 1, name: "João Silva", teamId: 1 }
+ * AFTER:  player = {
+ *   id: 1,
+ *   name: "João Silva",
+ *   teamId: 1,
+ *   team: {                      // Added!
+ *     id: 1,
+ *     name: "Eagles",
+ *     logo: "...",
+ *     stadium: "...",
+ *     // ... all team info
+ *   }
+ * }
+ *
+ * WHY? Now in PlayerCard you can do: player.team.name, player.team.logo
+ * without searching for the team separately!
+ */
+
+const getEnrichedPlayers = (players, teamLookup) => {
+  // Go through each player and add their team's full details
+  return players.map((player) => {
+    // Look up this player's team using the teamId
+    const teamDetails = teamLookup[player.teamId];
+
+    // Return a new player object with team details included
+    return {
+      ...player, // Keep all original player data
+      team: teamDetails, // Add full team object
+    };
+  });
+};
 
 function App() {
+  // ===============================================
+  // Step 2: Create lookup objects (DO THIS ONCE!)
+  // ===============================================
+  // These are like fast dictionaries for finding data by ID
+
+  // Team lookup: { 1: {team1 data}, 2: {team2 data}, ... }
+  const teamLookup = teams;
+
+  // Standings lookup: { 1: {team1 standings}, 2: {team2 standings}, ... }
+  // Note: standings use 'teamId' as the key, not 'id'!
+  const standingsLookup = createLookup(standings, "teamId");
+
+  // Player lookup: { 1: {player1 data}, 2: {player2 data}, ... }
+  const playerLookup = createLookup(players, "id");
+
+  // The playerLookup variable is unused, but that's perfectly acceptable given the current set of enrichment functions. If you later create a function like getMatchMOTM(playerLookup), then the variable would become necessary.
+
+  // ===============================================
+  // Step 3: Enrich all your data (DO THIS ONCE!)
+  // ===============================================
+  // Now we add all the extra information to each item
+
+  //====================teams + standings==============
+
+  // Convert the teams OBJECT into an ARRAY of team objects
+  const teamsArray = Object.values(teams);
+
+  // Each team now has a .standing property
+  const enrichedTeams = getEnrichedTeams(teamsArray, standingsLookup);
+
+  //==================matches + teams + standings================
+  // Each match now has .homeTeam, .awayTeam, and standings
+  const enrichedMatches = getEnrichedMatches(
+    matchesData,
+    teamLookup,
+    standingsLookup
+  );
+
+  //====================players + teams==============
+  // Each player now has a .team property
+  const enrichedPlayers = getEnrichedPlayers(players, teamLookup);
+
   {
     /* ============================================
               ROUTES DEFINITION
@@ -70,8 +262,13 @@ function App() {
               path="/" → Home page (exact match)
               path="/matches" → Matches page
               path="/teams/:id" → Team detail (dynamic route)
-    */
+  */
   }
+
+  // ===============================================
+  // Step 4: Pass enriched data to your components
+  // ===============================================
+  // Now your components have everything they need!
   return (
     // ============================================
     // PROVIDER HIERARCHY
@@ -96,24 +293,45 @@ function App() {
                 <>
                   {/* Hero component - only on home page */}
                   <Hero />
-                  <Homepage matches={enrichedMatches} stats={statsData} />
+                  <Homepage
+                    matches={enrichedMatches}
+                    /*matches={matchesData}*/ stats={statsData}
+                  />
                 </>
               }
             />
             <Route
               path="/jogos"
-              element={<MatchesPage matches={enrichedMatches} />}
+              element={
+                <MatchesPage
+                  matches={enrichedMatches}
+                  /*matches={matchesData}*/
+                />
+              }
             />
             <Route
               path="/jogadores"
-              element={<PlayersPage players={players} teams={teams} />}
+              element={
+                <PlayersPage
+                  players={enrichedPlayers} /*players={players} teams={teams}*/
+                />
+              }
             />
             <Route
               path="/classificacao"
-              element={<StandingsPage standings={standings} />}
+              element={
+                <StandingsPage
+                  standings={enrichedTeams} /*standings={standings}*/
+                />
+              }
             />
             <Route path="/estatistica" element={<StatisticsPage />} />
-            <Route path="/equipas" element={<TeamsPage teams={teams} />} />
+            <Route
+              path="/equipas"
+              element={
+                <TeamsPage standings={enrichedTeams} /*teams={teams} */ />
+              }
+            />
 
             {/* Team detail page - shows at "/teams/eagles", "/teams/lions", etc.
                 :id is a URL parameter - accessible via useParams() hook */}
@@ -121,10 +339,14 @@ function App() {
               path="/equipas/:teamId"
               element={
                 <TeamDetailPage
-                  teams={teams}
-                  players={players}
+                  teams={enrichedTeams}
+                  // teams={teams}
+                  players={enrichedPlayers}
+                  // players={players}
                   matches={enrichedMatches}
-                  standings={standings}
+                  // matches={matchesData}
+                  standings={enrichedTeams}
+                  // standings={standings}
                 />
               }
             /> */}

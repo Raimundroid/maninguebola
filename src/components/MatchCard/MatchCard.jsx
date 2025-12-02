@@ -28,11 +28,14 @@ const MatchCard = ({ match }) => {
 
   // Format the date for display (e.g., "Sat, 16 Nov")
   // You may need to adjust the locale ('pt-MZ' or similar) based on your user base
-  const formattedDate = new Intl.DateTimeFormat("pt-PT", {
-    weekday: "short",
+  const formatted = new Intl.DateTimeFormat("pt-MZ", {
+    weekday: "long",
     day: "numeric",
     month: "short",
   }).format(matchDate);
+
+  // Capitalize first letter (just in case locale returns lowercase)
+  const formattedDate = formatted.charAt(0).toUpperCase() + formatted.slice(1);
 
   // Check  if match is currently being played
   const isLive = status === "live";
@@ -49,8 +52,7 @@ const MatchCard = ({ match }) => {
 
       {/* Date and time - show FINALIZADO if match is finished  or (||) show PRÓXIMO if match is upcoming*/}
       <div className="datetime">
-        {/*formattedDate*/}
-        {date} • {time}
+        {formattedDate} • {time}
         {(status === "finished" && " • FINALIZADO") ||
           (status === "upcoming" && " • PRÓXIMO")}
       </div>

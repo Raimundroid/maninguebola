@@ -1,19 +1,19 @@
 // ===============================================
 // 🔑 DATA TRANSFORMATION: LOOKUP LOGIC HERE (Once)
 // ===============================================
-const getEnrichedMatches = (rawMatches, teamLookup) => {
-  return rawMatches.map((match) => {
-    // Resolve the Foreign Keys (IDs) to full Team objects
-    const homeTeamDetails = teamLookup[match.homeTeamId];
-    const awayTeamDetails = teamLookup[match.awayTeamId];
+// const getEnrichedMatches = (rawMatches, teamLookup) => {
+//   return rawMatches.map((match) => {
+//     // Resolve the Foreign Keys (IDs) to full Team objects
+//     const homeTeamDetails = teamLookup[match.homeTeamId];
+//     const awayTeamDetails = teamLookup[match.awayTeamId];
 
-    // Return the new, enriched match object
-    return { ...match, homeTeam: homeTeamDetails, awayTeam: awayTeamDetails };
-  });
-};
+//     // Return the new, enriched match object
+//     return { ...match, homeTeam: homeTeamDetails, awayTeam: awayTeamDetails };
+//   });
+// };
 
-// The fully enriched array that will be passed down
-const enrichedMatches = getEnrichedMatches(matchesData, teams);
+// // The fully enriched array that will be passed down
+// const enrichedMatches = getEnrichedMatches(matchesData, teams);
 
 
 
@@ -95,6 +95,8 @@ const getEnrichedMatches = (rawMatches, teamLookup, standingsLookup) => {
   });
 };
 
+//==================================
+
 /**
  * Enriches teams with their standings data
  *
@@ -130,15 +132,15 @@ const getEnrichedTeams = (teams, standingsLookup) => {
       // Add the standings data, or provide defaults if standings don't exist
       standing: standing || {
         // Default values if this team has no standings yet
-        position: '-',
-        points: 0,
+        position: '-', //calculated
+        points: 0, //calculated
         played: 0,
         won: 0,
         drawn: 0,
         lost: 0,
         goalsFor: 0,
         goalsAgainst: 0,
-        goalDifference: 0,
+        goalDiff: 0, //calculated
         form: []
       }
     };

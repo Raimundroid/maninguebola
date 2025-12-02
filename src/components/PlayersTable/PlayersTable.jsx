@@ -10,9 +10,10 @@ import "./PlayersTable.css";
 
 const PlayersTable = ({ players = [], teams = {} }) => {
   // Ensure players is an array before trying to map over it
-  //   if (!players || players.length === 0) {
-  //     return <div className="players-container">No players data available.</div>;
-  //   }
+  if (!players || players.length === 0) {
+    return <div className="players-container">No players data available.</div>;
+  }
+
   return (
     <div className="players-container">
       <table className="players-table">
