@@ -21,10 +21,10 @@ const PlayersTable = ({ players = [] /*,teams = {}*/ }) => {
           <tr>
             <th>#</th>
             <th>Jogador</th>
-            <th>Equipa</th>
-            <th>Golos</th>
-            <th>Assistências</th>
-            <th>Jogos</th>
+            <th>Equipas</th>
+            <th>Gol.</th>
+            <th>As.</th>
+            <th>J</th>
           </tr>
         </thead>
 

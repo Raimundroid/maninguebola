@@ -16,11 +16,11 @@
 }
 
 .caption-abbr {
-  width: 25px; /* Fixed width for abbreviation */
+  width: 35px; /* Fixed width for abbreviation */
   font-weight: 600;
 }
 .caption-dash {
-  margin: 0 8px; /* Equal spacing left and right */
+  margin: 0 10px; /* Equal spacing left and right */
 }
 .caption-text {
   flex: 1;
