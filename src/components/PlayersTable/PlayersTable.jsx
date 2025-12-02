@@ -8,7 +8,7 @@
 import React from "react";
 import "./PlayersTable.css";
 
-const PlayersTable = ({ players = [], teams = {} }) => {
+const PlayersTable = ({ players = [] /*,teams = {}*/ }) => {
   // Ensure players is an array before trying to map over it
   if (!players || players.length === 0) {
     return <div className="players-container">No players data available.</div>;
@@ -30,18 +30,15 @@ const PlayersTable = ({ players = [], teams = {} }) => {
 
         <tbody>
           {players.map((player, index) => {
-            // find the team by teamId
-            const team = teams[player.teamId];
-
             return (
               <tr key={player.id || index}>
                 <td>
                   <span className="position">{index + 1}</span>
                 </td>
                 <td>
-                  <strong>{player?.name ?? "-"}</strong>
+                  <strong>{player?.name ?? "/-/"}</strong>
                 </td>
-                <td>{team?.name ?? "–"}</td>
+                <td>{player?.team.name ?? "-"}</td>
                 <td>{player.stats?.goals ?? "0"}</td>
                 <td>{player.stats?.assists ?? "0"}</td>
                 <td>{player.stats?.appearances ?? "0"}</td>
