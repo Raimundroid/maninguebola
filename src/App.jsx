@@ -341,7 +341,7 @@ function App() {
                   players={enrichedPlayers} //players + teams
                   matches={enrichedMatches} //matches + teams + standings
                   //standings={enrichedTeams}
-                /> */}
+                />
             } />
             {/* 404 - Catch all unmatched routes */}
             <Route path="*" element={<Error404 />} />
