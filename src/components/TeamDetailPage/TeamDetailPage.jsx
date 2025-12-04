@@ -1166,7 +1166,7 @@ import "./TeamDetailPage.css";
 const TeamDetailPage = ({
   teams = {}, // Default to empty object
   players = [], // Default to empty array
-  standings = [], // Default to empty array
+  //standings = [], // Default to empty array
   matches = [], // This expects the ENRICHED matches array
 }) => {
   // =========================================================
@@ -1190,10 +1190,11 @@ const TeamDetailPage = ({
   // =========================================================
   if (!team) {
     return (
-      <div className="container">
+      <div className="team-not-found-container">
         <div className="team-not-found">
           <h1>❌ Equipa não encontrada</h1>
           <p>A equipa com ID "{teamId}" não existe nos dados fornecidos.</p>
+
           <button onClick={() => navigate("/equipas")} className="back-button">
             ← Voltar para Equipas
           </button>
@@ -1208,26 +1209,32 @@ const TeamDetailPage = ({
   const {
     name = "Nome da Equipa",
     logo = "/images/default-team.png",
-    founded = "N/A",
-    stadium = "Estádio N/D",
+    founded = "Deconhecido",
+    stadium = "Deconhecido",
     colors = { primary: "#3b82f6", secondary: "#1e40af" },
     contact = {},
   } = team;
 
-  const { captain = "Capitão N/D", phone = "", email = "" } = contact;
+  const {
+    coach = "Deconhecido",
+    captain = "Deconhecido",
+    phone = "",
+    email = "",
+  } = contact;
 
   // =========================================================
   // FILTER DATA FOR THIS TEAM
   // =========================================================
   const teamPlayers = players.filter((p) => p.teamId === teamId);
   const teamStanding =
-    standings.find((s) => s.teamId === teamId || s.id === teamId) || {};
+    teams.find((s) => s.teamId === teamId || s.id === teamId) || {};
 
   // Get team matches
   // Since 'matches' prop is already enriched, we just filter by ID.
   // The homeTeamId/awayTeamId properties still exist on the enriched object.
   const teamMatches = matches
     .filter((m) => m.homeTeamId === teamId || m.awayTeamId === teamId)
+    // add new sorting to list the matches that are live first in ascending time, then the upcomming ones by ascending date first, and if the date is the same, by sacending time, and lastly list the games that are finished by descending date, if the same, then time
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const liveMatches = teamMatches.filter((m) => m.status === "live");
@@ -1239,6 +1246,10 @@ const TeamDetailPage = ({
   const recentMatches = teamMatches
     .filter((m) => m.status === "finished")
     .slice(0, 5);
+
+  const canceledMatches = teamMatches
+    .filter((m) => m.status === "canceled")
+    .slice(0, 4);
 
   // =========================================================
   // CALCULATE STATS
@@ -1253,10 +1264,13 @@ const TeamDetailPage = ({
     0
   );
 
-  // Top scorers from this team
   const topScorers = teamPlayers
     .filter((p) => p.stats?.goals > 0)
-    .sort((a, b) => b.stats.goals - a.stats.goals)
+
+    .sort((a, b) => {
+      if (a.stats.goals !== b.stats.goals) return b.stats.goals - a.stats.goals;
+      return b.stats.assists - a.stats.assists;
+    })
     .slice(0, 5);
 
   // Group players by position
@@ -1268,7 +1282,7 @@ const TeamDetailPage = ({
   };
 
   // Form badges
-  const form = teamStanding.form || [];
+  const form = teamStanding.standing.form || [];
 
   // =========================================================
   // 🖼️ RENDER
@@ -1276,7 +1290,7 @@ const TeamDetailPage = ({
   return (
     <div className="team-detail">
       {/* Back Button */}
-      <div className="container">
+      <div className="back-button-container">
         <button onClick={() => navigate("/equipas")} className="back-button">
           ← Voltar para Equipas
         </button>
@@ -1294,7 +1308,11 @@ const TeamDetailPage = ({
         >
           <div className="team-header__content">
             <div className="team-header__logo-section">
-              <img src={logo} alt={name} className="team-header__logo" />
+              <img
+                src={logo || "/images/default-team-logo.png"}
+                alt={name}
+                className="team-header__logo"
+              />
               <div className="team-header__info">
                 <h1 className="team-header__name">{name}</h1>
                 <div className="team-header__meta">
@@ -1309,18 +1327,20 @@ const TeamDetailPage = ({
             <div className="team-header__stats">
               <div className="stat-box">
                 <div className="stat-box__value">
-                  {teamStanding.position || "-"}
+                  {teamStanding.standing.position || "-"}
                 </div>
                 <div className="stat-box__label">Posição</div>
               </div>
               <div className="stat-box">
                 <div className="stat-box__value">
-                  {teamStanding.points || 0}
+                  {teamStanding.standing.points || 0}
                 </div>
                 <div className="stat-box__label">Pontos</div>
               </div>
               <div className="stat-box">
-                <div className="stat-box__value">{teamStanding.wins || 0}</div>
+                <div className="stat-box__value">
+                  {teamStanding.standing.wins || 0}
+                </div>
                 <div className="stat-box__label">Vitórias</div>
               </div>
               <div className="stat-box">
@@ -1389,50 +1409,50 @@ const TeamDetailPage = ({
                 <div className="stat-card">
                   <div className="stat-card__label">Jogos</div>
                   <div className="stat-card__value">
-                    {teamStanding.played || 0}
+                    {teamStanding.standing.played || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Vitórias</div>
                   <div className="stat-card__value">
-                    {teamStanding.wins || 0}
+                    {teamStanding.standing.wins || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Empates</div>
                   <div className="stat-card__value">
-                    {teamStanding.draws || 0}
+                    {teamStanding.standing.draws || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Derrotas</div>
                   <div className="stat-card__value">
-                    {teamStanding.losses || 0}
+                    {teamStanding.standing.losses || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Golos Marcados</div>
                   <div className="stat-card__value">
-                    {teamStanding.goalsFor || 0}
+                    {teamStanding.standing.goalsFor || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Golos Sofridos</div>
                   <div className="stat-card__value">
-                    {teamStanding.goalsAgainst || 0}
+                    {teamStanding.standing.goalsAgainst || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Diferença</div>
                   <div className="stat-card__value">
-                    {teamStanding.goalDiff > 0 ? "+" : ""}
-                    {teamStanding.goalDiff || 0}
+                    {teamStanding.standing.goalDiff > 0 ? "+" : ""}
+                    {teamStanding.standing.goalDiff || 0}
                   </div>
                 </div>
                 <div className="stat-card stat-card--highlight">
                   <div className="stat-card__label">Pontos</div>
                   <div className="stat-card__value">
-                    {teamStanding.points || 0}
+                    {teamStanding.standing.points || 0}
                   </div>
                 </div>
               </div>
@@ -1471,7 +1491,6 @@ const TeamDetailPage = ({
               <div className="content-section">
                 <h2 className="section-title">Jogos ao Vivo</h2>
                 <div className="matches-list">
-                  {/* teams prop removed from MatchCard because 'match' is already enriched */}
                   {liveMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
                   ))}
@@ -1484,7 +1503,6 @@ const TeamDetailPage = ({
               <div className="content-section">
                 <h2 className="section-title">Próximos Jogos</h2>
                 <div className="matches-list">
-                  {/* teams prop removed from MatchCard because 'match' is already enriched */}
                   {upcomingMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
                   ))}
@@ -1497,8 +1515,19 @@ const TeamDetailPage = ({
               <div className="content-section">
                 <h2 className="section-title">Resultados Recentes</h2>
                 <div className="matches-list">
-                  {/* teams prop removed from MatchCard because 'match' is already enriched */}
                   {recentMatches.map((match) => (
+                    <MatchCard key={match.id} match={match} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Canceled Matches */}
+            {canceledMatches.length > 0 && (
+              <div className="content-section">
+                <h2 className="section-title">Jogos Cancelados</h2>
+                <div className="matches-list">
+                  {canceledMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
                   ))}
                 </div>
@@ -1523,13 +1552,13 @@ const TeamDetailPage = ({
                     posPlayers.length > 0 ? (
                       <div key={position} className="position-group">
                         <h3 className="position-group__title">
-                          {position}s ({posPlayers.length})
+                          {position} ({posPlayers.length})
                         </h3>
                         <div className="players-grid">
                           {posPlayers.map((player) => (
                             <div key={player.id} className="player-card">
                               <div className="player-card__number">
-                                #{player.number}
+                                Nº{player.number}
                               </div>
                               <img
                                 src={
@@ -1576,7 +1605,6 @@ const TeamDetailPage = ({
                 <p className="empty-message">Nenhum jogo registado ainda.</p>
               ) : (
                 <div className="matches-list">
-                  {/* teams prop removed from MatchCard because 'match' is already enriched */}
                   {teamMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
                   ))}
@@ -1591,6 +1619,9 @@ const TeamDetailPage = ({
       {contact && (
         <div className="team-contact">
           <h3>📞 Informações de Contacto</h3>
+          <p>
+            <strong>Treinador:</strong> {coach}
+          </p>
           <p>
             <strong>Capitão:</strong> {captain}
           </p>

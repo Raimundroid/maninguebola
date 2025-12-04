@@ -49,12 +49,16 @@ const MatchCard = ({ match }) => {
           AO VIVO {/*  {minute}' */}
         </div>
       )}
-
       {/* Date and time - show FINALIZADO if match is finished  or (||) show PRÓXIMO if match is upcoming*/}
-      <div className="datetime">
+      <div
+        className={`datetime ${
+          status === "canceled" ? "canceled-match-datetime" : ""
+        }`}
+      >
         {formattedDate} • {time}
         {(status === "finished" && " • FINALIZADO") ||
-          (status === "upcoming" && " • PRÓXIMO")}
+          (status === "upcoming" && " • PRÓXIMO") ||
+          (status === "canceled" && " • CANCELADO")}
       </div>
 
       {/* Teams and score section - 3 column grid */}
@@ -77,11 +81,7 @@ const MatchCard = ({ match }) => {
           ) : (
             <>
               <span>{homeScore}</span>
-              <span
-                /*style={{ color: "var(--text-light)" }}*/ className="score-separator"
-              >
-                -
-              </span>
+              <span className="score-separator">-</span>
               <span>{awayScore}</span>
             </>
           )}
@@ -95,7 +95,6 @@ const MatchCard = ({ match }) => {
           <div className="team-name">{awayTeam.name}</div>
         </div>
       </div>
-
       {/* Venue and additional info */}
       <div className="info">
         🥅 {venue} {info && `• ${info}`}

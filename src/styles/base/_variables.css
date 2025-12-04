@@ -54,6 +54,9 @@
   --shadow-hover: rgba(0, 0, 0, 0.15);
 
   /* NEED CREATION */
+  --error: rgb(255, 100, 100);
+
+  --page-max-width: 1200px;
   /* --color-link
   --color-link-hover */
   /* --color-button-bg */

@@ -9,6 +9,7 @@
 
   margin-top: 1.5rem; /*test*/
 
+  max-width: var(--page-max-width);
   width: 98vw; /*test*/
   margin: 1rem auto; /*test*/
 

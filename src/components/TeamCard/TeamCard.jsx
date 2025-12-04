@@ -48,16 +48,16 @@ const TeamCard = ({ team, onClick }) => {
 //         The && operator means: if left side is true, render right side
 //         The || operator means: true if EITHER position OR points exist
 //       */}
-      {(team.position || team.points) && (
+      {(team.standing.position || team.standing.points) && (
         <div className="team-info">
           {/* Show position if it exists */}
-          {team.position && `${team.position}º Lugar`}
+          {team.standing.position && `${team.standing.position}º Lugar`}
 
           {/* Show separator bullet if BOTH position AND points exist */}
-          {team.position && team.points && " • "}
+          {team.standing.position && team.standing.points && " • "}
 
           {/* Show points if they exist */}
-          {team.points && `${team.points} Pontos`}
+          {team.standing.points && `${team.standing.points} Pontos`}
         </div>
       )}
     </div>

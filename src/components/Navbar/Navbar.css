@@ -72,7 +72,7 @@
 */
 .nav-container {
   /* Maximum width prevnts navbar from getting too wide on large screens */
-  max-width: 1200px;
+  max-width: var(--page-max-width);
 
   /* Center the container horizontally */
   margin: 0 auto;

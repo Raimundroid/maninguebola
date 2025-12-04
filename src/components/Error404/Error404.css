@@ -1,5 +1,5 @@
 .error404-container {
-  /* background-color: red; */
+  max-width: var(--page-max-width);
   padding: 48px;
   text-align: center;
   min-height: 60vh;

@@ -54,7 +54,7 @@ const MATCH_FILTERS = [
   { value: "live", label: "Ao Vivo" }, // Currently playing
   { value: "finished", label: "Realizados" }, // Finished/completed
   { value: "upcoming", label: "Próximos" }, // Future matches
-  { value: "exemplo", label: "Exemplo" },
+  { value: "canceled", label: "Cancelado" },
 ];
 
 const MatchesPage = ({ matches }) => {

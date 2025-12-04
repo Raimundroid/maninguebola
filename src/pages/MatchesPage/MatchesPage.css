@@ -1,5 +1,5 @@
 .matches-page-container {
-  max-width: 1200px;
+  max-width: var(--page-max-width);
   margin: 0 auto;
   padding: 24px 16px;
   min-height: 60vh;

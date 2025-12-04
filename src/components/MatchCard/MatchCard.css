@@ -45,6 +45,10 @@
   margin-bottom: 16px;
 }
 
+.match-card .canceled-match-datetime {
+  color: var(--error, red);
+}
+
 .match-card .teams {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

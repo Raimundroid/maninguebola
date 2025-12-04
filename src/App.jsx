@@ -333,16 +333,18 @@ function App() {
             />
             {/* Team detail page - shows at "/teams/eagles", "/teams/lions", etc.
                 :id is a URL parameter - accessible via useParams() hook */}
-            {/* <Route
+            <Route
               path="/equipas/:teamId"
               element={
                 <TeamDetailPage
-                  teams={enrichedTeams} //teams + standings
-                  players={enrichedPlayers} //players + teams
-                  matches={enrichedMatches} //matches + teams + standings
-                  //standings={enrichedTeams}
+                //teams={enrichedTeams} //teams + standings
+                //players={enrichedPlayers} //players + teams
+                //matches={enrichedMatches} //matches + teams + standings
+                //standings={enrichedTeams}
                 />
-            } />
+              }
+            />
+
             {/* 404 - Catch all unmatched routes */}
             <Route path="*" element={<Error404 />} />
           </Routes>
