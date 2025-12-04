@@ -327,3 +327,130 @@ function PlayerCard({ player }) {
     </div>
   );
 }
+
+//========================================
+//PROMPT: ...so i was thinking, if is it possible, to instead of adding each player who scores to this two keys:homeScorers: awayScorers: , i just provide the id of the player who scored.
+// (some possible issues i notice: the players' ids are integers, it would make it near impossible to associate the id of the ones who score, and i currently do not a loooup for players + matches).
+
+// for now do not provide any solution code, just explain the feasibility and if feasible, how would it be done.
+//========================================
+
+// RESPONSE:
+// That's an excellent idea and is a much more robust and scalable data architecture than using comma-separated strings of names.
+
+// Yes, it is highly feasible and is the recommended approach for handling relationships between data entities (like Players and Matches) in a normalized structure.
+
+// ⚽ Feasibility and Implementation Overview
+// Using player IDs in your matchesData is not only possible but is considered a best practice in data modeling (normalization). This prevents errors if a player's name changes, minimizes data duplication, and allows you to easily pull rich player data (like their photo, position, or jersey number) without changing your MatchCard component logic.
+
+// 1. Data Structure Change (The Match object)
+// You would change the match data structure from:
+
+// JavaScript
+
+// BEFORE (String-based)
+{
+    id: 2,
+    homeScore: 3,
+    awayScore: 2,
+    homeScorers: "Miguel Santos (2), Tomás Ferreira", // ❌ Avoid this
+    awayScorers: "Ricardo Matos, João Silva",        // ❌ Avoid this
+}
+// To a more normalized, ID-based array structure:
+
+JavaScript
+
+// AFTER (ID-based)
+{
+    id: 2,
+    homeScore: 3,
+    awayScore: 2,
+    // List of Player IDs who scored for the home team
+    // You can repeat IDs if a player scored multiple times
+    homeScorerIds: [1, 1, 4], // Miguel Santos (ID 1) scored twice, Tomás Ferreira (ID 4) once
+    // List of Player IDs who scored for the away team
+    awayScorerIds: [101, 105], // Example IDs for away players
+}
+// Note on IDs: If your player IDs are sequential integers (like 1, 2, 3...) as shown in your mock data, they work perfectly fine. The key is that they are unique identifiers for the player object.
+
+// 2. Implementation Steps (The Enrichment)
+// The process will involve a new, small Data Enrichment step within your App function to look up the full player details based on the IDs.
+
+// A. Create the Player Lookup
+// You already have this: const playerLookup = createLookup(players, "id");
+
+// This creates a fast dictionary that maps player ID to the full player object (e.g., playerLookup[4] gives you the object for "Tomás Ferreira").
+
+// B. Modify getEnrichedMatches (The New Logic)
+// You will update your existing getEnrichedMatches function to handle the new homeScorerIds and awayScorerIds fields.
+
+// The new logic would be:
+
+// Access the homeScorerIds array from the raw match data.
+
+// Map over that array of IDs.
+
+// For each ID, use the playerLookup to pull the full Player Object.
+
+// Attach the resulting array of Player Objects (not just names!) to the enriched match object under a new key, e.g., homeScorers.
+
+// JavaScript
+
+// Conceptual Modification inside getEnrichedMatches
+const getEnrichedMatches = (rawMatches, teamLookup, standingsLookup, playerLookup) => {
+    return rawMatches.map((match) => {
+        // ... existing logic for homeTeamDetails, awayTeamDetails, standings
+
+        // NEW LOGIC: Enrich Home Scorers
+        const enrichedHomeScorers = (match.homeScorerIds || []).map(playerId =>
+            playerLookup[playerId] // Look up the full player object
+        ).filter(player => player); // Filter out any undefined lookups (safety)
+
+        // NEW LOGIC: Enrich Away Scorers
+        const enrichedAwayScorers = (match.awayScorerIds || []).map(playerId =>
+            playerLookup[playerId]
+        ).filter(player => player);
+
+        return {
+            ...match,
+            // ... existing homeTeam, awayTeam, standings
+            homeScorers: enrichedHomeScorers, // Array of full Player Objects
+            awayScorers: enrichedAwayScorers, // Array of full Player Objects
+        };
+    });
+};
+// C. Update the App Call
+// You would need to pass the playerLookup into the getEnrichedMatches function in your App component:
+
+// JavaScript
+
+// BEFORE
+// const enrichedMatches = getEnrichedMatches(matchesData, teamLookup, standingsLookup);
+
+// AFTER
+const enrichedMatches = getEnrichedMatches(
+    matchesData,
+    teamLookup,
+    standingsLookup,
+    playerLookup // <-- New argument passed
+);
+// 3. Display in MatchCard (The Component)
+// Once the match is enriched, your MatchCard component receives an array of player objects (e.g., match.homeScorers), allowing you to build the list without any string parsing:
+
+// JavaScript
+
+// Inside the MatchCard.jsx component:
+// Destructure the new arrays:
+const { homeScorers, awayScorers, /* ...other props */ } = match;
+
+// Inside the JSX rendering:
+// The list is already an array of rich objects!
+{homeScorers.map((scorer) => (
+  // Now you have the full player name, ID, position, etc.
+  <span key={scorer.id} className="scorer-name">
+    {scorer.name}
+    <span className="ball-icon">⚽</span>
+  </span>
+))}
+// Conclusion
+// This ID-based approach is significantly cleaner and gives your MatchCard component access to the full, rich player data immediately, making future updates (like adding player photos or jersey numbers to the card) trivial.

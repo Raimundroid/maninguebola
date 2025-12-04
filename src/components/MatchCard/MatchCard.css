@@ -1,3 +1,53 @@
+/* ======== need review============== */
+/* ... existing css ... */
+
+/* Container for the list of names */
+.match-card .teams .team .scorers {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* Tight spacing like the reference image */
+  margin-top: 8px; /* Separation from team name */
+}
+
+/* Individual scorer name */
+.match-card .teams .team .scorers .scorer-name {
+  font-size: 11px; /* Smaller than team name */
+  color: var(--text-light); /* Gray color */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap; /* Prevents wrapping on weird spots */
+}
+
+/* The soccer ball icon */
+.match-card .teams .team .scorers .ball-icon {
+  font-size: 8px; /* Tiny icon */
+  opacity: 0.7;
+  filter: grayscale(1); /* Optional: makes the emoji blend in better */
+}
+
+/* ALIGNMENT LOGIC */
+/* Since your card centers the logo, we should keep the scorers centered
+   OR align them towards the score (Home Right, Away Left) */
+
+/* Option A: Centered (Safest for your current design) */
+/* .match-card .teams .team .scorers {
+  align-items: center;
+} */
+
+/* Option B: Mirror Alignment (Home aligns Right, Away aligns Left)
+   Uncomment below if you prefer them "facing" the score */
+
+.match-card .teams .team .scorers.home-scorers {
+  align-items: flex-end;
+}
+.match-card .teams .team .scorers.away-scorers {
+  align-items: flex-start;
+}
+
+/* ======== need review============== */
+
 .match-card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -53,7 +103,7 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 16px;
-  align-items: center;
+  align-items: start;
   margin-bottom: 12px;
 }
 

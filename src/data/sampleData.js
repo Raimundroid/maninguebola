@@ -1321,6 +1321,10 @@ export const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo Principal",
     info: "85 espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: ["José Lima"],
+    awayScorers: ["Rui Almeida"],
   },
   {
     id: 2,
@@ -1334,7 +1338,11 @@ export const matchesData = [
     time: "15:00",
     status: "finished",
     venue: "Campo A",
-    info: "⚽ Miguel Santos (2), Tomás Ferreira",
+    // info: "⚽ Miguel Santos (2), Tomás Ferreira",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: ["Miguel Santos (2)", "Tomás Ferreira"],
+    awayScorers: ["José Lima (2)"],
   },
   {
     id: 3,
@@ -1349,6 +1357,10 @@ export const matchesData = [
     status: "finished",
     venue: "Campo B",
     // 'info' is optional - can be omitted
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: ["Rui Almeida"],
+    awayScorers: ["Tomás Ferreira"],
   },
   {
     id: 4,

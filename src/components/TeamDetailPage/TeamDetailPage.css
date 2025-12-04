@@ -1,4 +1,4 @@
-/* TeamDetailPage.css */
+/* TeamDetailPage.css
 
 /* :root {
   --primary: #3b82f6;
@@ -18,11 +18,11 @@
   --bg: #0f172a;
   --card-bg: #1e293b;
   --shadow: rgba(0, 0, 0, 0.3);
-} */
+}
 
-/* ====================TEAM NOT FOUND / BACK BUTTON==================== */
+/* ====================TEAM NOT FOUND / BACK BUTTON====================
 
-.team-not-found-container {
+/* .team-not-found-container {
   background: var(--card-bg);
   padding: 24px 48px;
   border-radius: 12px;
@@ -55,13 +55,13 @@
   white-space: nowrap;
 }
 
-/* Team Detail Container */
+/* Team Detail Container
 .team-detail {
   width: 100%;
   min-height: 100vh;
 }
 
-/* ==================== TEAM HEADER ==================== */
+/* ==================== TEAM HEADER ====================
 
 .team-header__banner {
   padding: 32px 16px;
@@ -143,7 +143,7 @@
   }
 }
 
-/* Stat Box */
+/* Stat Box
 .stat-box {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -166,10 +166,10 @@
   letter-spacing: 0.5px;
 }
 
-/* Team Form */
+/* Team Form
 .team-form {
   max-width: var(--page-max-width);
-  margin: -12px auto 10px; /**og: -12px auto 0; */
+  margin: -12px auto 10px; /**og: -12px auto 0;
   padding: 0 16px;
   display: flex;
   align-items: center;
@@ -210,7 +210,7 @@
   background: #ef4444;
 }
 
-/* ==================== TABS ==================== */
+/* ==================== TABS ====================
 
 .team-tabs {
   max-width: var(--page-max-width);
@@ -253,7 +253,7 @@
   color: white;
 }
 
-/* ==================== CONTENT ==================== */
+/* ==================== CONTENT ====================
 
 .team-content {
   max-width: var(--page-max-width);
@@ -290,7 +290,7 @@
   color: var(--text);
 }
 
-/* Stats Grid */
+/* Stats Grid
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -343,7 +343,7 @@
   color: white;
 }
 
-/* ==================== SCORERS LIST ==================== */
+/* ==================== SCORERS LIST ====================
 
 .scorers-list {
   background: var(--card-bg);
@@ -415,7 +415,7 @@
   color: var(--primary);
 }
 
-/* ==================== SQUAD/PLAYERS ==================== */
+/* ==================== SQUAD/PLAYERS ====================
 
 .position-group {
   margin-bottom: 32px;
@@ -521,7 +521,7 @@
   border-radius: 6px;
 }
 
-/* ==================== MATCHES LIST ==================== */
+/* ==================== MATCHES LIST ====================
 
 .matches-list {
   display: grid;
@@ -534,7 +534,7 @@
   }
 }
 
-/* ==================== TEAM CONTACT ==================== */
+/* ==================== TEAM CONTACT ====================
 
 .team-contact {
   max-width: var(--page-max-width);
@@ -558,7 +558,7 @@
   font-size: 14px;
 }
 
-/* ==================== RESPONSIVE ==================== */
+/* ==================== RESPONSIVE ====================
 
 @media (max-width: 480px) {
   .team-header__logo-section {
@@ -592,7 +592,7 @@
   }
 }
 
-/* ==================== PRINT ==================== */
+/* ==================== PRINT ====================
 
 @media print {
   .team-tabs,
@@ -603,5 +603,842 @@
   .player-card,
   .scorer-item {
     break-inside: avoid;
+  }
+}
+  */
+
+/* ============================================================================
+   TEAMDETAILPAGE.CSS - Comprehensive Style Guide
+   ============================================================================
+
+   This stylesheet styles the TeamDetailPage component with a modern,
+   responsive design that works on all screen sizes.
+
+   KEY CSS CONCEPTS FOR BEGINNERS:
+   - CSS Variables (--variable-name): Reusable values stored in :root
+   - Flexbox: One-dimensional layout (row or column)
+   - Grid: Two-dimensional layout (rows AND columns)
+   - Media Queries: Apply styles at different screen sizes
+   - BEM Naming: block__element--modifier pattern for class names
+
+   ORGANIZATION:
+   1. Error States & Back Button
+   2. Team Header
+   3. Navigation Tabs
+   4. Content Sections
+   5. Statistics Grids
+   6. Player Cards
+   7. Match Lists
+   8. Contact Information
+   9. Responsive Design
+   ============================================================================ */
+
+/* ----------------------------------------------------------------------------
+   ERROR STATE & BACK BUTTON
+   ---------------------------------------------------------------------------- */
+
+/* Container for "team not found" error message */
+.team-not-found-container {
+  background: var(--card-bg); /* Uses CSS variable from root theme */
+  padding: 24px 48px; /* Vertical 24px, Horizontal 48px */
+  border-radius: 12px; /* Rounded corners */
+  text-align: center;
+  color: var(--text-light);
+  max-width: var(--page-max-width); /* Constrains width for readability */
+  margin: 20px auto; /* Centers horizontally with auto */
+}
+
+.team-not-found-container p {
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Container that holds back button with page constraints */
+.back-button-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto; /* Centers container */
+  padding: 16px 16px 0; /* Top 16px, sides 16px, bottom 0 */
+}
+
+/*
+  IMPROVED BACK BUTTON DESIGN
+  - Better visual hierarchy with icon + text
+  - Hover effects for interactivity
+  - Smooth transitions
+  - Accessible focus states
+*/
+.back-button {
+  display: inline-flex; /* Inline-flex allows natural width */
+  align-items: center; /* Vertically centers icon and text */
+  gap: 8px; /* Space between icon and text */
+  padding: 12px 20px; /* Comfortable click target */
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-weight: 600; /* Slightly bold for emphasis */
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer; /* Shows hand cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  white-space: nowrap; /* Prevents text wrapping */
+  box-shadow: 0 2px 4px var(--shadow); /* Subtle depth */
+}
+
+/* Icon within back button */
+.back-button__icon {
+  font-size: 18px; /* Slightly larger arrow */
+  transition: transform 0.3s ease; /* Animates arrow movement */
+}
+
+/* Text within back button */
+.back-button__text {
+  font-size: 14px;
+}
+
+/* Hover effect: lifts button and shifts arrow */
+.back-button:hover {
+  border-color: var(--primary); /* Primary color border */
+  background: var(--bg); /* Lighter background */
+  transform: translateY(-2px); /* Moves up 2px */
+  box-shadow: 0 4px 8px var(--shadow); /* Deeper shadow on hover */
+}
+
+/* Arrow shifts left on hover for "back" motion */
+.back-button:hover .back-button__icon {
+  transform: translateX(-4px); /* Shifts left 4px */
+}
+
+/* Accessibility: Focus state for keyboard navigation */
+.back-button:focus {
+  outline: 2px solid var(--primary); /* Visible outline */
+  outline-offset: 2px; /* Space between button and outline */
+}
+
+/* Active state: button being clicked */
+.back-button:active {
+  transform: translateY(0); /* Resets lift */
+  box-shadow: 0 1px 2px var(--shadow); /* Compressed shadow */
+}
+
+/* ----------------------------------------------------------------------------
+   TEAM DETAIL CONTAINER
+   ---------------------------------------------------------------------------- */
+
+.team-detail {
+  width: 100%; /* Full width of parent */
+  min-height: 100vh; /* Minimum height = viewport height */
+}
+
+/* ----------------------------------------------------------------------------
+   TEAM HEADER SECTION
+   ---------------------------------------------------------------------------- */
+
+/*
+  Banner with gradient background
+  Uses inline styles from JSX for dynamic team colors
+*/
+.team-header__banner {
+  padding: 32px 16px; /* Vertical 32px, Horizontal 16px */
+  color: white; /* All text white for contrast */
+  margin-bottom: 24px;
+}
+
+/* Content wrapper with max-width constraint */
+.team-header__content {
+  max-width: var(--page-max-width);
+  margin: 0 auto; /* Centers content */
+}
+
+/*
+  Flexbox layout for logo and team info
+  Flex makes items sit side-by-side and controls spacing
+*/
+.team-header__logo-section {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  gap: 20px; /* 20px space between logo and info */
+  margin-bottom: 32px;
+}
+
+/* Team logo with shadow effect */
+.team-header__logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px; /* Rounded corners */
+  background: white; /* White background for logo */
+  padding: 8px; /* Inner spacing */
+  object-fit: contain; /* Scales image to fit without distortion */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow: X Y Blur Color */
+}
+
+/* Flex: 1 allows this section to grow and fill space */
+.team-header__info {
+  flex: 1; /* Takes remaining space */
+}
+
+/* Team name with text shadow for depth */
+.team-header__name {
+  font-size: 28px;
+  font-weight: 700; /* Extra bold */
+  margin: 0 0 12px 0; /* Bottom margin only */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow: X Y Blur Color */
+}
+
+/*
+  Metadata line (founded, stadium, players)
+  Flexbox with wrap allows items to flow to next line on small screens
+*/
+.team-header__meta {
+  display: flex;
+  flex-wrap: wrap; /* Wraps to new line if needed */
+  gap: 16px; /* Space between items */
+  font-size: 14px;
+  opacity: 0.95; /* Slightly transparent */
+}
+
+.team-header__meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Space between emoji and text */
+}
+
+/*
+  Quick stats boxes
+  CSS Grid creates responsive 2-column layout
+*/
+.team-header__stats {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* 2 equal columns (1fr = 1 fraction) */
+  gap: 12px;
+}
+
+/*
+  MEDIA QUERY: Screens 640px and wider
+  Changes grid to 4 columns for more space
+*/
+@media (min-width: 640px) {
+  .team-header__stats {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+  }
+}
+
+/*
+  MEDIA QUERY: Screens 768px and wider (tablets+)
+  Increases sizes for better visibility on larger screens
+*/
+@media (min-width: 768px) {
+  .team-header__logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-header__name {
+    font-size: 36px;
+  }
+
+  .team-header__banner {
+    padding: 48px 24px; /* More padding on larger screens */
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   STAT BOX (Quick stats in header)
+   ---------------------------------------------------------------------------- */
+
+/*
+  Glassmorphism effect: semi-transparent with blur
+  backdrop-filter applies blur to content behind element
+*/
+.stat-box {
+  background: rgba(255, 255, 255, 0.15); /* 15% opaque white */
+  backdrop-filter: blur(10px); /* Blurs background */
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.stat-box__value {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat-box__label {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase; /* ALL CAPS */
+  letter-spacing: 0.5px; /* Slightly wider letter spacing */
+}
+
+/* ----------------------------------------------------------------------------
+   TEAM FORM BADGES (W/D/L indicators)
+   ---------------------------------------------------------------------------- */
+
+.team-form {
+  max-width: var(--page-max-width);
+  margin: -12px auto 10px; /* Negative top margin pulls it up */
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-form__label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.team-form__badges {
+  display: flex;
+  gap: 6px;
+}
+
+/*
+  Individual form badge (W/D/L)
+  Square shape with centered text
+*/
+.form-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+}
+
+/* Color modifiers using BEM naming (block--modifier) */
+.form-badge--w {
+  background: #22c55e; /* Green for win */
+}
+
+.form-badge--d {
+  background: #94a3b8; /* Gray for draw */
+}
+
+.form-badge--l {
+  background: #ef4444; /* Red for loss */
+}
+
+/* ----------------------------------------------------------------------------
+   NAVIGATION TABS
+   ---------------------------------------------------------------------------- */
+
+.team-tabs {
+  max-width: var(--page-max-width);
+  margin: 0 auto 24px;
+  padding: 0 16px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto; /* Horizontal scroll on small screens */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hides scrollbar in Chrome/Safari/Edge */
+.team-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/*
+  Individual tab button
+  Transitions create smooth animation when properties change
+*/
+.team-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for ALL properties */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Hover state provides visual feedback */
+.team-tab:hover {
+  border-color: var(--primary);
+  background: var(--bg);
+}
+
+/* Active tab has distinctive appearance */
+.team-tab--active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* ----------------------------------------------------------------------------
+   TAB CONTENT AREA
+   ---------------------------------------------------------------------------- */
+
+.team-content {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 16px 32px;
+}
+
+/*
+  Fade-in animation for tab content
+  @keyframes defines the animation steps
+*/
+.tab-content {
+  animation: fadeIn 0.3s ease; /* Animation: name duration timing */
+}
+
+/* Animation definition: from (0%) to (100%) */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(10px); /* Starts 10px below */
+  }
+  to {
+    opacity: 1; /* Ends fully visible */
+    transform: translateY(0); /* Ends at normal position */
+  }
+}
+
+.content-section {
+  margin-bottom: 40px; /* Space between sections */
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+/* ----------------------------------------------------------------------------
+   STATISTICS GRID
+   ---------------------------------------------------------------------------- */
+
+/*
+  CSS Grid for responsive stat cards
+  Starts with 2 columns, expands to 4 on larger screens
+*/
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 12px;
+}
+
+/* 4 columns on screens 640px+ */
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*
+  Individual stat card with hover effect
+  Transform property creates lift effect
+*/
+.stat-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  text-align: center;
+  transition: transform 0.2s ease; /* Only animates transform */
+}
+
+/* Hover effect lifts card up */
+.stat-card:hover {
+  transform: translateY(-2px); /* Moves up 2px */
+}
+
+/* Highlighted stat card (points) has primary color background */
+.stat-card--highlight {
+  background: var(--primary);
+  color: white;
+}
+
+.stat-card__label {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Override label color for highlighted card */
+.stat-card--highlight .stat-card__label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.stat-card__value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Override value color for highlighted card */
+.stat-card--highlight .stat-card__value {
+  color: white;
+}
+
+/* ----------------------------------------------------------------------------
+   TOP SCORERS LIST
+   ---------------------------------------------------------------------------- */
+
+.scorers-list {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden; /* Clips content to rounded corners */
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/*
+  Individual scorer row
+  Flexbox creates left-to-right layout
+*/
+.scorer-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+
+/* Remove border from last item */
+.scorer-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect highlights row */
+.scorer-item:hover {
+  background: var(--bg);
+}
+
+/* Rank badge with primary color */
+.scorer-item__rank {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+/*
+  Player info section
+  flex: 1 makes it grow to fill space
+  min-width: 0 fixes text overflow issues in flex
+*/
+.scorer-item__info {
+  flex: 1;
+  min-width: 0; /* Allows text truncation */
+}
+
+.scorer-item__name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.scorer-item__position {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.scorer-item__stats {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Color-coded stat indicators */
+.scorer-item__goals {
+  color: var(--success); /* Green for goals */
+}
+
+.scorer-item__assists {
+  color: var(--primary); /* Blue for assists */
+}
+
+/* ----------------------------------------------------------------------------
+   PLAYER SQUAD SECTION
+   ---------------------------------------------------------------------------- */
+
+.position-group {
+  margin-bottom: 32px;
+}
+
+/* Position header with bottom border */
+.position-group__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+/*
+  Responsive grid for player cards
+  Starts with 2 columns, increases on larger screens
+*/
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* 3 columns on tablets */
+@media (min-width: 640px) {
+  .players-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4 columns on desktops */
+@media (min-width: 1024px) {
+  .players-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*
+  Individual player card
+  position: relative allows absolute positioning of number badge
+*/
+.player-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.3s ease;
+  position: relative; /* Creates positioning context */
+  cursor: pointer;
+}
+
+/* Hover effect lifts and enhances shadow */
+.player-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+/*
+  Player number badge
+  position: absolute removes it from normal flow
+  Positioned relative to .player-card
+*/
+.player-card__number {
+  position: absolute; /* Positioned relative to parent */
+  top: 12px; /* 12px from top */
+  right: 12px; /* 12px from right */
+  background: var(--primary);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Circular player photo */
+.player-card__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Perfect circle */
+  object-fit: cover; /* Crops image to fill circle */
+  margin: 0 auto 12px; /* Centers with auto margins */
+  display: block;
+  background: var(--bg);
+}
+
+.player-card__info {
+  text-align: center;
+}
+
+.player-card__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 4px 0;
+  line-height: 1.3; /* Line height for readability */
+}
+
+.player-card__position {
+  font-size: 12px;
+  color: var(--text-light);
+  margin: 0 0 12px 0;
+}
+
+/* Player statistics row */
+.player-card__stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.player-card__stats span {
+  padding: 4px 8px;
+  background: var(--bg);
+  border-radius: 6px;
+}
+
+/* ----------------------------------------------------------------------------
+   MATCHES LIST
+   ---------------------------------------------------------------------------- */
+
+.matches-list {
+  display: grid;
+  gap: 16px;
+}
+
+/* 2 columns on tablets+ */
+@media (min-width: 768px) {
+  .matches-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   TEAM CONTACT INFORMATION
+   ---------------------------------------------------------------------------- */
+
+.team-contact {
+  max-width: var(--page-max-width);
+  margin: 40px auto 0;
+  padding: 24px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.team-contact h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.team-contact p {
+  color: var(--text);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ----------------------------------------------------------------------------
+   RESPONSIVE DESIGN - MOBILE (480px and smaller)
+   ---------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  /* Stack logo and info vertically on very small screens */
+  .team-header__logo-section {
+    flex-direction: column; /* Changes from row to column */
+    text-align: center;
+  }
+
+  .team-header__name {
+    font-size: 24px;
+  }
+
+  /* Stack metadata vertically for easier reading */
+  .team-header__meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Reduce padding on small screens */
+  .stat-box {
+    padding: 12px;
+  }
+
+  .stat-box__value {
+    font-size: 24px;
+  }
+
+  /* Single column for player cards on mobile */
+  .players-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  /* Better spacing for back button on mobile */
+  .back-button-container {
+    padding: 12px 12px 0;
+  }
+
+  .back-button {
+    width: 100%; /* Full width on mobile */
+    justify-content: center; /* Centers content */
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   PRINT STYLES
+   ---------------------------------------------------------------------------- */
+
+/*
+  Prevents page breaks inside certain elements when printing
+  This keeps related content together on printed pages
+*/
+@media print {
+  .team-tabs,
+  .team-header__banner {
+    break-inside: avoid; /* Don't split across pages */
+  }
+
+  .player-card,
+  .scorer-item {
+    break-inside: avoid;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   ACCESSIBILITY IMPROVEMENTS
+   ---------------------------------------------------------------------------- */
+
+/*
+  Ensures sufficient contrast for text
+  These are already handled by CSS variables but documented here
+*/
+
+/* Focus visible for keyboard navigation */
+.team-tab:focus-visible,
+.player-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

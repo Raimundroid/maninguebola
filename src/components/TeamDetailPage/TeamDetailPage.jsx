@@ -1151,50 +1151,580 @@
 
 // export default TeamDetailPage;
 
-//===================================================HOPEFULLY=THE=FINAL=VERSION=====================================================================================================================================================================================================================================================================================================================
+//===================================================THE=FINAL=VERSION=====================================================================================================================================================================================================================================================================================================================
+// import React, { useState } from "react";
+// import { useParams, useNavigate } from "react-router-dom";
+// import MatchCard from "../MatchCard/MatchCard";
+// import "./TeamDetailPage.css";
+
+// // 🗑️ DIRECT DATA IMPORTS REMOVED
+// // Data is now received via Props from the parent (App.jsx)
+
+// // =========================================================
+// // ⚛️ COMPONENT DEFINITION
+// // =========================================================
+// const TeamDetailPage = ({
+//   teams = {}, // Default to empty object
+//   players = [], // Default to empty array
+//   //standings = [], // Default to empty array
+//   matches = [], // This expects the ENRICHED matches array
+// }) => {
+//   // =========================================================
+//   // ⚙️ INITIALIZE DATA & ROUTING
+//   // =========================================================
+//   const { teamId } = useParams();
+//   const navigate = useNavigate();
+//   const [activeTab, setActiveTab] = useState("overview");
+
+//   /**
+//    * CONVERT teams to array if it's an object (handles both array and object data format)
+//    * This is needed to find the CURRENT team's details using .find()
+//    */
+//   const teamsArray = Array.isArray(teams) ? teams : Object.values(teams);
+
+//   // Find team by ID (uses loose comparison t.id == teamId to handle string vs number IDs)
+//   const team = teamsArray.find((t) => t.id === teamId || t.id == teamId);
+
+//   // =========================================================
+//   // 🛑 ERROR HANDLING - Team not found
+//   // =========================================================
+//   if (!team) {
+//     return (
+//       <div className="team-not-found-container">
+//         <div className="team-not-found">
+//           <h1>❌ Equipa não encontrada</h1>
+//           <p>A equipa com ID "{teamId}" não existe nos dados fornecidos.</p>
+
+//           <button onClick={() => navigate("/equipas")} className="back-button">
+//             ← Voltar para Equipas
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   // =========================================================
+//   // SAFE DESTRUCTURING with defaults (using the found team object)
+//   // =========================================================
+//   const {
+//     name = "Nome da Equipa",
+//     logo = "/images/default-team.png",
+//     founded = "Deconhecido",
+//     stadium = "Deconhecido",
+//     colors = { primary: "#3b82f6", secondary: "#1e40af" },
+//     contact = {},
+//   } = team;
+
+//   const {
+//     coach = "Deconhecido",
+//     captain = "Deconhecido",
+//     phone = "",
+//     email = "",
+//   } = contact;
+
+//   // =========================================================
+//   // FILTER DATA FOR THIS TEAM
+//   // =========================================================
+//   const teamPlayers = players.filter((p) => p.teamId === teamId);
+//   const teamStanding =
+//     teams.find((s) => s.teamId === teamId || s.id === teamId) || {};
+
+//   // Get team matches
+//   // Since 'matches' prop is already enriched, we just filter by ID.
+//   // The homeTeamId/awayTeamId properties still exist on the enriched object.
+//   const teamMatches = matches
+//     .filter((m) => m.homeTeamId === teamId || m.awayTeamId === teamId)
+//     // add new sorting to list the matches that are live first in ascending time, then the upcomming ones by ascending date first, and if the date is the same, by sacending time, and lastly list the games that are finished by descending date, if the same, then time
+//     .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+//   const liveMatches = teamMatches.filter((m) => m.status === "live");
+
+//   const upcomingMatches = teamMatches
+//     .filter((m) => m.status === "upcoming")
+//     .slice(0, 3);
+
+//   const recentMatches = teamMatches
+//     .filter((m) => m.status === "finished")
+//     .slice(0, 5);
+
+//   const canceledMatches = teamMatches
+//     .filter((m) => m.status === "canceled")
+//     .slice(0, 4);
+
+//   // =========================================================
+//   // CALCULATE STATS
+//   // =========================================================
+//   const totalGoals = teamPlayers.reduce(
+//     (sum, p) => sum + (p.stats?.goals || 0),
+//     0
+//   );
+
+//   const totalAssists = teamPlayers.reduce(
+//     (sum, p) => sum + (p.stats?.assists || 0),
+//     0
+//   );
+
+//   const topScorers = teamPlayers
+//     .filter((p) => p.stats?.goals > 0)
+
+//     .sort((a, b) => {
+//       if (a.stats.goals !== b.stats.goals) return b.stats.goals - a.stats.goals;
+//       return b.stats.assists - a.stats.assists;
+//     })
+//     .slice(0, 5);
+
+//   // Group players by position
+//   const playersByPosition = {
+//     Goalkeeper: teamPlayers.filter((p) => p.position === "Goalkeeper"),
+//     Defender: teamPlayers.filter((p) => p.position === "Defender"),
+//     Midfielder: teamPlayers.filter((p) => p.position === "Midfielder"),
+//     Forward: teamPlayers.filter((p) => p.position === "Forward"),
+//   };
+
+//   // Form badges
+//   const form = teamStanding.standing.form || [];
+
+//   // =========================================================
+//   // 🖼️ RENDER
+//   // =========================================================
+//   return (
+//     <div className="team-detail">
+//       {/* Back Button */}
+//       <div className="back-button-container">
+//         <button onClick={() => navigate("/equipas")} className="back-button">
+//           ← Voltar para Equipas
+//         </button>
+//       </div>
+
+//       {/* Team Header */}
+//       <div className="team-header">
+//         <div
+//           className="team-header__banner"
+//           style={{
+//             background: `linear-gradient(135deg, ${
+//               colors?.primary || "#3b82f6"
+//             } 0%, ${colors?.secondary || "#1e40af"} 100%)`,
+//           }}
+//         >
+//           <div className="team-header__content">
+//             <div className="team-header__logo-section">
+//               <img
+//                 src={logo || "/images/default-team-logo.png"}
+//                 alt={name}
+//                 className="team-header__logo"
+//               />
+//               <div className="team-header__info">
+//                 <h1 className="team-header__name">{name}</h1>
+//                 <div className="team-header__meta">
+//                   <span>📅 Fundado: {founded}</span>
+//                   <span>🏟️ {stadium}</span>
+//                   <span>👥 {teamPlayers.length} Jogadores</span>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Quick Stats */}
+//             <div className="team-header__stats">
+//               <div className="stat-box">
+//                 <div className="stat-box__value">
+//                   {teamStanding.standing.position || "-"}
+//                 </div>
+//                 <div className="stat-box__label">Posição</div>
+//               </div>
+//               <div className="stat-box">
+//                 <div className="stat-box__value">
+//                   {teamStanding.standing.points || 0}
+//                 </div>
+//                 <div className="stat-box__label">Pontos</div>
+//               </div>
+//               <div className="stat-box">
+//                 <div className="stat-box__value">
+//                   {teamStanding.standing.wins || 0}
+//                 </div>
+//                 <div className="stat-box__label">Vitórias</div>
+//               </div>
+//               <div className="stat-box">
+//                 <div className="stat-box__value">{totalGoals}</div>
+//                 <div className="stat-box__label">Golos</div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Form Badge */}
+//         {form.length > 0 && (
+//           <div className="team-form">
+//             <span className="team-form__label">Forma:</span>
+//             <div className="team-form__badges">
+//               {form.map((result, index) => (
+//                 <span
+//                   key={index}
+//                   className={`form-badge form-badge--${result.toLowerCase()}`}
+//                 >
+//                   {result}
+//                 </span>
+//               ))}
+//             </div>
+//           </div>
+//         )}
+//       </div>
+
+//       {/* Navigation Tabs */}
+//       <div className="team-tabs">
+//         <button
+//           className={`team-tab ${
+//             activeTab === "overview" ? "team-tab--active" : ""
+//           }`}
+//           onClick={() => setActiveTab("overview")}
+//         >
+//           🏆 Visão Geral
+//         </button>
+//         <button
+//           className={`team-tab ${
+//             activeTab === "squad" ? "team-tab--active" : ""
+//           }`}
+//           onClick={() => setActiveTab("squad")}
+//         >
+//           👥 Plantel
+//         </button>
+//         <button
+//           className={`team-tab ${
+//             activeTab === "matches" ? "team-tab--active" : ""
+//           }`}
+//           onClick={() => setActiveTab("matches")}
+//         >
+//           ⚽ Jogos
+//         </button>
+//       </div>
+
+//       {/* Tab Content */}
+//       <div className="team-content">
+//         {/* Overview Tab */}
+//         {activeTab === "overview" && (
+//           <div className="tab-content">
+//             {/* Team Statistics */}
+//             <div className="content-section">
+//               <h2 className="section-title">📈 Estatísticas da Época</h2>
+//               <div className="stats-grid">
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Jogos</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.played || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Vitórias</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.wins || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Empates</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.draws || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Derrotas</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.losses || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Golos Marcados</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.goalsFor || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Golos Sofridos</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.goalsAgainst || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card">
+//                   <div className="stat-card__label">Diferença</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.goalDiff > 0 ? "+" : ""}
+//                     {teamStanding.standing.goalDiff || 0}
+//                   </div>
+//                 </div>
+//                 <div className="stat-card stat-card--highlight">
+//                   <div className="stat-card__label">Pontos</div>
+//                   <div className="stat-card__value">
+//                     {teamStanding.standing.points || 0}
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Top Scorers */}
+//             {topScorers.length > 0 && (
+//               <div className="content-section">
+//                 <h2 className="section-title">🏅 Melhores Marcadores</h2>
+//                 <div className="scorers-list">
+//                   {topScorers.map((player, index) => (
+//                     <div key={player.id} className="scorer-item">
+//                       <div className="scorer-item__rank">#{index + 1}</div>
+//                       <div className="scorer-item__info">
+//                         <div className="scorer-item__name">{player.name}</div>
+//                         <div className="scorer-item__position">
+//                           {player.position}
+//                         </div>
+//                       </div>
+//                       <div className="scorer-item__stats">
+//                         <span className="scorer-item__goals">
+//                           ⚽ {player.stats.goals}
+//                         </span>
+//                         <span className="scorer-item__assists">
+//                           🎯 {player.stats.assists}
+//                         </span>
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+//             )}
+
+//             {/* Live Matches */}
+//             {liveMatches.length > 0 && (
+//               <div className="content-section">
+//                 <h2 className="section-title">Jogos ao Vivo</h2>
+//                 <div className="matches-list">
+//                   {liveMatches.map((match) => (
+//                     <MatchCard key={match.id} match={match} />
+//                   ))}
+//                 </div>
+//               </div>
+//             )}
+
+//             {/* Upcoming Matches */}
+//             {upcomingMatches.length > 0 && (
+//               <div className="content-section">
+//                 <h2 className="section-title">Próximos Jogos</h2>
+//                 <div className="matches-list">
+//                   {upcomingMatches.map((match) => (
+//                     <MatchCard key={match.id} match={match} />
+//                   ))}
+//                 </div>
+//               </div>
+//             )}
+
+//             {/* Recent Results */}
+//             {recentMatches.length > 0 && (
+//               <div className="content-section">
+//                 <h2 className="section-title">Resultados Recentes</h2>
+//                 <div className="matches-list">
+//                   {recentMatches.map((match) => (
+//                     <MatchCard key={match.id} match={match} />
+//                   ))}
+//                 </div>
+//               </div>
+//             )}
+
+//             {/* Canceled Matches */}
+//             {canceledMatches.length > 0 && (
+//               <div className="content-section">
+//                 <h2 className="section-title">Jogos Cancelados</h2>
+//                 <div className="matches-list">
+//                   {canceledMatches.map((match) => (
+//                     <MatchCard key={match.id} match={match} />
+//                   ))}
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         )}
+
+//         {/* Squad Tab */}
+//         {activeTab === "squad" && (
+//           <div className="tab-content">
+//             <div className="content-section">
+//               <h2 className="section-title">
+//                 👥 Plantel Completo ({teamPlayers.length})
+//               </h2>
+
+//               {teamPlayers.length === 0 ? (
+//                 <p className="empty-message">Nenhum jogador registado ainda.</p>
+//               ) : (
+//                 Object.entries(playersByPosition).map(
+//                   ([position, posPlayers]) =>
+//                     posPlayers.length > 0 ? (
+//                       <div key={position} className="position-group">
+//                         <h3 className="position-group__title">
+//                           {position} ({posPlayers.length})
+//                         </h3>
+//                         <div className="players-grid">
+//                           {posPlayers.map((player) => (
+//                             <div key={player.id} className="player-card">
+//                               <div className="player-card__number">
+//                                 Nº{player.number}
+//                               </div>
+//                               <img
+//                                 src={
+//                                   player.photo || "/images/default-player.png"
+//                                 }
+//                                 alt={player.name}
+//                                 className="player-card__photo"
+//                               />
+//                               <div className="player-card__info">
+//                                 <h4 className="player-card__name">
+//                                   {player.name}
+//                                 </h4>
+//                                 <p className="player-card__position">
+//                                   {player.position}
+//                                 </p>
+//                                 {player.stats && (
+//                                   <div className="player-card__stats">
+//                                     <span>⚽ {player.stats.goals}</span>
+//                                     <span>🎯 {player.stats.assists}</span>
+//                                     <span>🟨 {player.stats.yellowCards}</span>
+//                                     {player.stats.redCards > 0 && (
+//                                       <span>🟥 {player.stats.redCards}</span>
+//                                     )}
+//                                   </div>
+//                                 )}
+//                               </div>
+//                             </div>
+//                           ))}
+//                         </div>
+//                       </div>
+//                     ) : null
+//                 )
+//               )}
+//             </div>
+//           </div>
+//         )}
+
+//         {/* Matches Tab */}
+//         {activeTab === "matches" && (
+//           <div className="tab-content">
+//             <div className="content-section">
+//               <h2 className="section-title">Todos os Jogos</h2>
+//               {teamMatches.length === 0 ? (
+//                 <p className="empty-message">Nenhum jogo registado ainda.</p>
+//               ) : (
+//                 <div className="matches-list">
+//                   {teamMatches.map((match) => (
+//                     <MatchCard key={match.id} match={match} />
+//                   ))}
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         )}
+//       </div>
+
+//       {/* Team Contact Info */}
+//       {contact && (
+//         <div className="team-contact">
+//           <h3>📞 Informações de Contacto</h3>
+//           <p>
+//             <strong>Treinador:</strong> {coach}
+//           </p>
+//           <p>
+//             <strong>Capitão:</strong> {captain}
+//           </p>
+//           {phone && (
+//             <p>
+//               <strong>Telefone:</strong> {phone}
+//             </p>
+//           )}
+//           {email && (
+//             <p>
+//               <strong>Email:</strong> {email}
+//             </p>
+//           )}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default TeamDetailPage;
+
+//============================THE=FINAL=VERSION=COMMENTED===========================================================================================================================================================================================================================================================================================================================================
+
+// ============================================================================
+// TeamDetailPage Component
+// ============================================================================
+// This component displays detailed information about a single team.
+// It receives data as props from the parent component (App.jsx) and uses
+// the teamId from the URL to filter and display the correct team's information.
+//
+// KEY CONCEPTS FOR BEGINNERS:
+// - Props: Data passed from parent components (teams, players, matches)
+// - useParams: React Router hook to get URL parameters (teamId)
+// - useState: React hook to manage component state (activeTab)
+// - Array methods: filter(), find(), map(), reduce() for data manipulation
+// ============================================================================
+
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MatchCard from "../MatchCard/MatchCard";
 import "./TeamDetailPage.css";
 
-// 🗑️ DIRECT DATA IMPORTS REMOVED
-// Data is now received via Props from the parent (App.jsx)
-
-// =========================================================
-// ⚛️ COMPONENT DEFINITION
-// =========================================================
+// ============================================================================
+// COMPONENT DEFINITION
+// ============================================================================
+// Props with default values ensure the component doesn't crash if data is missing
 const TeamDetailPage = ({
-  teams = {}, // Default to empty object
-  players = [], // Default to empty array
-  //standings = [], // Default to empty array
-  matches = [], // This expects the ENRICHED matches array
+  teams = {}, // Can be object {eagles: {...}} or array [{...}]
+  players = [], // Array of all player objects
+  matches = [], // Array of enriched match objects (already has team data)
 }) => {
-  // =========================================================
-  // ⚙️ INITIALIZE DATA & ROUTING
-  // =========================================================
+  // --------------------------------------------------------------------------
+  // ROUTING & STATE MANAGEMENT
+  // --------------------------------------------------------------------------
+
+  // useParams(): Gets dynamic URL parameters.
+  // Example: /equipas/eagles → teamId = "eagles"
   const { teamId } = useParams();
+
+  // useNavigate(): Returns function to programmatically navigate between routes
+  // Example: navigate("/equipas") redirects user to teams list page
   const navigate = useNavigate();
+
+  // useState(): Creates state variable for tracking which tab is active
+  // First value is current state, second is setter function
+  // "overview" is the default/initial value
   const [activeTab, setActiveTab] = useState("overview");
 
-  /**
-   * CONVERT teams to array if it's an object (handles both array and object data format)
-   * This is needed to find the CURRENT team's details using .find()
-   */
+  // --------------------------------------------------------------------------
+  // DATA NORMALIZATION
+  // --------------------------------------------------------------------------
+
+  // PROBLEM: The 'teams' prop might be an object OR an array depending on source
+  // SOLUTION: Convert to array format for consistent processing
+  //
+  // Object format: { eagles: {id: "eagles", name: "Eagles"}, lions: {...} }
+  // Array format:  [ {id: "eagles", name: "Eagles"}, {...} ]
+  //
+  // Array.isArray() checks the type
+  // Object.values() converts object to array of its values
   const teamsArray = Array.isArray(teams) ? teams : Object.values(teams);
 
-  // Find team by ID (uses loose comparison t.id == teamId to handle string vs number IDs)
+  // --------------------------------------------------------------------------
+  // FIND CURRENT TEAM
+  // --------------------------------------------------------------------------
+
+  // .find() searches array and returns FIRST match
+  // Uses "loose equality" (==) to handle both string and number IDs
+  // Example: "1" == 1 is true, but "1" === 1 is false
   const team = teamsArray.find((t) => t.id === teamId || t.id == teamId);
 
-  // =========================================================
-  // 🛑 ERROR HANDLING - Team not found
-  // =========================================================
+  // --------------------------------------------------------------------------
+  // ERROR HANDLING - Team Not Found
+  // --------------------------------------------------------------------------
+
+  // Early return pattern: if team doesn't exist, show error and exit
+  // This prevents the rest of the code from running with invalid data
   if (!team) {
     return (
       <div className="team-not-found-container">
         <div className="team-not-found">
           <h1>❌ Equipa não encontrada</h1>
           <p>A equipa com ID "{teamId}" não existe nos dados fornecidos.</p>
-
           <button onClick={() => navigate("/equipas")} className="back-button">
             ← Voltar para Equipas
           </button>
@@ -1203,9 +1733,14 @@ const TeamDetailPage = ({
     );
   }
 
-  // =========================================================
-  // SAFE DESTRUCTURING with defaults (using the found team object)
-  // =========================================================
+  // --------------------------------------------------------------------------
+  // DESTRUCTURING WITH DEFAULTS
+  // --------------------------------------------------------------------------
+
+  // Destructuring extracts properties from objects into variables
+  // Default values (= "...") prevent undefined errors if property is missing
+  //
+  // Example: If team.name doesn't exist, name = "Nome da Equipa"
   const {
     name = "Nome da Equipa",
     logo = "/images/default-team.png",
@@ -1215,6 +1750,7 @@ const TeamDetailPage = ({
     contact = {},
   } = team;
 
+  // Nested destructuring: Extract properties from the contact object
   const {
     coach = "Deconhecido",
     captain = "Deconhecido",
@@ -1222,41 +1758,99 @@ const TeamDetailPage = ({
     email = "",
   } = contact;
 
-  // =========================================================
-  // FILTER DATA FOR THIS TEAM
-  // =========================================================
+  // --------------------------------------------------------------------------
+  // FILTER DATA FOR CURRENT TEAM
+  // --------------------------------------------------------------------------
+
+  // .filter() creates new array with elements that pass the test
+  // Only keeps players whose teamId matches current team
   const teamPlayers = players.filter((p) => p.teamId === teamId);
+
+  // .find() returns first matching standing object, or empty object {} if none found
+  // The || operator provides fallback value
   const teamStanding =
     teams.find((s) => s.teamId === teamId || s.id === teamId) || {};
 
-  // Get team matches
-  // Since 'matches' prop is already enriched, we just filter by ID.
-  // The homeTeamId/awayTeamId properties still exist on the enriched object.
+  // --------------------------------------------------------------------------
+  // FILTER & SORT MATCHES
+  // --------------------------------------------------------------------------
+
+  // Chain methods for complex data manipulation:
+  // 1. .filter() - Keep only matches where this team plays
+  // 2. .sort() - Order by date (newest first)
+  //
+  // SORTING EXPLANATION:
+  // - new Date() converts string to Date object for comparison
+  // - Subtracting dates gives milliseconds difference
+  // - Negative result = b is older, positive = b is newer
+  // - This creates descending order (newest first)
   const teamMatches = matches
     .filter((m) => m.homeTeamId === teamId || m.awayTeamId === teamId)
-    // add new sorting to list the matches that are live first in ascending time, then the upcomming ones by ascending date first, and if the date is the same, by sacending time, and lastly list the games that are finished by descending date, if the same, then time
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    //ToDo: Add new sorting to list the matches that are live first in ascending time, then the upcomming ones by ascending date first, and if the date is the same, by sacending time, and lastly list the games that are finished by descending date, if the same, then time
+    .sort((a, b) => {
+      // 1. Define Priority Order (Lower number = Higher priority)
+      const statusPriority = {
+        live: 1,
+        upcoming: 2,
+        finished: 3,
+        canceled: 4,
+      };
 
+      const priorityA = statusPriority[a.status] || 99;
+      const priorityB = statusPriority[b.status] || 99;
+
+      // 2. First Level Sort: Compare Status Priority
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
+      }
+
+      // 3. Second Level Sort: Date & Time Logic
+      // We combine date and time to ensure strictly chronological sorting
+      // Assuming format is "YYYY-MM-DD" and "HH:MM"
+      const timeA = a.time || "00:00";
+      const timeB = b.time || "00:00";
+
+      const dateTimeA = new Date(`${a.date}T${timeA}`);
+      const dateTimeB = new Date(`${b.date}T${timeB}`);
+
+      // LOGIC:
+      // Live/Upcoming: Ascending (Earliest first: A - B)
+      // Finished/Canceled: Descending (Newest first: B - A)
+      if (a.status === "live" || a.status === "upcoming") {
+        return dateTimeA - dateTimeB;
+      } else {
+        return dateTimeB - dateTimeA;
+      }
+    });
+  // .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  // Filter matches by status (live, upcoming, finished, canceled)
+  // .slice(0, 3) limits results to first 3 matches
   const liveMatches = teamMatches.filter((m) => m.status === "live");
-
   const upcomingMatches = teamMatches
     .filter((m) => m.status === "upcoming")
     .slice(0, 3);
-
   const recentMatches = teamMatches
     .filter((m) => m.status === "finished")
     .slice(0, 5);
-
   const canceledMatches = teamMatches
     .filter((m) => m.status === "canceled")
     .slice(0, 4);
 
-  // =========================================================
-  // CALCULATE STATS
-  // =========================================================
+  // --------------------------------------------------------------------------
+  // CALCULATE STATISTICS
+  // --------------------------------------------------------------------------
+
+  // .reduce() accumulates a single value from array
+  // Parameters: (accumulator, currentItem) => newAccumulator, initialValue
+  //
+  // EXAMPLE: [5, 3, 7] → sum = 0 + 5 + 3 + 7 = 15
+  //
+  // Optional chaining (?.) safely accesses nested properties
+  // If player.stats is undefined, returns undefined instead of error
   const totalGoals = teamPlayers.reduce(
     (sum, p) => sum + (p.stats?.goals || 0),
-    0
+    0 // Start counting from 0
   );
 
   const totalAssists = teamPlayers.reduce(
@@ -1264,16 +1858,34 @@ const TeamDetailPage = ({
     0
   );
 
+  // --------------------------------------------------------------------------
+  // TOP SCORERS CALCULATION
+  // --------------------------------------------------------------------------
+
+  // Multi-step process:
+  // 1. Filter - Only players with goals > 0
+  // 2. Sort - Order by goals (primary), then assists (tiebreaker)
+  // 3. Slice - Take only top 5
+  //
+  // SORTING LOGIC:
+  // - If goals differ, sort by goals (descending)
+  // - If goals are equal, sort by assists (descending)
   const topScorers = teamPlayers
     .filter((p) => p.stats?.goals > 0)
-
     .sort((a, b) => {
-      if (a.stats.goals !== b.stats.goals) return b.stats.goals - a.stats.goals;
-      return b.stats.assists - a.stats.assists;
+      if (a.stats.goals !== b.stats.goals) {
+        return b.stats.goals - a.stats.goals; // More goals first
+      }
+      return b.stats.assists - a.stats.assists; // More assists first (tiebreaker)
     })
     .slice(0, 5);
 
-  // Group players by position
+  // --------------------------------------------------------------------------
+  // GROUP PLAYERS BY POSITION
+  // --------------------------------------------------------------------------
+
+  // Creates object with 4 arrays, one for each position
+  // This allows us to display players organized by position in the UI
   const playersByPosition = {
     Goalkeeper: teamPlayers.filter((p) => p.position === "Goalkeeper"),
     Defender: teamPlayers.filter((p) => p.position === "Defender"),
@@ -1281,23 +1893,34 @@ const TeamDetailPage = ({
     Forward: teamPlayers.filter((p) => p.position === "Forward"),
   };
 
-  // Form badges
-  const form = teamStanding.standing.form || [];
+  // Extract form array from standing (W/D/L badges)
+  // Default to empty array if not available
+  const form = teamStanding.standing?.form || [];
 
-  // =========================================================
-  // 🖼️ RENDER
-  // =========================================================
+  // --------------------------------------------------------------------------
+  // RENDER COMPONENT
+  // --------------------------------------------------------------------------
+
   return (
     <div className="team-detail">
-      {/* Back Button */}
+      {/* ===== BACK BUTTON ===== */}
+      {/* Arrow function () => executes on click, navigates to teams list */}
       <div className="back-button-container">
-        <button onClick={() => navigate("/equipas")} className="back-button">
-          ← Voltar para Equipas
+        <button
+          onClick={() => navigate("/equipas")}
+          className="back-button"
+          aria-label="Voltar para lista de equipas"
+        >
+          <span className="back-button__icon">←</span>
+          <span className="back-button__text">Voltar para Equipas</span>
         </button>
       </div>
 
-      {/* Team Header */}
+      {/* ===== TEAM HEADER WITH GRADIENT BANNER ===== */}
       <div className="team-header">
+        {/* Inline styles for dynamic gradient based on team colors */}
+        {/* Template literals (``) allow embedded expressions ${} */}
+        {/* Optional chaining (?.) prevents errors if colors is undefined */}
         <div
           className="team-header__banner"
           style={{
@@ -1307,6 +1930,7 @@ const TeamDetailPage = ({
           }}
         >
           <div className="team-header__content">
+            {/* Logo and basic info section */}
             <div className="team-header__logo-section">
               <img
                 src={logo || "/images/default-team-logo.png"}
@@ -1318,28 +1942,30 @@ const TeamDetailPage = ({
                 <div className="team-header__meta">
                   <span>📅 Fundado: {founded}</span>
                   <span>🏟️ {stadium}</span>
+                  {/* .length property gets number of items in array */}
                   <span>👥 {teamPlayers.length} Jogadores</span>
                 </div>
               </div>
             </div>
 
-            {/* Quick Stats */}
+            {/* Quick statistics boxes */}
             <div className="team-header__stats">
+              {/* || operator provides fallback if value is falsy (0, null, undefined, etc.) */}
               <div className="stat-box">
                 <div className="stat-box__value">
-                  {teamStanding.standing.position || "-"}
+                  {teamStanding.standing?.position || "-"}
                 </div>
                 <div className="stat-box__label">Posição</div>
               </div>
               <div className="stat-box">
                 <div className="stat-box__value">
-                  {teamStanding.standing.points || 0}
+                  {teamStanding.standing?.points || 0}
                 </div>
                 <div className="stat-box__label">Pontos</div>
               </div>
               <div className="stat-box">
                 <div className="stat-box__value">
-                  {teamStanding.standing.wins || 0}
+                  {teamStanding.standing?.wins || 0}
                 </div>
                 <div className="stat-box__label">Vitórias</div>
               </div>
@@ -1351,11 +1977,16 @@ const TeamDetailPage = ({
           </div>
         </div>
 
-        {/* Form Badge */}
+        {/* ===== FORM BADGES (W/D/L) ===== */}
+        {/* && operator: Only render if form.length > 0 is true */}
+        {/* This is called "conditional rendering" */}
         {form.length > 0 && (
           <div className="team-form">
             <span className="team-form__label">Forma:</span>
             <div className="team-form__badges">
+              {/* .map() transforms each array item into JSX */}
+              {/* (item, index) - index is position in array (0, 1, 2...) */}
+              {/* key prop helps React identify which items changed */}
               {form.map((result, index) => (
                 <span
                   key={index}
@@ -1369,8 +2000,10 @@ const TeamDetailPage = ({
         )}
       </div>
 
-      {/* Navigation Tabs */}
+      {/* ===== NAVIGATION TABS ===== */}
       <div className="team-tabs">
+        {/* Conditional class names based on activeTab state */}
+        {/* Ternary operator: condition ? ifTrue : ifFalse */}
         <button
           className={`team-tab ${
             activeTab === "overview" ? "team-tab--active" : ""
@@ -1397,74 +2030,76 @@ const TeamDetailPage = ({
         </button>
       </div>
 
-      {/* Tab Content */}
+      {/* ===== TAB CONTENT (Changes based on activeTab) ===== */}
       <div className="team-content">
-        {/* Overview Tab */}
+        {/* ----- OVERVIEW TAB ----- */}
         {activeTab === "overview" && (
           <div className="tab-content">
-            {/* Team Statistics */}
+            {/* Season Statistics Grid */}
             <div className="content-section">
               <h2 className="section-title">📈 Estatísticas da Época</h2>
               <div className="stats-grid">
                 <div className="stat-card">
                   <div className="stat-card__label">Jogos</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.played || 0}
+                    {teamStanding.standing?.played || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Vitórias</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.wins || 0}
+                    {teamStanding.standing?.wins || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Empates</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.draws || 0}
+                    {teamStanding.standing?.draws || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Derrotas</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.losses || 0}
+                    {teamStanding.standing?.losses || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Golos Marcados</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.goalsFor || 0}
+                    {teamStanding.standing?.goalsFor || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Golos Sofridos</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.goalsAgainst || 0}
+                    {teamStanding.standing?.goalsAgainst || 0}
                   </div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-card__label">Diferença</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.goalDiff > 0 ? "+" : ""}
-                    {teamStanding.standing.goalDiff || 0}
+                    {/* Ternary adds + sign for positive numbers */}
+                    {teamStanding.standing?.goalDiff > 0 ? "+" : ""}
+                    {teamStanding.standing?.goalDiff || 0}
                   </div>
                 </div>
                 <div className="stat-card stat-card--highlight">
                   <div className="stat-card__label">Pontos</div>
                   <div className="stat-card__value">
-                    {teamStanding.standing.points || 0}
+                    {teamStanding.standing?.points || 0}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Top Scorers */}
+            {/* Top Scorers List */}
             {topScorers.length > 0 && (
               <div className="content-section">
                 <h2 className="section-title">🏅 Melhores Marcadores</h2>
                 <div className="scorers-list">
                   {topScorers.map((player, index) => (
                     <div key={player.id} className="scorer-item">
+                      {/* index + 1 because arrays start at 0 */}
                       <div className="scorer-item__rank">#{index + 1}</div>
                       <div className="scorer-item__info">
                         <div className="scorer-item__name">{player.name}</div>
@@ -1486,11 +2121,12 @@ const TeamDetailPage = ({
               </div>
             )}
 
-            {/* Live Matches */}
+            {/* Live Matches Section */}
             {liveMatches.length > 0 && (
               <div className="content-section">
-                <h2 className="section-title">Jogos ao Vivo</h2>
+                <h2 className="section-title">🔴 Jogos ao Vivo</h2>
                 <div className="matches-list">
+                  {/* MatchCard is a separate component that handles match display */}
                   {liveMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
                   ))}
@@ -1498,10 +2134,10 @@ const TeamDetailPage = ({
               </div>
             )}
 
-            {/* Upcoming Matches */}
+            {/* Upcoming Matches Section */}
             {upcomingMatches.length > 0 && (
               <div className="content-section">
-                <h2 className="section-title">Próximos Jogos</h2>
+                <h2 className="section-title">📅 Próximos Jogos</h2>
                 <div className="matches-list">
                   {upcomingMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
@@ -1510,10 +2146,10 @@ const TeamDetailPage = ({
               </div>
             )}
 
-            {/* Recent Results */}
+            {/* Recent Results Section */}
             {recentMatches.length > 0 && (
               <div className="content-section">
-                <h2 className="section-title">Resultados Recentes</h2>
+                <h2 className="section-title">✅ Resultados Recentes</h2>
                 <div className="matches-list">
                   {recentMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
@@ -1522,10 +2158,10 @@ const TeamDetailPage = ({
               </div>
             )}
 
-            {/* Canceled Matches */}
+            {/* Canceled Matches Section */}
             {canceledMatches.length > 0 && (
               <div className="content-section">
-                <h2 className="section-title">Jogos Cancelados</h2>
+                <h2 className="section-title">❌ Jogos Cancelados</h2>
                 <div className="matches-list">
                   {canceledMatches.map((match) => (
                     <MatchCard key={match.id} match={match} />
@@ -1536,7 +2172,7 @@ const TeamDetailPage = ({
           </div>
         )}
 
-        {/* Squad Tab */}
+        {/* ----- SQUAD TAB ----- */}
         {activeTab === "squad" && (
           <div className="tab-content">
             <div className="content-section">
@@ -1544,11 +2180,15 @@ const TeamDetailPage = ({
                 👥 Plantel Completo ({teamPlayers.length})
               </h2>
 
+              {/* Conditional rendering: Show message if no players */}
               {teamPlayers.length === 0 ? (
                 <p className="empty-message">Nenhum jogador registado ainda.</p>
               ) : (
+                // Object.entries() converts object to array of [key, value] pairs
+                // Example: {Goalkeeper: [...]} → [["Goalkeeper", [...]]]
                 Object.entries(playersByPosition).map(
                   ([position, posPlayers]) =>
+                    // Only render section if position has players
                     posPlayers.length > 0 ? (
                       <div key={position} className="position-group">
                         <h3 className="position-group__title">
@@ -1574,11 +2214,13 @@ const TeamDetailPage = ({
                                 <p className="player-card__position">
                                   {player.position}
                                 </p>
+                                {/* Only show stats if they exist */}
                                 {player.stats && (
                                   <div className="player-card__stats">
                                     <span>⚽ {player.stats.goals}</span>
                                     <span>🎯 {player.stats.assists}</span>
                                     <span>🟨 {player.stats.yellowCards}</span>
+                                    {/* Only show red cards if > 0 */}
                                     {player.stats.redCards > 0 && (
                                       <span>🟥 {player.stats.redCards}</span>
                                     )}
@@ -1589,18 +2231,18 @@ const TeamDetailPage = ({
                           ))}
                         </div>
                       </div>
-                    ) : null
+                    ) : null // Return null if no players in this position
                 )
               )}
             </div>
           </div>
         )}
 
-        {/* Matches Tab */}
+        {/* ----- MATCHES TAB ----- */}
         {activeTab === "matches" && (
           <div className="tab-content">
             <div className="content-section">
-              <h2 className="section-title">Todos os Jogos</h2>
+              <h2 className="section-title">⚽ Todos os Jogos</h2>
               {teamMatches.length === 0 ? (
                 <p className="empty-message">Nenhum jogo registado ainda.</p>
               ) : (
@@ -1615,7 +2257,8 @@ const TeamDetailPage = ({
         )}
       </div>
 
-      {/* Team Contact Info */}
+      {/* ===== TEAM CONTACT INFORMATION ===== */}
+      {/* Only render if contact object exists */}
       {contact && (
         <div className="team-contact">
           <h3>📞 Informações de Contacto</h3>
@@ -1625,6 +2268,7 @@ const TeamDetailPage = ({
           <p>
             <strong>Capitão:</strong> {captain}
           </p>
+          {/* Only show phone/email if they have values */}
           {phone && (
             <p>
               <strong>Telefone:</strong> {phone}
@@ -1641,4 +2285,5 @@ const TeamDetailPage = ({
   );
 };
 
+// Export component so it can be imported in other files
 export default TeamDetailPage;

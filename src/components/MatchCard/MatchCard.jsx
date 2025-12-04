@@ -19,6 +19,10 @@ const MatchCard = ({ match }) => {
     time, // string (e.g., '14:00')
     status, // 'live' | 'finished' | 'upcoming'
     venue, // string (e.g., 'Campo Principal')
+    // ✅ These are now Arrays (e.g. ["Name 1", "Name 2"])
+    // default to empty array [] to prevent crash if undefined
+    homeScorers = [],
+    awayScorers = [],
     info, // optional extra info string
     // minute, // current minute if live (e.g., 67)
   } = match;
@@ -70,6 +74,20 @@ const MatchCard = ({ match }) => {
         <div className="team">
           <div className="team-logo">{homeTeam.abbr}</div>
           <div className="team-name">{homeTeam.name}</div>
+
+          {/* ======== need review============== */}
+          {/* ✅ SIMPLIFIED: No .split() needed. Just map the array. */}
+          {(status === "finished" || status === "live") &&
+            homeScorers.length > 0 && (
+              <div className="scorers home-scorers">
+                {homeScorers.map((scorer, index) => (
+                  <span key={index} className="scorer-name">
+                    {scorer} <span className="ball-icon">⚽</span>
+                  </span>
+                ))}
+              </div>
+            )}
+          {/* ======== need review============== */}
         </div>
         {/* Score (center) - shows VS if upcoming, actual score otherwise */}
         {/* -------------------------------------------------------- */}
@@ -93,6 +111,20 @@ const MatchCard = ({ match }) => {
         <div className="team">
           <div className="team-logo">{awayTeam.abbr}</div>
           <div className="team-name">{awayTeam.name}</div>
+
+          {/* ======== need review============== */}
+          {/* ✅ SIMPLIFIED: Just map the array. */}
+          {(status === "finished" || status === "live") &&
+            awayScorers.length > 0 && (
+              <div className="scorers away-scorers">
+                {awayScorers.map((scorer, index) => (
+                  <span key={index} className="scorer-name">
+                    <span className="ball-icon">⚽</span> {scorer}
+                  </span>
+                ))}
+              </div>
+            )}
+          {/* ======== need review============== */}
         </div>
       </div>
       {/* Venue and additional info */}
