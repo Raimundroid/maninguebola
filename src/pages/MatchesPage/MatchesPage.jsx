@@ -47,6 +47,8 @@ import FilterButtons from "../../components/atoms/filterButtons/FilterButtons";
 import MatchesGrid from "../../components/MatchesGrid/MatchesGrid";
 import "./MatchesPage.css";
 
+import { useSearchParams } from "react-router-dom";
+
 // Define filter options as a constant outside the component
 // This prevents recreating the array on every render
 const MATCH_FILTERS = [
@@ -97,9 +99,22 @@ const complexMatchSorter = (a, b) => {
 };
 
 const MatchesPage = ({ matches }) => {
+  // 1. Hook to read the URL query parameters
+  const [searchParams] = useSearchParams();
+
+  // 2. Get the filter value from the URL, defaulting to 'all' if not present
+  const urlFilter = searchParams.get("filter");
+
+  // 3. Determine the initial filter state
+  const initialFilter =
+    urlFilter &&
+    ["live", "finished", "upcoming", "canceled"].includes(urlFilter)
+      ? urlFilter // Use the valid URL filter
+      : "all"; // Default to 'all'
+
   // State to track which filter is currently selected
-  // Default is 'all' (show all matches)
-  const [activeFilter, setActiveFilter] = useState("all");
+  //  Use the determined initialFilter from the URL
+  const [activeFilter, setActiveFilter] = useState(initialFilter);
 
   // ============================================
   // useMemo EXPLAINED STEP BY STEP:

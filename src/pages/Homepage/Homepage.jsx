@@ -27,6 +27,9 @@ const Homepage = ({ matches, stats }) => {
   const upcomingMatches = matches
     .filter((m) => m.status === "upcoming")
     .slice(0, 2);
+  const canceledMatches = matches
+    .filter((m) => m.status === "canceled")
+    .slice(0, 4);
 
   return (
     <div className="homepage-container">
@@ -38,8 +41,8 @@ const Homepage = ({ matches, stats }) => {
         <>
           <SectionHeader
             title="🔴 Ao Vivo Agora"
-            linkTo={"/jogos"}
-            linkText={"Ver mais"}
+            linkTo={"/jogos?filter=live"}
+            linkText={"Ver todos"}
           />
           <MatchesGrid matches={liveMatches} />
         </>
@@ -49,7 +52,7 @@ const Homepage = ({ matches, stats }) => {
       {/* With React Router, use Link component for navigation */}
       <SectionHeader
         title="Resultados Recentes"
-        linkTo={"/jogos"}
+        linkTo={"/jogos?filter=finished"}
         linkText={"Ver todos"}
       />
       {/* <Link to="/jogos" className="link">
@@ -61,10 +64,18 @@ const Homepage = ({ matches, stats }) => {
       {/* Upcoming matches section */}
       <SectionHeader
         title="Próximos Jogos"
-        linkTo={"/jogos"}
-        linkText={"Ver mais"}
+        linkTo={"/jogos?filter=upcoming"}
+        linkText={"Ver todos"}
       />
       <MatchesGrid matches={upcomingMatches} />
+
+      {/* Upcoming matches section */}
+      <SectionHeader
+        title="Jogos Cancelados"
+        linkTo={"/jogos?filter=canceled"}
+        linkText={"Ver todos"}
+      />
+      <MatchesGrid matches={canceledMatches} />
 
       {/* Statistics section */}
       <SectionHeader title="Estatísticas Rápidas" />
