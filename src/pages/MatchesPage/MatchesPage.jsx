@@ -54,8 +54,47 @@ const MATCH_FILTERS = [
   { value: "live", label: "Ao Vivo" }, // Currently playing
   { value: "finished", label: "Realizados" }, // Finished/completed
   { value: "upcoming", label: "Próximos" }, // Future matches
-  { value: "canceled", label: "Cancelado" },
+  { value: "canceled", label: "Cancelados" },
 ];
+
+// Define Priority Order (Lower number = Higher priority)
+const statusPriority = {
+  live: 1,
+  upcoming: 2,
+  finished: 3,
+  canceled: 4,
+};
+
+/**
+ * Custom sort function for matches based on status priority and chronology.
+ */
+const complexMatchSorter = (a, b) => {
+  // 1. Compare Status Priority
+  const priorityA = statusPriority[a.status] || 99;
+  const priorityB = statusPriority[b.status] || 99;
+
+  if (priorityA !== priorityB) {
+    return priorityA - priorityB;
+  }
+
+  // 2. Statuses are the same - Apply Date & Time Logic
+
+  // Combine date and time for precise chronological sorting
+  const timeA = a.time || "00:00";
+  const timeB = b.time || "00:00";
+
+  const dateTimeA = new Date(`${a.date}T${timeA}`);
+  const dateTimeB = new Date(`${b.date}T${timeB}`);
+
+  // Logic:
+  // Live/Upcoming: Ascending (Earliest first: A - B)
+  // Finished/Canceled: Descending (Newest first: B - A)
+  if (a.status === "live" || a.status === "upcoming") {
+    return dateTimeA - dateTimeB;
+  } else {
+    return dateTimeB - dateTimeA;
+  }
+};
 
 const MatchesPage = ({ matches }) => {
   // State to track which filter is currently selected
@@ -82,14 +121,25 @@ const MatchesPage = ({ matches }) => {
 
   // This code only runs when 'matches' or 'activeFilter' changes
   const filteredMatches = useMemo(() => {
-    // If 'all' is selected, return all matches (no filtering needed)
+    let resultMatches;
+
+    // A. Filter Step
     if (activeFilter === "all") {
-      return matches;
+      // If 'all' is selected, start with all matches
+      resultMatches = matches;
+    } else {
+      // Otherwise, filter matches by the active status
+      resultMatches = matches.filter((match) => match.status === activeFilter);
     }
 
-    // Otherwise, filter matches where status matches the active filter
-    // .filter() returns a NEW array with only items where the condition is true
-    return matches.filter((match) => match.status === activeFilter);
+    // B. Sort Step (APPLY TO ALL RESULTS)
+    // We sort a COPY of the array using .slice() to ensure
+    // we don't modify the original 'matches' array or the filtered result
+    // before it's returned.
+
+    return resultMatches
+      .slice() // Create a shallow copy to sort
+      .sort(complexMatchSorter); // Apply the custom sorting logic
   }, [matches, activeFilter]); // <-- DEPENDENCY ARRAY
   // ↑ These are the "dependencies" - values that, when changed,
   //   trigger recalculation. If you forget a dependency, you'll
