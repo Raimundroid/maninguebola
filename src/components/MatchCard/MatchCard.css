@@ -127,6 +127,16 @@
   font-weight: 700;
   color: var(--text-light);
 }
+/* }==== */
+.match-card .teams .team .team-logo .team-logo-img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+
+  object-fit: contain; /* Use object-fit to ensure the logo scales correctly without stretching */
+  box-shadow: 0 4px 16px var(--shadow); /* Shadow: X Y Blur Color */
+}
 
 .match-card .teams .team .team-name {
   font-size: 14px;
@@ -141,7 +151,7 @@
   min-width: 0;
 }
 .match-card .teams .score {
-  font-size: 32px; /*og: 32px*/
+  font-size: 28px; /*og: 32px*/
   font-weight: 700;
   display: flex;
   align-items: center;

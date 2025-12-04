@@ -69,8 +69,11 @@ const TeamsGrid = ({ teams /* = []*/, onTeamClick }) => {
     //   return 1;
     // }
 
-    // Otherwise (both have no points), sort by name alphabetically
-    return a.name.localeCompare(b.name);
+    // Otherwise (no points for both) → sort by name alphabetically
+    return a.name.localeCompare(b.name, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    });
   });
 
   return (

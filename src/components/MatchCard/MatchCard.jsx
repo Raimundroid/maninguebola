@@ -71,10 +71,30 @@ const MatchCard = ({ match }) => {
         {/* ------------------------LEFT-------------------------------- */}
         {/* -------------------------------------------------------- */}
         {/* -------------------------------------------------------- */}
-        <div className="team">
-          <div className="team-logo">{homeTeam.abbr}</div>
-          <div className="team-name">{homeTeam.name}</div>
 
+        {/* <div className="team-header__logo-section">
+              <img
+                src={logo || "/images/default-team-logo.png"}
+                alt={name}
+                className="team-header__logo"
+              /> */}
+        <div className="team">
+          {/* Best practice: Always render the logo, but show the abbreviation
+          inside the logo container if the logo is missing. */}
+          <div className="team-logo">
+            {homeTeam.logo ? (
+              <img
+                className="team-logo-img"
+                src={homeTeam.logo}
+                alt={homeTeam.abbr}
+              />
+            ) : (
+              // Fallback if logo path is missing
+              homeTeam.abbr
+            )}
+          </div>
+
+          <div className="team-name">{homeTeam.name}</div>
           {/* ======== need review============== */}
           {/* ✅ SIMPLIFIED: No .split() needed. Just map the array. */}
           {(status === "finished" || status === "live") &&
@@ -109,7 +129,20 @@ const MatchCard = ({ match }) => {
         {/* -------------------------------------------------------- */}
         {/* ------------------------RIGHT-------------------------------- */}
         <div className="team">
-          <div className="team-logo">{awayTeam.abbr}</div>
+          {/* Best practice: Always render the logo, but show the abbreviation
+          inside the logo container if the logo is missing. */}
+          <div className="team-logo">
+            {awayTeam.logo ? (
+              <img
+                className="team-logo-img"
+                src={awayTeam.logo}
+                alt={awayTeam.abbr}
+              />
+            ) : (
+              // Fallback if logo path is missing
+              awayTeam.abbr
+            )}
+          </div>
           <div className="team-name">{awayTeam.name}</div>
 
           {/* ======== need review============== */}
