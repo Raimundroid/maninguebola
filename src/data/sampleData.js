@@ -173,8 +173,9 @@ export const players = [
     name: "Miguel Santos",
     teamId: "eagles", //new
     number: 10, //new
+
     position: "Forward", //new Defender || Midfielder || Forward
-    photo: "/src/images/players/default-player-1.png", //new
+    photo: "/images/players/default-player-1.png", //new
     stats: {
       //new
       appearances: 12,
@@ -190,7 +191,7 @@ export const players = [
     teamId: "lions",
     number: 7,
     position: "Forward",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 14,
       goals: 15,
@@ -205,7 +206,7 @@ export const players = [
     teamId: "tigers",
     number: 10,
     position: "Forward",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
       goals: 14,
@@ -220,7 +221,7 @@ export const players = [
     teamId: "eagles",
     number: 9,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
       goals: 12,
@@ -235,7 +236,7 @@ export const players = [
     teamId: "lions",
     number: 11,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 13,
       goals: 10,
@@ -250,7 +251,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
       goals: 3,
@@ -265,7 +266,7 @@ export const players = [
     teamId: "eagles",
     number: 4,
     position: "Defender",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -280,7 +281,7 @@ export const players = [
     teamId: "lions",
     number: 1,
     position: "Defender",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
       goals: 5,
@@ -295,7 +296,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Defender",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -310,7 +311,7 @@ export const players = [
     teamId: "eagles",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -325,7 +326,7 @@ export const players = [
     teamId: "lions",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 10,
       goals: 5,
@@ -340,7 +341,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -355,7 +356,7 @@ export const players = [
     teamId: "cats",
     number: 2,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 10,
       goals: 0,
@@ -370,7 +371,7 @@ export const players = [
     teamId: "cats",
     number: 4,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
       goals: 5,
@@ -385,7 +386,7 @@ export const players = [
     teamId: "cats",
     number: 9,
     position: "Forward",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 9,
       goals: 20,
@@ -400,7 +401,7 @@ export const players = [
     teamId: "cats",
     number: 3,
     position: "Defender",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 12,
       goals: 3,
@@ -416,7 +417,7 @@ export const players = [
     teamId: "eagles", //new
     number: 10, //new
     position: "Forward", //new Defender || Midfielder || Forward
-    photo: "/src/images/players/default-player-1.png", //new
+    photo: "/images/players/default-player-1.png", //new
     stats: {
       //new
       appearances: 12,
@@ -432,7 +433,7 @@ export const players = [
     teamId: "lions",
     number: 7,
     position: "Forward",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 14,
       goals: 15,
@@ -447,7 +448,7 @@ export const players = [
     teamId: "tigers",
     number: 10,
     position: "Forward",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
       goals: 14,
@@ -462,7 +463,7 @@ export const players = [
     teamId: "eagles",
     number: 9,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
       goals: 12,
@@ -477,7 +478,7 @@ export const players = [
     teamId: "lions",
     number: 11,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 13,
       goals: 10,
@@ -492,7 +493,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
       goals: 3,
@@ -507,7 +508,7 @@ export const players = [
     teamId: "eagles",
     number: 4,
     position: "Defender",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -522,7 +523,7 @@ export const players = [
     teamId: "lions",
     number: 1,
     position: "Defender",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
       goals: 5,
@@ -537,7 +538,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Defender",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -552,7 +553,7 @@ export const players = [
     teamId: "eagles",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -567,7 +568,7 @@ export const players = [
     teamId: "lions",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 10,
       goals: 5,
@@ -582,7 +583,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -597,7 +598,7 @@ export const players = [
     teamId: "cats",
     number: 2,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 10,
       goals: 0,
@@ -612,7 +613,7 @@ export const players = [
     teamId: "cats",
     number: 4,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
       goals: 5,
@@ -627,7 +628,7 @@ export const players = [
     teamId: "cats",
     number: 9,
     position: "Forward",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 9,
       goals: 20,
@@ -642,7 +643,7 @@ export const players = [
     teamId: "cats",
     number: 3,
     position: "Defender",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 12,
       goals: 3,
@@ -659,7 +660,7 @@ export const players = [
     teamId: "eagles", //new
     number: 10, //new
     position: "Forward", //new Defender || Midfielder || Forward
-    photo: "/src/images/players/default-player-1.png", //new
+    photo: "/images/players/default-player-1.png", //new
     stats: {
       //new
       appearances: 12,
@@ -675,7 +676,7 @@ export const players = [
     teamId: "lions",
     number: 7,
     position: "Forward",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 14,
       goals: 15,
@@ -690,7 +691,7 @@ export const players = [
     teamId: "tigers",
     number: 10,
     position: "Forward",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
       goals: 14,
@@ -705,7 +706,7 @@ export const players = [
     teamId: "eagles",
     number: 9,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
       goals: 12,
@@ -720,7 +721,7 @@ export const players = [
     teamId: "lions",
     number: 11,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 13,
       goals: 10,
@@ -735,7 +736,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
       goals: 3,
@@ -750,7 +751,7 @@ export const players = [
     teamId: "eagles",
     number: 4,
     position: "Defender",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -765,7 +766,7 @@ export const players = [
     teamId: "lions",
     number: 1,
     position: "Defender",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
       goals: 5,
@@ -780,7 +781,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Defender",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -795,7 +796,7 @@ export const players = [
     teamId: "eagles",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -810,7 +811,7 @@ export const players = [
     teamId: "lions",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 10,
       goals: 5,
@@ -825,7 +826,7 @@ export const players = [
     teamId: "tigers",
     number: 1,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 12,
       goals: 0,
@@ -840,7 +841,7 @@ export const players = [
     teamId: "cats",
     number: 2,
     position: "Goalkeeper",
-    photo: "/src/images/players/default-player-1.png",
+    photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 10,
       goals: 0,
@@ -855,7 +856,7 @@ export const players = [
     teamId: "cats",
     number: 4,
     position: "Midfielder",
-    photo: "/src/images/players/default-player-2.png",
+    photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
       goals: 5,
@@ -870,7 +871,7 @@ export const players = [
     teamId: "cats",
     number: 9,
     position: "Forward",
-    photo: "/src/images/players/default-player-3.png",
+    photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 9,
       goals: 20,
@@ -885,7 +886,7 @@ export const players = [
     teamId: "cats",
     number: 3,
     position: "Defender",
-    photo: "/src/images/players/default-player-4.png",
+    photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 12,
       goals: 3,
