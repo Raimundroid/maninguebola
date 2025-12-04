@@ -35,7 +35,7 @@
 .standings-table .team-cell {
   display: inline-flex;
   align-items: center;
-  gap: 5px; /*og: 8px*/
+  gap: 4px; /*og: 8px*/
 }
 
 .standings-table .team-cell .team-logo {
@@ -49,6 +49,7 @@
   align-items: center;
   font-weight: 700;
   color: var(--text-light);
+  flex-shrink: 0;
 }
 .standings-table .team-cell .team-name {
   font-size: 12px;
