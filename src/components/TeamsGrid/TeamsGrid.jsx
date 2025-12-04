@@ -51,14 +51,27 @@ const TeamsGrid = ({ teams /* = []*/, onTeamClick }) => {
   // Input object: { eagles: {id: "eagles", ...}, lions: {id: "lions", ...} }
   // After Object.values(): [ {id: "eagles", ...}, {id: "lions", ...} ]
 
-  // const sortedTeams = teams.sort((a, b) => {
-  //   // CRITERIA 1: Points (Highest points first)
-  //   if (b.points !== a.points) return b.points - a.points;
-  //   // CRITERIA 2: Goal Difference (If points are tied, best GD wins)
-  //   if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
-  //   // CRITERIA 3: Goals Scored (If points and GD are tied, most goals wins)
-  //   return b.goalsFor - a.goalsFor;
-  // });
+  // sort it
+  teamsArray.sort((a, b) => {
+    // const aPts = a.standing?.points;
+    // const bPts = b.standing?.points;
+
+    // // If both have points defined, sort ascending by points:
+    // if (aPts !== null && bPts !== null) {
+    //   return bPts - aPts;
+    // }
+
+    // // If only one has points defined, put that one first
+    // if (aPts !== null) {
+    //   return -1;
+    // }
+    // if (bPts !== null) {
+    //   return 1;
+    // }
+
+    // Otherwise (both have no points), sort by name alphabetically
+    return a.name.localeCompare(b.name);
+  });
 
   return (
     <div className="teams-grid">
