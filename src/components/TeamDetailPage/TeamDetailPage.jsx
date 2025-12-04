@@ -1933,7 +1933,7 @@ const TeamDetailPage = ({
             {/* Logo and basic info section */}
             <div className="team-header__logo-section">
               <img
-                src={logo || "/images/default-team-logo.png"}
+                src={logo || "/images/teams/default-team-logo.png"}
                 alt={name}
                 className="team-header__logo"
               />

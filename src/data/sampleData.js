@@ -98,7 +98,7 @@ export const teams = {
     // points: "99", /////
     founded: 2010,
     stadium: "Eagles Arena A",
-    logo: "/src/images/teams/shield-gold.jpg",
+    logo: "/images/teams/shield-gold.jpg",
     colors: { primary: "#0033cc", secondary: "#ffcc00" },
     contact: {
       coach: "John Dalton",
@@ -115,7 +115,8 @@ export const teams = {
     // points: "75", /////
     founded: 2015,
     stadium: "Lions Den",
-    logo: "/src/images/teams/shield-golden.jpg",
+
+    logo: "/images/teams/shield-golden.jpg",
     colors: { primary: "#FF0000", secondary: "#14ca14ff" },
     contact: {
       coach: "Lino Papagaio",
@@ -132,7 +133,7 @@ export const teams = {
     // points: "50", /////
     founded: 2012,
     stadium: "Tigers Cave",
-    logo: "/src/images/teams/shield-png-1.png",
+    logo: "/images/teams/shield-png-1.png",
     colors: { primary: "#00FF00", secondary: "#000000" },
     contact: {
       coach: "Gomes Boavista",
@@ -149,7 +150,7 @@ export const teams = {
     // points: "50", /////
     founded: 2009,
     stadium: "Cats House",
-    logo: "/src/images/teams/shield-png-2.png",
+    logo: "/images/teams/shield-png-2.png",
     colors: { primary: "#003cffff", secondary: "#df0c0cff" },
     contact: {
       coach: "Marcus Fontes",

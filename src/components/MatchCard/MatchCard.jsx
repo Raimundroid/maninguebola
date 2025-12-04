@@ -87,6 +87,9 @@ const MatchCard = ({ match }) => {
                 className="team-logo-img"
                 src={homeTeam.logo}
                 alt={homeTeam.abbr}
+                loading="lazy"
+                width="48"
+                height="48"
               />
             ) : (
               // Fallback if logo path is missing
@@ -137,6 +140,9 @@ const MatchCard = ({ match }) => {
                 className="team-logo-img"
                 src={awayTeam.logo}
                 alt={awayTeam.abbr}
+                loading="lazy"
+                width="48"
+                height="48"
               />
             ) : (
               // Fallback if logo path is missing
