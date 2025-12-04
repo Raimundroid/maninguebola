@@ -135,7 +135,6 @@
   padding: 1px;
 
   object-fit: contain; /* Use object-fit to ensure the logo scales correctly without stretching */
-  box-shadow: 0 4px 16px var(--shadow); /* Shadow: X Y Blur Color */
 }
 
 .match-card .teams .team .team-name {

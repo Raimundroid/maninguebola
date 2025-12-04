@@ -10,7 +10,7 @@ TeamCard Styles
   background: var(--card-bg, #ffffff);
 
   /* Internal spacing inside the card */
-  padding: 20px;
+  padding: 16px;
 
   /* Rounded corners */
   border-radius: 12px;
@@ -72,9 +72,17 @@ TeamCard Styles
   color: var(--text-light, #666);
 }
 
+.team-card .team-logo .team-logo-img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  object-fit: contain; /* Use object-fit to ensure the logo scales correctly without stretching*/
+}
+
 /* Team name styling */
 .team-card .team-name {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 8px;
   font-weight: 600;
   color: var(--text, #333);

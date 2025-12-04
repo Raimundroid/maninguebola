@@ -32,8 +32,19 @@ const TeamCard = ({ team, onClick }) => {
     <div className="team-card" onClick={() => onClick?.(team)}>
       {/* Logo box - displays team abbreviation */}
       <div className="team-logo">
-        {/* Display the team's abbreviation (e.g., "FE" for FC Eagles) */}
-        {team.abbr}
+        {team.logo ? (
+          <img
+            className="team-logo-img"
+            src={team.logo}
+            alt={team.abbr}
+            loading="lazy"
+            width="64"
+            height="64"
+          />
+        ) : (
+          // Fallback if logo path is missing
+          team.abbr
+        )}
       </div>
 
       {/* Team name display */}
