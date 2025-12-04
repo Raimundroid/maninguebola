@@ -2202,7 +2202,8 @@ const TeamDetailPage = ({
                               </div>
                               <img
                                 src={
-                                  player.photo || "/images/default-player.png"
+                                  player.photo ||
+                                  "/images/players/default-player.png"
                                 }
                                 alt={player.name}
                                 className="player-card__photo"
