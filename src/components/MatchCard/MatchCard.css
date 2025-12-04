@@ -112,6 +112,9 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+
+  /* Allow flex children to shrink when space is limited */
+  min-width: 0;
 }
 .match-card .teams .team .team-logo {
   width: 48px;
@@ -130,9 +133,15 @@
   font-weight: 600;
   text-align: center;
   color: var(--text);
+  white-space: nowrap;
+  overflow: hidden; /* hides the extra text that doesn't fit */
+  text-overflow: ellipsis; /* adds “...” at the end of visible text */
+  /* Ensure the element has a width context */
+  width: 100%;
+  min-width: 0;
 }
 .match-card .teams .score {
-  font-size: 30px; /*og: 32px*/
+  font-size: 32px; /*og: 32px*/
   font-weight: 700;
   display: flex;
   align-items: center;

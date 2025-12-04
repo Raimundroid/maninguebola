@@ -126,7 +126,7 @@ export const teams = {
   },
   tigers: {
     id: "tigers",
-    name: "Sporting Tigers",
+    name: "Wakandan Sporting Tigers",
     abbr: "ST",
     // position: "3",
     // points: "50", /////

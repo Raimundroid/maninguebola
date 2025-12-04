@@ -38,7 +38,7 @@
   gap: 5px; /*og: 8px*/
 }
 
-.standings-table .team-logo {
+.standings-table .team-cell .team-logo {
   width: 32px;
   height: 32px;
   font-size: 12px;
@@ -50,7 +50,7 @@
   font-weight: 700;
   color: var(--text-light);
 }
-.standings-table .team-name {
+.standings-table .team-cell .team-name {
   font-size: 12px;
   font-weight: 700;
   color: var(--primary);

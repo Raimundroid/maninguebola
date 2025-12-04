@@ -22,6 +22,9 @@ TeamCard Styles
   /* Center all text inside the card */
   text-align: center;
 
+  /* Allow flex children to shrink when space is limited */
+  min-width: 0;
+
   /* Smooth animation for all property changes
     Format: property duration timing-function */
   transition: all 300ms;
@@ -75,6 +78,12 @@ TeamCard Styles
   margin-bottom: 8px;
   font-weight: 600;
   color: var(--text, #333);
+  white-space: nowrap;
+  overflow: hidden; /* hides the extra text that doesn't fit */
+  text-overflow: ellipsis; /* adds “...” at the end of visible text */
+  /* Ensure the element has a width context */
+  width: 100%;
+  min-width: 0;
 }
 
 /* Stats info styling (position and points) */
