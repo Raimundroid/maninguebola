@@ -132,7 +132,7 @@
   color: var(--text);
 }
 .match-card .teams .score {
-  font-size: 32px;
+  font-size: 30px; /*og: 32px*/
   font-weight: 700;
   display: flex;
   align-items: center;
