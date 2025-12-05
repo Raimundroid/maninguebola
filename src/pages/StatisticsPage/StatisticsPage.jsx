@@ -350,6 +350,33 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
     <div className="statistics-page">
       <div className="container">
         <PageIndicator icon={"📊"} title={"Estatísticas dos Jogadores"} />
+
+        {/* ============================================
+            TABS NAVIGATION
+            ============================================
+            Two tabs: Goals and Assists
+            Clicking a tab changes activeTab state
+            Active tab gets special styling (stats-tab--active)
+        */}
+        <div className="stats-tabs">
+          <button
+            className={`stats-tab ${
+              activeTab === "goals" ? "stats-tab--active" : ""
+            }`}
+            onClick={() => setActiveTab("goals")}
+          >
+            ⚽ Golos
+          </button>
+
+          <button
+            className={`stats-tab ${
+              activeTab === "assists" ? "stats-tab--active" : ""
+            }`}
+            onClick={() => setActiveTab("assists")}
+          >
+            🎯 Assistências
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -499,21 +526,8 @@ export default StatisticsPage;
 //   return (
 // <div className="statistics-page">
 // <div className="container">
-//   {/* ============================================
-//       PAGE INDICATOR
-//       ============================================
-//       Shows at top to indicate current page
-//       Uses emoji icon for visual appeal
-//   */}
 //   <div className="page-indicator">📊 Estatísticas dos Jogadores</div>
 
-//         {/* ============================================
-//             TABS NAVIGATION
-//             ============================================
-//             Two tabs: Goals and Assists
-//             Clicking a tab changes activeTab state
-//             Active tab gets special styling (stats-tab--active)
-//         */}
 //         <div className="stats-tabs">
 //           <button
 //             className={`stats-tab ${
@@ -523,6 +537,7 @@ export default StatisticsPage;
 //           >
 //             ⚽ Golos
 //           </button>
+
 //           <button
 //             className={`stats-tab ${
 //               activeTab === "assists" ? "stats-tab--active" : ""
