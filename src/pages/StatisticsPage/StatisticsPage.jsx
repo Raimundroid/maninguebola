@@ -563,8 +563,112 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
             </thead>
 
             {/* TABLE BODY */}
-            <tbody></tbody>
+            <tbody>
+              {/* EMPTY STATE
+                  Shows if no players match current filters */}
+              {getFilteredPlayers.length === 0 ? (
+                <tr>
+                  <td colSpan="9" className="empty-state">
+                    <div className="empty-state-content">
+                      <div className="empty-state-icon">📊</div>
+                      <p>Nenhum jogador encontrado com estes filtros</p>
+                    </div>
+                  </td>
+                </tr>
+              ) : (
+                /* PLAYER ROWS
+                   Map over filtered players array
+                   Each player gets one row
+                   Index used for ranking (0 = 1st place) */
+                getFilteredPlayers.map((player, index) => {
+                  // Get team data for this player
+                  const team = getTeam(player.teamId);
+                  return (
+                    /* ROW ELEMENT
+                       key: Unique identifier for React rendering
+                       className: Base class + rank class for styling
+                       Example: "stats-row rank-gold" for 1st place */
+                    <tr
+                      key={player.id}
+                      className={`stats-row ${getRankClass(index)}`}
+                    >
+                      {/* RANK CELL
+                          Shows medal (🥇🥈🥉) for top 3, number for others */}
+                      <td className="td-rank">
+                        <span className="rank-badge">
+                          {getRankMedal(index)}
+                        </span>
+                      </td>
+
+                      {/* PLAYER CELL
+                          Shows photo + name in horizontal layout */}
+                      <td className="td-player">
+                        <div className="player-cell">
+                          <img
+                            src={
+                              player.photo ||
+                              "/images/players/default-player.png"
+                            }
+                            alt={player.name}
+                            className="player-photo"
+                          />
+                          <span className="player-name">{player.name}</span>
+                        </div>
+                      </td>
+
+                      {/* TEAM CELL
+                          Shows team logo + name */}
+                      <td className="td-team">
+                        <div className="team-cell">
+                          <img
+                            src={
+                              team.logo ||
+                              team.abbr ||
+                              "/images/teams/default-team-logo.png"
+                            }
+                            alt={team.name}
+                            className="team-logo-small"
+                          />
+                          <span className="team-name-small">{team.name}</span>
+                        </div>
+                      </td>
+
+                      {/* MAIN STAT CELL (Goals or Assists)
+                          Highlighted with larger font and primary color */}
+                      <td className="td-center td-highlight">
+                        <strong>{player.value}</strong>
+                      </td>
+
+                      {/* MATCHES CELL */}
+                      <td className="td-center">{player.matches}</td>
+
+                      {/* AVERAGE CELL
+                          Shows calculated average (e.g., "2.50") */}
+                      <td className="td-center">{player.average}</td>
+
+                      {/* POSITION CELL */}
+                      <td className="td-center td-position">
+                        {player.positions}
+                      </td>
+
+                      {/* YELLOW CARDS CELL 
+                       Shows number or 0 if zero */}
+                      <td className="td-center">
+                        {player.yellowCards > 0 ? player.yellowCards : "0"}
+                      </td>
+
+                      {/* RED CARDS CELL
+                          Shows number or 0 if zero */}
+                      <td className="td-center">
+                        {player.redCards > 0 ? player.redCards : "0"}
+                      </td>
+                    </tr>
+                  );
+                })
+              )}
+            </tbody>
           </table>
+          {/* END OF DESKTOP TABLE */}
         </div>
       </div>
     </div>
@@ -863,8 +967,7 @@ export default StatisticsPage;
 
 //
 //             <tbody>
-//               {/* EMPTY STATE
-//                   Shows if no players match current filters */}
+
 //               {getFilteredPlayers.length === 0 ? (
 //                 <tr>
 //                   <td colSpan="9" className="empty-state">
@@ -875,33 +978,24 @@ export default StatisticsPage;
 //                   </td>
 //                 </tr>
 //               ) : (
-//                 /* PLAYER ROWS
-//                    Map over filtered players array
-//                    Each player gets one row
-//                    Index used for ranking (0 = 1st place) */
+
 //                 getFilteredPlayers.map((player, index) => {
-//                   // Get team data for this player
+//
 //                   const team = getTeam(player.teamId);
 
 //                   return (
-//                     /* ROW ELEMENT
-//                        key: Unique identifier for React rendering
-//                        className: Base class + rank class for styling
-//                        Example: "stats-row rank-gold" for 1st place */
+
 //                     <tr
 //                       key={player.id}
 //                       className={`stats-row ${getRankClass(index)}`}
 //                     >
-//                       {/* RANK CELL
-//                           Shows medal (🥇🥈🥉) for top 3, number for others */}
+
 //                       <td className="td-rank">
 //                         <span className="rank-badge">
 //                           {getRankMedal(index)}
 //                         </span>
 //                       </td>
 
-//                       {/* PLAYER CELL
-//                           Shows photo + name in horizontal layout */}
 //                       <td className="td-player">
 //                         <div className="player-cell">
 //                           <img
@@ -913,8 +1007,6 @@ export default StatisticsPage;
 //                         </div>
 //                       </td>
 
-//                       {/* TEAM CELL
-//                           Shows team logo + name */}
 //                       <td className="td-team">
 //                         <div className="team-cell">
 //                           <img
@@ -926,29 +1018,23 @@ export default StatisticsPage;
 //                         </div>
 //                       </td>
 
-//                       {/* MAIN STAT CELL (Goals or Assists)
-//                           Highlighted with larger font and primary color */}
 //                       <td className="td-center td-highlight">
 //                         <strong>{player.value}</strong>
 //                       </td>
 
-//                       {/* MATCHES CELL */}
+//
 //                       <td className="td-center">{player.matches}</td>
 
-//                       {/* AVERAGE CELL
-//                           Shows calculated average (e.g., "2.50") */}
 //                       <td className="td-center">{player.average}</td>
 
-//                       {/* POSITION CELL */}
+//
 //                       <td className="td-center td-position">
 //                         {player.position}
 //                       </td>
 
-//                       {/* YELLOW CARDS CELL */}
+//
 //                       <td className="td-center">{player.yellowCards}</td>
 
-//                       {/* RED CARDS CELL
-//                           Shows number or dash if zero */}
 //                       <td className="td-center">
 //                         {player.redCards > 0 ? player.redCards : "-"}
 //                       </td>
@@ -959,7 +1045,7 @@ export default StatisticsPage;
 //             </tbody>
 //           </table>
 //         </div>
-//         {/* END OF DESKTOP TABLE */}
+//
 
 //         {/* ============================================
 //             MOBILE CARDS VIEW
