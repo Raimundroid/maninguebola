@@ -408,8 +408,10 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
               onChange updates searchQuery state on every keystroke
               Value is controlled by searchQuery state */}
           <div className="filter-group">
-            <label>🔍 Pesquisar:</label>
+            <label htmlFor="search-input">🔍 Pesquisar:</label>
             <input
+              id="search-input"
+              name="search-input"
               type="text"
               placeholder="Nome do Jogador"
               value={searchQuery}
@@ -422,8 +424,10 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
               Shows all teams from teamsArray
               onChange updates filterTeam state */}
           <div className="filter-group">
-            <label>🎽 Equipa:</label>
+            <label htmlFor="team-iflter-input">🎽 Equipa:</label>
             <select
+              id="team-iflter-input"
+              name="team-iflter-input"
               value={filterTeam}
               onChange={(e) => setFilterTeam(e.target.value)}
               className="filter-select"
@@ -441,8 +445,10 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
               Shows all unique positions found in players array
               onChange updates filterPosition state */}
           <div className="filter-group">
-            <label>📍 Posição:</label>
+            <label htmlFor="position-fiflter-input">📍 Posição:</label>
             <select
+              id="position-fiflter-input"
+              name="position-fiflter-input"
               value={filterPosition}
               onChange={(e) => setFilterPosition(e.target.value)}
               className="filter-select"
@@ -611,6 +617,7 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
                             }
                             alt={player.name}
                             className="player-photo"
+                            loading="lazy"
                           />
                           <span className="player-name">{player.name}</span>
                         </div>
@@ -628,6 +635,7 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
                             }
                             alt={team.name}
                             className="team-logo-small"
+                            loading="lazy"
                           />
                           <span className="team-name-small">{team.name}</span>
                         </div>
@@ -668,7 +676,105 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
               )}
             </tbody>
           </table>
-          {/* END OF DESKTOP TABLE */}
+        </div>
+        {/* END OF DESKTOP TABLE */}
+
+        {/* ============================================
+            MOBILE CARDS VIEW
+            ============================================
+
+            Hidden on desktop (display: none above 768px)
+            Shows card layout for better mobile experience
+
+            Each player gets a card with:
+            - Header: Rank, Photo, Name, Team, Main Stat
+            - Body: Grid of additional stats
+        */}
+        <div className="stats-mobile">
+          {/* EMPTY STATE for mobile */}
+          {getFilteredPlayers.length === 0 ? (
+            <div className="empty-state-card">
+              <div className="empty-state-icon">📊</div>
+              <p>Nenhum jogador encontrado</p>
+            </div>
+          ) : (
+            /* PLAYER CARDS
+               Map over same filtered players array
+               Each player gets a card */
+            getFilteredPlayers.map((player, index) => {
+              const team = getTeam(player.teamId);
+
+              return (
+                /* CARD ELEMENT
+                   key: Unique identifier
+                   className: Base class + rank class for colored border */
+                <div
+                  key={player.id}
+                  className={`stats-card ${getRankClass(index)}`}
+                >
+                  {/* CARD HEADER
+                      Horizontal layout with all key info */}
+                  <div className="stats-card-header">
+                    {/* Rank with medal/number */}
+                    <div className="stats-card-rank">{getRankMedal(index)}</div>
+
+                    {/* Player photo */}
+                    <img
+                      src={player.photo || "/images/players/default-player.png"}
+                      alt={player.name}
+                      className="stats-card-photo"
+                    />
+
+                    {/* Player info: name + team */}
+                    <div className="stats-card-player-info">
+                      <h3 className="stats-card-name">{player.name}</h3>
+                      <div className="stats-card-team">
+                        <img
+                          src={
+                            team.logo ||
+                            team.abbr ||
+                            "/images/teams/default-team.png"
+                          }
+                          alt={team.name}
+                        />
+                        <span>{teams.name}</span>
+                      </div>
+                    </div>
+
+                    {/* Main stat (large number) */}
+                    <div className="stats-card-main-stat">{player.value}</div>
+
+                    {/* CARD BODY
+                      2x2 grid of additional stats */}
+                    <div className="stats-card-body">
+                      <div className="stat-item">
+                        <span className="stat-label">Jogos:</span>
+                        <span className="stats-value">{player.matches}</span>
+                      </div>
+
+                      <div className="stat-item">
+                        <span className="stat-label">Média:</span>
+                        <span className="stats-value">{player.average}</span>
+                      </div>
+
+                      <div className="stat-item">
+                        <span className="stat-label">Posição:</span>
+                        <span className="stats-value">{player.position}</span>
+                      </div>
+
+                      <div className="stat-item">
+                        <span className="stat-label">Cartões:</span>
+                        <span className="stats-value">
+                          🟨 {player.yellowCards > 0 ? player.yellowCards : "0"}{" "}
+                          🟥 {player.redCards > 0 ? player.redCards : "0"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })
+          )}
         </div>
       </div>
     </div>
@@ -1047,55 +1153,39 @@ export default StatisticsPage;
 //         </div>
 //
 
-//         {/* ============================================
-//             MOBILE CARDS VIEW
-//             ============================================
-
-//             Hidden on desktop (display: none above 768px)
-//             Shows card layout for better mobile experience
-
-//             Each player gets a card with:
-//             - Header: Rank, Photo, Name, Team, Main Stat
-//             - Body: Grid of additional stats
-//         */}
 //         <div className="stats-mobile">
-//           {/* EMPTY STATE for mobile */}
+//
 //           {getFilteredPlayers.length === 0 ? (
 //             <div className="empty-state-card">
 //               <div className="empty-state-icon">📊</div>
 //               <p>Nenhum jogador encontrado</p>
 //             </div>
 //           ) : (
-//             /* PLAYER CARDS
-//                Map over same filtered players array
-//                Each player gets a card */
+
 //             getFilteredPlayers.map((player, index) => {
 //               const team = getTeam(player.teamId);
 
 //               return (
-//                 /* CARD ELEMENT
-//                    key: Unique identifier
-//                    className: Base class + rank class for colored border */
+
 //                 <div
 //                   key={player.id}
 //                   className={`stats-card ${getRankClass(index)}`}
 //                 >
-//                   {/* CARD HEADER
-//                       Horizontal layout with all key info */}
+
 //                   <div className="stats-card__header">
-//                     {/* Rank with medal/number */}
+//
 //                     <div className="stats-card__rank">
 //                       {getRankMedal(index)}
 //                     </div>
 
-//                     {/* Player photo */}
+//
 //                     <img
 //                       src={player.photo || "/images/default-player.png"}
 //                       alt={player.name}
 //                       className="stats-card__photo"
 //                     />
 
-//                     {/* Player info: name + team */}
+//
 //                     <div className="stats-card__player-info">
 //                       <h3 className="stats-card__name">{player.name}</h3>
 //                       <div className="stats-card__team">
@@ -1107,12 +1197,10 @@ export default StatisticsPage;
 //                       </div>
 //                     </div>
 
-//                     {/* Main stat (large number) */}
+//
 //                     <div className="stats-card__main-stat">{player.value}</div>
 //                   </div>
 
-//                   {/* CARD BODY
-//                       2x2 grid of additional stats */}
 //                   <div className="stats-card__body">
 //                     <div className="stat-item">
 //                       <span className="stat-label">Jogos:</span>
