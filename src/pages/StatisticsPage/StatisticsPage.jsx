@@ -495,6 +495,77 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
           </strong>{" "}
           jogadores
         </div>
+
+        {/* ============================================
+            DESKTOP TABLE VIEW
+            ============================================
+
+            Hidden on mobile (display: none below 768px)
+            Shows full table with all columns
+
+            TABLE STRUCTURE:
+            - thead: Column headers (some sortable)
+            - tbody: Data rows (one per player)
+        */}
+        <div className="stats-table-wrapper">
+          <table className="stats-table">
+            {/* TABLE HEADER */}
+            <thead>
+              <tr>
+                {/* Rank column - not sortable */}
+                <th className="th-rank">#</th>
+
+                {/* Player column - not sortable */}
+                <th className="th-player">Jogador</th>
+
+                {/* Team column - not sortable */}
+                <th className="th-team">Equipa</th>
+
+                {/* Goals/Assists column - SORTABLE
+                    Shows emoji and text based on active tab
+                    onClick triggers handleSort function
+                    Shows ▲▼ arrow if currently sorted by this column */}
+                <th
+                  className="thsortable th-center"
+                  onClick={() => handleSort("value")}
+                >
+                  {activeTab === "goals" ? "⚽ Golos" : "🎯 Assistências"}
+                  {sortBy === "value" && (sortOrder === "asc" ? "▲" : "▼")}
+                </th>
+
+                {/* Matches column - SORTABLE */}
+                <th
+                  className="thsortable th-center"
+                  onClick={() => handleSort("matches")}
+                >
+                  Jogos{" "}
+                  {sortBy === "matches" && (sortOrder === "asc" ? "▲" : "▼")}
+                </th>
+
+                {/* Average column - SORTABLE */}
+                <th
+                  className="thsortable th-center"
+                  onClick={() => handleSort("average")}
+                >
+                  Média{" "}
+                  {sortBy === "average" && (sortOrder === "asc" ? "▲" : "▼")}
+                </th>
+
+                {/* Position column - not sortable */}
+                <th className="th-center">Posição</th>
+
+                {/* Yellow cards column - not sortable */}
+                <th className="th-center">🟨</th>
+
+                {/* Red cards column - not sortable */}
+                <th className="th-center">🟥</th>
+              </tr>
+            </thead>
+
+            {/* TABLE BODY */}
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
@@ -742,31 +813,14 @@ export default StatisticsPage;
 //           jogadores
 //         </div>
 
-//         {/* ============================================
-//             DESKTOP TABLE VIEW
-//             ============================================
-
-//             Hidden on mobile (display: none below 768px)
-//             Shows full table with all columns
-
-//             TABLE STRUCTURE:
-//             - thead: Column headers (some sortable)
-//             - tbody: Data rows (one per player)
-//         */}
 //         <div className="stats-table-wrapper">
 //           <table className="stats-table">
-//             {/* TABLE HEADER */}
+
 //             <thead>
 //               <tr>
-//                 {/* Rank column - not sortable */}
 //                 <th className="th-rank">#</th>
-
-//                 {/* Player column - not sortable */}
 //                 <th className="th-player">Jogador</th>
-
-//                 {/* Team column - not sortable */}
 //                 <th className="th-team">Equipa</th>
-
 //                 {/* Goals/Assists column - SORTABLE
 //                     Shows emoji and text based on active tab
 //                     onClick triggers handleSort function
@@ -779,7 +833,6 @@ export default StatisticsPage;
 //                   {sortBy === "value" && (sortOrder === "asc" ? " ▲" : " ▼")}
 //                 </th>
 
-//                 {/* Matches column - SORTABLE */}
 //                 <th
 //                   className="th-sortable th-center"
 //                   onClick={() => handleSort("matches")}
@@ -788,7 +841,7 @@ export default StatisticsPage;
 //                   {sortBy === "matches" && (sortOrder === "asc" ? " ▲" : " ▼")}
 //                 </th>
 
-//                 {/* Average column - SORTABLE */}
+//
 //                 <th
 //                   className="th-sortable th-center"
 //                   onClick={() => handleSort("average")}
@@ -797,18 +850,18 @@ export default StatisticsPage;
 //                   {sortBy === "average" && (sortOrder === "asc" ? " ▲" : " ▼")}
 //                 </th>
 
-//                 {/* Position column - not sortable */}
+//
 //                 <th className="th-center">Posição</th>
 
-//                 {/* Yellow cards column - not sortable */}
+//
 //                 <th className="th-center">🟨</th>
 
-//                 {/* Red cards column - not sortable */}
+//
 //                 <th className="th-center">🟥</th>
 //               </tr>
 //             </thead>
 
-//             {/* TABLE BODY */}
+//
 //             <tbody>
 //               {/* EMPTY STATE
 //                   Shows if no players match current filters */}
