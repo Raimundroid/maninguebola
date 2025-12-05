@@ -1,14 +1,14 @@
 /* StatisticsPage.css */
-.statistics-page-container {
+.statistics-page {
   max-width: var(--page-max-width);
   margin: 0 auto;
   /* padding: 24px 16px; */
   min-height: 60vh;
-  /* background-color: black; */
-  /* padding-top: 1rem; */
 }
-/* :root {
-   --primary: #3b82f6;
+
+/*
+:root {
+  --primary: #3b82f6;
   --secondary: #1e293b;
   --success: #22c55e;
   --text: #3b82f6;
@@ -50,6 +50,7 @@
   padding: 24px 16px;
 }
 
+/* NO NEED
 /* ==================== PAGE INDICATOR ====================
 
 .page-indicator {
