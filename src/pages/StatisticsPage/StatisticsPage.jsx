@@ -475,6 +475,26 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
           )}
         </div>
         {/* END OF FILTERS SECTION */}
+
+        {/* ============================================
+            RESULTS INFO
+            ============================================
+            Shows: "Showing X of Y players"
+            Updates dynamically based on filters
+        */}
+        <div className="results-info">
+          Mostrando <strong>{getFilteredPlayers.length}</strong> de{" "}
+          <strong>
+            {
+              players.filter(
+                (p) =>
+                  calculateStats(p, activeTab === "goals" ? "goals" : "assists")
+                    .value > 0
+              ).length
+            }
+          </strong>{" "}
+          jogadores
+        </div>
       </div>
     </div>
   );
@@ -708,12 +728,6 @@ export default StatisticsPage;
 //         </div>
 //
 
-//         {/* ============================================
-//             RESULTS INFO
-//             ============================================
-//             Shows: "Showing X of Y players"
-//             Updates dynamically based on filters
-//         */}
 //         <div className="results-info">
 //           Mostrando <strong>{getFilteredPlayers.length}</strong> de{" "}
 //           <strong>
