@@ -1322,7 +1322,7 @@ export const matchesData = [
     status: "live", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Principal",
-    info: "85 espectadores", // Optional extra info
+    info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["José Lima"],

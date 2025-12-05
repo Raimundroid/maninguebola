@@ -23,10 +23,9 @@
 /* The soccer ball icon */
 .match-card .teams .team .scorers .ball-icon {
   font-size: 8px; /* Tiny icon */
-  opacity: 0.7;
+  opacity: 1;
   filter: grayscale(1); /* Optional: makes the emoji blend in better */
 }
-
 /* ALIGNMENT LOGIC */
 /* Since your card centers the logo, we should keep the scorers centered
    OR align them towards the score (Home Right, Away Left) */

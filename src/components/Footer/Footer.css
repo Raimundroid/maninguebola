@@ -4,6 +4,7 @@
   margin-top: 48px;
   text-align: center;
   border-top: 1px solid var(--border);
+  background-color: var(--error);
 }
 
 .footer-content {
@@ -29,3 +30,112 @@
   text-decoration: none;
   color: var(--primary);
 }
+/* ========================================NEW VERSION */
+/* .footer {
+  background: var(--card-bg);
+  /* Slightly more padding for visual breathing room
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* Space between the 4 sections
+}
+
+/* 1. Brand Section
+.footer-logo {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text); /* Main text color
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* 2. Navigation
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on tiny screens
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--primary); /* Highlight color on hover
+}
+
+/* 3. Socials
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  color: var(--text-light);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-hover, #f0f0f0); /* Subtle background circle
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px); /* Little hop effect
+}
+
+/* 4. Legal / Bottom
+.footer-legal {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-legal p {
+  color: var(--text-light);
+  font-size: 12px;
+  margin: 0;
+}
+
+.legal-links a {
+  font-size: 12px;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Support (Assuming you use a data-theme or class)
+@media (prefers-color-scheme: dark) {
+  .social-link {
+    background: rgba(255, 255, 255, 0.1);
+  }
+} */

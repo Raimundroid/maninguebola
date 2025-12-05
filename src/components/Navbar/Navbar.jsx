@@ -105,8 +105,8 @@ const Navbar = () => {
     },
     {
       id: "statistics",
-      path: "/estatistica",
-      label: "Estatística",
+      path: "/estatisticas",
+      label: "Estatísticas",
       icon: "📊",
     },
     {
