@@ -322,11 +322,24 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
    * 3. Use Set to get unique values only
    * 4. Convert back to array with spread operator [...]
    */
-  const positions = (index) => {
+
+  const positions = [
+    ...new Set(players.map((p) => p.position).filter(Boolean)),
+  ];
+
+  /**
+   * GET RANK MEDAL
+   *
+   * Purpose: Return medal emoji for top 3, number for others
+   *
+   * @param {number} index - Player's position in array (0-based)
+   * @returns {string} Medal emoji or rank number
+   */
+  const getRankMedal = (index) => {
     if (index === 0) return "🥇"; // 1st place: Gold
     if (index === 1) return "🥈"; // 2nd place: Silver
     if (index === 2) return "🥉"; // 3rd place: Bronze
-    retunr`1${index + 1}`; // Others: Show number (index+1 because 0-based)
+    return `${index + 1}`; // Others: Show number (index+1 because 0-based)
   };
 
   /**
@@ -377,6 +390,91 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
             🎯 Assistências
           </button>
         </div>
+
+        {/* ============================================
+            FILTERS SECTION
+            ============================================
+
+            TO DISABLE FILTERS:
+            Comment out this entire section (from here to closing </div>)
+                        Contains:
+            - Search input (filter by player name)
+            - Team dropdown (filter by team)
+            - Position dropdown (filter by position)
+            - Reset button (clear all filters)
+        */}
+        <div className="stats-filters">
+          {/* SEARCH INPUT
+              onChange updates searchQuery state on every keystroke
+              Value is controlled by searchQuery state */}
+          <div className="filter-group">
+            <label>🔍 Pesquisar:</label>
+            <input
+              type="text"
+              placeholder="Nome do Jogador"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="filter-input"
+            />
+          </div>
+
+          {/* TEAM FILTER DROPDOWN
+              Shows all teams from teamsArray
+              onChange updates filterTeam state */}
+          <div className="filter-group">
+            <label>🎽 Equipa:</label>
+            <select
+              value={filterTeam}
+              onChange={(e) => setFilterTeam(e.target.value)}
+              className="filter-select"
+            >
+              <option value="all">Todas as Equipas</option>
+              {teamsArray.map((team) => (
+                <option key={team.id} value={team.id}>
+                  {team.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* POSITION FILTER DROPDOWN
+              Shows all unique positions found in players array
+              onChange updates filterPosition state */}
+          <div className="filter-group">
+            <label>📍 Posição:</label>
+            <select
+              value={filterPosition}
+              onChange={(e) => setFilterPosition(e.target.value)}
+              className="filter-select"
+            >
+              <option value="all">Todas as Posições</option>
+              {positions.map((pos) => (
+                <option key={pos} value={pos}>
+                  {pos}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* RESET FILTERS BUTTON
+              Only shows if at least one filter is active
+              Clicking resets all filters to default values */}
+          {(filterTeam !== "all" ||
+            filterPosition !== "all" ||
+            searchQuery) && (
+            <button
+              onClick={() => {
+                setFilterTeam("all");
+                setFilterPosition("all");
+                setSearchQuery("");
+              }}
+              className="reset-filter"
+            >
+              ❌ Limpar Filtros
+            </button>
+          )}
+        </div>
+        {/* END OF FILTERS SECTION */}
       </div>
     </div>
   );
@@ -548,23 +646,8 @@ export default StatisticsPage;
 //           </button>
 //         </div>
 
-//         {/* ============================================
-//             FILTERS SECTION
-//             ============================================
-
-//             TO DISABLE FILTERS:
-//             Comment out this entire section (from here to closing </div>)
-
-//             Contains:
-//             - Search input (filter by player name)
-//             - Team dropdown (filter by team)
-//             - Position dropdown (filter by position)
-//             - Reset button (clear all filters)
-//         */}
 //         <div className="stats-filters">
-//           {/* SEARCH INPUT
-//               onChange updates searchQuery state on every keystroke
-//               Value is controlled by searchQuery state */}
+
 //           <div className="filter-group">
 //             <label>🔍 Pesquisar:</label>
 //             <input
@@ -576,9 +659,6 @@ export default StatisticsPage;
 //             />
 //           </div>
 
-//           {/* TEAM FILTER DROPDOWN
-//               Shows all teams from teamsArray
-//               onChange updates filterTeam state */}
 //           <div className="filter-group">
 //             <label>👥 Equipa:</label>
 //             <select
@@ -595,9 +675,6 @@ export default StatisticsPage;
 //             </select>
 //           </div>
 
-//           {/* POSITION FILTER DROPDOWN
-//               Shows all unique positions found in players array
-//               onChange updates filterPosition state */}
 //           <div className="filter-group">
 //             <label>📍 Posição:</label>
 //             <select
@@ -614,9 +691,6 @@ export default StatisticsPage;
 //             </select>
 //           </div>
 
-//           {/* RESET FILTERS BUTTON
-//               Only shows if at least one filter is active
-//               Clicking resets all filters to default values */}
 //           {(filterTeam !== "all" ||
 //             filterPosition !== "all" ||
 //             searchQuery) && (
@@ -632,7 +706,7 @@ export default StatisticsPage;
 //             </button>
 //           )}
 //         </div>
-//         {/* END OF FILTERS SECTION */}
+//
 
 //         {/* ============================================
 //             RESULTS INFO
@@ -1253,14 +1327,14 @@ export default StatisticsPage;
 //     ...new Set(players.map((p) => p.position).filter(Boolean)),
 //   ];
 
-//   /**
-//    * GET RANK MEDAL
-//    *
-//    * Purpose: Return medal emoji for top 3, number for others
-//    *
-//    * @param {number} index - Player's position in array (0-based)
-//    * @returns {string} Medal emoji or rank number
-//    */
+// /**
+//  * GET RANK MEDAL
+//  *
+//  * Purpose: Return medal emoji for top 3, number for others
+//  *
+//  * @param {number} index - Player's position in array (0-based)
+//  * @returns {string} Medal emoji or rank number
+//  */
 //   const getRankMedal = (index) => {
 //     if (index === 0) return "🥇"; // 1st place: Gold
 //     if (index === 1) return "🥈"; // 2nd place: Silver
