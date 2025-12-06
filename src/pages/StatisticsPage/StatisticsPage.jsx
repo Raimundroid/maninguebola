@@ -1,48 +1,8 @@
 import React from "react";
 import "./StatisticsPage.css";
-import PlayerStatsTable from "../../components/PlayerStatsTable/PlayerStatsTable";
-
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
-import FilterButtons from "../../components/atoms/filterButtons/FilterButtons";
-
-// const MATCH_FILTERS = [
-//   { value: "all", label: "Todos" }, // All matches
-//   { value: "live", label: "Ao Vivo" }, // Currently playing
-//   { value: "finished", label: "Realizados" }, // Finished/completed
-//   { value: "upcoming", label: "Próximos" }, // Future matches
-//   { value: "canceled", label: "Cancelados" },
-// ];
-
-// // 1. Hook to read the URL query parameters
-// const [searchParams] = useSearchParams();
-
-// // 2. Get the filter value from the URL, defaulting to 'all' if not present
-// const urlFilter = searchParams.get("filter");
-
-// // 3. Determine the initial filter state
-// const initialFilter =
-//   urlFilter && ["live", "finished", "upcoming", "canceled"].includes(urlFilter)
-//     ? urlFilter // Use the valid URL filter
-//     : "all"; // Default to 'all'
-
-// const [activeFilter, setActiveFilter] = useState(initialFilter);
-
-// const filteredMatches = useMemo(() => {
-//   let resultMatches;
-
-//   // A. Filter Step
-//   if (activeFilter === "all") {
-//     // If 'all' is selected, start with all matches
-//     resultMatches = matches;
-//   } else {
-//     // Otherwise, filter matches by the active status
-//     resultMatches = matches.filter((match) => match.status === activeFilter);
-//   }
-
-//   return resultMatches
-//     .slice() // Create a shallow copy to sort
-//     .sort(complexMatchSorter); // Apply the custom sorting logic
-// }, [matches, activeFilter]);
+import PlayerStatsTable from "../../components/PlayerStatsTable/PlayerStatsTable";
+import TableCaption from "../../components/atoms/tableCaption/TableCaption";
 
 const StatisticsPage = ({ players = {}, teams = [] }) => {
   return (
@@ -54,6 +14,13 @@ const StatisticsPage = ({ players = {}, teams = [] }) => {
       // onFilterChange={setActiveFilter}
       /> */}
       <PlayerStatsTable players={players} teams={teams} />
+      <TableCaption
+        abbr1={"J"}
+        text1={"Jogos"}
+        abbr2={"Assists"}
+        text2={"Assistencias"}
+        dash={"-"}
+      />
     </div>
   );
 };
@@ -171,7 +138,7 @@ export default StatisticsPage;
 //    * @returns {object} Team object or empty object if not found
 //    */
 //   const getTeam = (teamId) => {
-//     return teamsArray.find((t) => t.id === teamId) || {};
+//     return teamsArray.find((t) => t.id === teamId) || {""};
 //   };
 
 //   /**
@@ -191,7 +158,7 @@ export default StatisticsPage;
 //    */
 //   const calculateStats = (player, statType) => {
 //     // Get stats object or use empty object if undefined
-//     const stats = player.stats || {};
+//     const stats = player.stats || {""};
 
 //     // Get the main stat value based on current tab
 //     // If goals tab: get goals, if assists tab: get assists
@@ -904,7 +871,7 @@ export default StatisticsPage;
 //  * Comment out the entire <div className="stats-filters"> section (lines ~200-260)
 //  */
 
-// const StatisticsPage = ({ players = [], teams = {} }) => {
+// const StatisticsPage = ({ players = [], teams = {""} }) => {
 //   // ============================================
 //   // STATE MANAGEMENT
 //   // ============================================
@@ -976,7 +943,7 @@ export default StatisticsPage;
 //    * @returns {object} Team object or empty object if not found
 //    */
 //   const getTeam = (teamId) => {
-//     return teamsArray.find((t) => t.id === teamId) || {};
+//     return teamsArray.find((t) => t.id === teamId) || {""};
 //   };
 
 //   /**
@@ -996,7 +963,7 @@ export default StatisticsPage;
 //    */
 //   const calculateStats = (player, statType) => {
 //     // Get stats object or use empty object if undefined
-//     const stats = player.stats || {};
+//     const stats = player.stats || {""};
 
 //     // Get the main stat value based on current tab
 //     // If goals tab: get goals, if assists tab: get assists

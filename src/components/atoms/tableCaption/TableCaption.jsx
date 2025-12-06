@@ -18,7 +18,7 @@ const TableCaption = ({
   text7,
   abbr8,
   text8,
-  dash,
+  dash = "-",
 }) => {
   return (
     <div className="standings-table-caption">
@@ -82,7 +82,7 @@ const TableCaption = ({
         <div className="caption-item">
           <span className="caption-abbr">{abbr8}</span>
           <span className="caption-dash">{dash}</span>
-          <span className="caption-text">{text3}</span>
+          <span className="caption-text">{text8}</span>
         </div>
       )}
     </div>
