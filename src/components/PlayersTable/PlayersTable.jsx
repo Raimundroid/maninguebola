@@ -65,6 +65,7 @@
 /// PlayersTable.jsx
 
 // --- Sample Data (You would typically fetch this from an API or prop) ---
+import { Link } from "react-router-dom";
 import "./PlayersTable.css";
 
 // const playersData = [
@@ -125,26 +126,54 @@ const PlayersTable = ({ players = [] }) => {
               <td className="number">{index + 1}</td>
 
               <td>
-                <div className="player-cell">
-                  <img
-                    className="player-image"
-                    src={player.photo}
-                    alt={`Icon for ${player.name}`}
-                  />
-                  <span>{player.name}</span>
-                </div>
+                <Link className="wrapper-Link" to={`/jogadores/${player.id}`}>
+                  <div className="player-cell">
+                    <div className="player-logo">
+                      <img
+                        className="player-logo-img"
+                        src={player.photo}
+                        alt={`Icon for ${player.name}`}
+                        loading="lazy"
+                        width="32"
+                        height="32"
+                      />
+                    </div>
+                    <span>
+                      <strong>{player?.name ?? "-"}</strong>
+                    </span>
+                  </div>
+                </Link>
               </td>
 
               <td>
-                <div className="team-cell">
-                  <img
-                    className="team-image"
-                    src={player.team.logo}
-                    alt={`Icon for ${player.team.name}`}
-                  />
-                  <span>{player.team.name}</span>
-                </div>
+                <Link
+                  className="wrapper-Link"
+                  to={`/equipas/${player.team.id}`}
+                >
+                  <div className="team-cell">
+                    <div className="team-logo">
+                      {player.team.logo ? (
+                        <img
+                          className="team-logo-img"
+                          src={player.team.logo}
+                          alt={player.team.abbr}
+                          loading="lazy"
+                          width="32"
+                          height="32"
+                        />
+                      ) : (
+                        // Fallback if logo path is missing
+                        player.team.abbr
+                      )}
+                    </div>
+
+                    <span className="team-name">
+                      {player?.team.name ?? "-"}
+                    </span>
+                  </div>
+                </Link>
               </td>
+
               {/* 3rd Column: Posição (Position) */}
               <td>{player.position}</td>
             </tr>
@@ -154,5 +183,37 @@ const PlayersTable = ({ players = [] }) => {
     </div>
   );
 };
+
+{
+  /* <img
+  className="team-image"
+  src={player.team.logo}
+  alt={`Icon for ${player.team.name}`}
+/>; */
+}
+{
+  /* <Link to={`/equipas/${team.id}`}>
+  <div className="team-cell">
+    <div className="team-logo">
+      {team.logo ? (
+        <img
+          className="team-logo-img"
+          src={team.logo}
+          alt={team.abbr}
+          loading="lazy"
+          width="30"
+          height="30"
+        />
+      ) : (
+        // Fallback if logo path is missing
+        team.abbr
+      )}
+    </div>
+
+
+    <span className="team-name">{team.name}</span>
+  </div>
+</Link>; */
+}
 
 export default PlayersTable;

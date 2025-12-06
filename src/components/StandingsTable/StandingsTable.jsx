@@ -21,11 +21,7 @@ const StandingsTable = ({ standings }) => {
             <th>Pts</th>
           </tr>
         </thead>
-        {/* <Link to={`/jogadores/${player.id}`}>{player.name}</Link>
-        <Link to={`/equipas/${team.id}`}>
-          <span>{team.name}</span>
-        </Link>{" "}
-        */}
+
         <tbody>
           {standings.map((team, index) => (
             <tr key={team.id || index}>
@@ -35,7 +31,21 @@ const StandingsTable = ({ standings }) => {
               <td>
                 <Link to={`/equipas/${team.id}`}>
                   <div className="team-cell">
-                    <div className="team-logo">{team.abbr}</div>
+                    <div className="team-logo">
+                      {team.logo ? (
+                        <img
+                          className="team-logo-img"
+                          src={team.logo}
+                          alt={team.abbr}
+                          loading="lazy"
+                          width="30"
+                          height="30"
+                        />
+                      ) : (
+                        // Fallback if logo path is missing
+                        team.abbr
+                      )}
+                    </div>
                     <span className="team-name">{team.name}</span>
                   </div>
                 </Link>

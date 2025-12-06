@@ -98,12 +98,29 @@
   gap: 8px;
 }
 
-.player-table .player-image,
-.player-table .team-image {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
+.player-table .player-cell .player-logo,
+.player-table .team-cell .team-logo {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  background: var(--border);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text-light);
   flex-shrink: 0;
-  border: 1px solid var(--shadow);
+  /* border: 1px solid var(--shadow); */
+}
+.player-table .player-logo .player-logo-img,
+.player-table .team-logo .team-logo-img {
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.player-table .wrapper-Link {
+  color: currentColor;
+  text-decoration: none;
 }

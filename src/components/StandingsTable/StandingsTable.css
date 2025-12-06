@@ -51,6 +51,10 @@
   color: var(--text-light);
   flex-shrink: 0;
 }
+.standings-table .team-cell .team-logo .team-logo-img {
+  background-color: blue;
+  border-radius: 8px;
+}
 .standings-table .team-cell .team-name {
   font-size: 12px;
   font-weight: 700;
