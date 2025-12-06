@@ -9,7 +9,7 @@ const PlayersPage = ({ players = [] /*,teams = {}*/ }) => {
     <div className="players-page-container">
       <PageIndicator icon="👥" title="Tabela dos Jogadores" />
       <PlayersTable players={players} /*teams={teams}*/ />
-      <TableCaption
+      {/* <TableCaption
         abbr1={"Gol."}
         text1={"Golos"}
         abbr2={"Assist."}
@@ -17,7 +17,7 @@ const PlayersPage = ({ players = [] /*,teams = {}*/ }) => {
         abbr3={"J"}
         text3={"Jogos"}
         dash={"-"}
-      />
+      /> used with the og PlayersTable */}
     </div>
   );
 };

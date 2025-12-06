@@ -1660,7 +1660,7 @@
 // ============================================================================
 
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import MatchCard from "../MatchCard/MatchCard";
 import "./TeamDetailPage.css";
 
@@ -2096,13 +2096,16 @@ const TeamDetailPage = ({
             {topScorers.length > 0 && (
               <div className="content-section">
                 <h2 className="section-title">🏅 Melhores Marcadores</h2>
+
                 <div className="scorers-list">
                   {topScorers.map((player, index) => (
                     <div key={player.id} className="scorer-item">
                       {/* index + 1 because arrays start at 0 */}
                       <div className="scorer-item__rank">#{index + 1}</div>
                       <div className="scorer-item__info">
-                        <div className="scorer-item__name">{player.name}</div>
+                        <Link to={`/jogadores/${player.id}`}>
+                          <div className="scorer-item__name">{player.name}</div>
+                        </Link>
                         <div className="scorer-item__position">
                           {player.position}
                         </div>
@@ -2196,39 +2199,41 @@ const TeamDetailPage = ({
                         </h3>
                         <div className="players-grid">
                           {posPlayers.map((player) => (
-                            <div key={player.id} className="player-card">
-                              <div className="player-card__number">
-                                Nº{player.number}
+                            <Link to={`/jogadores/${player.id}`}>
+                              <div key={player.id} className="player-card">
+                                <div className="player-card__number">
+                                  Nº{player.number}
+                                </div>
+                                <img
+                                  src={
+                                    player.photo ||
+                                    "/images/players/default-player.png"
+                                  }
+                                  alt={player.name}
+                                  className="player-card__photo"
+                                />
+                                <div className="player-card__info">
+                                  <h4 className="player-card__name">
+                                    {player.name}
+                                  </h4>
+                                  <p className="player-card__position">
+                                    {player.position}
+                                  </p>
+                                  {/* Only show stats if they exist */}
+                                  {player.stats && (
+                                    <div className="player-card__stats">
+                                      <span>⚽ {player.stats.goals}</span>
+                                      <span>🎯 {player.stats.assists}</span>
+                                      <span>🟨 {player.stats.yellowCards}</span>
+                                      {/* Only show red cards if > 0 */}
+                                      {player.stats.redCards > 0 && (
+                                        <span>🟥 {player.stats.redCards}</span>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
                               </div>
-                              <img
-                                src={
-                                  player.photo ||
-                                  "/images/players/default-player.png"
-                                }
-                                alt={player.name}
-                                className="player-card__photo"
-                              />
-                              <div className="player-card__info">
-                                <h4 className="player-card__name">
-                                  {player.name}
-                                </h4>
-                                <p className="player-card__position">
-                                  {player.position}
-                                </p>
-                                {/* Only show stats if they exist */}
-                                {player.stats && (
-                                  <div className="player-card__stats">
-                                    <span>⚽ {player.stats.goals}</span>
-                                    <span>🎯 {player.stats.assists}</span>
-                                    <span>🟨 {player.stats.yellowCards}</span>
-                                    {/* Only show red cards if > 0 */}
-                                    {player.stats.redCards > 0 && (
-                                      <span>🟥 {player.stats.redCards}</span>
-                                    )}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       </div>

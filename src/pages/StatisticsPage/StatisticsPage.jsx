@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import "./StatisticsPage.css";
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 
@@ -610,16 +611,19 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
                           Shows photo + name in horizontal layout */}
                       <td className="td-player">
                         <div className="player-cell">
-                          <img
-                            src={
-                              player.photo ||
-                              "/images/players/default-player.png"
-                            }
-                            alt={player.name}
-                            className="player-photo"
-                            loading="lazy"
-                          />
-                          <span className="player-name">{player.name}</span>
+                          <Link to={`/jogadores/${player.id}`}>
+                            <img
+                              src={
+                                player.photo ||
+                                "/images/players/default-player.png"
+                              }
+                              alt={player.name}
+                              className="player-photo"
+                              loading="lazy"
+                            />
+
+                            <span className="player-name">{player.name}</span>
+                          </Link>
                         </div>
                       </td>
 
@@ -627,17 +631,20 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
                           Shows team logo + name */}
                       <td className="td-team">
                         <div className="team-cell">
-                          <img
-                            src={
-                              team.logo ||
-                              team.abbr ||
-                              "/images/teams/default-team-logo.png"
-                            }
-                            alt={team.name}
-                            className="team-logo-small"
-                            loading="lazy"
-                          />
-                          <span className="team-name-small">{team.name}</span>
+                          <Link to={`/equipas/${team.id}`}>
+                            <img
+                              src={
+                                team.logo ||
+                                team.abbr ||
+                                "/images/teams/default-team-logo.png"
+                              }
+                              alt={team.name}
+                              className="team-logo-small"
+                              loading="lazy"
+                            />
+
+                            <span className="team-name-small">{team.name}</span>
+                          </Link>
                         </div>
                       </td>
 
@@ -659,7 +666,7 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
                         {player.positions}
                       </td>
 
-                      {/* YELLOW CARDS CELL 
+                      {/* YELLOW CARDS CELL
                        Shows number or 0 if zero */}
                       <td className="td-center">
                         {player.yellowCards > 0 ? player.yellowCards : "0"}
@@ -719,25 +726,36 @@ const StatisticsPage = ({ players = [], teams = [] }) => {
                     <div className="stats-card-rank">{getRankMedal(index)}</div>
 
                     {/* Player photo */}
-                    <img
-                      src={player.photo || "/images/players/default-player.png"}
-                      alt={player.name}
-                      className="stats-card-photo"
-                    />
+                    <Link to={`/jogadores/${player.id}`}>
+                      <img
+                        src={
+                          player.photo || "/images/players/default-player.png"
+                        }
+                        alt={player.name}
+                        className="stats-card-photo"
+                      />
+                    </Link>
 
                     {/* Player info: name + team */}
                     <div className="stats-card-player-info">
-                      <h3 className="stats-card-name">{player.name}</h3>
+                      <h3 className="stats-card-name">
+                        <Link to={`/jogadores/${player.id}`}>
+                          {player.name}
+                        </Link>
+                      </h3>
                       <div className="stats-card-team">
-                        <img
-                          src={
-                            team.logo ||
-                            team.abbr ||
-                            "/images/teams/default-team.png"
-                          }
-                          alt={team.name}
-                        />
-                        <span>{teams.name}</span>
+                        <Link to={`/equipas/${team.id}`}>
+                          <img
+                            src={
+                              team.logo ||
+                              team.abbr ||
+                              "/images/teams/default-team.png"
+                            }
+                            alt={team.name}
+                          />
+
+                          <span>{team.name}</span>
+                        </Link>
                       </div>
                     </div>
 

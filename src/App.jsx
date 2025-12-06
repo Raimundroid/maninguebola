@@ -15,6 +15,8 @@ import Error404 from "./components/Error404/Error404.jsx";
 import ScrollToTop from "./utils/ScrollToTop/ScrollToTop.jsx";
 import "./App.css";
 
+import PlayerDetailPage from "./pages/PlayerDetailPage/PlayerDetailPage.jsx";
+
 import {
   players,
   teams,
@@ -288,6 +290,18 @@ function App() {
 
         <main>
           <Routes>
+            {/* 🟢 CRITICAL: Define the dynamic route with ':id' */}
+            {/* <Route
+              path="/jogadores/:id"
+              element={
+                <PlayerDetailPage
+                  players={players}
+                  matches={matchesData}
+                  teams={teams}
+                />
+              }
+            /> */}
+
             <Route
               path="/"
               element={

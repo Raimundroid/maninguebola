@@ -1,4 +1,6 @@
-.players-container {
+/* OG Table css styles */
+
+/* .players-container {
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
@@ -12,13 +14,13 @@
 .players-table th {
   background: var(--primary);
   color: white;
-  padding: 12px 6px; /*og: 12px 8px*/
+  padding: 12px 6px; /*og: 12px 8px
   text-align: left;
   font-size: 12px;
   font-weight: 600;
 }
 .players-table td {
-  padding: 12px 6px; /*og: 12px 8px*/
+  padding: 12px 6px; /*og: 12px 8px
   border-bottom: 1px solid var(--border);
   font-size: 14px;
   color: var(--text);
@@ -26,4 +28,82 @@
 .players-table .position {
   font-weight: 700;
   color: var(--primary);
+} */
+
+/* //==================================== */
+/* ========================================== */
+
+.players-table-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+
+  /* This container needs a defined height and overflow-y: scroll for the sticky effect to work
+     if the entire table is scrolled within this container. */
+  max-height: 500px; /* Example: Define a max height */
+  overflow-y: auto; /* Enable vertical scrolling within the container */
+
+  /* --- SCROLLBAR HIDING ADDITIONS --- */
+
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+
+  /* For Firefox */
+  scrollbar-width: none;
+}
+
+.players-table-container::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar visually */
+}
+
+.player-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.player-table thead {
+  /* --- STICKY ADDITIONS --- */
+  position: sticky; /* Make the element sticky */
+  top: 0; /* Stick it to the top edge of its scrolling ancestor (.players-container) */
+  z-index: 10; /* Ensure it sits above the table rows */
+}
+
+.player-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px 6px; /*og: 12px 8px*/
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.player-table td {
+  padding: 12px 6px; /*og: 12px 8px*/
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text);
+  vertical-align: middle;
+  text-align: left;
+}
+
+.player-table .number {
+  font-weight: 700;
+  color: var(--primary);
+}
+.player-table .player-cell,
+.player-table .team-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-table .player-image,
+.player-table .team-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--shadow);
 }

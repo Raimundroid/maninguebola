@@ -1,5 +1,6 @@
 import React from "react";
 import "./StandingsTable.css";
+import { Link } from "react-router-dom";
 
 const StandingsTable = ({ standings }) => {
   return (
@@ -20,7 +21,11 @@ const StandingsTable = ({ standings }) => {
             <th>Pts</th>
           </tr>
         </thead>
-
+        {/* <Link to={`/jogadores/${player.id}`}>{player.name}</Link>
+        <Link to={`/equipas/${team.id}`}>
+          <span>{team.name}</span>
+        </Link>{" "}
+        */}
         <tbody>
           {standings.map((team, index) => (
             <tr key={team.id || index}>
@@ -28,10 +33,12 @@ const StandingsTable = ({ standings }) => {
                 <span className="position">{team.position}</span>
               </td>
               <td>
-                <div className="team-cell">
-                  <div className="team-logo">{team.abbr}</div>
-                  <span className="team-name">{team.name}</span>
-                </div>
+                <Link to={`/equipas/${team.id}`}>
+                  <div className="team-cell">
+                    <div className="team-logo">{team.abbr}</div>
+                    <span className="team-name">{team.name}</span>
+                  </div>
+                </Link>
               </td>
               <td>{team.played}</td>
               <td>{team.wins}</td>
