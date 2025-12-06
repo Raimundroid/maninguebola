@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PlayerStatsTable.css";
+import { Link } from "react-router-dom";
 
 const PlayerStatsTable = ({ players = {}, teams = [] }) => {
   const [activeTab, setActiveTab] = useState("goals");
@@ -56,7 +57,7 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
           }`}
           onClick={() => setActiveTab("goals")}
         >
-          Marcadores
+          Golos
         </button>
         <button
           className={`tab-button ${
@@ -69,18 +70,36 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
       </div>
 
       {/* --- Table Content --- */}
-      <div className="table-scroll-wrapper">
-        <table className="players-table">
+      <div className="player-stats-table-wrapper">
+        <table className="players-stats-table">
           <thead>
             <tr>
               <th>#</th>
               <th>Jogador</th>
-              <th>Equipa</th>
               {/* Dynamic Header: Displays 'Gol.' (Goals) or 'As.' (Assists) */}
-              <th>{activeTab === "goals" ? "Gol." : "As."}</th>
+              <th>{activeTab === "goals" ? "Golos" : "Assists."}</th>
               <th>J</th>
             </tr>
           </thead>
+
+          {/* <Link className="wrapper-Link" to={`/jogadores/${player.id}`}> */}
+          {/* <div className="player-cell">
+            <div className="player-logo">
+              <img
+                className="player-logo-img"
+                src={player.photo || "/images/players/default-player.png"}
+                alt={`Icon for ${player.name}`}
+                loading="lazy"
+                width="32"
+                height="32"
+              />
+            </div>
+            <span>
+              <strong className="player-name">{player?.name ?? "-"}</strong>
+            </span>
+          </div> */}
+          {/* </Link> */}
+
           <tbody>
             {sortedPlayers.map((player, index) => {
               // 4. Determine the main stat value to display based on the active tab
@@ -95,22 +114,70 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
                   <td className="rank-col">{index + 1}</td>
 
                   {/* Player Name and Photo Column */}
-                  <td className="player-col">
-                    <div className="player-info-wrapper">
-                      <img
-                        src={player.photo}
-                        alt={player.name}
-                        className="player-photo"
-                      />
-                      <span className="player-name">{player.name}</span>
+                  <td>
+                    <div className="player-cell">
+                      <Link
+                        className="wrapper-Link"
+                        to={`/jogadores/${player.id}`}
+                      >
+                        <div className="player-photo-wrapper">
+                          <img
+                            src={
+                              player.photo ||
+                              "/images/players/default-player.png"
+                            }
+                            alt={`Icon for ${player.name}`}
+                            loading="lazy"
+                            width="48"
+                            height="48"
+                            className="player-photo"
+                          />
+                        </div>
+                      </Link>
+
+                      <div className="players-name-team-wrapper">
+                        <Link
+                          className="wrapper-Link"
+                          to={`/jogadores/${player.id}`}
+                        >
+                          <span className="player-name">
+                            <strong>{player.name}</strong>
+                          </span>
+                        </Link>
+
+                        {/* <Link
+                          className="wrapper-Link"
+                          to={`/equipas/${player.team.id}`}
+                        > */}
+                        <div className="team-info">
+                          <div className="team-logo">
+                            {player.team.logo ? (
+                              <img
+                                className="team-logo-img"
+                                src={player.team.logo}
+                                alt={player.team.abbr}
+                                loading="lazy"
+                                width="24"
+                                height="24"
+                              />
+                            ) : (
+                              // Fallback if logo path is missing
+                              player.team.abbr
+                            )}
+                          </div>
+                          <span className="team-name">{player.team.name}</span>
+                        </div>
+                        {/* </Link> */}
+                      </div>
                     </div>
                   </td>
 
-                  {/* Team Name Column (Resolved from ID) */}
-                  <td className="team-col">{player.team.name}</td>
-
                   {/* Dynamic Stat Column (Goals/Assists) */}
-                  <td className="stat-col">{displayStat || 0}</td>
+                  <td className="stat-col">
+                    <span>
+                      <strong>{displayStat || 0}</strong>
+                    </span>
+                  </td>
 
                   {/* Games Played / Appearances */}
                   <td className="games-col">
