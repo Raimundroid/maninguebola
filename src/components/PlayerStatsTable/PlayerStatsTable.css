@@ -1,0 +1,179 @@
+/* ============================================
+   FilterButtons.css
+   ============================================
+   Styles for filter button group component
+   ============================================
+*/
+
+/* Container for all filter buttons */
+.filter-buttons-container {
+  display: flex;
+  gap: 12px; /* Space between buttons */
+  margin-bottom: 24px;
+  flex-wrap: wrap; /* Wrap to next line on small screens */
+}
+
+/* Base button styles (inactive state) */
+.filter-buttons-container .filter-button {
+  /* Spacing */
+  padding: 8px 16px;
+
+  /* Border and background */
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+
+  /* Typography */
+  font-weight: 500;
+
+  /* Animation */
+  transition: all 300ms;
+}
+/* ========= */
+
+/* Hover state for all buttons */
+.filter-buttons-container .filter-button:hover {
+  /* Cursor behavior on hover */
+  cursor: pointer;
+
+  /* Add hover effect (optional)*/
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* ========= */
+
+/* Active/selected button state */
+.filter-buttons-container .filter-button--active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+/* ================================= */
+
+/* --- Tab Header Styling --- */
+.tab-button-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap; /
+}
+
+.tab-button-container .tab-button{
+  padding: 8px 16px;
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 300ms;
+}
+.tab-button-container .tab-button:hover{
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+.tab-button-container  .tab-button--active{
+     border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+/* ===================== */
+
+/* Container styling
+.players-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow: hidden; /* Contains the children
+}
+
+/* .tab-header {
+  display: flex;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-button {
+  flex: 1; /* Buttons take equal width
+  padding: 14px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent; /* Invisible border for inactive state
+}
+
+/* Hover effect
+.tab-button:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Active State (Underline + Color)
+.tab-button.active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+}
+
+/* --- Table Wrapper (Scroll & Sticky) ---
+.table-scroll-wrapper {
+  max-height: 400px; /* Adjust height as needed
+  overflow-y: auto; /* Vertical scroll
+
+  /* Hide Scrollbar (Firefox)
+  scrollbar-width: none;
+  /* Hide Scrollbar (IE/Edge)
+  -ms-overflow-style: none;
+}
+
+/* Hide Scrollbar (Chrome/Safari/Webkit)
+.table-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.players-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Sticky Header
+.players-table th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--primary);
+  color: white;
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.players-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Specific Columns Styling
+.rank-col {
+  font-weight: bold;
+  color: var(--primary);
+  width: 40px;
+}
+
+.player-col {
+  font-weight: 600;
+  color: var(--primary); /* Blue text for player name
+}
+
+.stat-col {
+  font-weight: bold;
+}
+*/

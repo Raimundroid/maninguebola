@@ -1,5 +1,16 @@
 /* StatisticsPage.css */
+.statistics-page {
+  width: 100%;
+  min-height: 60vh; /*og: 100vh*/
+  /* padding-bottom: 40px; */
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+}
 
+/* //============================================
+// OG FULL VERSION=================
+//============================================ */
 /*
 :root {
   --primary: #3b82f6;
@@ -32,9 +43,9 @@
 
 /* ==================== CONTAINER ====================*/
 
-.statistics-page {
+/* .statistics-page {
   width: 100%;
-  min-height: 60vh; /*og: 100vh*/
+  min-height: 60vh; /*og: 100vh
   padding-bottom: 40px;
 }
 
@@ -42,7 +53,7 @@
   max-width: var(--page-max-width);
   margin: 0 auto;
   padding: 24px 16px;
-}
+} */
 
 /* NO NEED
 /* ==================== PAGE INDICATOR ====================

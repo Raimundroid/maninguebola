@@ -342,7 +342,13 @@ function App() {
             />
             <Route
               path="/estatisticas"
-              element={<StatisticsPage players={players} teams={teams} />}
+              element={
+                <StatisticsPage
+                  // players={players}
+                  // teams={teams}
+                  players={enrichedPlayers} //players + teams
+                />
+              }
             />
             <Route
               path="/equipas"
