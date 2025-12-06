@@ -126,56 +126,58 @@ const PlayersTable = ({ players = [] }) => {
               <td className="number">{index + 1}</td>
 
               <td>
-                <Link className="wrapper-Link" to={`/jogadores/${player.id}`}>
-                  <div className="player-cell">
-                    <div className="player-logo">
+                {/* <Link className="wrapper-Link" to={`/jogadores/${player.id}`}> */}
+                <div className="player-cell">
+                  <div className="player-logo">
+                    <img
+                      className="player-logo-img"
+                      src={player.photo || "/images/players/default-player.png"}
+                      alt={`Icon for ${player.name}`}
+                      loading="lazy"
+                      width="32"
+                      height="32"
+                    />
+                  </div>
+                  <span>
+                    <strong className="player-name">
+                      {player?.name ?? "-"}
+                    </strong>
+                  </span>
+                </div>
+                {/* </Link> */}
+              </td>
+
+              <td>
+                {/* <Link
+                  className="wrapper-Link"
+                  to={`/equipas/${player.team.id}`}
+                > */}
+                <div className="team-cell">
+                  <div className="team-logo">
+                    {player.team.logo ? (
                       <img
-                        className="player-logo-img"
-                        src={player.photo}
-                        alt={`Icon for ${player.name}`}
+                        className="team-logo-img"
+                        src={player.team.logo}
+                        alt={player.team.abbr}
                         loading="lazy"
                         width="32"
                         height="32"
                       />
-                    </div>
-                    <span>
-                      <strong>{player?.name ?? "-"}</strong>
-                    </span>
+                    ) : (
+                      // Fallback if logo path is missing
+                      player.team.abbr
+                    )}
                   </div>
-                </Link>
-              </td>
 
-              <td>
-                <Link
-                  className="wrapper-Link"
-                  to={`/equipas/${player.team.id}`}
-                >
-                  <div className="team-cell">
-                    <div className="team-logo">
-                      {player.team.logo ? (
-                        <img
-                          className="team-logo-img"
-                          src={player.team.logo}
-                          alt={player.team.abbr}
-                          loading="lazy"
-                          width="32"
-                          height="32"
-                        />
-                      ) : (
-                        // Fallback if logo path is missing
-                        player.team.abbr
-                      )}
-                    </div>
-
-                    <span className="team-name">
-                      {player?.team.name ?? "-"}
-                    </span>
-                  </div>
-                </Link>
+                  <span className="team-name">{player?.team.name ?? "-"}</span>
+                </div>
+                {/* </Link> */}
               </td>
 
               {/* 3rd Column: Posição (Position) */}
-              <td>{player.position}</td>
+              <td>
+                <span className="player-position">{player.position}</span>
+              </td>
             </tr>
           ))}
         </tbody>

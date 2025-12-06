@@ -173,7 +173,6 @@ export const players = [
     name: "Miguel Santos",
     teamId: "eagles", //new
     number: 10, //new
-
     position: "Forward", //new Defender || Midfielder || Forward
     photo: "/images/players/default-player-1.png", //new
     stats: {

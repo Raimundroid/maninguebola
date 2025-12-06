@@ -29,7 +29,7 @@ const StandingsTable = ({ standings }) => {
                 <span className="position">{team.position}</span>
               </td>
               <td>
-                <Link to={`/equipas/${team.id}`}>
+                <Link className="wrapper-Link" to={`/equipas/${team.id}`}>
                   <div className="team-cell">
                     <div className="team-logo">
                       {team.logo ? (
@@ -38,15 +38,17 @@ const StandingsTable = ({ standings }) => {
                           src={team.logo}
                           alt={team.abbr}
                           loading="lazy"
-                          width="30"
-                          height="30"
+                          width="32"
+                          height="32"
                         />
                       ) : (
                         // Fallback if logo path is missing
                         team.abbr
                       )}
                     </div>
-                    <span className="team-name">{team.name}</span>
+                    <span className="team-name">
+                      <strong>{team.name}</strong>
+                    </span>
                   </div>
                 </Link>
               </td>

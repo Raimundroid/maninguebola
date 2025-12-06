@@ -95,7 +95,7 @@
 .player-table .team-cell {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px; /*og: 8px*/
 }
 
 .player-table .player-cell .player-logo,
@@ -111,13 +111,28 @@
   font-weight: 700;
   color: var(--text-light);
   flex-shrink: 0;
-  /* border: 1px solid var(--shadow); */
+  border: 1px solid var(--shadow);
 }
 .player-table .player-logo .player-logo-img,
 .player-table .team-logo .team-logo-img {
   border-radius: 8px;
   object-fit: cover;
   object-position: center;
+}
+.player-table .player-cell .player-name,
+.player-table .team-cell .team-name,
+.player-table .player-position {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+}
+.player-table .team-cell .team-name {
+  font-weight: 600;
+}
+
+.player-table .player-position {
+  font-weight: 500;
+  color: var(--text);
 }
 
 .player-table .wrapper-Link {
