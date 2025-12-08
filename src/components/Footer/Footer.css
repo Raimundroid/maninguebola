@@ -32,9 +32,66 @@
 } */
 
 .footer {
-  background-color: green;
+  background: var(--card-bg);
+  padding: 40px 20px;
+  margin-top: 50px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.footer-content {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
+/* 1. Brand Section */
+/* .footer-brand {
+  background-color: aqua;
+} */
+.footer-logo {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0;
+}
+.footer-tagline {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* 2. Navigation */
+.footer-nav {
+  background-color: red;
+}
+.footer-nav a {
+}
+.footer-nav a:hover {
+}
+
+/* 3. Socials */
+.footer-socials {
+  background-color: green;
+}
+.social-link {
+}
+.social-link:hover {
+}
+
+/* 4. Legal / Bottom */
+.footer-legal {
+  background-color: blue;
+}
+.footer-legal p {
+}
+.legal-links a {
+}
+.legal-links a:hover {
+}
 /* =====================NEW VERSION FOOTER=================== */
 
 /* .footer {

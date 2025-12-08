@@ -34,16 +34,18 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   // Scroll to top when clicking a footer link
-  // const scrollToTop = () => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className="footer">
       <div className="footer-content">
         {/* 1. Brand Section */}
         <div className="footer-brand">
-          <h3 className="footer-logo">⚽ManingueBola</h3>
-          <p className="ffoter-tagline">O seu portal do Futebol Local</p>
+          <Link to="/" className="footer-logo" onClick={scrollToTop}>
+            ⚽ManingueBola
+          </Link>
+          <p className="footer-tagline">O seu portal do Futebol Local</p>
         </div>
 
         {/* 2. Main Navigation (Safety Net) */}
