@@ -1,0 +1,501 @@
+/* ============================================
+   PLAYER DETAIL PAGE STYLES - MINIMALISTIC
+   ============================================
+
+   PURPOSE:
+   Styles for the player detail page showing:
+   - Player profile with photo and info
+   - Season statistics in a grid
+   - Recent match history
+   - Team information card
+
+   DESIGN APPROACH:
+   - Mobile-first (styles for small screens first)
+   - Minimalistic and clean
+   - Uses CSS variables for consistent theming
+   - Responsive design that works on all screen sizes
+
+   ============================================ */
+
+/* ============================================
+   BASE CONTAINER STYLES
+   ============================================
+
+   EXPLANATION:
+   - padding: Space inside the container
+   - padding-bottom: Extra space at bottom for footer
+   - background-color: Uses CSS variable for theme support
+   - min-height: Ensures page fills screen even with little content
+*/
+
+.player-detail-page {
+  padding: 16px; /* Space around content */
+  padding-bottom: 80px; /* Extra space for footer at bottom */
+  background-color: var(--bg); /* Page background color from theme */
+  min-height: 100vh; /* vh = viewport height, 100vh = full screen */
+}
+
+/*
+  CONTENT CONTAINER
+
+  EXPLANATION:
+  - max-width: Limits how wide content can get
+  - margin: 0 auto centers the container horizontally
+  - display: flex makes it a flexbox container
+  - flex-direction: column stacks children vertically
+  - gap: Space between child elements
+*/
+.player-content {
+  max-width: 500px; /* Max width for readability on mobile */
+  margin: 0 auto; /* Centers container horizontally */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 16px; /* Space between sections */
+}
+
+/* ============================================
+   BACK BUTTON
+   ============================================
+
+   EXPLANATION:
+   A clickable link styled as a button to go back to players list
+*/
+
+.back-button {
+  background: var(--card-bg); /* Card background color */
+  color: var(--text); /* Text color from theme */
+  border: 1px solid var(--border); /* Subtle border */
+  padding: 10px 16px; /* Space inside button */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 14px; /* Text size */
+  font-weight: 600; /* Semi-bold text */
+  cursor: pointer; /* Show hand cursor on hover */
+  display: inline-flex; /* Flexbox for icon + text alignment */
+  align-items: center; /* Vertically center content */
+  gap: 6px; /* Space between arrow and text */
+  margin-bottom: 8px; /* Space below button */
+  text-decoration: none; /* Remove underline from link */
+}
+
+/* ============================================
+   PLAYER NOT FOUND ERROR STATE
+   ============================================
+
+   EXPLANATION:
+   Shown when the requested player doesn't exist in data
+*/
+
+.player-not-found {
+  text-align: center; /* Center all text */
+  padding: 40px 16px; /* Space around content */
+}
+
+/* Error message container */
+.error-content {
+  background: var(--card-bg); /* Card background */
+  padding: 32px 24px; /* Space inside card */
+  border-radius: 16px; /* Rounded corners */
+  border: 1px solid var(--border); /* Subtle border */
+}
+
+/* Error title styling */
+.error-title {
+  font-size: 20px; /* Large text for heading */
+  color: var(--text); /* Theme text color */
+  margin-bottom: 12px; /* Space below title */
+  font-weight: 700; /* Bold text */
+}
+
+/* Error message text */
+.error-message {
+  color: var(--text-light); /* Lighter text for secondary info */
+  font-size: 14px; /* Standard text size */
+  margin-bottom: 20px; /* Space before button */
+  line-height: 1.5; /* Space between lines for readability */
+}
+
+/* ============================================
+   PLAYER HERO SECTION
+   ============================================
+
+   EXPLANATION:
+   The main profile card at the top showing player photo,
+   name, number, and basic information
+*/
+
+.player-hero {
+  background: var(--card-bg); /* Card background */
+  border-radius: 16px; /* Rounded corners */
+  overflow: hidden; /* Clip content at edges */
+  box-shadow: 0 2px 10px var(--shadow); /* Subtle shadow for depth */
+  border: 1px solid var(--border); /* Subtle border */
+}
+
+/*
+  HERO BACKGROUND BAND
+
+  EXPLANATION:
+  Colored band at top using team colors
+  Created with inline styles (gradient) in JSX
+*/
+.hero-bg {
+  height: 80px; /* Height of color band */
+  width: 100%; /* Full width */
+  opacity: 0.9; /* Slightly transparent */
+}
+
+/*
+  HERO CONTENT CONTAINER
+
+  EXPLANATION:
+  Container for player photo and info
+  Pulled up over the background with negative margin
+*/
+.hero-content {
+  margin-top: -40px; /* Pull content up over background */
+  padding: 0 16px 24px 16px; /* Space around content */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+}
+
+/*
+  PLAYER AVATAR CONTAINER
+
+  EXPLANATION:
+  Container for player photo and team badge
+  Uses position: relative for badge positioning
+*/
+.player-avatar-container {
+  position: relative; /* Enables absolute positioning for children */
+  width: 100px; /* Size of photo */
+  height: 100px; /* Size of photo */
+  margin-bottom: 12px; /* Space below photo */
+}
+
+/*
+  PLAYER PHOTO
+
+  EXPLANATION:
+  Circular player photo with border
+*/
+.player-avatar-large {
+  width: 100%; /* Fill container */
+  height: 100%; /* Fill container */
+  border-radius: 50%; /* Make circular */
+  object-fit: cover; /* Crop image to fit without distortion */
+  border: 4px solid var(--card-bg); /* White ring around photo */
+  background: var(--bg); /* Background color if image fails */
+}
+
+/*
+  TEAM BADGE OVERLAY
+
+  EXPLANATION:
+  Small team badge shown in corner of player photo
+  Uses position: absolute to position over photo
+*/
+.team-badge-overlap {
+  position: absolute; /* Position relative to container */
+  bottom: 0; /* Align to bottom */
+  right: 0; /* Align to right */
+  width: 32px; /* Size of badge */
+  height: 32px; /* Size of badge */
+  background: var(--card-bg); /* Background color */
+  border-radius: 50%; /* Make circular */
+  padding: 4px; /* Space around logo */
+  box-shadow: 0 2px 4px var(--shadow); /* Subtle shadow */
+}
+
+.team-badge-overlap img {
+  width: 100%; /* Fill badge container */
+  height: 100%; /* Fill badge container */
+  object-fit: contain; /* Fit logo without cropping */
+}
+
+/*
+  PLAYER NAME
+
+  EXPLANATION:
+  Player's name with jersey number badge
+*/
+.player-name {
+  font-size: 20px; /* Large text */
+  font-weight: 800; /* Very bold */
+  color: var(--text); /* Theme text color */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Flexbox for name + number */
+  align-items: center; /* Vertically center */
+  gap: 8px; /* Space between name and number */
+  justify-content: center; /* Center horizontally */
+}
+
+/*
+  PLAYER NUMBER BADGE
+
+  EXPLANATION:
+  Small badge showing jersey number next to name
+*/
+.player-number {
+  font-size: 14px; /* Smaller than name */
+  color: var(--primary); /* Primary brand color */
+  background: rgba(59, 130, 246, 0.1); /* Light blue background */
+  padding: 2px 8px; /* Space around number */
+  border-radius: 12px; /* Rounded corners */
+  font-weight: 600; /* Semi-bold */
+}
+
+/*
+  PLAYER METADATA
+
+  EXPLANATION:
+  Line showing position, age, nationality
+  Example: "Forward • 25 anos • Moçambicano"
+*/
+.player-meta {
+  color: var(--text-light); /* Lighter text for secondary info */
+  font-size: 14px; /* Standard text size */
+  margin-top: 4px; /* Space above */
+  font-weight: 500; /* Medium weight */
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================
+
+   EXPLANATION:
+   Reusable container for different sections
+   (statistics, match history, team info)
+*/
+
+.content-section {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 12px; /* Space between children */
+}
+
+/*
+  SECTION TITLE
+
+  EXPLANATION:
+  Title for each section (📊 Estatísticas, etc.)
+*/
+.section-title {
+  font-size: 16px; /* Medium-large text */
+  font-weight: 700; /* Bold */
+  color: var(--text); /* Theme text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* ============================================
+   STATISTICS GRID
+   ============================================
+
+   EXPLANATION:
+   Grid of stat cards showing player performance
+   Uses CSS Grid for automatic layout
+*/
+
+.stats-grid {
+  display: grid; /* Use CSS Grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 8px; /* Space between cards */
+}
+
+/*
+  INDIVIDUAL STAT CARD
+
+  EXPLANATION:
+  Container for one statistic (goals, assists, etc.)
+  Shows label above value
+*/
+.stat-card {
+  background: var(--card-bg); /* Card background */
+  padding: 12px 8px; /* Space inside card */
+  border-radius: 12px; /* Rounded corners */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack label and value */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  border: 1px solid var(--border); /* Subtle border */
+  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow */
+}
+
+/*
+  HIGHLIGHTED STAT CARD
+
+  EXPLANATION:
+  Special styling for important stats (usually goals)
+  Uses primary color for emphasis
+*/
+.stat-card--highlight {
+  border-color: var(--primary); /* Primary color border */
+  background: rgba(59, 130, 246, 0.05); /* Light blue background */
+}
+
+/* Stat label (top text) */
+.stat-card__label {
+  font-size: 10px; /* Small text */
+  text-transform: uppercase; /* ALL CAPS */
+  color: var(--text-light); /* Light gray */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 4px; /* Space below */
+  text-align: center; /* Center text */
+}
+
+/* Stat value (large number) */
+.stat-card__value {
+  font-size: 18px; /* Large text */
+  font-weight: 800; /* Very bold */
+  color: var(--text); /* Theme text color */
+}
+
+/* ============================================
+   DISCIPLINE ROW
+   ============================================
+
+   EXPLANATION:
+   Shows yellow and red cards in a horizontal row
+*/
+
+.discipline-row {
+  display: flex; /* Flexbox layout */
+  gap: 16px; /* Space between items */
+  background: var(--card-bg); /* Card background */
+  padding: 12px; /* Space inside */
+  border-radius: 12px; /* Rounded corners */
+  border: 1px solid var(--border); /* Subtle border */
+  justify-content: center; /* Center items */
+}
+
+/* Individual discipline item (yellow or red cards) */
+.discipline-item {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically center */
+  gap: 8px; /* Space between icon and text */
+  font-size: 13px; /* Text size */
+  color: var(--text); /* Theme text color */
+  font-weight: 500; /* Medium weight */
+}
+
+/*
+  CARD ICON
+
+  EXPLANATION:
+  Colored rectangle representing yellow/red card
+*/
+.card-icon {
+  width: 12px; /* Width of card icon */
+  height: 16px; /* Height of card icon */
+  border-radius: 2px; /* Slightly rounded corners */
+}
+
+/* Yellow card color */
+.card-icon.yellow-card {
+  background: #facc15; /* Yellow color */
+}
+
+/* Red card color */
+.card-icon.red-card {
+  background: #ef4444; /* Red color */
+}
+
+/* ============================================
+   MATCH HISTORY
+   ============================================
+
+   EXPLANATION:
+   List of recent matches where player participated
+   Uses MatchCard component for each match
+*/
+
+.matches-list {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack cards vertically */
+  gap: 8px; /* Space between cards */
+}
+
+/*
+  DESKTOP TABLE VIEW
+
+  EXPLANATION:
+  Hidden on mobile (for future desktop version)
+  Currently not used since we use MatchCard
+*/
+.matches-table-wrapper {
+  display: none; /* Hidden */
+}
+
+/* ============================================
+   TEAM INFO CARD
+   ============================================
+
+   EXPLANATION:
+   Clickable card showing player's team
+   Links to team detail page
+*/
+
+.team-info-card {
+  background: var(--card-bg); /* Card background */
+  border: 1px solid var(--border); /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px; /* Space inside card */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically center */
+  gap: 12px; /* Space between logo and text */
+  text-decoration: none; /* Remove link underline */
+  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow */
+}
+
+/* Team logo image */
+.team-info__logo {
+  width: 48px; /* Logo size */
+  height: 48px; /* Logo size */
+  object-fit: contain; /* Fit without cropping */
+  flex-shrink: 0; /* Don't shrink logo */
+}
+
+/* Container for team name and link text */
+.team-info__details {
+  flex: 1; /* Take remaining space */
+}
+
+/* Team name */
+.team-info__name {
+  font-size: 16px; /* Medium text */
+  font-weight: 700; /* Bold */
+  color: var(--text); /* Theme text color */
+  margin: 0 0 4px 0; /* Space below */
+}
+
+/* "Ver página da equipa" text */
+.team-info__text {
+  color: var(--text-light); /* Light gray */
+  margin: 0; /* No margin */
+  font-size: 13px; /* Small text */
+  font-weight: 500; /* Medium weight */
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET AND UP
+   ============================================
+
+   EXPLANATION:
+   Styles that only apply on screens 768px and wider
+   @media queries let us change styles based on screen size
+*/
+
+@media (min-width: 768px) {
+  /* Wider content container for larger screens */
+  .player-content {
+    max-width: 700px; /* Wider than mobile */
+  }
+
+  /* Stats grid stays the same (4 columns) */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* //===========OTHER CSS======== */

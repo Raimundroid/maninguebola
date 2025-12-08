@@ -30,7 +30,7 @@ const TeamCard = ({ team }) => {
     // onClick with arrow function: when clicked, call onClick function with team data
     // The ?. is optional chaining - only calls onClick if it exists
 
-    <Link className="wrapper-Link" to={`/jogadores/${team.id}`}>
+    <Link className="wrapper-Link" to={`/equipas/${team.id}`}>
       <div className="team-card">
         {/* Logo box - displays team abbreviation */}
         <div className="team-logo">

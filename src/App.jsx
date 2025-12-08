@@ -292,12 +292,14 @@ function App() {
           <Routes>
             {/* 🟢 CRITICAL: Define the dynamic route with ':id' */}
             <Route
-              path="/jogadores/:id"
+              path="/jogadores/:playerId"
               element={
                 <PlayerDetailPage
-                  players={players}
-                  matches={matchesData}
-                  teams={teams}
+                // players={players}
+                // matches={matchesData}
+                // teams={teams}
+                // matches={enrichedMatches}
+                // players={enrichedPlayers}
                 />
               }
             />
@@ -360,10 +362,10 @@ function App() {
               path="/equipas/:teamId"
               element={
                 <TeamDetailPage
-                  teams={enrichedTeams} //teams + standings
-                  players={enrichedPlayers} //players + teams
-                  matches={enrichedMatches} //matches + teams + standings
-                  //standings={enrichedTeams}//not-needed
+                // teams={enrichedTeams} //teams + standings
+                // players={enrichedPlayers} //players + teams
+                // matches={enrichedMatches} //matches + teams + standings
+                //standings={enrichedTeams}//not-needed
                 />
               }
             />

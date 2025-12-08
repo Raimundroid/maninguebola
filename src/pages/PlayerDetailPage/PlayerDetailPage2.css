@@ -1,0 +1,672 @@
+/* ============================================
+   PLAYER DETAIL PAGE STYLES
+   ============================================
+
+   Theme: Football Hub - Modern, Clean, Professional
+   Colors: Primary blue (#2563eb), Dark backgrounds, White text
+   Layout: Responsive grid system
+   ============================================ */
+
+/* ============================================
+   BASE STYLES & CONTAINER
+   ============================================ */
+
+.player-detail-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+  padding-bottom: 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.player-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ============================================
+   BACK BUTTON
+   ============================================ */
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1.5rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-4px);
+}
+
+/* ============================================
+   PLAYER NOT FOUND ERROR
+   ============================================ */
+
+.player-not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+  padding: 2rem;
+}
+
+.error-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 500px;
+}
+
+.error-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   PLAYER HERO SECTION
+   ============================================ */
+
+.player-hero {
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.player-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(15, 23, 42, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+.player-hero__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.player-hero__main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+/* ============================================
+   PLAYER PHOTO & NUMBER BADGE
+   ============================================ */
+
+.player-photo-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.player-hero__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.player-number-badge {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  background: white;
+  color: #1e293b;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   PLAYER INFO
+   ============================================ */
+
+.player-hero__info {
+  color: white;
+}
+
+.player-hero__name {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.player-hero__position {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.player-details {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+}
+
+.detail-text {
+  font-weight: 500;
+}
+
+/* ============================================
+   QUICK STATS BOXES
+   ============================================ */
+
+.player-quick-stats {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.quick-stat-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 110px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quick-stat__value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.quick-stat__label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+
+.content-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ============================================
+   STATISTICS GRID
+   ============================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.stat-card--highlight {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.2) 0%,
+    rgba(59, 130, 246, 0.2) 100%
+  );
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.stat-card__label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.stat-card__value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+/* ============================================
+   MATCHES TABLE (DESKTOP)
+   ============================================ */
+
+.matches-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.matches-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.matches-table thead {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.matches-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.th-center {
+  text-align: center;
+}
+
+.matches-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+
+.matches-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.matches-table td {
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.td-date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.td-center {
+  text-align: center;
+}
+
+.td-goals {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* Opponent Cell */
+.opponent-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.opponent-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Result Cell */
+.result-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.result-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.result-badge--v {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.result-badge--e {
+  background: rgba(234, 179, 8, 0.2);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.result-badge--d {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ============================================
+   MATCHES MOBILE VIEW
+   ============================================ */
+
+.matches-mobile {
+  display: none;
+}
+
+.match-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.match-card__date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.match-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.match-card__opponent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.match-card__logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.match-card__team {
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+}
+
+.match-card__result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.match-card__score {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.match-card__player-goals {
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   TEAM INFO CARD
+   ============================================ */
+
+.team-info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.team-info-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(37, 99, 235, 0.5);
+  transform: translateX(4px);
+}
+
+.team-info__logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+}
+
+.team-info__details {
+  flex: 1;
+}
+
+.team-info__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.team-info__text {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .player-hero__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .player-hero__main {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .player-hero__name {
+    font-size: 2.2rem;
+  }
+
+  .player-quick-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .quick-stat-box {
+    flex: 1;
+    min-width: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hide desktop table, show mobile cards */
+  .matches-table-wrapper {
+    display: none;
+  }
+
+  .matches-mobile {
+    display: block;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .player-hero {
+    padding: 2rem 0;
+  }
+
+  .player-hero__photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .player-number-badge {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .player-hero__name {
+    font-size: 1.8rem;
+  }
+
+  .player-hero__position {
+    font-size: 1.1rem;
+  }
+
+  .player-details {
+    gap: 1rem;
+  }
+
+  .quick-stat-box {
+    padding: 1rem;
+  }
+
+  .quick-stat__value {
+    font-size: 2rem;
+  }
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-card__value {
+    font-size: 2rem;
+  }
+
+  .team-info-card {
+    padding: 1rem;
+  }
+
+  .team-info__logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .team-info__name {
+    font-size: 1.2rem;
+  }
+}
