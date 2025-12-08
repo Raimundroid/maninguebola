@@ -166,4 +166,5 @@ if the entire table is scrolled within this container. */
 .player-stats-table-wrapper .wrapper-Link {
   color: currentColor;
   text-decoration: none;
+  cursor: pointer;
 }

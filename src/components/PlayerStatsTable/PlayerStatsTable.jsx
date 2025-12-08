@@ -97,29 +97,31 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
                           </span>
                         </Link>
 
-                        {/* <Link
+                        <Link
                           className="wrapper-Link"
                           to={`/equipas/${player.team.id}`}
-                        > */}
-                        <div className="team-info">
-                          <div className="team-logo">
-                            {player.team.logo ? (
-                              <img
-                                className="team-logo-img"
-                                src={player.team.logo}
-                                alt={player.team.abbr}
-                                loading="lazy"
-                                width="24"
-                                height="24"
-                              />
-                            ) : (
-                              // Fallback if logo path is missing
-                              player.team.abbr
-                            )}
+                        >
+                          <div className="team-info">
+                            <div className="team-logo">
+                              {player.team.logo ? (
+                                <img
+                                  className="team-logo-img"
+                                  src={player.team.logo}
+                                  alt={player.team.abbr}
+                                  loading="lazy"
+                                  width="24"
+                                  height="24"
+                                />
+                              ) : (
+                                // Fallback if logo path is missing
+                                player.team.abbr
+                              )}
+                            </div>
+                            <span className="team-name">
+                              {player.team.name}
+                            </span>
                           </div>
-                          <span className="team-name">{player.team.name}</span>
-                        </div>
-                        {/* </Link> */}
+                        </Link>
                       </div>
                     </div>
                   </td>

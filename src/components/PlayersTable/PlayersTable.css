@@ -138,4 +138,5 @@
 .player-table .wrapper-Link {
   color: currentColor;
   text-decoration: none;
+  cursor: pointer;
 }
