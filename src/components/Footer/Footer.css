@@ -66,11 +66,20 @@
 
 /* 2. Navigation */
 .footer-nav {
-  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 .footer-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 200ms;
 }
 .footer-nav a:hover {
+  color: var(--primary);
 }
 
 /* 3. Socials */
