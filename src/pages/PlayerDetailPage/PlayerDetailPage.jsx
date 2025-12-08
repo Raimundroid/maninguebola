@@ -29,7 +29,9 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
     if (!player || !matches) return [];
 
     return matches
-      .filter((m) => m.homeTeamId === player.teamId || m.awayTeamId === player.teamId)
+      .filter(
+        (m) => m.homeTeamId === player.teamId || m.awayTeamId === player.teamId
+      )
       .sort((a, b) => new Date(b.date) - new Date(a.date)) // Newest first
       .slice(0, 5); // Limit to last 5
   }, [player, matches]);
@@ -40,12 +42,17 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
     if (!match || match.status !== "finished") return false;
 
     // Combine home and away scorers into one list/string
-    const allScorers = [].concat(match.homeScorers || [], match.awayScorers || []);
+    const allScorers = [].concat(
+      match.homeScorers || [],
+      match.awayScorers || []
+    );
 
     // Check if player name exists in that list
     // Note: This is a simple string check. Ideally use IDs in future.
     if (Array.isArray(allScorers)) {
-      return allScorers.some(scorer => typeof scorer === 'string' && scorer.includes(player.name));
+      return allScorers.some(
+        (scorer) => typeof scorer === "string" && scorer.includes(player.name)
+      );
     }
     return false;
   };
@@ -55,7 +62,9 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
     return (
       <div className="player-not-found">
         <h2>Jogador não encontrado</h2>
-        <Link to="/jogadores" className="back-link">Voltar à lista</Link>
+        <Link to="/jogadores" className="back-link">
+          Voltar à lista
+        </Link>
       </div>
     );
   }
@@ -65,10 +74,14 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
       <PageIndicator icon="👤" title="Perfil do Jogador" />
 
       <div className="player-content">
-
         {/* --- SECTION 1: HERO PROFILE --- */}
         <div className="player-hero">
-          <div className="hero-bg" style={{ backgroundColor: playerTeam?.colors?.primary || 'var(--primary)' }}></div>
+          <div
+            className="hero-bg"
+            style={{
+              backgroundColor: playerTeam?.colors?.primary || "var(--primary)",
+            }}
+          ></div>
 
           <div className="hero-content">
             <div className="player-avatar-container">
@@ -76,11 +89,15 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
                 src={player.photo}
                 alt={player.name}
                 className="player-avatar-large"
-                onError={(e) => e.target.src = "/src/images/players/default-placeholder.png"}
+                onError={(e) =>
+                  (e.target.src = "/src/images/players/default-placeholder.png")
+                }
               />
               <div className="team-badge-overlap">
                 {/* Team Logo (Small badge) */}
-                {playerTeam?.logo && <img src={playerTeam.logo} alt={playerTeam.abbr} />}
+                {playerTeam?.logo && (
+                  <img src={playerTeam.logo} alt={playerTeam.abbr} />
+                )}
               </div>
             </div>
 
@@ -139,16 +156,22 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
               {playerMatches.map((match) => {
                 const didScore = hasScoredInMatch(match);
                 const isHome = match.homeTeamId === player.teamId;
-                const opponentName = isHome ? match.awayTeam?.abbr : match.homeTeam?.abbr;
-                const result = match.status === 'finished'
-                  ? `${match.homeScore} - ${match.awayScore}`
-                  : match.time;
+                const opponentName = isHome
+                  ? match.awayTeam?.abbr
+                  : match.homeTeam?.abbr;
+                const result =
+                  match.status === "finished"
+                    ? `${match.homeScore} - ${match.awayScore}`
+                    : match.time;
 
                 return (
                   <div key={match.id} className="history-item">
                     <div className="history-date">
-                       {/* Format: 16 Nov */}
-                      {new Date(match.date).toLocaleDateString('pt-PT', { day: 'numeric', month: 'short' })}
+                      {/* Format: 16 Nov */}
+                      {new Date(match.date).toLocaleDateString("pt-PT", {
+                        day: "numeric",
+                        month: "short",
+                      })}
                     </div>
                     <div className="history-info">
                       <span className="history-vs">
@@ -160,7 +183,9 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
                     </div>
                     {/* Goal Icon if they scored */}
                     <div className="history-badge">
-                      {didScore && <span title="Marcou golo neste jogo">⚽</span>}
+                      {didScore && (
+                        <span title="Marcou golo neste jogo">⚽</span>
+                      )}
                     </div>
                   </div>
                 );
@@ -170,7 +195,6 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
             <p className="no-history">Sem jogos recentes.</p>
           )}
         </div>
-
       </div>
     </div>
   );
@@ -178,427 +202,248 @@ const PlayerDetailPage = ({ players, matches, teams }) => {
 
 export default PlayerDetailPage;
 
-// import React from "react";
-// import { useParams, useNavigate } from "react-router-dom";
+// =====================ANOTHER ANOTHER VERSION =====================================================================================================================
+// import React, { useMemo } from "react";
+// import { useParams, Link } from "react-router-dom";
 // import "./PlayerDetailPage.css";
 
 // /**
 //  * ============================================
 //  * PLAYER DETAIL PAGE COMPONENT
 //  * ============================================
-//  *
-//  * PURPOSE:
-//  * Displays detailed information about a single player including:
-//  * - Player profile (photo, name, number, position, team)
-//  * - Season statistics (goals, assists, matches, cards)
-//  * - Match history (recent matches where player participated)
-//  * - Team information section
-//  *
-//  * FEATURES:
-//  * - Responsive design (desktop & mobile)
-//  * - Back button to return to players list
-//  * - Link to player's team page
-//  * - Clean, simple layout for easy maintenance
-//  * - Uses emoji icons (no lucide-react)
-//  *
-//  * PROPS EXPECTED:
-//  * @param {Array} players - Array of all player objects
-//  *   Example: [{ id: 1, name: "John", teamId: "eagles", number: 10,
-//  *              position: "Forward", stats: { goals: 15, assists: 8 } }]
-//  *
-//  * @param {Array|Object} teams - Team data (array or object)
-//  *   Example: [{ id: "eagles", name: "FC Eagles", logo: "/logo.png" }]
-//  *
-//  * @param {Array} matches - Array of match objects
-//  *   Example: [{ id: 1, homeTeamId: "eagles", awayTeamId: "lions",
-//  *              scorers: [{ playerId: 1, playerName: "John", minute: 45 }] }]
-//  *
-//  * URL PARAMETER:
-//  * Uses React Router's useParams() to get playerId from URL
-//  * Example URL: /jogadores/1 (playerId = "1")
-//  *
-//  * NAVIGATION:
-//  * Access at: /jogadores/:playerId
-//  * Example: /jogadores/1, /jogadores/2, etc.
+//  * * PURPOSE:
+//  * Displays a comprehensive profile for a single player.
+//  * * BEST PRACTICES IMPLEMENTED:
+//  * 1. useMemo: Used for expensive calculations (finding players, filtering matches,
+//  * calculating age/stats) so they only re-run when dependencies change.
+//  * 2. Link: Used instead of useNavigate for better SEO and accessibility
+//  * (allows users to open in new tab).
+//  * 3. Safe Chaining (?.) and Defaults: Prevents crashes if data is missing.
+//  * * @param {Array} players - List of all players
+//  * @param {Array|Object} teams - List of teams (handled as array or object)
+//  * @param {Array} matches - List of all matches
 //  */
-
-// const PlayerDetailPage = ({ players = [], teams = {}, matches = [] }) => {
+// const PlayerDetailPage = ({ players = [], teams = [], matches = [] }) => {
 //   // ============================================
-//   // HOOKS & STATE
-//   // ============================================
-
-//   /**
-//    * useParams()
-//    * React Router hook that extracts URL parameters
-//    *
-//    * If URL is: /jogadores/5
-//    * Then: playerId = "5"
-//    *
-//    * Note: URL params are always strings, convert to number if needed
-//    */
-//   const { playerId } = useParams();
-
-//   /**
-//    * useNavigate()
-//    * React Router hook for programmatic navigation
-//    *
-//    * Usage: navigate('/some-path') - changes URL and renders new page
-//    * Used here for the back button
-//    */
-//   const navigate = useNavigate();
-
-//   // ============================================
-//   // DATA CONVERSION & LOOKUP
+//   // 1. DATA RETRIEVAL & MEMOIZATION
 //   // ============================================
 
 //   /**
-//    * CONVERT TEAMS TO ARRAY
-//    *
-//    * Problem: teams prop can be either array or object
-//    * Solution: Normalize to array for consistent handling
-//    *
-//    * If teams is array: use as-is
-//    * If teams is object: convert using Object.values()
+//    * Get the 'id' from the URL.
+//    * We rename it to 'urlId' for clarity.
 //    */
-//   const teamsArray = Array.isArray(teams) ? teams : Object.values(teams);
+//   const { id: urlId } = useParams();
 
 //   /**
-//    * FIND PLAYER BY ID
-//    *
-//    * Search through players array to find matching player
-//    *
-//    * Comparison logic:
-//    * - p.id === playerId: Strict equality (for numbers)
-//    * - p.id == playerId: Loose equality (handles string/number conversion)
-//    *
-//    * Example: URL /jogadores/5 (string "5")
-//    *          Player object has id: 5 (number 5)
-//    *          == handles this conversion, === would fail
+//    * FIND PLAYER
+//    * Uses useMemo to avoid searching the array on every single render.
+//    * Only re-runs if 'players' array or 'urlId' changes.
 //    */
-//   const player = players.find((p) => p.id === playerId || p.id == playerId);
+//   const player = useMemo(() => {
+//     if (!players || players.length === 0) return null;
+//     // Convert URL param to Number to ensure strict comparison works
+//     return players.find((p) => p.id === Number(urlId));
+//   }, [players, urlId]);
 
 //   /**
-//    * GET PLAYER'S TEAM
-//    *
-//    * After finding player, get their team information
-//    * Uses optional chaining (?.) to safely access teamId
-//    * Returns empty object {} if team not found (prevents errors)
+//    * FIND TEAM
+//    * Depends on the found 'player'.
+//    * Handles cases where 'teams' might be an array OR an object map.
 //    */
-//   const team = player
-//     ? teamsArray.find((t) => t.id === player.teamId) || {}
-//     : {};
+//   const team = useMemo(() => {
+//     if (!player) return null;
+
+//     // 1. If 'teams' is an array, use .find()
+//     if (Array.isArray(teams)) {
+//       return teams.find((t) => t.id === player.teamId);
+//     }
+
+//     // 2. If 'teams' is an object (id -> team), access directly
+//     // 3. Fallback to using player.team if it was pre-populated
+//     return teams[player.teamId] || player.team || {};
+//   }, [player, teams]);
+
+//   /**
+//    * FILTER & SORT MATCHES
+//    * Finds recent matches involving this player's team.
+//    */
+//   const playerMatches = useMemo(() => {
+//     if (!player || !matches) return [];
+
+//     return matches
+//       .filter((match) => {
+//         // Check if player's team is Home OR Away
+//         const isTeamInvolved =
+//           match.homeTeamId === player.teamId ||
+//           match.awayTeamId === player.teamId;
+
+//         // Optional: You could add logic here to check if the player specifically played
+//         // e.g., check lineups or scorers if available
+//         return isTeamInvolved;
+//       })
+//       .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort Newest -> Oldest
+//       .slice(0, 10); // Keep only the last 10 matches
+//   }, [player, matches]);
 
 //   // ============================================
-//   // ERROR HANDLING - PLAYER NOT FOUND
+//   // 2. HELPER FUNCTIONS & CALCULATIONS
 //   // ============================================
 
 //   /**
-//    * GUARD CLAUSE
-//    *
-//    * If player doesn't exist, show error message and stop execution
-//    * This prevents trying to access properties of undefined
-//    *
-//    * Why check this early?
-//    * - Prevents crashes from accessing player.name, player.stats, etc.
-//    * - Provides better UX with helpful error message
-//    * - Gives user a way to go back (back button)
+//    * CALCULATE AGE
+//    * We assume this calculation is light enough to not strictly need useMemo,
+//    * but we wrap it in a helper for cleanliness.
 //    */
+//   const calculateAge = (dob) => {
+//     if (!dob) return "-";
+//     const birthDate = new Date(dob);
+//     const today = new Date();
+//     let age = today.getFullYear() - birthDate.getFullYear();
+//     const m = today.getMonth() - birthDate.getMonth();
+//     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+//       age--;
+//     }
+//     return age;
+//   };
+
+//   /**
+//    * GET MATCH RESULT (Win/Draw/Loss)
+//    * Determines the badge color (V/E/D).
+//    */
+//   const getMatchResult = (match) => {
+//     if (match.status !== "finished") return "NA"; // Not Applicable if not finished
+
+//     const isHome = match.homeTeamId === player?.teamId;
+//     const ourScore = isHome ? match.homeScore : match.awayScore;
+//     const theirScore = isHome ? match.awayScore : match.homeScore;
+
+//     if (ourScore > theirScore) return "V"; // Vitória
+//     if (ourScore < theirScore) return "D"; // Derrota
+//     return "E"; // Empate
+//   };
+
+//   /**
+//    * GET PLAYER GOALS IN MATCH
+//    * Checks the scorers array to count this player's goals.
+//    */
+//   const getPlayerGoalsInMatch = (match) => {
+//     if (!match.scorers || !Array.isArray(match.scorers)) return 0;
+
+//     // Check by ID first, fallback to name check if IDs aren't available
+//     return match.scorers.filter(
+//       (scorer) =>
+//         scorer.playerId === player.id ||
+//         (typeof scorer === "string" && scorer.includes(player.name))
+//     ).length;
+//   };
+
+//   /**
+//    * GET OPPONENT INFO
+//    * Returns the opponent team object for display.
+//    */
+//   const getOpponent = (match) => {
+//     const opponentId =
+//       match.homeTeamId === player?.teamId ? match.awayTeamId : match.homeTeamId;
+
+//     // Re-use logic to find team in array or object
+//     if (Array.isArray(teams)) {
+//       return teams.find((t) => t.id === opponentId) || { name: "Unknown" };
+//     }
+//     return teams[opponentId] || { name: "Unknown" };
+//   };
+
+//   // ============================================
+//   // 3. ERROR STATE (Player Not Found)
+//   // ============================================
 //   if (!player) {
 //     return (
 //       <div className="player-not-found">
 //         <div className="error-content">
 //           <h1 className="error-title">❌ Jogador não encontrado</h1>
 //           <p className="error-message">
-//             O jogador com ID "<strong>{playerId}</strong>" não existe.
+//             Não foi possível localizar este jogador.
 //           </p>
-//           <button
-//             onClick={() => navigate("/jogadores")}
-//             className="back-button"
-//           >
+//           <Link to="/jogadores" className="back-button">
 //             ← Voltar para Jogadores
-//           </button>
+//           </Link>
 //         </div>
 //       </div>
 //     );
 //   }
 
 //   // ============================================
-//   // SAFE DESTRUCTURING WITH DEFAULTS
+//   // 4. PREPARE DISPLAY DATA (Defaults)
 //   // ============================================
-
-//   /**
-//    * EXTRACT PLAYER DATA
-//    *
-//    * Destructuring with default values prevents errors
-//    * If a field is undefined, use the default instead
-//    *
-//    * Example: If player.photo is undefined, use '/images/default-player.png'
-//    *
-//    * Why use defaults?
-//    * - Prevents "Cannot read property of undefined" errors
-//    * - Ensures UI always has valid data to display
-//    * - Makes component more robust
-//    */
+//   // Destructure with safe defaults to keep JSX clean
 //   const {
-//     name = "Nome do Jogador", // Player name
-//     number = "-", // Jersey number
-//     position = "Posição N/D", // Playing position
-//     photo = "/images/default-player.png", // Profile photo
-//     dateOfBirth = null, // Birth date (for age calculation)
-//     nationality = "Moçambicano", // Player nationality
-//     stats = {}, // Statistics object
+//     name,
+//     number = "-",
+//     position = "N/D",
+//     photo = "/images/default-player.png",
+//     nationality = "Moçambicano",
+//     dateOfBirth,
+//     stats = {},
 //   } = player;
 
-//   /**
-//    * EXTRACT TEAM DATA
-//    * Similar destructuring for team information
-//    */
-//   const {
-//     name: teamName = "Equipa N/D",
-//     logo: teamLogo = "/images/default-team.png",
-//     colors = { primary: "#3b82f6", secondary: "#1e40af" },
-//   } = team;
-
-//   /**
-//    * EXTRACT STATISTICS
-//    * Get individual stat values from stats object
-//    * Default to 0 if stat doesn't exist
-//    */
 //   const {
 //     goals = 0,
 //     assists = 0,
-//     appearances = 0, // Matches played (might also be called "matches")
-//     matches: matchesPlayed = 0, // Alternative field name
+//     appearances = 0,
 //     yellowCards = 0,
 //     redCards = 0,
 //   } = stats;
 
-//   // Use whichever field exists (appearances or matches)
-//   const totalMatches = appearances || matchesPlayed || 0;
+//   const teamColors = team?.colors || { primary: "#333", secondary: "#000" };
 
-//   // ============================================
-//   // CALCULATIONS
-//   // ============================================
-
-//   /**
-//    * CALCULATE AGE FROM DATE OF BIRTH
-//    *
-//    * Process:
-//    * 1. Check if dateOfBirth exists
-//    * 2. Calculate difference between current year and birth year
-//    * 3. Check if birthday has occurred this year
-//    * 4. Adjust age if birthday hasn't happened yet
-//    *
-//    * Example: Born Jan 15, 1998; Today is Nov 20, 2025
-//    *   - Initial: 2025 - 1998 = 27
-//    *   - Birthday passed (Jan < Nov): Keep 27
-//    *
-//    * Example: Born Dec 15, 1998; Today is Nov 20, 2025
-//    *   - Initial: 2025 - 1998 = 27
-//    *   - Birthday not passed (Dec > Nov): age = 27 - 1 = 26
-//    */
-//   const calculateAge = () => {
-//     if (!dateOfBirth) return "-";
-
-//     const today = new Date();
-//     const birthDate = new Date(dateOfBirth);
-
-//     // Calculate initial age (year difference)
-//     let age = today.getFullYear() - birthDate.getFullYear();
-
-//     // Get month difference
-//     const monthDiff = today.getMonth() - birthDate.getMonth();
-
-//     // If birthday hasn't occurred this year yet, subtract 1 from age
-//     // This happens if: month difference is negative (birthday later in year)
-//     //              OR: same month but day hasn't come yet
-//     if (
-//       monthDiff < 0 ||
-//       (monthDiff === 0 && today.getDate() < birthDate.getDate())
-//     ) {
-//       age--;
-//     }
-
-//     return age;
-//   };
-
-//   /**
-//    * CALCULATE GOALS PER MATCH
-//    *
-//    * Formula: Total Goals ÷ Total Matches
-//    * Example: 15 goals in 10 matches = 1.50 average
-//    *
-//    * Edge case: If 0 matches, return 0.00 (prevents division by zero)
-//    * toFixed(2): Round to 2 decimal places (e.g., 1.5 → "1.50")
-//    */
+//   // Calculate ratios
 //   const goalsPerMatch =
-//     totalMatches > 0 ? (goals / totalMatches).toFixed(2) : "0.00";
-
-//   /**
-//    * CALCULATE ASSISTS PER MATCH
-//    * Same logic as goals per match
-//    */
+//     appearances > 0 ? (goals / appearances).toFixed(2) : "0.00";
 //   const assistsPerMatch =
-//     totalMatches > 0 ? (assists / totalMatches).toFixed(2) : "0.00";
+//     appearances > 0 ? (assists / appearances).toFixed(2) : "0.00";
 
 //   // ============================================
-//   // MATCH HISTORY PROCESSING
-//   // ============================================
-
-//   /**
-//    * GET PLAYER'S MATCH HISTORY
-//    *
-//    * Goal: Find all matches where this player participated
-//    *
-//    * Process:
-//    * 1. Filter matches where player's team was involved
-//    * 2. Check if player scored or assisted in the match
-//    * 3. Sort by date (most recent first)
-//    * 4. Take only last 10 matches
-//    *
-//    * Why this logic?
-//    * - Step 1: Player can only participate in their team's matches
-//    * - Step 2: We know they participated if they have stats in that match
-//    * - Step 3: Recent matches are most relevant
-//    * - Step 4: Don't overwhelm UI with too many matches
-//    */
-//   const playerMatches = matches
-//     .filter((match) => {
-//       // Check if this match involves player's team
-//       const isPlayerTeamInvolved =
-//         match.homeTeamId === player.teamId ||
-//         match.awayTeamId === player.teamId;
-
-//       // If player's team not involved, skip this match
-//       if (!isPlayerTeamInvolved) return false;
-
-//       // Check if player has any stats in this match
-//       // Look in scorers array for player's ID
-//       const playerScored = match.scorers?.some(
-//         (scorer) =>
-//           scorer.playerId === player.id || scorer.playerId == player.id
-//       );
-
-//       // For now, we only show matches where player scored
-//       // TODO: Later, track player's participation in all team matches
-//       return playerScored;
-//     })
-//     // Sort by date (newest first)
-//     .sort((a, b) => new Date(b.date) - new Date(a.date))
-//     // Take only first 10
-//     .slice(0, 10);
-
-//   /**
-//    * COUNT PLAYER GOALS IN A SPECIFIC MATCH
-//    *
-//    * Some players score multiple goals in one match
-//    * This function counts how many
-//    *
-//    * @param {object} match - Match object to check
-//    * @returns {number} Number of goals player scored in this match
-//    */
-//   const getPlayerGoalsInMatch = (match) => {
-//     if (!match.scorers) return 0;
-
-//     // Filter scorers array to get only this player's goals
-//     // Then count the length
-//     return match.scorers.filter(
-//       (scorer) => scorer.playerId === player.id || scorer.playerId == player.id
-//     ).length;
-//   };
-
-//   /**
-//    * GET MATCH RESULT TEXT
-//    *
-//    * Determines if player's team won, drew, or lost
-//    *
-//    * @param {object} match - Match object
-//    * @returns {string} 'V' (vitória), 'E' (empate), 'D' (derrota)
-//    */
-//   const getMatchResult = (match) => {
-//     // Determine if player's team was home or away
-//     const isHome = match.homeTeamId === player.teamId;
-
-//     // Get scores
-//     const playerTeamScore = isHome ? match.homeScore : match.awayScore;
-//     const opponentScore = isHome ? match.awayScore : match.homeScore;
-
-//     // Compare scores
-//     if (playerTeamScore > opponentScore) return "V"; // Vitória (Win)
-//     if (playerTeamScore < opponentScore) return "D"; // Derrota (Loss)
-//     return "E"; // Empate (Draw)
-//   };
-
-//   /**
-//    * GET OPPONENT TEAM
-//    *
-//    * Find which team the player was playing against
-//    *
-//    * @param {object} match - Match object
-//    * @returns {object} Opponent team object
-//    */
-//   const getOpponent = (match) => {
-//     // If player's team was home, opponent is away team
-//     const opponentId =
-//       match.homeTeamId === player.teamId ? match.awayTeamId : match.homeTeamId;
-
-//     // Find and return opponent team
-//     return teamsArray.find((t) => t.id === opponentId) || {};
-//   };
-
-//   // ============================================
-//   // RENDER COMPONENT
+//   // 5. RENDER
 //   // ============================================
 //   return (
 //     <div className="player-detail-page">
-//       {/* ============================================
-//           BACK BUTTON
-//           ============================================
-//           Allows user to return to players list
-//           Uses navigate() to change URL programmatically
+//       {/* BACK BUTTON
+//          Using <Link> instead of useNavigate is a best practice for internal navigation
+//          because it keeps the browser history clean and allows "Open in new tab".
 //       */}
 //       <div className="container">
-//         <button onClick={() => navigate("/jogadores")} className="back-button">
+//         <Link to="/jogadores" className="back-button">
 //           ← Voltar para Jogadores
-//         </button>
+//         </Link>
 //       </div>
 
-//       {/* ============================================
-//           PLAYER HERO SECTION
-//           ============================================
-//           Large header with player photo and basic info
-//           Background uses team colors for visual impact
-
-//           Inline style:
-//           - background: CSS gradient using team's colors
-//           - Creates smooth color transition from primary to secondary
+//       {/* HERO SECTION
+//          Uses inline styles for dynamic gradients based on Team Colors.
 //       */}
 //       <div
 //         className="player-hero"
 //         style={{
-//           background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)`,
+//           background: `linear-gradient(135deg, ${teamColors.primary} 0%, ${teamColors.secondary} 100%)`,
 //         }}
 //       >
 //         <div className="player-hero__content">
-//           {/* Left side: Photo and basic info */}
 //           <div className="player-hero__main">
-//             {/* Player photo with number badge overlay */}
+//             {/* Photo & Badge */}
 //             <div className="player-photo-wrapper">
 //               <img src={photo} alt={name} className="player-hero__photo" />
-//               {/* Jersey number badge */}
 //               <div className="player-number-badge">#{number}</div>
 //             </div>
 
-//             {/* Player information */}
+//             {/* Text Info */}
 //             <div className="player-hero__info">
 //               <h1 className="player-hero__name">{name}</h1>
 //               <div className="player-hero__position">{position}</div>
 
-//               {/* Player details grid */}
 //               <div className="player-details">
 //                 <div className="detail-item">
 //                   <span className="detail-icon">🎂</span>
-//                   <span className="detail-text">{calculateAge()} anos</span>
+//                   <span className="detail-text">
+//                     {calculateAge(dateOfBirth)} anos
+//                   </span>
 //                 </div>
 //                 <div className="detail-item">
 //                   <span className="detail-icon">🌍</span>
@@ -606,97 +451,66 @@ export default PlayerDetailPage;
 //                 </div>
 //                 <div className="detail-item">
 //                   <span className="detail-icon">👕</span>
-//                   <span className="detail-text">Número {number}</span>
+//                   <span className="detail-text">
+//                     Equipa: {team?.name || "Sem Equipa"}
+//                   </span>
 //                 </div>
 //               </div>
 //             </div>
 //           </div>
 
-//           {/* Right side: Quick stats boxes */}
+//           {/* Quick Stats (Hero Right Side) */}
 //           <div className="player-quick-stats">
-//             {/* Goals box */}
 //             <div className="quick-stat-box">
 //               <div className="quick-stat__value">{goals}</div>
 //               <div className="quick-stat__label">⚽ Golos</div>
 //             </div>
-//             {/* Assists box */}
 //             <div className="quick-stat-box">
 //               <div className="quick-stat__value">{assists}</div>
-//               <div className="quick-stat__label">🎯 Assistências</div>
+//               <div className="quick-stat__label">🎯 Assist.</div>
 //             </div>
-//             {/* Matches box */}
 //             <div className="quick-stat-box">
-//               <div className="quick-stat__value">{totalMatches}</div>
+//               <div className="quick-stat__value">{appearances}</div>
 //               <div className="quick-stat__label">🎮 Jogos</div>
 //             </div>
 //           </div>
 //         </div>
 //       </div>
 
-//       {/* ============================================
-//           MAIN CONTENT AREA
-//           ============================================
-//           Contains statistics and match history
-//           Max-width container centers content on large screens
-//       */}
+//       {/* MAIN CONTENT CONTAINER */}
 //       <div className="player-content">
-//         {/* ============================================
-//             SEASON STATISTICS SECTION
-//             ============================================
-//             Displays player's performance stats in grid layout
-//             Grid automatically adjusts columns based on screen size
-//         */}
+//         {/* --- STATS GRID --- */}
 //         <div className="content-section">
 //           <h2 className="section-title">📊 Estatísticas da Época</h2>
-
-//           {/* Stats grid - responsive layout
-//               Desktop: 4 columns
-//               Tablet: 2 columns
-//               Mobile: 2 columns (smaller boxes) */}
 //           <div className="stats-grid">
-//             {/* Matches played stat */}
 //             <div className="stat-card">
 //               <div className="stat-card__label">Jogos Realizados</div>
-//               <div className="stat-card__value">{totalMatches}</div>
+//               <div className="stat-card__value">{appearances}</div>
 //             </div>
-
-//             {/* Goals stat - highlighted */}
 //             <div className="stat-card stat-card--highlight">
 //               <div className="stat-card__label">Golos</div>
 //               <div className="stat-card__value">{goals}</div>
 //             </div>
-
-//             {/* Assists stat */}
 //             <div className="stat-card">
 //               <div className="stat-card__label">Assistências</div>
 //               <div className="stat-card__value">{assists}</div>
 //             </div>
-
-//             {/* Goals per match - calculated stat */}
 //             <div className="stat-card">
 //               <div className="stat-card__label">Golos/Jogo</div>
 //               <div className="stat-card__value">{goalsPerMatch}</div>
 //             </div>
-
-//             {/* Assists per match - calculated stat */}
 //             <div className="stat-card">
-//               <div className="stat-card__label">Assistências/Jogo</div>
+//               <div className="stat-card__label">Assist./Jogo</div>
 //               <div className="stat-card__value">{assistsPerMatch}</div>
 //             </div>
-
-//             {/* Total contributions (goals + assists) */}
 //             <div className="stat-card">
 //               <div className="stat-card__label">Contribuições</div>
 //               <div className="stat-card__value">{goals + assists}</div>
 //             </div>
-
-//             {/* Yellow cards */}
 //             <div className="stat-card">
 //               <div className="stat-card__label">🟨 Cartões Amarelos</div>
 //               <div className="stat-card__value">{yellowCards}</div>
 //             </div>
-
-//             {/* Red cards */}
 //             <div className="stat-card">
 //               <div className="stat-card__label">🟥 Cartões Vermelhos</div>
 //               <div className="stat-card__value">{redCards}</div>
@@ -704,21 +518,12 @@ export default PlayerDetailPage;
 //           </div>
 //         </div>
 
-//         {/* ============================================
-//             MATCH HISTORY SECTION
-//             ============================================
-//             Shows recent matches where player scored/assisted
-//             Only displays if player has match history
-
-//             Conditional rendering:
-//             - If playerMatches.length > 0: Show table
-//             - If playerMatches.length === 0: Show empty message
-//         */}
+//         {/* --- MATCH HISTORY --- */}
 //         {playerMatches.length > 0 && (
 //           <div className="content-section">
 //             <h2 className="section-title">📅 Histórico de Jogos</h2>
 
-//             {/* Desktop: Table view (hidden on mobile) */}
+//             {/* 1. Desktop Table View */}
 //             <div className="matches-table-wrapper">
 //               <table className="matches-table">
 //                 <thead>
@@ -730,18 +535,13 @@ export default PlayerDetailPage;
 //                   </tr>
 //                 </thead>
 //                 <tbody>
-//                   {/* Map over matches array to create table rows
-//                       Each match gets one row */}
 //                   {playerMatches.map((match) => {
 //                     const opponent = getOpponent(match);
 //                     const result = getMatchResult(match);
-//                     const playerGoals = getPlayerGoalsInMatch(match);
+//                     const goalsInMatch = getPlayerGoalsInMatch(match);
 
 //                     return (
 //                       <tr key={match.id} className="match-row">
-//                         {/* Date column
-//                             toLocaleDateString formats date in Portuguese
-//                             Example output: "20 de novembro de 2025" */}
 //                         <td className="td-date">
 //                           {new Date(match.date).toLocaleDateString("pt-PT", {
 //                             day: "numeric",
@@ -749,8 +549,6 @@ export default PlayerDetailPage;
 //                             year: "numeric",
 //                           })}
 //                         </td>
-
-//                         {/* Opponent column with logo */}
 //                         <td className="td-opponent">
 //                           <div className="opponent-cell">
 //                             <img
@@ -761,10 +559,6 @@ export default PlayerDetailPage;
 //                             <span>{opponent.name}</span>
 //                           </div>
 //                         </td>
-
-//                         {/* Result column
-//                             Shows final score + win/draw/loss indicator
-//                             CSS class changes based on result */}
 //                         <td className="td-center">
 //                           <div className="result-cell">
 //                             <span className="score">
@@ -777,11 +571,8 @@ export default PlayerDetailPage;
 //                             </span>
 //                           </div>
 //                         </td>
-
-//                         {/* Player goals in this match
-//                             Shows number or dash if no goals */}
 //                         <td className="td-center td-goals">
-//                           {playerGoals > 0 ? playerGoals : "-"}
+//                           {goalsInMatch > 0 ? goalsInMatch : "-"}
 //                         </td>
 //                       </tr>
 //                     );
@@ -790,27 +581,22 @@ export default PlayerDetailPage;
 //               </table>
 //             </div>
 
-//             {/* Mobile: Card view (hidden on desktop) */}
+//             {/* 2. Mobile Card View */}
 //             <div className="matches-mobile">
-//               {/* Map over same matches array but display as cards */}
 //               {playerMatches.map((match) => {
 //                 const opponent = getOpponent(match);
 //                 const result = getMatchResult(match);
-//                 const playerGoals = getPlayerGoalsInMatch(match);
+//                 const goalsInMatch = getPlayerGoalsInMatch(match);
 
 //                 return (
 //                   <div key={match.id} className="match-card">
-//                     {/* Card header with date */}
 //                     <div className="match-card__date">
 //                       {new Date(match.date).toLocaleDateString("pt-PT", {
 //                         day: "numeric",
 //                         month: "short",
 //                       })}
 //                     </div>
-
-//                     {/* Card body with match info */}
 //                     <div className="match-card__body">
-//                       {/* Opponent info */}
 //                       <div className="match-card__opponent">
 //                         <img
 //                           src={opponent.logo || "/images/default-team.png"}
@@ -821,8 +607,6 @@ export default PlayerDetailPage;
 //                           {opponent.name}
 //                         </span>
 //                       </div>
-
-//                       {/* Match result */}
 //                       <div className="match-card__result">
 //                         <div className="match-card__score">
 //                           {match.homeScore} - {match.awayScore}
@@ -833,12 +617,10 @@ export default PlayerDetailPage;
 //                           {result}
 //                         </span>
 //                       </div>
-
-//                       {/* Player goals (only show if scored) */}
-//                       {playerGoals > 0 && (
+//                       {goalsInMatch > 0 && (
 //                         <div className="match-card__player-goals">
-//                           ⚽ {playerGoals}{" "}
-//                           {playerGoals === 1 ? "golo" : "golos"}
+//                           ⚽ {goalsInMatch}{" "}
+//                           {goalsInMatch === 1 ? "golo" : "golos"}
 //                         </div>
 //                       )}
 //                     </div>
@@ -849,37 +631,26 @@ export default PlayerDetailPage;
 //           </div>
 //         )}
 
-//         {/* ============================================
-//             TEAM INFORMATION SECTION
-//             ============================================
-//             Shows which team player belongs to
-//             Includes link to team's detail page
-//         */}
-//         <div className="content-section">
-//           <h2 className="section-title">👥 Equipa Atual</h2>
-
-//           {/* Team card - clickable to navigate to team page
-//               onClick uses navigate() to change URL */}
-//           <div
-//             className="team-info-card"
-//             onClick={() => navigate(`/equipas/${player.teamId}`)}
-//             role="button"
-//             tabIndex={0}
-//             onKeyPress={(e) => {
-//               // Also handle Enter key for accessibility
-//               if (e.key === "Enter") navigate(`/equipas/${player.teamId}`);
-//             }}
-//           >
-//             {/* Team logo */}
-//             <img src={teamLogo} alt={teamName} className="team-info__logo" />
-
-//             {/* Team details */}
-//             <div className="team-info__details">
-//               <h3 className="team-info__name">{teamName}</h3>
-//               <p className="team-info__text">Ver página da equipa →</p>
-//             </div>
+//         {/* --- TEAM INFO LINK --- */}
+//         {team && (
+//           <div className="content-section">
+//             <h2 className="section-title">👥 Equipa Atual</h2>
+//             {/* Wrap card in Link for SEO-friendly navigation */}
+//             <Link to={`/equipas/${team.id}`} className="team-info-link-wrapper">
+//               <div className="team-info-card">
+//                 <img
+//                   src={team.logo || "/images/default-team.png"}
+//                   alt={team.name}
+//                   className="team-info__logo"
+//                 />
+//                 <div className="team-info__details">
+//                   <h3 className="team-info__name">{team.name}</h3>
+//                   <p className="team-info__text">Ver página da equipa →</p>
+//                 </div>
+//               </div>
+//             </Link>
 //           </div>
-//         </div>
+//         )}
 //       </div>
 //     </div>
 //   );
