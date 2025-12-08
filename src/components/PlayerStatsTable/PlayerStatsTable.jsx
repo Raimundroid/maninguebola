@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const PlayerStatsTable = ({ players = {}, teams = [] }) => {
   const [activeTab, setActiveTab] = useState("goals");
 
-  // 1. Convert the 'players' prop (which defaults to an object) into an array for sorting and mapping.
-  //   const playersList = Object.values(players);
-
   // 2. Sort the players array based on the active tab.
   // We create a copy using [...playersList] to avoid mutating the original prop.
   const sortedPlayers = [...players].sort((a, b) => {
@@ -19,33 +16,6 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
       return (b.stats?.assists || 0) - (a.stats?.assists || 0);
     }
   });
-
-  // 3. Helper function to find the Team Name using the teamId.
-  // Assumes 'teams' is an array of objects like { id: 'eagles', name: 'FC Eagles' }.
-  //   const getTeamName = (teamId) => {
-  //     const team = teams.find((t) => t.id === teamId);
-  //     return team ? team.name : teamId; // Fallback to ID if name not found
-  //   };
-
-  {
-    /* <div className="filter-buttons-container">
-
-  {filters.map((filter) => (
-    <button
-      key={filter.value}
-
-      className={`filter-button ${
-        activeFilter === filter.value ? "filter-button--active" : ""
-      }`}
-
-      onClick={() => onFilterChange(filter.value)}
-    >
-
-      {filter.label}
-    </button>
-  ))}
-</div>; */
-  }
 
   return (
     <div className="players-stats-container">
@@ -81,24 +51,6 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
               <th>J</th>
             </tr>
           </thead>
-
-          {/* <Link className="wrapper-Link" to={`/jogadores/${player.id}`}> */}
-          {/* <div className="player-cell">
-            <div className="player-logo">
-              <img
-                className="player-logo-img"
-                src={player.photo || "/images/players/default-player.png"}
-                alt={`Icon for ${player.name}`}
-                loading="lazy"
-                width="32"
-                height="32"
-              />
-            </div>
-            <span>
-              <strong className="player-name">{player?.name ?? "-"}</strong>
-            </span>
-          </div> */}
-          {/* </Link> */}
 
           <tbody>
             {sortedPlayers.map((player, index) => {

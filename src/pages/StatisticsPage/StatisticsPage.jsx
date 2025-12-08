@@ -8,18 +8,13 @@ const StatisticsPage = ({ players = {}, teams = [] }) => {
   return (
     <div className="statistics-page">
       <PageIndicator icon={"📊"} title={"Estatísticas dos Jogadores"} />
-      {/* <FilterButtons
-      // filters={MATCH_FILTERS}
-      // activeFilter={activeFilter}
-      // onFilterChange={setActiveFilter}
-      /> */}
       <PlayerStatsTable players={players} teams={teams} />
       <TableCaption
-        abbr1={"J"}
-        text1={"Jogos"}
-        abbr2={"Assists"}
-        text2={"Assistencias"}
         dash={"-"}
+        items={[
+          { abbr: "J", text: "Jogos" },
+          { abbr: "Assists", text: "Assistências" },
+        ]}
       />
     </div>
   );

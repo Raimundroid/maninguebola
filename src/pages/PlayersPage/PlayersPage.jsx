@@ -9,29 +9,18 @@ const PlayersPage = ({ players = [] /*,teams = {}*/ }) => {
     <div className="players-page-container">
       <PageIndicator icon="👥" title="Tabela dos Jogadores" />
       <PlayersTable players={players} /*teams={teams}*/ />
-      {/* <TableCaption
-        abbr1={"Gol."}
-        text1={"Golos"}
-        abbr2={"Assist."}
-        text2={"Assistências"}
-        abbr3={"J"}
-        text3={"Jogos"}
+      {/* TableCaption is used with the OG PlayersTable */}
+      <TableCaption
         dash={"-"}
-      /> used with the og PlayersTable */}
+        items={[
+          { abbr: "J", text: "Jogos" },
+          { abbr: "V", text: "Vitórias" },
+          { abbr: "E", text: "Empates" },
+          { abbr: "D", text: "Derrotas" },
+        ]}
+      />
     </div>
   );
 };
 
 export default PlayersPage;
-// For the short table:
-{
-  /* <TableCaption
-  dash={"-=="}
-  items={[
-    { abbr: "J", text: "Jogos" },
-    { abbr: "V", text: "Vitórias" },
-    { abbr: "E", text: "Empates" },
-    { abbr: "D", text: "Derrotas" },
-  ]}
-/> */
-}
