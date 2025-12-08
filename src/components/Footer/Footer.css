@@ -84,11 +84,24 @@
 
 /* 3. Socials */
 .footer-socials {
-  background-color: green;
+  display: flex;
+  gap: 16px;
 }
 .social-link {
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: all 200ms;
 }
 .social-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* 4. Legal / Bottom */
