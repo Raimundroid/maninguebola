@@ -20,20 +20,22 @@
   align-items: center;
 }
 
-.footer-logo .logo-icon {
+.footer-logo #logo-icon {
+  fill: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   transition: transform 500ms ease-in-out;
 }
-.footer-logo:hover .logo-icon,
-.footer-logo:active .logo-icon {
+.footer-logo:hover #logo-icon,
+.footer-logo:active #logo-icon {
   transform: rotate(360deg);
 }
 
 .footer-logo .logo-text {
+  margin-left: 2px;
   font-size: 18px;
   font-weight: 800;
   color: var(--primary);
