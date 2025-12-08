@@ -72,12 +72,6 @@ const MatchCard = ({ match }) => {
         {/* -------------------------------------------------------- */}
         {/* -------------------------------------------------------- */}
 
-        {/* <div className="team-header__logo-section">
-              <img
-                src={logo || "/images/default-team-logo.png"}
-                alt={name}
-                className="team-header__logo"
-              /> */}
         <div className="team">
           {/* Best practice: Always render the logo, but show the abbreviation
           inside the logo container if the logo is missing. */}
@@ -98,8 +92,7 @@ const MatchCard = ({ match }) => {
           </div>
 
           <div className="team-name">{homeTeam.name}</div>
-          {/* ======== need review============== */}
-          {/* ✅ SIMPLIFIED: No .split() needed. Just map the array. */}
+
           {(status === "finished" || status === "live") &&
             homeScorers.length > 0 && (
               <div className="scorers home-scorers">
@@ -110,7 +103,6 @@ const MatchCard = ({ match }) => {
                 ))}
               </div>
             )}
-          {/* ======== need review============== */}
         </div>
         {/* Score (center) - shows VS if upcoming, actual score otherwise */}
         {/* -------------------------------------------------------- */}
@@ -151,8 +143,6 @@ const MatchCard = ({ match }) => {
           </div>
           <div className="team-name">{awayTeam.name}</div>
 
-          {/* ======== need review============== */}
-          {/* ✅ SIMPLIFIED: Just map the array. */}
           {(status === "finished" || status === "live") &&
             awayScorers.length > 0 && (
               <div className="scorers away-scorers">
@@ -163,7 +153,6 @@ const MatchCard = ({ match }) => {
                 ))}
               </div>
             )}
-          {/* ======== need review============== */}
         </div>
       </div>
       {/* Venue and additional info */}

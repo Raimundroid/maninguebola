@@ -62,49 +62,18 @@
 
 // export default PlayersTable;
 
-/// PlayersTable.jsx
-
-// --- Sample Data (You would typically fetch this from an API or prop) ---
 import { Link } from "react-router-dom";
 import "./PlayersTable.css";
 
-// const playersData = [
-//   {
-//     id: 1,
-//     player: "Barry Allen",
-//     team: "Love And Fun FC",
-//     position: "Meio-campista",
-//     playerImg: "path/to/barry-allen-icon.png", // Image path for the player icon
-//     teamImg: "path/to/love-fun-fc-icon.png", // Image path for the team icon
-//   },
-//   {
-//     id: 2,
-//     player: "Billy Batson",
-//     team: "Freedom FC",
-//     position: "Meio-campista",
-//     playerImg: "path/to/billy-batson-icon.png",
-//     teamImg: "path/to/freedom-fc-icon.png",
-//   },
-//   {
-//     id: 3,
-//     player: "Bruce Wayne",
-//     team: "Progress FC",
-//     position: "Atacante",
-//     playerImg: "path/to/bruce-wayne-icon.png",
-//     teamImg: "path/to/progress-fc-icon.png",
-//   },
-//   {
-//     id: 4,
-//     player: "Clark Kent",
-//     team: "Kindness FC",
-//     position: "Atacante",
-//     playerImg: "path/to/clark-kent-icon.png",
-//     teamImg: "path/to/kindness-fc-icon.png",
-//   },
-//   // Add more data as your list grows...
-// ];
-
 const PlayersTable = ({ players = [] }) => {
+  players.sort((a, b) => {
+    // Sort by name alphabetically
+    return a.name.localeCompare(b.name, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    });
+  });
+
   return (
     <div className="players-table-container">
       <table className="player-table">
@@ -189,37 +158,5 @@ const PlayersTable = ({ players = [] }) => {
     </div>
   );
 };
-
-{
-  /* <img
-  className="team-image"
-  src={player.team.logo}
-  alt={`Icon for ${player.team.name}`}
-/>; */
-}
-{
-  /* <Link to={`/equipas/${team.id}`}>
-  <div className="team-cell">
-    <div className="team-logo">
-      {team.logo ? (
-        <img
-          className="team-logo-img"
-          src={team.logo}
-          alt={team.abbr}
-          loading="lazy"
-          width="30"
-          height="30"
-        />
-      ) : (
-        // Fallback if logo path is missing
-        team.abbr
-      )}
-    </div>
-
-
-    <span className="team-name">{team.name}</span>
-  </div>
-</Link>; */
-}
 
 export default PlayersTable;
