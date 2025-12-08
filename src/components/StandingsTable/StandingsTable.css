@@ -86,9 +86,3 @@
   font-weight: 700;
   color: var(--primary);
 }
-
-.standings-table .wrapper-Link {
-  color: currentColor;
-  text-decoration: none;
-  cursor: pointer;
-}

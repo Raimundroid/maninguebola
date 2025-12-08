@@ -95,7 +95,7 @@ const Navbar = () => {
    */
   const navItems = [
     { id: "home", path: "/", label: "Início", icon: "🏠" },
-    { id: "matches", path: "/jogos", label: "Jogos", icon: "⚽" },
+    { id: "matches", path: "/jogos", label: "Jogos", icon: "🆚" },
     { id: "players", path: "/jogadores", label: "Jogadores", icon: "👥" },
     {
       id: "standings",

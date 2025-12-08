@@ -35,7 +35,7 @@ import React from "react";
 import "./TeamsGrid.css";
 import TeamCard from "../TeamCard/TeamCard.jsx";
 
-const TeamsGrid = ({ teams /* = []*/, onTeamClick }) => {
+const TeamsGrid = ({ teams }) => {
   // ============================================
   // DATA TRANSFORMATION
   // ============================================
@@ -45,7 +45,7 @@ const TeamsGrid = ({ teams /* = []*/, onTeamClick }) => {
   // Check if teams is already an array using Array.isArray()
   const teamsArray = Array.isArray(teams)
     ? teams // If it's an array, use it as-is
-    : Object.values(teams /* || {}*/); // If it's an object, convert to array of values
+    : Object.values(teams || {}); // If it's an object, convert to array of values
 
   // Example transformation:
   // Input object: { eagles: {id: "eagles", ...}, lions: {id: "lions", ...} }
@@ -98,9 +98,6 @@ const TeamsGrid = ({ teams /* = []*/, onTeamClick }) => {
           key={team.id}
           // Pass the current team's data to the TeamCard component
           team={team}
-          // Pass the click handler function down to TeamCard
-          // When a card is clicked, this function will be called
-          onClick={onTeamClick}
         />
       ))}
     </div>

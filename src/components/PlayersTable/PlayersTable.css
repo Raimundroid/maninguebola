@@ -134,9 +134,3 @@
   font-weight: 500;
   color: var(--text);
 }
-
-.player-table .wrapper-Link {
-  color: currentColor;
-  text-decoration: none;
-  cursor: pointer;
-}

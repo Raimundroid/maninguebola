@@ -4,7 +4,11 @@
 
    Styles for anchor tags
 */
-
+.wrapper-Link {
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* a {
   font-weight: 500;
   color:inherit; ** var(--color-link), #646cff; **
