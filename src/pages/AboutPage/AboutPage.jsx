@@ -45,7 +45,10 @@ const AboutPage = () => {
           <div className="dev-header">
             {/* Placeholder for your photo */}
             <div className="dev-avatar">
-              <img src={devPhoto || /src/images/your-photo.jpg } alt="Developer"  />
+              <img
+                src={/*devPhoto || */ "/src/images/your-photo.jpg"}
+                alt="Developer"
+              />
               <span className="dev-initials">DEV</span>
             </div>
             <div>
@@ -56,30 +59,59 @@ const AboutPage = () => {
             </div>
           </div>
 
-          <p className="dev-bio">Sou um desenvolvedor web focado em criar soluções modernas e rápidas. Estou disponível para projetos freelance e oportunidades profissionais.</p>
+          <p className="dev-bio">
+            Sou um desenvolvedor web focado em criar soluções modernas e
+            rápidas. Estou disponível para projetos freelance e oportunidades
+            profissionais.
+          </p>
 
           {/* Dynamic Tech Stack List */}
           <div className="tech-stack-containe">
             <h4>Construído com/Desenvolvindo usando:</h4>
             <div className="tech-tags">
-                            {/* Explanation: .map() loops through your 'techStack' array
+              {/* Explanation: .map() loops through your 'techStack' array
                 and creates a span for each item. This is efficient!
-              */}{techStack.map((tech,index)=>(
-                <span key={index} className="tech-tag">{tech}</span>
+              */}
+              {techStack.map((tech, index) => (
+                <span key={index} className="tech-tag">
+                  {tech}
+                </span>
               ))}
             </div>
           </div>
 
           <div className="dev-links">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="btn-link">LinkedIn</a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-link"
+            >
+              LinkedIn
+            </a>
 
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="btn-link">GitHub</a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-link"
+            >
+              GitHub
+            </a>
 
-            <a href="mailto:seu.email@exemplo.com" className="btn-link primary">Contactar Dev/Enviar Email</a>
-            </div>  
+            <a href="mailto:seu.email@exemplo.com" className="btn-link primary">
+              Contactar Dev/Enviar Email
+            </a>
+          </div>
         </section>
 
         {/* --- TEAM REGISTRATION (ONBOARDING) --- */}
+        <div className="about-section">
+          <h3>Quer ver a sua equipa aqui?</h3>
+          <p>
+            É gratuito! Envie-nos o logótipo e a lista de jogadores através de:
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -90,7 +122,6 @@ export default AboutPage;
 //   return (
 //     <div className="about-page">
 //       <div className="about-container">
-
 
 //         <section className="about-section">
 //           <h3>Quer ver a sua equipa aqui?</h3>
