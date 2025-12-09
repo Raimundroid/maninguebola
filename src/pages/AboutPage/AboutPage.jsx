@@ -142,6 +142,27 @@ const AboutPage = () => {
         </section>
 
         {/* --- DONATION SECTION --- */}
+        <section className="about-section donation-section">
+          <h3>Apoie o Projeto ☕</h3>
+          <p>
+            {" "}
+            Este projeto é mantido de forma independente. Qualquer contribuição
+            ajuda a fazer a manunteção do projecto.
+          </p>
+          <div className="wallets">
+            <div className="wallet mpesa">
+              <span className="wallet-label">M-Pesa</span>
+              <span className="wallet-number">{donationInfo.mpesa}</span>
+              <span className="walle-number">{donationInfo.name}</span>
+            </div>
+
+            <div className="wallet emola">
+              <span className="wallet-label">e-Mola</span>
+              <span className="wallet-number">{donationInfo.emola}</span>
+              <span className="walle-number">{donationInfo.name}</span>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
@@ -149,37 +170,6 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-//   return (
-//     <div className="about-page">
-//       <div className="about-container">
-
-//         {/* --- DONATION SECTION --- */}
-//         <section className="about-section donation-section">
-//           <h3>Apoie o Projeto ☕</h3>
-//           <p>
-//             Este projeto é mantido de forma independente. Qualquer contribuição
-//             ajuda a pagar os servidores.
-//           </p>
-
-//           <div className="wallets">
-//             <div className="wallet mpesa">
-//               <span className="wallet-label">M-Pesa</span>
-//               <span className="wallet-number">{donationInfo.mpesa}</span>
-//               <span className="wallet-name">({donationInfo.name})</span>
-//             </div>
-//             <div className="wallet emola">
-//               <span className="wallet-label">e-Mola</span>
-//               <span className="wallet-number">{donationInfo.emola}</span>
-//               <span className="wallet-name">({donationInfo.name})</span>
-//             </div>
-//           </div>
-//         </section>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutPage;
 // ===============================OG===============================// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================
 // ===============================OG===============================
 // import React from "react";
