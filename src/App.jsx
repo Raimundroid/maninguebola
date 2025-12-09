@@ -295,11 +295,11 @@ function App() {
               path="/jogadores/:playerId"
               element={
                 <PlayerDetailPage
-                // players={players}
-                // matches={matchesData}
-                // teams={teams}
-                // matches={enrichedMatches}
-                // players={enrichedPlayers}
+                  // players={players}
+                  // matches={matchesData}
+                  // teams={teams}
+                  matches={enrichedMatches}
+                  players={enrichedPlayers}
                 />
               }
             />
