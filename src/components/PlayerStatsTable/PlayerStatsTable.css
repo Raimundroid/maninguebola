@@ -153,8 +153,8 @@ if the entire table is scrolled within this container. */
 }
 .players-stats-table .players-name-team-wrapper .team-info .team-logo-img {
   border-radius: 8px;
-  object-fit: cover;
   object-position: center;
+  object-fit: contain; /* Fit logo without cropping */
 }
 
 .players-stats-table .players-name-team-wrapper .team-info .team-name {

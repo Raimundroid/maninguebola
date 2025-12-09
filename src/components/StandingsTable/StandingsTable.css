@@ -77,8 +77,8 @@
 }
 .standings-table .team-cell .team-logo .team-logo-img {
   border-radius: 8px;
-  object-fit: cover;
   object-position: center;
+  object-fit: contain; /* Fit logo without cropping */
 }
 
 .standings-table .team-cell .team-name {

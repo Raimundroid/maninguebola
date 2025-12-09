@@ -116,8 +116,8 @@
 .player-table .player-logo .player-logo-img,
 .player-table .team-logo .team-logo-img {
   border-radius: 8px;
-  object-fit: cover;
   object-position: center;
+  object-fit: contain; /* Fit logo without cropping */
 }
 .player-table .player-cell .player-name,
 .player-table .team-cell .team-name,

@@ -131,14 +131,15 @@
   EXPLANATION:
   Container for player photo and info
   Pulled up over the background with negative margin
+*/
 
 .player-detail-page .hero-content {
-  margin-top: -40px; /* Pull content up over background
-  padding: 0 16px 24px 16px; /* Space around content
-  display: flex; /* Flexbox layout
-  flex-direction: column; /* Stack children vertically
-  align-items: center; /* Center horizontally
-  text-align: center; /* Center text
+  margin-top: -40px;
+  padding: 0 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /*
@@ -147,12 +148,12 @@
   EXPLANATION:
   Container for player photo and team badge
   Uses position: relative for badge positioning
-
+*/
 .player-detail-page .player-avatar-container {
-  position: relative; /* Enables absolute positioning for children
-  width: 100px; /* Size of photo
-  height: 100px; /* Size of photo
-  margin-bottom: 12px; /* Space below photo
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 12px;
 }
 
 /*
@@ -160,14 +161,14 @@
 
   EXPLANATION:
   Circular player photo with border
-
+*/
 .player-detail-page .player-avatar-large {
-  width: 100%; /* Fill container
-  height: 100%; /* Fill container
-  border-radius: 50%; /* Make circular
-  object-fit: cover; /* Crop image to fit without distortion
-  border: 4px solid var(--card-bg); /* White ring around photo
-  background: var(--bg); /* Background color if image fails
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Crop image to fit without distortion */
+  border: 4px solid var(--card-bg);
+  background: var(--bg);
 }
 
 /*
@@ -176,23 +177,24 @@
   EXPLANATION:
   Small team badge shown in corner of player photo
   Uses position: absolute to position over photo
-
+*/
 .player-detail-page .team-badge-overlap {
-  position: absolute; /* Position relative to container
-  bottom: 0; /* Align to bottom
-  right: 0; /* Align to right
-  width: 32px; /* Size of badge
-  height: 32px; /* Size of badge
-  background: var(--card-bg); /* Background color
-  border-radius: 50%; /* Make circular
-  padding: 4px; /* Space around logo
-  box-shadow: 0 2px 4px var(--shadow); /* Subtle shadow
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--card-bg);
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 4px var(--shadow);
 }
 
 .player-detail-page .team-badge-overlap img {
-  width: 100%; /* Fill badge container
-  height: 100%; /* Fill badge container
-  object-fit: contain; /* Fit logo without cropping
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain; /* Fit logo without cropping*/
 }
 
 /*
@@ -200,16 +202,15 @@
 
   EXPLANATION:
   Player's name with jersey number badge
-
+*/
 .player-detail-page .player-name {
-  font-size: 20px; /* Large text
-  font-weight: 800; /* Very bold
-  color: var(--text); /* Theme text color
-  margin: 0; /* Remove default margin
-  display: flex; /* Flexbox for name + number
-  align-items: center; /* Vertically center
-  gap: 8px; /* Space between name and number
-  justify-content: center; /* Center horizontally
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 /*
@@ -217,14 +218,14 @@
 
   EXPLANATION:
   Small badge showing jersey number next to name
-
+*/
 .player-detail-page .player-number {
-  font-size: 14px; /* Smaller than name
-  color: var(--primary); /* Primary brand color
-  background: rgba(59, 130, 246, 0.1); /* Light blue background
-  padding: 2px 8px; /* Space around number
-  border-radius: 12px; /* Rounded corners
-  font-weight: 600; /* Semi-bold
+  font-size: 14px;
+  color: var(--primary);
+  background: rgba(59, 130, 246, 0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
 }
 
 /*
@@ -233,12 +234,12 @@
   EXPLANATION:
   Line showing position, age, nationality
   Example: "Forward • 25 anos • Moçambicano"
-
+*/
 .player-detail-page .player-meta {
-  color: var(--text-light); /* Lighter text for secondary info
-  font-size: 14px; /* Standard text size
-  margin-top: 4px; /* Space above
-  font-weight: 500; /* Medium weight
+  color: var(--text-light);
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 500;
 }
 
 /* ============================================
