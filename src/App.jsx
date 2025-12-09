@@ -364,10 +364,10 @@ function App() {
               path="/equipas/:teamId"
               element={
                 <TeamDetailPage
-                  teams={enrichedTeams} //teams + standings
-                  players={enrichedPlayers} //players + teams
-                  matches={enrichedMatches} //matches + teams + standings
-                  //standings={enrichedTeams}//not-needed
+                // teams={enrichedTeams} //teams + standings
+                // players={enrichedPlayers} //players + teams
+                // matches={enrichedMatches} //matches + teams + standings
+                //standings={enrichedTeams}//not-needed
                 />
               }
             />
