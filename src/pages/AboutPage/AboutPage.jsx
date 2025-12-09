@@ -3,7 +3,8 @@
 // // ============================================
 import React from "react";
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
-// import "./AboutPage.css";
+import "./AboutPage.css";
+import devPhoto from "/src/assets/images/developer/default-developer.png";
 
 const AboutPage = () => {
   // The Tech stack (Add new skills here as you learn them!)
@@ -46,7 +47,12 @@ const AboutPage = () => {
             {/* Placeholder for your photo */}
             <div className="dev-avatar">
               <img
-                src={/*devPhoto || */ "/src/images/your-photo.jpg"}
+                src={devPhoto}
+                onError={(e) => {
+                  e.target.onerror = null; // Prevents infinite loop if fallback image also fails
+                  e.target.src =
+                    "/src/assets/images/developer/default-developer.png"; // Set to a guaranteed-to-work fallback image
+                }}
                 alt="Developer"
               />
               <span className="dev-initials">DEV</span>
@@ -145,7 +151,6 @@ const AboutPage = () => {
         <section className="about-section donation-section">
           <h3>Apoie o Projeto ☕</h3>
           <p>
-            {" "}
             Este projeto é mantido de forma independente. Qualquer contribuição
             ajuda a fazer a manunteção do projecto.
           </p>
@@ -153,13 +158,13 @@ const AboutPage = () => {
             <div className="wallet mpesa">
               <span className="wallet-label">M-Pesa</span>
               <span className="wallet-number">{donationInfo.mpesa}</span>
-              <span className="walle-number">{donationInfo.name}</span>
+              <span className="wallet-number">{donationInfo.name}</span>
             </div>
 
             <div className="wallet emola">
               <span className="wallet-label">e-Mola</span>
               <span className="wallet-number">{donationInfo.emola}</span>
-              <span className="walle-number">{donationInfo.name}</span>
+              <span className="wallet-number">{donationInfo.name}</span>
             </div>
           </div>
         </section>
@@ -170,7 +175,7 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================// ===============================OG===============================
+// =============================OG===============================
 // ===============================OG===============================
 // import React from "react";
 // import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator"; // Assuming you have this

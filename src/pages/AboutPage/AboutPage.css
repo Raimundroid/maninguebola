@@ -1,19 +1,23 @@
 /* Container styles */
 .about-page {
-  padding: 16px;
-  background-color: var(--bg);
-  min-height: 100vh;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+  min-height: 60vh;
+  background: var(--bg);
 }
+/*
+
 
 .about-container {
-  max-width: 600px; /* Reading width */
+  max-width: 600px; /* Reading width
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-/* Generic Section Card Style */
+/* Generic Section Card Style
 .about-section {
   background: var(--card-bg);
   padding: 24px;
@@ -22,9 +26,9 @@
   border: 1px solid var(--border);
 }
 
-.about-section h2, 
+.about-section h2,
 .about-section h3 {
-  color: var(--secondary); /* Dark blue/slate for headings */
+  color: var(--secondary); /* Dark blue/slate for headings
   margin-bottom: 12px;
 }
 
@@ -34,12 +38,12 @@
   margin-bottom: 12px;
 }
 
-/* --- MISSION CARD SPECIFIC --- */
+/* --- MISSION CARD SPECIFIC ---
 .mission-card {
-  border-left: 4px solid var(--primary); /* Nice accent */
+  border-left: 4px solid var(--primary); /* Nice accent
 }
 
-/* --- DEV CARD SPECIFIC --- */
+/* --- DEV CARD SPECIFIC ---
 .dev-header {
   display: flex;
   align-items: center;
@@ -98,7 +102,7 @@
 
 .tech-tag {
   font-size: 12px;
-  background: var(--bg); /* Light grey bg */
+  background: var(--bg); /* Light grey bg
   color: var(--secondary);
   padding: 6px 12px;
   border-radius: 20px;
@@ -137,7 +141,7 @@
   opacity: 0.9;
 }
 
-/* --- CONTACT METHODS --- */
+/* --- CONTACT METHODS ---
 .contact-methods {
   display: flex;
   flex-direction: column;
@@ -179,7 +183,7 @@
   font-size: 13px;
 }
 
-/* --- WALLETS --- */
+/* --- WALLETS ---
 .wallets {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -198,13 +202,13 @@
 
 .wallet-label {
   font-weight: 700;
-  color: var(--error); /* M-Pesa red-ish */
+  color: var(--error); /* M-Pesa red-ish
   font-size: 12px;
   margin-bottom: 4px;
 }
 
 .wallet.emola .wallet-label {
-  color: #f97316; /* Orange for e-mola */
+  color: #f97316; /* Orange for e-mola
 }
 
 .wallet-number {
@@ -217,4 +221,4 @@
 .wallet-name {
   font-size: 10px;
   color: var(--text-light);
-}
+}*/
