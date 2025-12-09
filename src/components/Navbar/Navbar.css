@@ -644,11 +644,11 @@
 
   /* Resize the logo icon size */
   .logo-icon {
-    font-size: 24px;
+    font-size: 20px;
   }
   /* Resize the logo text size */
   .logo-text {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .nav-links {
@@ -657,7 +657,7 @@
 
     /* Horizontal layout for desktop */
     flex-direction: row;
-    gap: 6px; /* Space between links */ /*og: 24px*/
+    gap: 5px; /* Space between links */ /*og: 24px*/
 
     /* No background needed (part of navbar) */
     background: none;
@@ -687,7 +687,7 @@
   .nav-link {
     /* Compact padding for desktop */
     width: auto; /* Not full width anymore*/
-    padding: 10px 6px; /*og: 8px 12px*/
+    padding: 10px 5px; /*og: 8px 12px*/
 
     /* Rounded corners for desktop */
     border-radius: 8px;
@@ -700,7 +700,7 @@
   /* Show text labels on desktop */
   .nav-link-text {
     display: inline;
-    font-size: 14px;
+    font-size: 13px;
   }
   /* Desktop icon size*/
   .nav-link-icon {

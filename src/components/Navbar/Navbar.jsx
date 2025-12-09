@@ -115,6 +115,12 @@ const Navbar = () => {
       label: "Equipas",
       icon: "🎽",
     },
+    {
+      id: "about",
+      path: "/sobre",
+      label: "Sobre",
+      icon: "❔",
+    },
   ];
 
   // ==========================================

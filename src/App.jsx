@@ -17,6 +17,8 @@ import "./App.css";
 
 import PlayerDetailPage from "./pages/PlayerDetailPage/PlayerDetailPage.jsx";
 
+import AboutPage from "./pages/AboutPage/AboutPage.jsx";
+
 import {
   players,
   teams,
@@ -369,6 +371,7 @@ function App() {
                 />
               }
             />
+            <Route path="/sobre" element={<AboutPage />} />
 
             {/* 404 - Catch all unmatched routes */}
             <Route path="*" element={<Error404 />} />
