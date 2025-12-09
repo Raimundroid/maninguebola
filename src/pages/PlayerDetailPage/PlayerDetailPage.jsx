@@ -1246,7 +1246,7 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
         */}
         {playerMatches.length > 0 && (
           <div className="content-section">
-            <h2 className="section-title">📅 Últimos Jogos</h2>
+            <h2 className="section-title">Histórico de Jogos</h2>
 
             {/* List of matches using MatchCard component */}
             <div className="matches-list">
@@ -1293,9 +1293,6 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
             </div>
           </Link>
         </div>
-
-        {/*  */}
-        {/*  */}
       </div>
     </div>
   );

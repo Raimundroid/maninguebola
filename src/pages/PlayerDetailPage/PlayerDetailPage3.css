@@ -38,8 +38,11 @@
   flex-direction: column;
   gap: 16px;
 
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
   @media (min-width: 992px) {
-    max-width: 80vw;
+    max-width: 800px;
   }
 }
 
@@ -394,19 +397,11 @@
    List of recent matches where player participated
    Uses MatchCard component for each match
 
-
+*/
 .player-detail-page .matches-list {
-  display: flex; /* Flexbox layout
-  flex-direction: column; /* Stack cards vertically
-  gap: 8px; /* Space between cards
-
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
-  margin-bottom: 32px;
-  /* CSS Grid will show 2 columns on larger screens
-   This would typically be handled with media queries in CSS
-   For inline styles; you'd need a resize listener or CSS classes
 }
 
 /*
@@ -428,66 +423,43 @@
    Clickable card showing player's team
    Links to team detail page
 
-
-.player-detail-page .team-info-card {
-  background: var(--card-bg); /* Card background
-  border: 1px solid var(--border); /* Subtle border
-  border-radius: 12px; /* Rounded corners
-  padding: 16px; /* Space inside card
-  display: flex; /* Flexbox layout
-  align-items: center; /* Vertically center
-  gap: 12px; /* Space between logo and text
-  text-decoration: none; /* Remove link underline
-  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow
-}
-
-/* Team logo image
-.player-detail-page .team-info__logo {
-  width: 48px; /* Logo size
-  height: 48px; /* Logo size
-  object-fit: contain; /* Fit without cropping
-  flex-shrink: 0; /* Don't shrink logo
-}
-
-/* Container for team name and link text
-.player-detail-page .team-info__details {
-  flex: 1; /* Take remaining space
-}
-
-/* Team name
-.player-detail-page .team-info__name {
-  font-size: 16px; /* Medium text
-  font-weight: 700; /* Bold
-  color: var(--text); /* Theme text color
-  margin: 0 0 4px 0; /* Space below
-}
-
-/* "Ver página da equipa" text
-.player-detail-page .team-info__text {
-  color: var(--text-light); /* Light gray
-  margin: 0; /* No margin
-  font-size: 13px; /* Small text
-  font-weight: 500; /* Medium weight
-}
-
-/* ============================================
-   RESPONSIVE DESIGN - TABLET AND UP
-   ============================================
-
-   EXPLANATION:
-   Styles that only apply on screens 768px and wider
-   @media queries let us change styles based on screen size
-
-
-@media (min-width: 768px) {
-  /* Wider content container for larger screens
-  .player-detail-page .player-content {
-    max-width: 700px; /* Wider than mobile
-  }
-
-  /* Stats grid stays the same (4 columns)
-  .player-detail-page .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 */
+.player-detail-page .team-info-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 2px var(--shadow);
+}
+
+/* Team logo image */
+.player-detail-page .team-info__logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain; /* Fit without cropping */
+  flex-shrink: 0; /* Don't shrink logo */
+  border-radius: 12px;
+}
+
+/* Container for team name and link text */
+.player-detail-page .team-info__details {
+  flex: 1; /* Take remaining space */
+}
+
+/* Team name */
+.player-detail-page .team-info__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px 0;
+}
+
+/* "Ver página da equipa" text*/
+.player-detail-page .team-info__text {
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 500;
+}
