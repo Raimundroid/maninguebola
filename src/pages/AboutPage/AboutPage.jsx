@@ -16,8 +16,8 @@ const AboutPage = () => {
   ];
   // Donation Info
   const donationInfo = {
-    mpesa: "84 000000000",
-    emola: "83 000000000",
+    mpesa: "84 123 4567",
+    emola: "87 987 6543",
     name: "Pablo ! Picasso", // The name that appears on the transfer
   };
   return (
@@ -106,12 +106,42 @@ const AboutPage = () => {
         </section>
 
         {/* --- TEAM REGISTRATION (ONBOARDING) --- */}
-        <div className="about-section">
+        <section className="about-section">
           <h3>Quer ver a sua equipa aqui?</h3>
           <p>
             É gratuito! Envie-nos o logótipo e a lista de jogadores através de:
           </p>
-        </div>
+          <div className="contact-methods">
+            {/* Method 1: WhatsApp (Most popular in MZ) */}
+            <a href="https://wa.me/258841234567" className="contact-item">
+              <span className="icon">📱</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+258 84 123 4567</span>
+              </div>
+            </a>
+
+            {/* Method 2: Email (Professional) */}
+            <a href="mailto:equipas@maninguebola.com" className="contact-item">
+              <span className="icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <span>equipas@maninguebola.com</span>
+              </div>
+            </a>
+
+            {/* Method 3: Phone (For non-techies) */}
+            <a href="tel:+258841234567" className="contact-item">
+              <span className="icon">📞</span>
+              <div>
+                <strong>Ligar</strong>
+                <span>+258 84 123 4567</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        {/* --- DONATION SECTION --- */}
       </div>
     </div>
   );
@@ -122,42 +152,6 @@ export default AboutPage;
 //   return (
 //     <div className="about-page">
 //       <div className="about-container">
-
-//         <section className="about-section">
-//           <h3>Quer ver a sua equipa aqui?</h3>
-//           <p>
-//             É gratuito! Envie-nos o logótipo e a lista de jogadores através de:
-//           </p>
-
-//           <div className="contact-methods">
-//             {/* Method 1: WhatsApp (Most popular in MZ) */}
-//             <a href="https://wa.me/258841234567" className="contact-item">
-//               <span className="icon">📱</span>
-//               <div>
-//                 <strong>WhatsApp</strong>
-//                 <span>+258 84 123 4567</span>
-//               </div>
-//             </a>
-
-//             {/* Method 2: Email (Professional) */}
-//             <a href="mailto:equipas@maninguebola.com" className="contact-item">
-//               <span className="icon">📧</span>
-//               <div>
-//                 <strong>Email</strong>
-//                 <span>equipas@maninguebola.com</span>
-//               </div>
-//             </a>
-
-//             {/* Method 3: Phone (For non-techies) */}
-//             <a href="tel:+258841234567" className="contact-item">
-//               <span className="icon">📞</span>
-//               <div>
-//                 <strong>Ligar</strong>
-//                 <span>+258 84 123 4567</span>
-//               </div>
-//             </a>
-//           </div>
-//         </section>
 
 //         {/* --- DONATION SECTION --- */}
 //         <section className="about-section donation-section">
