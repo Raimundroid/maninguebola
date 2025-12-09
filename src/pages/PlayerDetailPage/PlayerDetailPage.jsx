@@ -789,6 +789,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import MatchCard from "../../components/MatchCard/MatchCard";
+import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import "./PlayerDetailPage3.css";
 
 /**
@@ -1133,6 +1134,8 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
   return (
     <div className="player-detail-page">
       <div className="player-content">
+        <PageIndicator icon="👤" title="Perfil do Jogador" />
+
         {/* ==========================================
              BACK BUTTON
              ==========================================

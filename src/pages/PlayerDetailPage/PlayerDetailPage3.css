@@ -60,6 +60,7 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  width: fit-content;
 
   /*display: inline-flex; /* Flexbox for icon + text alignment
   align-items: center; /* Vertically center content

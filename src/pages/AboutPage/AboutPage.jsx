@@ -46,6 +46,7 @@ const AboutPage = () => {
           <div className="dev-header">
             {/* Placeholder for your photo */}
             <div className="dev-avatar">
+              (
               <img
                 src={devPhoto}
                 onError={(e) => {
@@ -55,10 +56,12 @@ const AboutPage = () => {
                 }}
                 alt="Developer"
               />
-              <span className="dev-initials">DEV</span>
+              ):
+              {/* <span className="dev-initials">DEV</span> */}
             </div>
+
             <div>
-              <h3>Desenvolvido por [Seu Nome]</h3>
+              <h3>Desenvolvido por RAIMUNDO</h3>
               <p className="dev-role">
                 Full Stack Developer • Apaixonado por Desporto
               </p>
@@ -72,8 +75,8 @@ const AboutPage = () => {
           </p>
 
           {/* Dynamic Tech Stack List */}
-          <div className="tech-stack-containe">
-            <h4>Construído com/Desenvolvindo usando:</h4>
+          <div className="tech-stack-container">
+            <h4>Desenvolvindo usando:</h4>
             <div className="tech-tags">
               {/* Explanation: .map() loops through your 'techStack' array
                 and creates a span for each item. This is efficient!
@@ -106,7 +109,7 @@ const AboutPage = () => {
             </a>
 
             <a href="mailto:seu.email@exemplo.com" className="btn-link primary">
-              Contactar Dev/Enviar Email
+              Contactar Dev
             </a>
           </div>
         </section>
@@ -152,19 +155,19 @@ const AboutPage = () => {
           <h3>Apoie o Projeto ☕</h3>
           <p>
             Este projeto é mantido de forma independente. Qualquer contribuição
-            ajuda a fazer a manunteção do projecto.
+            ajuda a fazer a manunteção dele.
           </p>
           <div className="wallets">
             <div className="wallet mpesa">
               <span className="wallet-label">M-Pesa</span>
               <span className="wallet-number">{donationInfo.mpesa}</span>
-              <span className="wallet-number">{donationInfo.name}</span>
+              <span className="wallet-name">{donationInfo.name}</span>
             </div>
 
             <div className="wallet emola">
               <span className="wallet-label">e-Mola</span>
               <span className="wallet-number">{donationInfo.emola}</span>
-              <span className="wallet-number">{donationInfo.name}</span>
+              <span className="wallet-name">{donationInfo.name}</span>
             </div>
           </div>
         </section>
@@ -179,7 +182,7 @@ export default AboutPage;
 // ===============================OG===============================
 // import React from "react";
 // import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator"; // Assuming you have this
-
+// import "./AboutPage.css";
 // const AboutPage = () => {
 //   // ----------------------------------------------------------------
 //   // 🔧 CONFIGURATION: UPDATE YOUR DATA HERE
