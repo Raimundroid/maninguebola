@@ -1902,7 +1902,7 @@ const TeamDetailPage = ({
   // --------------------------------------------------------------------------
 
   return (
-    <div className="team-detail">
+    <div className="team-detail-page">
       {/* ===== BACK BUTTON ===== */}
       {/* Arrow function () => executes on click, navigates to teams list */}
       <div className="back-button-container">

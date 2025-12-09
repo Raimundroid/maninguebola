@@ -15,103 +15,83 @@
    - Uses CSS variables for consistent theming
    - Responsive design that works on all screen sizes
 
-   ============================================ */
+   ============================================
+*/
 
 /* ============================================
    BASE CONTAINER STYLES
    ============================================
-
-   EXPLANATION:
-   - padding: Space inside the container
-   - padding-bottom: Extra space at bottom for footer
-   - background-color: Uses CSS variable for theme support
-   - min-height: Ensures page fills screen even with little content
 */
-
 .player-detail-page {
-  padding: 16px; /* Space around content */
-  padding-bottom: 80px; /* Extra space for footer at bottom */
-  background-color: var(--bg); /* Page background color from theme */
-  min-height: 100vh; /* vh = viewport height, 100vh = full screen */
+  padding: 24px 16px;
+  min-height: 60vh;
+  padding-bottom: 50px;
+  background: var(--bg);
 }
 
-/*
-  CONTENT CONTAINER
+/* CONTENT CONTAINER */
 
-  EXPLANATION:
-  - max-width: Limits how wide content can get
-  - margin: 0 auto centers the container horizontally
-  - display: flex makes it a flexbox container
-  - flex-direction: column stacks children vertically
-  - gap: Space between child elements
-*/
-.player-content {
-  max-width: 500px; /* Max width for readability on mobile */
-  margin: 0 auto; /* Centers container horizontally */
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack children vertically */
-  gap: 16px; /* Space between sections */
+.player-detail-page .player-content {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* ============================================
    BACK BUTTON
    ============================================
+   */
 
-   EXPLANATION:
-   A clickable link styled as a button to go back to players list
-*/
+.player-detail-page .back-button {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 
-.back-button {
-  background: var(--card-bg); /* Card background color */
-  color: var(--text); /* Text color from theme */
-  border: 1px solid var(--border); /* Subtle border */
-  padding: 10px 16px; /* Space inside button */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 14px; /* Text size */
-  font-weight: 600; /* Semi-bold text */
-  cursor: pointer; /* Show hand cursor on hover */
-  display: inline-flex; /* Flexbox for icon + text alignment */
-  align-items: center; /* Vertically center content */
-  gap: 6px; /* Space between arrow and text */
-  margin-bottom: 8px; /* Space below button */
-  text-decoration: none; /* Remove underline from link */
+  /*display: inline-flex; /* Flexbox for icon + text alignment
+  align-items: center; /* Vertically center content
+  gap: 6px; /* Space between arrow and text
+  margin-bottom: 8px; /* Space below button*/
 }
-
 /* ============================================
    PLAYER NOT FOUND ERROR STATE
    ============================================
 
-   EXPLANATION:
-   Shown when the requested player doesn't exist in data
-*/
+  */
 
 .player-not-found {
-  text-align: center; /* Center all text */
-  padding: 40px 16px; /* Space around content */
+  text-align: center;
+  padding: 40px 16px;
 }
 
-/* Error message container */
+/* Error message container*/
 .error-content {
-  background: var(--card-bg); /* Card background */
-  padding: 32px 24px; /* Space inside card */
-  border-radius: 16px; /* Rounded corners */
-  border: 1px solid var(--border); /* Subtle border */
+  background: var(--card-bg);
+  padding: 32px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
 }
 
 /* Error title styling */
 .error-title {
-  font-size: 20px; /* Large text for heading */
-  color: var(--text); /* Theme text color */
-  margin-bottom: 12px; /* Space below title */
-  font-weight: 700; /* Bold text */
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
-/* Error message text */
+/* Error message text*/
 .error-message {
-  color: var(--text-light); /* Lighter text for secondary info */
-  font-size: 14px; /* Standard text size */
-  margin-bottom: 20px; /* Space before button */
-  line-height: 1.5; /* Space between lines for readability */
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 /* ============================================
@@ -121,14 +101,15 @@
    EXPLANATION:
    The main profile card at the top showing player photo,
    name, number, and basic information
+
 */
 
-.player-hero {
-  background: var(--card-bg); /* Card background */
-  border-radius: 16px; /* Rounded corners */
-  overflow: hidden; /* Clip content at edges */
-  box-shadow: 0 2px 10px var(--shadow); /* Subtle shadow for depth */
-  border: 1px solid var(--border); /* Subtle border */
+.player-detail-page .player-hero {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow);
+  border: 1px solid var(--border);
 }
 
 /*
@@ -138,10 +119,10 @@
   Colored band at top using team colors
   Created with inline styles (gradient) in JSX
 */
-.hero-bg {
-  height: 80px; /* Height of color band */
-  width: 100%; /* Full width */
-  opacity: 0.9; /* Slightly transparent */
+.player-detail-page .hero-bg {
+  height: 80px;
+  width: 100%;
+  opacity: 0.9;
 }
 
 /*
@@ -150,14 +131,14 @@
   EXPLANATION:
   Container for player photo and info
   Pulled up over the background with negative margin
-*/
-.hero-content {
-  margin-top: -40px; /* Pull content up over background */
-  padding: 0 16px 24px 16px; /* Space around content */
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text */
+
+.player-detail-page .hero-content {
+  margin-top: -40px; /* Pull content up over background
+  padding: 0 16px 24px 16px; /* Space around content
+  display: flex; /* Flexbox layout
+  flex-direction: column; /* Stack children vertically
+  align-items: center; /* Center horizontally
+  text-align: center; /* Center text
 }
 
 /*
@@ -166,12 +147,12 @@
   EXPLANATION:
   Container for player photo and team badge
   Uses position: relative for badge positioning
-*/
-.player-avatar-container {
-  position: relative; /* Enables absolute positioning for children */
-  width: 100px; /* Size of photo */
-  height: 100px; /* Size of photo */
-  margin-bottom: 12px; /* Space below photo */
+
+.player-detail-page .player-avatar-container {
+  position: relative; /* Enables absolute positioning for children
+  width: 100px; /* Size of photo
+  height: 100px; /* Size of photo
+  margin-bottom: 12px; /* Space below photo
 }
 
 /*
@@ -179,14 +160,14 @@
 
   EXPLANATION:
   Circular player photo with border
-*/
-.player-avatar-large {
-  width: 100%; /* Fill container */
-  height: 100%; /* Fill container */
-  border-radius: 50%; /* Make circular */
-  object-fit: cover; /* Crop image to fit without distortion */
-  border: 4px solid var(--card-bg); /* White ring around photo */
-  background: var(--bg); /* Background color if image fails */
+
+.player-detail-page .player-avatar-large {
+  width: 100%; /* Fill container
+  height: 100%; /* Fill container
+  border-radius: 50%; /* Make circular
+  object-fit: cover; /* Crop image to fit without distortion
+  border: 4px solid var(--card-bg); /* White ring around photo
+  background: var(--bg); /* Background color if image fails
 }
 
 /*
@@ -195,23 +176,23 @@
   EXPLANATION:
   Small team badge shown in corner of player photo
   Uses position: absolute to position over photo
-*/
-.team-badge-overlap {
-  position: absolute; /* Position relative to container */
-  bottom: 0; /* Align to bottom */
-  right: 0; /* Align to right */
-  width: 32px; /* Size of badge */
-  height: 32px; /* Size of badge */
-  background: var(--card-bg); /* Background color */
-  border-radius: 50%; /* Make circular */
-  padding: 4px; /* Space around logo */
-  box-shadow: 0 2px 4px var(--shadow); /* Subtle shadow */
+
+.player-detail-page .team-badge-overlap {
+  position: absolute; /* Position relative to container
+  bottom: 0; /* Align to bottom
+  right: 0; /* Align to right
+  width: 32px; /* Size of badge
+  height: 32px; /* Size of badge
+  background: var(--card-bg); /* Background color
+  border-radius: 50%; /* Make circular
+  padding: 4px; /* Space around logo
+  box-shadow: 0 2px 4px var(--shadow); /* Subtle shadow
 }
 
-.team-badge-overlap img {
-  width: 100%; /* Fill badge container */
-  height: 100%; /* Fill badge container */
-  object-fit: contain; /* Fit logo without cropping */
+.player-detail-page .team-badge-overlap img {
+  width: 100%; /* Fill badge container
+  height: 100%; /* Fill badge container
+  object-fit: contain; /* Fit logo without cropping
 }
 
 /*
@@ -219,16 +200,16 @@
 
   EXPLANATION:
   Player's name with jersey number badge
-*/
-.player-name {
-  font-size: 20px; /* Large text */
-  font-weight: 800; /* Very bold */
-  color: var(--text); /* Theme text color */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Flexbox for name + number */
-  align-items: center; /* Vertically center */
-  gap: 8px; /* Space between name and number */
-  justify-content: center; /* Center horizontally */
+
+.player-detail-page .player-name {
+  font-size: 20px; /* Large text
+  font-weight: 800; /* Very bold
+  color: var(--text); /* Theme text color
+  margin: 0; /* Remove default margin
+  display: flex; /* Flexbox for name + number
+  align-items: center; /* Vertically center
+  gap: 8px; /* Space between name and number
+  justify-content: center; /* Center horizontally
 }
 
 /*
@@ -236,14 +217,14 @@
 
   EXPLANATION:
   Small badge showing jersey number next to name
-*/
-.player-number {
-  font-size: 14px; /* Smaller than name */
-  color: var(--primary); /* Primary brand color */
-  background: rgba(59, 130, 246, 0.1); /* Light blue background */
-  padding: 2px 8px; /* Space around number */
-  border-radius: 12px; /* Rounded corners */
-  font-weight: 600; /* Semi-bold */
+
+.player-detail-page .player-number {
+  font-size: 14px; /* Smaller than name
+  color: var(--primary); /* Primary brand color
+  background: rgba(59, 130, 246, 0.1); /* Light blue background
+  padding: 2px 8px; /* Space around number
+  border-radius: 12px; /* Rounded corners
+  font-weight: 600; /* Semi-bold
 }
 
 /*
@@ -252,12 +233,12 @@
   EXPLANATION:
   Line showing position, age, nationality
   Example: "Forward • 25 anos • Moçambicano"
-*/
-.player-meta {
-  color: var(--text-light); /* Lighter text for secondary info */
-  font-size: 14px; /* Standard text size */
-  margin-top: 4px; /* Space above */
-  font-weight: 500; /* Medium weight */
+
+.player-detail-page .player-meta {
+  color: var(--text-light); /* Lighter text for secondary info
+  font-size: 14px; /* Standard text size
+  margin-top: 4px; /* Space above
+  font-weight: 500; /* Medium weight
 }
 
 /* ============================================
@@ -267,12 +248,12 @@
    EXPLANATION:
    Reusable container for different sections
    (statistics, match history, team info)
-*/
 
-.content-section {
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Stack children vertically */
-  gap: 12px; /* Space between children */
+
+.player-detail-page .content-section {
+  display: flex; /* Flexbox layout
+  flex-direction: column; /* Stack children vertically
+  gap: 12px; /* Space between children
 }
 
 /*
@@ -280,12 +261,12 @@
 
   EXPLANATION:
   Title for each section (📊 Estatísticas, etc.)
-*/
-.section-title {
-  font-size: 16px; /* Medium-large text */
-  font-weight: 700; /* Bold */
-  color: var(--text); /* Theme text color */
-  margin: 0; /* Remove default margin */
+
+.player-detail-page .section-title {
+  font-size: 16px; /* Medium-large text
+  font-weight: 700; /* Bold
+  color: var(--text); /* Theme text color
+  margin: 0; /* Remove default margin
 }
 
 /* ============================================
@@ -295,12 +276,12 @@
    EXPLANATION:
    Grid of stat cards showing player performance
    Uses CSS Grid for automatic layout
-*/
 
-.stats-grid {
-  display: grid; /* Use CSS Grid layout */
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 8px; /* Space between cards */
+
+.player-detail-page .stats-grid {
+  display: grid; /* Use CSS Grid layout
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns
+  gap: 8px; /* Space between cards
 }
 
 /*
@@ -309,17 +290,17 @@
   EXPLANATION:
   Container for one statistic (goals, assists, etc.)
   Shows label above value
-*/
-.stat-card {
-  background: var(--card-bg); /* Card background */
-  padding: 12px 8px; /* Space inside card */
-  border-radius: 12px; /* Rounded corners */
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Stack label and value */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  border: 1px solid var(--border); /* Subtle border */
-  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow */
+
+.player-detail-page .stat-card {
+  background: red; /* Card background
+  padding: 12px 8px; /* Space inside card
+  border-radius: 12px; /* Rounded corners
+  display: flex; /* Flexbox layout
+  flex-direction: column; /* Stack label and value
+  align-items: center; /* Center horizontally
+  justify-content: center; /* Center vertically
+  border: 1px solid var(--border); /* Subtle border
+  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow
 }
 
 /*
@@ -328,27 +309,27 @@
   EXPLANATION:
   Special styling for important stats (usually goals)
   Uses primary color for emphasis
-*/
-.stat-card--highlight {
-  border-color: var(--primary); /* Primary color border */
-  background: rgba(59, 130, 246, 0.05); /* Light blue background */
+
+.player-detail-page .stat-card--highlight {
+  border-color: var(--primary); /* Primary color border
+  background: rgba(59, 130, 246, 0.05); /* Light blue background
 }
 
-/* Stat label (top text) */
-.stat-card__label {
-  font-size: 10px; /* Small text */
-  text-transform: uppercase; /* ALL CAPS */
-  color: var(--text-light); /* Light gray */
-  font-weight: 600; /* Semi-bold */
-  margin-bottom: 4px; /* Space below */
-  text-align: center; /* Center text */
+/* Stat label (top text)
+.player-detail-page .stat-card__label {
+  font-size: 10px; /* Small text
+  text-transform: uppercase; /* ALL CAPS
+  color: var(--text-light); /* Light gray
+  font-weight: 600; /* Semi-bold
+  margin-bottom: 4px; /* Space below
+  text-align: center; /* Center text
 }
 
-/* Stat value (large number) */
-.stat-card__value {
-  font-size: 18px; /* Large text */
-  font-weight: 800; /* Very bold */
-  color: var(--text); /* Theme text color */
+/* Stat value (large number)
+.player-detail-page .stat-card__value {
+  font-size: 18px; /* Large text
+  font-weight: 800; /* Very bold
+  color: var(--text); /* Theme text color
 }
 
 /* ============================================
@@ -357,26 +338,26 @@
 
    EXPLANATION:
    Shows yellow and red cards in a horizontal row
-*/
 
-.discipline-row {
-  display: flex; /* Flexbox layout */
-  gap: 16px; /* Space between items */
-  background: var(--card-bg); /* Card background */
-  padding: 12px; /* Space inside */
-  border-radius: 12px; /* Rounded corners */
-  border: 1px solid var(--border); /* Subtle border */
-  justify-content: center; /* Center items */
+
+.player-detail-page .discipline-row {
+  display: flex; /* Flexbox layout
+  gap: 16px; /* Space between items
+  background: var(--card-bg); /* Card background
+  padding: 12px; /* Space inside
+  border-radius: 12px; /* Rounded corners
+  border: 1px solid var(--border); /* Subtle border
+  justify-content: center; /* Center items
 }
 
-/* Individual discipline item (yellow or red cards) */
-.discipline-item {
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Vertically center */
-  gap: 8px; /* Space between icon and text */
-  font-size: 13px; /* Text size */
-  color: var(--text); /* Theme text color */
-  font-weight: 500; /* Medium weight */
+/* Individual discipline item (yellow or red cards)
+.player-detail-page .discipline-item {
+  display: flex; /* Flexbox layout
+  align-items: center; /* Vertically center
+  gap: 8px; /* Space between icon and text
+  font-size: 13px; /* Text size
+  color: var(--text); /* Theme text color
+  font-weight: 500; /* Medium weight
 }
 
 /*
@@ -384,21 +365,21 @@
 
   EXPLANATION:
   Colored rectangle representing yellow/red card
-*/
-.card-icon {
-  width: 12px; /* Width of card icon */
-  height: 16px; /* Height of card icon */
-  border-radius: 2px; /* Slightly rounded corners */
+
+.player-detail-page .card-icon {
+  width: 12px; /* Width of card icon
+  height: 16px; /* Height of card icon
+  border-radius: 2px; /* Slightly rounded corners
 }
 
-/* Yellow card color */
-.card-icon.yellow-card {
-  background: #facc15; /* Yellow color */
+/* Yellow card color
+.player-detail-page .card-icon.yellow-card {
+  background: #facc15; /* Yellow color
 }
 
-/* Red card color */
-.card-icon.red-card {
-  background: #ef4444; /* Red color */
+/* Red card color
+.player-detail-page .card-icon.red-card {
+  background: #ef4444; /* Red color
 }
 
 /* ============================================
@@ -408,12 +389,20 @@
    EXPLANATION:
    List of recent matches where player participated
    Uses MatchCard component for each match
-*/
 
-.matches-list {
-  display: flex; /* Flexbox layout */
-  flex-direction: column; /* Stack cards vertically */
-  gap: 8px; /* Space between cards */
+
+.player-detail-page .matches-list {
+  display: flex; /* Flexbox layout
+  flex-direction: column; /* Stack cards vertically
+  gap: 8px; /* Space between cards
+
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+  /* CSS Grid will show 2 columns on larger screens
+   This would typically be handled with media queries in CSS
+   For inline styles; you'd need a resize listener or CSS classes
 }
 
 /*
@@ -422,9 +411,9 @@
   EXPLANATION:
   Hidden on mobile (for future desktop version)
   Currently not used since we use MatchCard
-*/
-.matches-table-wrapper {
-  display: none; /* Hidden */
+
+.player-detail-page .matches-table-wrapper {
+  display: none; /* Hidden
 }
 
 /* ============================================
@@ -434,47 +423,47 @@
    EXPLANATION:
    Clickable card showing player's team
    Links to team detail page
-*/
 
-.team-info-card {
-  background: var(--card-bg); /* Card background */
-  border: 1px solid var(--border); /* Subtle border */
-  border-radius: 12px; /* Rounded corners */
-  padding: 16px; /* Space inside card */
-  display: flex; /* Flexbox layout */
-  align-items: center; /* Vertically center */
-  gap: 12px; /* Space between logo and text */
-  text-decoration: none; /* Remove link underline */
-  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow */
+
+.player-detail-page .team-info-card {
+  background: var(--card-bg); /* Card background
+  border: 1px solid var(--border); /* Subtle border
+  border-radius: 12px; /* Rounded corners
+  padding: 16px; /* Space inside card
+  display: flex; /* Flexbox layout
+  align-items: center; /* Vertically center
+  gap: 12px; /* Space between logo and text
+  text-decoration: none; /* Remove link underline
+  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow
 }
 
-/* Team logo image */
-.team-info__logo {
-  width: 48px; /* Logo size */
-  height: 48px; /* Logo size */
-  object-fit: contain; /* Fit without cropping */
-  flex-shrink: 0; /* Don't shrink logo */
+/* Team logo image
+.player-detail-page .team-info__logo {
+  width: 48px; /* Logo size
+  height: 48px; /* Logo size
+  object-fit: contain; /* Fit without cropping
+  flex-shrink: 0; /* Don't shrink logo
 }
 
-/* Container for team name and link text */
-.team-info__details {
-  flex: 1; /* Take remaining space */
+/* Container for team name and link text
+.player-detail-page .team-info__details {
+  flex: 1; /* Take remaining space
 }
 
-/* Team name */
-.team-info__name {
-  font-size: 16px; /* Medium text */
-  font-weight: 700; /* Bold */
-  color: var(--text); /* Theme text color */
-  margin: 0 0 4px 0; /* Space below */
+/* Team name
+.player-detail-page .team-info__name {
+  font-size: 16px; /* Medium text
+  font-weight: 700; /* Bold
+  color: var(--text); /* Theme text color
+  margin: 0 0 4px 0; /* Space below
 }
 
-/* "Ver página da equipa" text */
-.team-info__text {
-  color: var(--text-light); /* Light gray */
-  margin: 0; /* No margin */
-  font-size: 13px; /* Small text */
-  font-weight: 500; /* Medium weight */
+/* "Ver página da equipa" text
+.player-detail-page .team-info__text {
+  color: var(--text-light); /* Light gray
+  margin: 0; /* No margin
+  font-size: 13px; /* Small text
+  font-weight: 500; /* Medium weight
 }
 
 /* ============================================
@@ -484,18 +473,17 @@
    EXPLANATION:
    Styles that only apply on screens 768px and wider
    @media queries let us change styles based on screen size
-*/
+
 
 @media (min-width: 768px) {
-  /* Wider content container for larger screens */
-  .player-content {
-    max-width: 700px; /* Wider than mobile */
+  /* Wider content container for larger screens
+  .player-detail-page .player-content {
+    max-width: 700px; /* Wider than mobile
   }
 
-  /* Stats grid stays the same (4 columns) */
-  .stats-grid {
+  /* Stats grid stays the same (4 columns)
+  .player-detail-page .stats-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* //===========OTHER CSS======== */
+*/

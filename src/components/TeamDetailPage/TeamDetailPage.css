@@ -56,7 +56,7 @@
 }
 
 /* Team Detail Container
-.team-detail {
+.team-detail-page{
   width: 100%;
   min-height: 100vh;
 }
@@ -723,7 +723,7 @@
    TEAM DETAIL CONTAINER
    ---------------------------------------------------------------------------- */
 
-.team-detail {
+.team-detail-page {
   width: 100%; /* Full width of parent */
   min-height: 100vh; /* Minimum height = viewport height */
 }
@@ -1029,7 +1029,7 @@
   CSS Grid for responsive stat cards
   Starts with 2 columns, expands to 4 on larger screens
 */
-.stats-grid {
+.team-detail-page .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
   gap: 12px;
@@ -1046,7 +1046,7 @@
   Individual stat card with hover effect
   Transform property creates lift effect
 */
-.stat-card {
+.team-detail-page .stat-card {
   background: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
@@ -1061,7 +1061,7 @@
 }
 
 /* Highlighted stat card (points) has primary color background */
-.stat-card--highlight {
+.team-detail-page.stat-card--highlight {
   background: var(--primary);
   color: white;
 }
@@ -1079,7 +1079,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.stat-card__value {
+.team-detail-page.stat-card__value {
   font-size: 32px;
   font-weight: 700;
   color: var(--text);
