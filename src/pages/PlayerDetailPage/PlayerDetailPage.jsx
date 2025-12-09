@@ -1224,12 +1224,12 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
             {/* Yellow cards */}
             <div className="discipline-item">
               <div className="card-icon yellow-card"></div>
-              <span>{yellowCards} 🟨Amarelos</span>
+              <span>{yellowCards} Amarelos</span>
             </div>
             {/* Red cards */}
             <div className="discipline-item">
               <div className="card-icon red-card"></div>
-              <span>{redCards} 🟥Vermelhos</span>
+              <span>{redCards} Vermelhos</span>
             </div>
           </div>
         </div>

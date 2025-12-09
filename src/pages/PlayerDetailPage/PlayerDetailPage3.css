@@ -37,6 +37,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (min-width: 992px) {
+    max-width: 80vw;
+  }
 }
 
 /* ============================================
@@ -250,11 +254,11 @@
    Reusable container for different sections
    (statistics, match history, team info)
 
-
+*/
 .player-detail-page .content-section {
-  display: flex; /* Flexbox layout
-  flex-direction: column; /* Stack children vertically
-  gap: 12px; /* Space between children
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /*
@@ -262,12 +266,11 @@
 
   EXPLANATION:
   Title for each section (📊 Estatísticas, etc.)
-
+*/
 .player-detail-page .section-title {
-  font-size: 16px; /* Medium-large text
-  font-weight: 700; /* Bold
-  color: var(--text); /* Theme text color
-  margin: 0; /* Remove default margin
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
 }
 
 /* ============================================
@@ -277,12 +280,12 @@
    EXPLANATION:
    Grid of stat cards showing player performance
    Uses CSS Grid for automatic layout
-
+*/
 
 .player-detail-page .stats-grid {
-  display: grid; /* Use CSS Grid layout
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns
-  gap: 8px; /* Space between cards
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
 }
 
 /*
@@ -291,17 +294,17 @@
   EXPLANATION:
   Container for one statistic (goals, assists, etc.)
   Shows label above value
-
+*/
 .player-detail-page .stat-card {
-  background: red; /* Card background
-  padding: 12px 8px; /* Space inside card
-  border-radius: 12px; /* Rounded corners
-  display: flex; /* Flexbox layout
-  flex-direction: column; /* Stack label and value
-  align-items: center; /* Center horizontally
-  justify-content: center; /* Center vertically
-  border: 1px solid var(--border); /* Subtle border
-  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow
+  background: var(--card-bg);
+  padding: 12px 8px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px var(--shadow);
 }
 
 /*
@@ -310,27 +313,27 @@
   EXPLANATION:
   Special styling for important stats (usually goals)
   Uses primary color for emphasis
-
+*/
 .player-detail-page .stat-card--highlight {
-  border-color: var(--primary); /* Primary color border
-  background: rgba(59, 130, 246, 0.05); /* Light blue background
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.05);
 }
 
-/* Stat label (top text)
+/* Stat label (top text)*/
 .player-detail-page .stat-card__label {
-  font-size: 10px; /* Small text
-  text-transform: uppercase; /* ALL CAPS
-  color: var(--text-light); /* Light gray
-  font-weight: 600; /* Semi-bold
-  margin-bottom: 4px; /* Space below
-  text-align: center; /* Center text
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-align: center;
 }
 
-/* Stat value (large number)
+/* Stat value (large number)*/
 .player-detail-page .stat-card__value {
-  font-size: 18px; /* Large text
-  font-weight: 800; /* Very bold
-  color: var(--text); /* Theme text color
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
 }
 
 /* ============================================
@@ -339,26 +342,26 @@
 
    EXPLANATION:
    Shows yellow and red cards in a horizontal row
-
+*/
 
 .player-detail-page .discipline-row {
-  display: flex; /* Flexbox layout
-  gap: 16px; /* Space between items
-  background: var(--card-bg); /* Card background
-  padding: 12px; /* Space inside
-  border-radius: 12px; /* Rounded corners
-  border: 1px solid var(--border); /* Subtle border
-  justify-content: center; /* Center items
+  display: flex;
+  gap: 18px;
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  justify-content: center;
 }
 
-/* Individual discipline item (yellow or red cards)
+/* Individual discipline item (yellow or red cards)*/
 .player-detail-page .discipline-item {
-  display: flex; /* Flexbox layout
-  align-items: center; /* Vertically center
-  gap: 8px; /* Space between icon and text
-  font-size: 13px; /* Text size
-  color: var(--text); /* Theme text color
-  font-weight: 500; /* Medium weight
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
 }
 
 /*
@@ -366,21 +369,21 @@
 
   EXPLANATION:
   Colored rectangle representing yellow/red card
-
+*/
 .player-detail-page .card-icon {
-  width: 12px; /* Width of card icon
-  height: 16px; /* Height of card icon
-  border-radius: 2px; /* Slightly rounded corners
+  width: 12px;
+  height: 16px;
+  border-radius: 2px;
 }
 
-/* Yellow card color
+/* Yellow card color*/
 .player-detail-page .card-icon.yellow-card {
-  background: #facc15; /* Yellow color
+  background: #facc15;
 }
 
-/* Red card color
+/* Red card color*/
 .player-detail-page .card-icon.red-card {
-  background: #ef4444; /* Red color
+  background: #ef4444;
 }
 
 /* ============================================
