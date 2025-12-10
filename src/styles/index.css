@@ -22,12 +22,14 @@
 @import "./base/_typography.css";
 @import "./base/_buttons.css";
 @import "./base/_links.css";
+@import "./base/_error-state.css";
 
 /* 4. Utilities */
 @import "./utilities/_accessibility.css";
 @import "./utilities/_animations.css";
 @import "./utilities/_reduced-motion.css";
 @import "./utilities/_print.css";
+
 /* *,
 ::before,
 ::after {
