@@ -18,6 +18,8 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 2px;
 }
 
 .footer-logo #logo-icon {
