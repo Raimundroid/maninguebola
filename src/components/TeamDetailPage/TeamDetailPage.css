@@ -1,60 +1,5 @@
 /* TeamDetailPage.css
 
-/* :root {
-  --primary: #3b82f6;
-  --success: #22c55e;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --border: #e2e8f0;
-  --bg: #f8fafc;
-  --card-bg: #ffffff;
-  --shadow: rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="dark"] {
-  --text: #f1f5f9;
-  --text-light: #94a3b8;
-  --border: #334155;
-  --bg: #0f172a;
-  --card-bg: #1e293b;
-  --shadow: rgba(0, 0, 0, 0.3);
-}
-
-/* ====================TEAM NOT FOUND / BACK BUTTON====================
-
-/* .team-not-found-container {
-  background: var(--card-bg);
-  padding: 24px 48px;
-  border-radius: 12px;
-  text-align: center;
-  color: var(--text-light);
-  max-width: var(--page-max-width);
-  margin: 20px auto;
-}
-
-.team-not-found-container p {
-  margin-bottom: 20px;
-}
-.back-button-container {
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  padding: 10px 0;
-}
-.back-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-  background: var(--card-bg);
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  color: var(--text);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
 /* Team Detail Container
 .team-detail-page{
   width: 100%;
@@ -636,158 +581,165 @@
    ============================================================================
 */
 
-/* ----------------------------------------------------------------------------
+/*
    TEAM DETAIL CONTAINER
-   ----------------------------------------------------------------------------
-
+*/
 .team-detail-page {
-  width: 100%; /* Full width of parent
-  min-height: 100vh; /* Minimum height = viewport height
+  width: 100%;
+  min-height: 100vh;
 }
 
-/* ----------------------------------------------------------------------------
+/*
    TEAM HEADER SECTION
-   ----------------------------------------------------------------------------
-
 /*
   Banner with gradient background
   Uses inline styles from JSX for dynamic team colors
-
+*/
 .team-header__banner {
-  padding: 32px 16px; /* Vertical 32px, Horizontal 16px
-  color: white; /* All text white for contrast
+  padding: 32px 16px;
+  color: white;
   margin-bottom: 24px;
+
+  /*
+  MEDIA QUERY: Screens 768px and wider (tablets+)
+  Increases sizes for better visibility on larger screens */
+
+  @media (min-width: 768px) {
+    padding: 48px 24px;
+  }
 }
 
-/* Content wrapper with max-width constraint
+/* Content wrapper with max-width constraint */
 .team-header__content {
   max-width: var(--page-max-width);
-  margin: 0 auto; /* Centers content
+  margin: 0 auto;
 }
 
 /*
   Flexbox layout for logo and team info
   Flex makes items sit side-by-side and controls spacing
-
+*/
 .team-header__logo-section {
   display: flex;
-  align-items: center; /* Vertically centers items
-  gap: 20px; /* 20px space between logo and info
+  align-items: center;
+  gap: 20px;
   margin-bottom: 32px;
 }
 
-/* Team logo with shadow effect
+/* Team logo with shadow effect */
 .team-header__logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px; /* Rounded corners
-  background: white; /* White background for logo
-  padding: 8px; /* Inner spacing
-  object-fit: contain; /* Scales image to fit without distortion
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow: X Y Blur Color
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  background: white;
+  padding: 8px;
+  object-fit: contain; /* Scales image to fit without distortion */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow: X Y Blur Color */
+
+  /*
+  MEDIA QUERY: Screens 768px and wider (tablets+)
+  Increases sizes for better visibility on larger screens */
+
+  @media (min-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
-/* Flex: 1 allows this section to grow and fill space
+/* Flex: 1 allows this section to grow and fill space */
 .team-header__info {
-  flex: 1; /* Takes remaining space
+  flex: 1; /* Takes remaining space */
 }
 
-/* Team name with text shadow for depth
+/* Team name with text shadow for depth */
 .team-header__name {
   font-size: 28px;
-  font-weight: 700; /* Extra bold
-  margin: 0 0 12px 0; /* Bottom margin only
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow: X Y Blur Color
+  font-weight: 700; /* Extra bold */
+  margin: 0 0 12px 0; /* Bottom margin only */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow: X Y Blur Color */
+
+  /* MEDIA QUERY: Screens 768px and wider (tablets+)
+  Increases sizes for better visibility on larger screens */
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
 }
 
 /*
   Metadata line (founded, stadium, players)
   Flexbox with wrap allows items to flow to next line on small screens
-
+*/
 .team-header__meta {
   display: flex;
-  flex-wrap: wrap; /* Wraps to new line if needed
-  gap: 16px; /* Space between items
+  flex-wrap: wrap; /* Wraps to new line if needed */
+  gap: 16px;
   font-size: 14px;
-  opacity: 0.95; /* Slightly transparent
+  opacity: 0.95; /* Slightly transparent */
 }
 
 .team-header__meta span {
   display: flex;
   align-items: center;
-  gap: 6px; /* Space between emoji and text
+  gap: 6px;
 }
 
 /*
   Quick stats boxes
   CSS Grid creates responsive 2-column layout
-
+*/
 .team-header__stats {
   display: grid;
   grid-template-columns: repeat(
     2,
     1fr
-  ); /* 2 equal columns (1fr = 1 fraction)
+  ); /* 2 equal columns (1fr = 1 fraction) */
   gap: 12px;
-}
 
-/*
+  /*
   MEDIA QUERY: Screens 640px and wider
   Changes grid to 4 columns for more space
-
-@media (min-width: 640px) {
-  .team-header__stats {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens
+*/
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
   }
 }
 
 /*
-  MEDIA QUERY: Screens 768px and wider (tablets+)
-  Increases sizes for better visibility on larger screens
-
-@media (min-width: 768px) {
-  .team-header__logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .team-header__name {
-    font-size: 36px;
-  }
-
-  .team-header__banner {
-    padding: 48px 24px; /* More padding on larger screens
-  }
-}
-
-/* ----------------------------------------------------------------------------
    STAT BOX (Quick stats in header)
-   ----------------------------------------------------------------------------
-
 /*
   Glassmorphism effect: semi-transparent with blur
   backdrop-filter applies blur to content behind element
+*/
 
 .stat-box {
-  background: rgba(255, 255, 255, 0.15); /* 15% opaque white
-  backdrop-filter: blur(10px); /* Blurs background
-  padding: 16px;
+  background: rgba(255, 255, 255, 0.15); /* 15% opaque white */
+  backdrop-filter: blur(10px); /* Blurs background */
+  padding: 12px;
   border-radius: 12px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+
+  @media (min-width: 768px) {
+    padding: 14px;
+  }
 }
 
 .stat-box__value {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 4px;
+
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 .stat-box__label {
   font-size: 12px;
   opacity: 0.9;
-  text-transform: uppercase; /* ALL CAPS
-  letter-spacing: 0.5px; /* Slightly wider letter spacing
+  text-transform: uppercase; /* ALL CAPS */
+  letter-spacing: 0.5px; /* Slightly wider letter spacing */
 }
 
 /* ----------------------------------------------------------------------------

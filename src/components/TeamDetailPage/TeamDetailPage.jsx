@@ -1820,7 +1820,7 @@
 // ============================================================================
 
 import React, { useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import MatchCard from "../MatchCard/MatchCard";
 import "./TeamDetailPage.css";
 
@@ -1840,10 +1840,6 @@ const TeamDetailPage = ({
   // useParams(): Gets dynamic URL parameters.
   // Example: /equipas/eagles → teamId = "eagles"
   const { teamId } = useParams();
-
-  // useNavigate(): Returns function to programmatically navigate between routes
-  // Example: navigate("/equipas") redirects user to teams list page
-  const navigate = useNavigate();
 
   // useState(): Creates state variable for tracking which tab is active
   // First value is current state, second is setter function
@@ -2279,7 +2275,10 @@ const TeamDetailPage = ({
                       {/* index + 1 because arrays start at 0 */}
                       <div className="scorer-item__rank">#{index + 1}</div>
                       <div className="scorer-item__info">
-                        <Link to={`/jogadores/${player.id}`}>
+                        <Link
+                          className="wrapper-Link"
+                          to={`/jogadores/${player.id}`}
+                        >
                           <div className="scorer-item__name">{player.name}</div>
                         </Link>
                         <div className="scorer-item__position">
