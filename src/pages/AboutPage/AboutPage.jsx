@@ -5,6 +5,8 @@ import React from "react";
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import "./AboutPage.css";
 import devPhoto from "/src/assets/images/developer/default-developer.png";
+import emola from "/src/assets/images/wallets/emola-logo.webp";
+import mpesa from "/src/assets/images/wallets/m-pesa-logo.png";
 
 const AboutPage = () => {
   // The Tech stack (Add new skills here as you learn them!)
@@ -187,15 +189,21 @@ const AboutPage = () => {
           </p>
           <div className="wallets">
             <div className="wallet mpesa">
-              <span className="wallet-label">M-Pesa</span>
+              <div className="logo">
+                <img src={mpesa} alt="mpesa" width={48} height={48} />
+              </div>
+              {/* <span className="wallet-label">M-Pesa</span> */}
               <span className="wallet-number">{donationInfo.mpesa}</span>
               <span className="wallet-name">{donationInfo.name}</span>
             </div>
 
             <div className="wallet emola">
-              <span className="wallet-label">e-Mola</span>
+              <div className="logo">
+                <img src={emola} alt="emola" width={48} height={48} />
+              </div>
+              {/* <span className="wallet-label">e-Mola</span> */}
               <span className="wallet-number">{donationInfo.emola}</span>
-              <span className="wallet-name">{donationInfo.name}</span>
+              <span className="wallet-name"> {donationInfo.name}</span>
             </div>
           </div>
         </section>

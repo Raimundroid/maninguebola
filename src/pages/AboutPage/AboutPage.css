@@ -221,16 +221,26 @@
   border: 1px dashed var(--border);
 }
 
-.wallet-label {
-  font-weight: 700;
-  color: var(--error); /* M-Pesa red-ish */
-  font-size: 12px;
-  margin-bottom: 4px;
+.wallet .logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+.wallet .logo img {
+  border-radius: 12px;
+  object-fit: contain;
 }
 
-.wallet.emola .wallet-label {
-  color: #e45f01; /* Orange for e-mola */
-}
+/* .wallet-label {
+  font-weight: 700;
+  color: var(--error);
+  font-size: 12px;
+  margin-bottom: 4px;
+} */
+
+/* .wallet.emola .wallet-label {
+  color: #e45f01;
+} */
 
 .wallet-number {
   font-family: monospace;
