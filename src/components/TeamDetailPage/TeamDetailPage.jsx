@@ -2067,16 +2067,80 @@ const TeamDetailPage = ({
   return (
     <div className="teams-detail-page">
       {/* ===== BACK BUTTON ===== */}
-
       <div className="back-button-container">
         <Link
           to="/equipas"
-          className="back-button"
+          className="back-button wrapper-Link"
           aria-label="Voltar para lista de equipas"
         >
           <span className="back-button__icon">←</span>
           <span className="back-button__text">Voltar para Equipas</span>
         </Link>
+      </div>
+
+      {/* ===== TEAM HEADER WITH GRADIENT BANNER ===== */}
+      <div className="team-header">
+        {/* Inline styles for dynamic gradient based on team colors */}
+        {/* Template literals (``) allow embedded expressions ${} */}
+        {/* Optional chaining (?.) prevents errors if colors is undefined */}
+        <div
+          className="team-header__banner"
+          style={{
+            background: `linear-gradient(135deg, ${
+              colors?.primary || "#3b82f6"
+            } 0%, ${colors?.secondary || "#1e40af"} 100%)`,
+          }}
+        >
+          <div className="team-header__content">
+            {/* Logo and basic info section */}
+            <div className="team-header__logo-section">
+              <img
+                src={logo || "/images/teams/default-team-logo.png"}
+                alt={name}
+                className="team-header__logo"
+              />
+              <div className="team-header__info">
+                <h1 className="team-header__name">{name}</h1>
+                <div className="team-header__meta">
+                  <span>📅 Fundado: {founded}</span>
+                  <span>🏟️ {stadium}</span>
+                  {/* .length property gets number of items in array */}
+                  <span>👥 {teamPlayers.length} Jogadores</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick statistics boxes */}
+            <div className="team-header__stats">
+              {/* || operator provides fallback if value is falsy (0, null, undefined, etc.) */}
+              <div className="stat-box">
+                <div className="stat-box__value">
+                  {teamStanding.standing?.position || "-"}
+                </div>
+                <div className="stat-box__label">Posição</div>
+              </div>
+
+              <div className="stat-box">
+                <div className="stat-box__value">
+                  {teamStanding.standing?.points || 0}
+                </div>
+                <div className="stat-box__label">Pontos</div>
+              </div>
+
+              <div className="stat-box">
+                <div className="stat-box__value">
+                  {teamStanding.standing?.wins || 0}
+                </div>
+                <div className="stat-box__label">Vitórias</div>
+              </div>
+
+              <div className="stat-box">
+                <div className="stat-box__value">{totalGoals}</div>
+                <div className="stat-box__label">Golos</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -2086,67 +2150,6 @@ export default TeamDetailPage;
 
 //   return (
 //     <div className="team-detail-page">
-
-//       {/* ===== TEAM HEADER WITH GRADIENT BANNER ===== */}
-//       <div className="team-header">
-//         {/* Inline styles for dynamic gradient based on team colors */}
-//         {/* Template literals (``) allow embedded expressions ${} */}
-//         {/* Optional chaining (?.) prevents errors if colors is undefined */}
-//         <div
-//           className="team-header__banner"
-//           style={{
-//             background: `linear-gradient(135deg, ${
-//               colors?.primary || "#3b82f6"
-//             } 0%, ${colors?.secondary || "#1e40af"} 100%)`,
-//           }}
-//         >
-//           <div className="team-header__content">
-//             {/* Logo and basic info section */}
-//             <div className="team-header__logo-section">
-//               <img
-//                 src={logo || "/images/teams/default-team-logo.png"}
-//                 alt={name}
-//                 className="team-header__logo"
-//               />
-//               <div className="team-header__info">
-//                 <h1 className="team-header__name">{name}</h1>
-//                 <div className="team-header__meta">
-//                   <span>📅 Fundado: {founded}</span>
-//                   <span>🏟️ {stadium}</span>
-//                   {/* .length property gets number of items in array */}
-//                   <span>👥 {teamPlayers.length} Jogadores</span>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Quick statistics boxes */}
-//             <div className="team-header__stats">
-//               {/* || operator provides fallback if value is falsy (0, null, undefined, etc.) */}
-//               <div className="stat-box">
-//                 <div className="stat-box__value">
-//                   {teamStanding.standing?.position || "-"}
-//                 </div>
-//                 <div className="stat-box__label">Posição</div>
-//               </div>
-//               <div className="stat-box">
-//                 <div className="stat-box__value">
-//                   {teamStanding.standing?.points || 0}
-//                 </div>
-//                 <div className="stat-box__label">Pontos</div>
-//               </div>
-//               <div className="stat-box">
-//                 <div className="stat-box__value">
-//                   {teamStanding.standing?.wins || 0}
-//                 </div>
-//                 <div className="stat-box__label">Vitórias</div>
-//               </div>
-//               <div className="stat-box">
-//                 <div className="stat-box__value">{totalGoals}</div>
-//                 <div className="stat-box__label">Golos</div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
 
 //         {/* ===== FORM BADGES (W/D/L) ===== */}
 //         {/* && operator: Only render if form.length > 0 is true */}
