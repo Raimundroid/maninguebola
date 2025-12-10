@@ -193,7 +193,9 @@ const AboutPage = () => {
                 <img src={mpesa} alt="mpesa" width={48} height={48} />
               </div>
               {/* <span className="wallet-label">M-Pesa</span> */}
-              <span className="wallet-number">{donationInfo.mpesa}</span>
+              <span className="wallet-number">
+                <a href="tel:+258841234567">{donationInfo.mpesa}</a>
+              </span>
               <span className="wallet-name">{donationInfo.name}</span>
             </div>
 
@@ -201,8 +203,11 @@ const AboutPage = () => {
               <div className="logo">
                 <img src={emola} alt="emola" width={48} height={48} />
               </div>
+
               {/* <span className="wallet-label">e-Mola</span> */}
-              <span className="wallet-number">{donationInfo.emola}</span>
+              <span className="wallet-number">
+                <a href="tel:+258841234567">{donationInfo.emola}</a>
+              </span>
               <span className="wallet-name"> {donationInfo.name}</span>
             </div>
           </div>
