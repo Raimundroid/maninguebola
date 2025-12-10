@@ -1058,7 +1058,7 @@
   margin-bottom: 32px;
 }
 
-/* Position header with bottom border
+/* Position header with bottom border */
 .position-group__title {
   font-size: 18px;
   font-weight: 700;
@@ -1071,23 +1071,19 @@
 /*
   Responsive grid for player cards
   Starts with 2 columns, increases on larger screens
-
+*/
 .players-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-}
 
-/* 3 columns on tablets
-@media (min-width: 640px) {
-  .players-grid {
+  /* 3 columns on tablets */
+  @media (min-width: 640px) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-/* 4 columns on desktops
-@media (min-width: 1024px) {
-  .players-grid {
+  /* 4 columns on desktops */
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -1095,51 +1091,54 @@
 /*
   Individual player card
   position: relative allows absolute positioning of number badge
-
+*/
 .player-card {
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 16px;
+  padding: 10px;
   box-shadow: 0 2px 8px var(--shadow);
   transition: all 0.3s ease;
-  position: relative; /* Creates positioning context
+  position: relative; /* Creates positioning context */
   cursor: pointer;
 }
 
-/* Hover effect lifts and enhances shadow
+/* Hover effect lifts and enhances shadow */
 .player-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 16px var(--shadow);
+  box-shadow: 0 4px 16px var(--shadow-hover);
 }
 
 /*
   Player number badge
   position: absolute removes it from normal flow
   Positioned relative to .player-card
+*/
 
 .player-card__number {
-  position: absolute; /* Positioned relative to parent
-  top: 12px; /* 12px from top
-  right: 12px; /* 12px from right
+  position: absolute; /* Positioned relative to parent */
+  top: 12px; /* 12px from top */
+  right: 12px; /* 12px from right */
   background: var(--primary);
   color: white;
   width: 32px;
-  height: 32px;
+  height: 28px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
+  padding: 0 10px;
+  background-color: #22c55e;
 }
 
-/* Circular player photo
+/* Circular player photo */
 .player-card__photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* Perfect circle
-  object-fit: cover; /* Crops image to fill circle
-  margin: 0 auto 12px; /* Centers with auto margins
+  width: 75px;
+  height: 75px;
+  border-radius: 50%; /* Perfect circle */
+  object-fit: contain;
+  margin: 0 auto 5px; /* Centers with auto margins */
   display: block;
   background: var(--bg);
 }
@@ -1153,7 +1152,7 @@
   font-weight: 600;
   color: var(--text);
   margin: 0 0 4px 0;
-  line-height: 1.3; /* Line height for readability
+  line-height: 1.3; /* Line height for readability */
 }
 
 .player-card__position {
@@ -1162,11 +1161,11 @@
   margin: 0 0 12px 0;
 }
 
-/* Player statistics row
+/* Player statistics row */
 .player-card__stats {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   font-size: 12px;
   font-weight: 600;
 }
