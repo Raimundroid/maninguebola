@@ -2203,61 +2203,61 @@ const TeamDetailPage = ({
             {/* Season Statistics Grid */}
             <div className="content-section">
               <h2 className="section-title">📈 Estatísticas da Época</h2>
-              <div className="stats-grid">
-                <div className="stat-card">
-                  <div className="stat-card__label">Jogos</div>
-                  <div className="stat-card__value">
+              <div className="team-stats-grid">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Jogos</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.played || 0}
                   </div>
                 </div>
 
-                <div className="stat-card">
-                  <div className="stat-card__label">Vitórias</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Vitórias</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.wins || 0}
                   </div>
                 </div>
 
-                <div className="stat-card">
-                  <div className="stat-card__label">Empates</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Empates</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.draws || 0}
                   </div>
                 </div>
 
-                <div className="stat-card">
-                  <div className="stat-card__label">Derrotas</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Derrotas</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.losses || 0}
                   </div>
                 </div>
 
-                <div className="stat-card">
-                  <div className="stat-card__label">Golos Marcados</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Golos Marcados</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.goalsFor || 0}
                   </div>
                 </div>
 
-                <div className="stat-card">
-                  <div className="stat-card__label">Golos Sofridos</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Golos Sofridos</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.goalsAgainst || 0}
                   </div>
                 </div>
 
-                <div className="stat-card">
-                  <div className="stat-card__label">Diferença</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card">
+                  <div className="team-stat-card__label">Diferença</div>
+                  <div className="team-stat-card__value">
                     {/* Ternary adds + sign for positive numbers */}
                     {teamStanding.standing?.goalDiff > 0 ? "+" : ""}
                     {teamStanding.standing?.goalDiff || 0}
                   </div>
                 </div>
 
-                <div className="stat-card stat-card--highlight">
-                  <div className="stat-card__label">Pontos</div>
-                  <div className="stat-card__value">
+                <div className="team-stat-card team-stat-card--highlight">
+                  <div className="team-stat-card__label">Pontos</div>
+                  <div className="team-stat-card__value">
                     {teamStanding.standing?.points || 0}
                   </div>
                 </div>

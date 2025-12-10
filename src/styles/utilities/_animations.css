@@ -7,15 +7,7 @@
    Can be used by any component
 */
 
-/* Fade In Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/* Pulse Animation */
 @keyframes pulse {
   0%,
   100% {
@@ -23,6 +15,19 @@
   }
   50% {
     opacity: 0.6;
+  }
+}
+
+/* Fade In Animation */
+/* Animation definition: from (0%) to (100%) */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(10px); /* Starts 10px below */
+  }
+  to {
+    opacity: 1; /* Ends fully visible */
+    transform: translateY(0); /* Ends at normal position */
   }
 }
 

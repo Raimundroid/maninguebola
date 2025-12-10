@@ -823,7 +823,7 @@
 .team-tab {
   display: flex;
   align-items: center;
-  /* gap: 8px; */
+  gap: 8px;
   padding: 8px 16px;
   background: var(--card-bg);
   border: 2px solid var(--border);
@@ -867,54 +867,42 @@
 /*
   Fade-in animation for tab content
   @keyframes defines the animation steps
-
+*/
 .tab-content {
-  animation: fadeIn 0.3s ease; /* Animation: name duration timing
-}
-
-/* Animation definition: from (0%) to (100%)
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Starts invisible
-    transform: translateY(10px); /* Starts 10px below
-  }
-  to {
-    opacity: 1; /* Ends fully visible
-    transform: translateY(0); /* Ends at normal position
-  }
+  animation: fadeIn 300ms ease; /* Animation: name duration timing */
 }
 
 .content-section {
-  margin-bottom: 40px; /* Space between sections
+  margin-bottom: 40px; /* Space between sections */
 }
 
 .section-title {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--text);
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
 }
 
-/* ----------------------------------------------------------------------------
+/*
    STATISTICS GRID
-   ----------------------------------------------------------------------------
-
 /*
   CSS Grid for responsive stat cards
   Starts with 2 columns, expands to 4 on larger screens
-
-.team-detail-page .stats-grid {
+*/
+.team-stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 equal columns
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
   gap: 12px;
-}
 
-/* 4 columns on screens 640px+
-@media (min-width: 640px) {
-  .stats-grid {
+  /* 4 columns on screens 640px+ */
+  @media (min-width: 640px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -922,28 +910,33 @@
 /*
   Individual stat card with hover effect
   Transform property creates lift effect
+*/
 
-.team-detail-page .stat-card {
+.team-stat-card {
   background: var(--card-bg);
-  padding: 20px;
+  padding: 16px;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--shadow);
   text-align: center;
-  transition: transform 0.2s ease; /* Only animates transform
+  transition: transform 200ms ease; /* Only animates transform */
+
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
 }
 
 /* Hover effect lifts card up
-.stat-card:hover {
+.team-stat-card:hover {
   transform: translateY(-2px); /* Moves up 2px
-}
+} */
 
-/* Highlighted stat card (points) has primary color background
-.team-detail-page.stat-card--highlight {
+/* Highlighted stat card (points) has primary color  background */
+.team-stat-card--highlight {
   background: var(--primary);
   color: white;
 }
 
-.stat-card__label {
+.team-stat-card__label {
   font-size: 12px;
   color: var(--text-light);
   margin-bottom: 8px;
@@ -951,31 +944,32 @@
   letter-spacing: 0.5px;
 }
 
-/* Override label color for highlighted card
-.stat-card--highlight .stat-card__label {
+/* Override label color for highlighted card */
+.team-stat-card--highlight .team-stat-card__label {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.team-detail-page.stat-card__value {
+.team-stat-card__value {
   font-size: 32px;
   font-weight: 700;
   color: var(--text);
 }
 
-/* Override value color for highlighted card
-.stat-card--highlight .stat-card__value {
+/* Override value color for highlighted card */
+.team-stat-card--highlight .team-stat-card__value {
   color: white;
 }
 
-/* ----------------------------------------------------------------------------
+/*
    TOP SCORERS LIST
-   ----------------------------------------------------------------------------
-
+*/
 .scorers-list {
   background: var(--card-bg);
   border-radius: 12px;
-  overflow: hidden; /* Clips content to rounded corners
+  overflow: hidden; /* Clips content to rounded corners */
   box-shadow: 0 2px 8px var(--shadow);
+
+  background-color: red;
 }
 
 /*
