@@ -46,17 +46,8 @@ const AboutPage = () => {
           <div className="dev-header">
             {/* Placeholder for your photo */}
             <div className="dev-avatar">
-              (
-              <img
-                src={devPhoto}
-                onError={(e) => {
-                  e.target.onerror = null; // Prevents infinite loop if fallback image also fails
-                  e.target.src =
-                    "/src/assets/images/developer/default-developer.png"; // Set to a guaranteed-to-work fallback image
-                }}
-                alt="Developer"
-              />
-              ):
+              <img src={devPhoto} alt="Developer" />
+
               {/* <span className="dev-initials">DEV</span> */}
             </div>
 
