@@ -742,13 +742,13 @@
   letter-spacing: 0.5px; /* Slightly wider letter spacing */
 }
 
-/* ----------------------------------------------------------------------------
+/*
    TEAM FORM BADGES (W/D/L indicators)
-   ----------------------------------------------------------------------------
+*/
 
 .team-form {
   max-width: var(--page-max-width);
-  margin: -12px auto 10px; /* Negative top margin pulls it up
+  margin: -12px auto 10px; /* Negative top margin pulls it up */
   padding: 0 16px;
   display: flex;
   align-items: center;
@@ -768,30 +768,33 @@
 /*
   Individual form badge (W/D/L)
   Square shape with centered text
+*/
 
 .form-badge {
   width: 32px;
   height: 32px;
   border-radius: 6px;
   display: flex;
-  align-items: center; /* Centers vertically
-  justify-content: center; /* Centers horizontally
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
   font-weight: 700;
   font-size: 12px;
   color: white;
+
+  background-color: black;
 }
 
-/* Color modifiers using BEM naming (block--modifier)
+/* Color modifiers using BEM naming (block--modifier) */
 .form-badge--w {
-  background: #22c55e; /* Green for win
+  background: #22c55e; /* Green for win */
 }
 
 .form-badge--d {
-  background: #94a3b8; /* Gray for draw
+  background: #94a3b8; /* Gray for draw */
 }
 
 .form-badge--l {
-  background: #ef4444; /* Red for loss
+  background: #ef4444; /* Red for loss */
 }
 
 /* ----------------------------------------------------------------------------
