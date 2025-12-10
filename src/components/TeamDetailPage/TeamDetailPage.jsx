@@ -1906,6 +1906,7 @@ const TeamDetailPage = ({
   const {
     name = "Nome da Equipa",
     logo = "/images/teams/default-team.png",
+    abbr = "XX",
     founded = "Indefinido",
     stadium = "Indefinido",
     colors = { primary: "#3b82f6", secondary: "#1e40af" },
@@ -2096,7 +2097,7 @@ const TeamDetailPage = ({
             <div className="team-header__logo-section">
               <img
                 src={logo || "/images/teams/default-team-logo.png"}
-                alt={name}
+                alt={abbr || name}
                 className="team-header__logo"
               />
               <div className="team-header__info">
@@ -2141,326 +2142,332 @@ const TeamDetailPage = ({
             </div>
           </div>
         </div>
+
+        {/* ===== FORM BADGES (W/D/L) ===== */}
+        {/* && operator: Only render if form.length > 0 is true */}
+        {/* This is called "conditional rendering" */}
+        {form.length > 0 && (
+          <div className="team-form">
+            <span className="team-form__label">Forma:</span>
+            <div className="team-form__badges">
+              {/* .map() transforms each array item into JSX */}
+              {/* (item, index) - index is position in array (0, 1, 2...) */}
+              {/* key prop helps React identify which items changed */}
+              {form.map((result, index) => (
+                <span
+                  key={index}
+                  className={`form-badge form-badge--${result.toLowerCase()}`}
+                >
+                  {result}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
+
+      {/* ===== NAVIGATION TABS ===== */}
+
+      <div className="team-tabs">
+        {/* Conditional class names based on activeTab state */}
+        {/* Ternary operator: condition ? ifTrue : ifFalse */}
+        <button
+          className={`team-tab ${
+            activeTab === "overview" ? "team-tab--active" : ""
+          }`}
+          onClick={() => setActiveTab("overview")}
+        >
+          🏆 Visão Geral
+        </button>
+
+        <button
+          className={`team-tab ${
+            activeTab === "squad" ? "team-tab--active" : ""
+          }`}
+          onClick={() => setActiveTab("squad")}
+        >
+          👥 Plantel
+        </button>
+
+        <button
+          className={`team-tab ${
+            activeTab === "matches" ? "team-tab--active" : ""
+          }`}
+          onClick={() => setActiveTab("matches")}
+        >
+          ⚽ Jogos
+        </button>
+      </div>
+
+      {/* ===== TAB CONTENT (Changes based on activeTab) ===== */}
+      <div className="team-content">
+        {/* ----- OVERVIEW TAB ----- */}
+        {activeTab === "overview" && (
+          <div className="tab-content">
+            {/* Season Statistics Grid */}
+            <div className="content-section">
+              <h2 className="section-title">📈 Estatísticas da Época</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <div className="stat-card__label">Jogos</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.played || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card__label">Vitórias</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.wins || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card__label">Empates</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.draws || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card__label">Derrotas</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.losses || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card__label">Golos Marcados</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.goalsFor || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card__label">Golos Sofridos</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.goalsAgainst || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card">
+                  <div className="stat-card__label">Diferença</div>
+                  <div className="stat-card__value">
+                    {/* Ternary adds + sign for positive numbers */}
+                    {teamStanding.standing?.goalDiff > 0 ? "+" : ""}
+                    {teamStanding.standing?.goalDiff || 0}
+                  </div>
+                </div>
+
+                <div className="stat-card stat-card--highlight">
+                  <div className="stat-card__label">Pontos</div>
+                  <div className="stat-card__value">
+                    {teamStanding.standing?.points || 0}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Top Scorers List */}
+            {topScorers.length > 0 && (
+              <div className="content-section">
+                <h2 className="section-title">🏅 Melhores Marcadores</h2>
+
+                <div className="scorers-list">
+                  {topScorers.map((player, index) => (
+                    <div key={player.id} className="scorer-item">
+                      {/* index + 1 because arrays start at 0 */}
+                      <div className="scorer-item__rank">#{index + 1}</div>
+                      <div className="scorer-item__info">
+                        <Link to={`/jogadores/${player.id}`}>
+                          <div className="scorer-item__name">{player.name}</div>
+                        </Link>
+                        <div className="scorer-item__position">
+                          {player.position}
+                        </div>
+                      </div>
+                      <div className="scorer-item__stats">
+                        <span className="scorer-item__goals">
+                          ⚽ {player.stats.goals}
+                        </span>
+                        <span className="scorer-item__assists">
+                          🎯 {player.stats.assists}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Live Matches Section */}
+            {liveMatches.length > 0 && (
+              <div className="content-section">
+                <h2 className="section-title">🔴 Jogos ao Vivo</h2>
+                <div className="matches-list">
+                  {/* MatchCard is a separate component that handles match display */}
+                  {liveMatches.map((match) => (
+                    <MatchCard key={match.id} match={match} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Upcoming Matches Section */}
+            {upcomingMatches.length > 0 && (
+              <div className="content-section">
+                <h2 className="section-title">📅 Próximos Jogos</h2>
+                <div className="matches-list">
+                  {upcomingMatches.map((match) => (
+                    <MatchCard key={match.id} match={match} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Recent Results Section */}
+            {recentMatches.length > 0 && (
+              <div className="content-section">
+                <h2 className="section-title">✅ Resultados Recentes</h2>
+                <div className="matches-list">
+                  {recentMatches.map((match) => (
+                    <MatchCard key={match.id} match={match} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Canceled Matches Section */}
+            {canceledMatches.length > 0 && (
+              <div className="content-section">
+                <h2 className="section-title">❌ Jogos Cancelados</h2>
+                <div className="matches-list">
+                  {canceledMatches.map((match) => (
+                    <MatchCard key={match.id} match={match} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ----- SQUAD TAB ----- */}
+        {activeTab === "squad" && (
+          <div className="tab-content">
+            <div className="content-section">
+              <h2 className="section-title">
+                👥 Plantel Completo ({teamPlayers.length})
+              </h2>
+
+              {/* Conditional rendering: Show message if no players */}
+              {teamPlayers.length === 0 ? (
+                <p className="empty-message">Nenhum jogador registado ainda.</p>
+              ) : (
+                // Object.entries() converts object to array of [key, value] pairs
+                // Example: {Goalkeeper: [...]} → [["Goalkeeper", [...]]]
+                Object.entries(playersByPosition).map(
+                  ([position, posPlayers]) =>
+                    // Only render section if position has players
+                    posPlayers.length > 0 ? (
+                      <div key={position} className="position-group">
+                        <h3 className="position-group__title">
+                          {position} ({posPlayers.length})
+                        </h3>
+                        <div className="players-grid">
+                          {posPlayers.map((player) => (
+                            <Link
+                              className="wrapper-Link"
+                              to={`/jogadores/${player.id}`}
+                            >
+                              <div key={player.id} className="player-card">
+                                <div className="player-card__number">
+                                  Nº{player.number}
+                                </div>
+                                <img
+                                  src={
+                                    player.photo ||
+                                    "/images/players/default-player.png"
+                                  }
+                                  alt={player.name}
+                                  className="player-card__photo"
+                                />
+                                <div className="player-card__info">
+                                  <h4 className="player-card__name">
+                                    {player.name}
+                                  </h4>
+                                  <p className="player-card__position">
+                                    {player.position}
+                                  </p>
+                                  {/* Only show stats if they exist */}
+                                  {player.stats && (
+                                    <div className="player-card__stats">
+                                      <span>⚽ {player.stats.goals}</span>
+                                      <span>🎯 {player.stats.assists}</span>
+                                      <span>🟨 {player.stats.yellowCards}</span>
+                                      {/* Only show red cards if > 0 */}
+                                      {player.stats.redCards > 0 && (
+                                        <span>🟥 {player.stats.redCards}</span>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null // Return null if no players in this position
+                )
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* ----- MATCHES TAB ----- */}
+        {activeTab === "matches" && (
+          <div className="tab-content">
+            <div className="content-section">
+              <h2 className="section-title">⚽ Todos os Jogos</h2>
+              {teamMatches.length === 0 ? (
+                <p className="empty-message">Nenhum jogo registado ainda.</p>
+              ) : (
+                <div className="matches-list">
+                  {teamMatches.map((match) => (
+                    <MatchCard key={match.id} match={match} />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* ===== TEAM CONTACT INFORMATION ===== */}
+      {/* Only render if contact object exists */}
+      {contact && (
+        <div className="team-contact">
+          <h3>📞 Informações de Contacto</h3>
+          <p>
+            <strong>Treinador:</strong> {coach}
+          </p>
+          <p>
+            <strong>Capitão:</strong> {captain}
+          </p>
+          {/* Only show phone/email if they have values */}
+          {phone && (
+            <p>
+              <strong>Telefone:</strong> {phone}
+            </p>
+          )}
+          {email && (
+            <p>
+              <strong>Email:</strong> {email}
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
 // Export component so it can be imported in other files
 export default TeamDetailPage;
-
-//   return (
-//     <div className="team-detail-page">
-
-//         {/* ===== FORM BADGES (W/D/L) ===== */}
-//         {/* && operator: Only render if form.length > 0 is true */}
-//         {/* This is called "conditional rendering" */}
-//         {form.length > 0 && (
-//           <div className="team-form">
-//             <span className="team-form__label">Forma:</span>
-//             <div className="team-form__badges">
-//               {/* .map() transforms each array item into JSX */}
-//               {/* (item, index) - index is position in array (0, 1, 2...) */}
-//               {/* key prop helps React identify which items changed */}
-//               {form.map((result, index) => (
-//                 <span
-//                   key={index}
-//                   className={`form-badge form-badge--${result.toLowerCase()}`}
-//                 >
-//                   {result}
-//                 </span>
-//               ))}
-//             </div>
-//           </div>
-//         )}
-//       </div>
-
-//       {/* ===== NAVIGATION TABS ===== */}
-//       <div className="team-tabs">
-//         {/* Conditional class names based on activeTab state */}
-//         {/* Ternary operator: condition ? ifTrue : ifFalse */}
-//         <button
-//           className={`team-tab ${
-//             activeTab === "overview" ? "team-tab--active" : ""
-//           }`}
-//           onClick={() => setActiveTab("overview")}
-//         >
-//           🏆 Visão Geral
-//         </button>
-//         <button
-//           className={`team-tab ${
-//             activeTab === "squad" ? "team-tab--active" : ""
-//           }`}
-//           onClick={() => setActiveTab("squad")}
-//         >
-//           👥 Plantel
-//         </button>
-//         <button
-//           className={`team-tab ${
-//             activeTab === "matches" ? "team-tab--active" : ""
-//           }`}
-//           onClick={() => setActiveTab("matches")}
-//         >
-//           ⚽ Jogos
-//         </button>
-//       </div>
-
-//       {/* ===== TAB CONTENT (Changes based on activeTab) ===== */}
-//       <div className="team-content">
-//         {/* ----- OVERVIEW TAB ----- */}
-//         {activeTab === "overview" && (
-//           <div className="tab-content">
-//             {/* Season Statistics Grid */}
-//             <div className="content-section">
-//               <h2 className="section-title">📈 Estatísticas da Época</h2>
-//               <div className="stats-grid">
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Jogos</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.played || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Vitórias</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.wins || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Empates</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.draws || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Derrotas</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.losses || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Golos Marcados</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.goalsFor || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Golos Sofridos</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.goalsAgainst || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card">
-//                   <div className="stat-card__label">Diferença</div>
-//                   <div className="stat-card__value">
-//                     {/* Ternary adds + sign for positive numbers */}
-//                     {teamStanding.standing?.goalDiff > 0 ? "+" : ""}
-//                     {teamStanding.standing?.goalDiff || 0}
-//                   </div>
-//                 </div>
-//                 <div className="stat-card stat-card--highlight">
-//                   <div className="stat-card__label">Pontos</div>
-//                   <div className="stat-card__value">
-//                     {teamStanding.standing?.points || 0}
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Top Scorers List */}
-//             {topScorers.length > 0 && (
-//               <div className="content-section">
-//                 <h2 className="section-title">🏅 Melhores Marcadores</h2>
-
-//                 <div className="scorers-list">
-//                   {topScorers.map((player, index) => (
-//                     <div key={player.id} className="scorer-item">
-//                       {/* index + 1 because arrays start at 0 */}
-//                       <div className="scorer-item__rank">#{index + 1}</div>
-//                       <div className="scorer-item__info">
-//                         <Link to={`/jogadores/${player.id}`}>
-//                           <div className="scorer-item__name">{player.name}</div>
-//                         </Link>
-//                         <div className="scorer-item__position">
-//                           {player.position}
-//                         </div>
-//                       </div>
-//                       <div className="scorer-item__stats">
-//                         <span className="scorer-item__goals">
-//                           ⚽ {player.stats.goals}
-//                         </span>
-//                         <span className="scorer-item__assists">
-//                           🎯 {player.stats.assists}
-//                         </span>
-//                       </div>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-
-//             {/* Live Matches Section */}
-//             {liveMatches.length > 0 && (
-//               <div className="content-section">
-//                 <h2 className="section-title">🔴 Jogos ao Vivo</h2>
-//                 <div className="matches-list">
-//                   {/* MatchCard is a separate component that handles match display */}
-//                   {liveMatches.map((match) => (
-//                     <MatchCard key={match.id} match={match} />
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-
-//             {/* Upcoming Matches Section */}
-//             {upcomingMatches.length > 0 && (
-//               <div className="content-section">
-//                 <h2 className="section-title">📅 Próximos Jogos</h2>
-//                 <div className="matches-list">
-//                   {upcomingMatches.map((match) => (
-//                     <MatchCard key={match.id} match={match} />
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-
-//             {/* Recent Results Section */}
-//             {recentMatches.length > 0 && (
-//               <div className="content-section">
-//                 <h2 className="section-title">✅ Resultados Recentes</h2>
-//                 <div className="matches-list">
-//                   {recentMatches.map((match) => (
-//                     <MatchCard key={match.id} match={match} />
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-
-//             {/* Canceled Matches Section */}
-//             {canceledMatches.length > 0 && (
-//               <div className="content-section">
-//                 <h2 className="section-title">❌ Jogos Cancelados</h2>
-//                 <div className="matches-list">
-//                   {canceledMatches.map((match) => (
-//                     <MatchCard key={match.id} match={match} />
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-//           </div>
-//         )}
-
-//         {/* ----- SQUAD TAB ----- */}
-//         {activeTab === "squad" && (
-//           <div className="tab-content">
-//             <div className="content-section">
-//               <h2 className="section-title">
-//                 👥 Plantel Completo ({teamPlayers.length})
-//               </h2>
-
-//               {/* Conditional rendering: Show message if no players */}
-//               {teamPlayers.length === 0 ? (
-//                 <p className="empty-message">Nenhum jogador registado ainda.</p>
-//               ) : (
-//                 // Object.entries() converts object to array of [key, value] pairs
-//                 // Example: {Goalkeeper: [...]} → [["Goalkeeper", [...]]]
-//                 Object.entries(playersByPosition).map(
-//                   ([position, posPlayers]) =>
-//                     // Only render section if position has players
-//                     posPlayers.length > 0 ? (
-//                       <div key={position} className="position-group">
-//                         <h3 className="position-group__title">
-//                           {position} ({posPlayers.length})
-//                         </h3>
-//                         <div className="players-grid">
-//                           {posPlayers.map((player) => (
-//                             <Link to={`/jogadores/${player.id}`}>
-//                               <div key={player.id} className="player-card">
-//                                 <div className="player-card__number">
-//                                   Nº{player.number}
-//                                 </div>
-//                                 <img
-//                                   src={
-//                                     player.photo ||
-//                                     "/images/players/default-player.png"
-//                                   }
-//                                   alt={player.name}
-//                                   className="player-card__photo"
-//                                 />
-//                                 <div className="player-card__info">
-//                                   <h4 className="player-card__name">
-//                                     {player.name}
-//                                   </h4>
-//                                   <p className="player-card__position">
-//                                     {player.position}
-//                                   </p>
-//                                   {/* Only show stats if they exist */}
-//                                   {player.stats && (
-//                                     <div className="player-card__stats">
-//                                       <span>⚽ {player.stats.goals}</span>
-//                                       <span>🎯 {player.stats.assists}</span>
-//                                       <span>🟨 {player.stats.yellowCards}</span>
-//                                       {/* Only show red cards if > 0 */}
-//                                       {player.stats.redCards > 0 && (
-//                                         <span>🟥 {player.stats.redCards}</span>
-//                                       )}
-//                                     </div>
-//                                   )}
-//                                 </div>
-//                               </div>
-//                             </Link>
-//                           ))}
-//                         </div>
-//                       </div>
-//                     ) : null // Return null if no players in this position
-//                 )
-//               )}
-//             </div>
-//           </div>
-//         )}
-
-//         {/* ----- MATCHES TAB ----- */}
-//         {activeTab === "matches" && (
-//           <div className="tab-content">
-//             <div className="content-section">
-//               <h2 className="section-title">⚽ Todos os Jogos</h2>
-//               {teamMatches.length === 0 ? (
-//                 <p className="empty-message">Nenhum jogo registado ainda.</p>
-//               ) : (
-//                 <div className="matches-list">
-//                   {teamMatches.map((match) => (
-//                     <MatchCard key={match.id} match={match} />
-//                   ))}
-//                 </div>
-//               )}
-//             </div>
-//           </div>
-//         )}
-//       </div>
-
-//       {/* ===== TEAM CONTACT INFORMATION ===== */}
-//       {/* Only render if contact object exists */}
-//       {contact && (
-//         <div className="team-contact">
-//           <h3>📞 Informações de Contacto</h3>
-//           <p>
-//             <strong>Treinador:</strong> {coach}
-//           </p>
-//           <p>
-//             <strong>Capitão:</strong> {captain}
-//           </p>
-//           {/* Only show phone/email if they have values */}
-//           {phone && (
-//             <p>
-//               <strong>Telefone:</strong> {phone}
-//             </p>
-//           )}
-//           {email && (
-//             <p>
-//               <strong>Email:</strong> {email}
-//             </p>
-//           )}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
