@@ -586,7 +586,10 @@
 */
 .team-detail-page {
   width: 100%;
-  min-height: 100vh;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+  min-height: 60vh;
 }
 
 /*
@@ -1176,25 +1179,19 @@
   border-radius: 6px;
 }
 
-/* ----------------------------------------------------------------------------
+/*
    MATCHES LIST
-   ----------------------------------------------------------------------------
+*/
 
 .matches-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
 }
 
-/* 2 columns on tablets+
-@media (min-width: 768px) {
-  .matches-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ----------------------------------------------------------------------------
+/*
    TEAM CONTACT INFORMATION
-   ----------------------------------------------------------------------------
+*/
 
 .team-contact {
   max-width: var(--page-max-width);
@@ -1218,14 +1215,14 @@
   font-size: 14px;
 }
 
-/* ----------------------------------------------------------------------------
-   RESPONSIVE DESIGN - MOBILE (480px and smaller)
-   ----------------------------------------------------------------------------
+/* SIGN - MOBILE (480px and smaller)
+  */
 
-@media (max-width: 480px) {
-  /* Stack logo and info vertically on very small screens
+/*
+@media (max-width: 576px) {
+  /* Stack logo and info vertically on very small screens 
   .team-header__logo-section {
-    flex-direction: column; /* Changes from row to column
+    flex-direction: column; /* Changes from row to column 
     text-align: center;
   }
 
