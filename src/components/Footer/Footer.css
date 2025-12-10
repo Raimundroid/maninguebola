@@ -54,6 +54,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  color: var(--text-light);
 }
 .footer-nav a {
   text-decoration: none;
