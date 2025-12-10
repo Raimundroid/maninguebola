@@ -1143,9 +1143,16 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
              - Changes URL without page reload
              - Navigates to /jogadores page
          */}
-        <Link to="/jogadores" className="back-button wrapper-Link">
-          ← Voltar
-        </Link>
+        <div className="back-button-container">
+          <Link
+            to="/equipas"
+            className="back-button wrapper-Link"
+            aria-label="Voltar para lista de equipas"
+          >
+            <span className="back-button__icon">←</span>
+            <span className="back-button__text">Voltar para Equipas</span>
+          </Link>
+        </div>
 
         {/* ==========================================
             PLAYER HERO SECTION

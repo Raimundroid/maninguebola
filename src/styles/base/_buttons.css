@@ -26,3 +26,91 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
+
+/* Container that holds back button with page constraints */
+.back-button-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto; /* Centers container */
+  padding: 16px 16px 0; /* Top 16px, sides 16px, bottom 0 */
+}
+
+/*
+  IMPROVED BACK BUTTON DESIGN
+  - Better visual hierarchy with icon + text
+  - Hover effects for interactivity
+  - Smooth transitions
+  - Accessible focus states
+*/
+.back-button {
+  display: inline-flex; /* Inline-flex allows natural width */
+  align-items: center; /* Vertically centers icon and text */
+  gap: 8px; /* Space between icon and text */
+  padding: 12px 20px; /* Comfortable click target */
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-weight: 600; /* Slightly bold for emphasis */
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer; /* Shows hand cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  white-space: nowrap; /* Prevents text wrapping */
+  box-shadow: 0 2px 4px var(--shadow); /* Subtle depth */
+}
+
+/* Icon within back button */
+.back-button__icon {
+  font-size: 18px; /* Slightly larger arrow */
+  transition: transform 0.3s ease; /* Animates arrow movement */
+}
+
+/* Text within back button*/
+.back-button__text {
+  font-size: 14px;
+}
+
+/* Hover effect: lifts button and shifts arrow */
+.back-button:hover {
+  border-color: var(--primary); /* Primary color border */
+  background: var(--bg); /* Lighter background */
+  transform: translateY(-2px); /* Moves up 2px */
+  box-shadow: 0 4px 8px var(--shadow); /* Deeper shadow on hover */
+}
+
+/* Arrow shifts left on hover for "back" motion */
+.back-button:hover .back-button__icon {
+  transform: translateX(-4px); /* Shifts left 4px */
+}
+
+/* Accessibility: Focus state for keyboard navigation */
+.back-button:focus {
+  outline: 2px solid var(--primary); /* Visible outline  */
+  outline-offset: 2px; /* Space between button and outline */
+}
+
+/* Active state: button being clicked */
+.back-button:active {
+  transform: translateY(0); /* Resets lift */
+  box-shadow: 0 1px 2px var(--shadow); /* Compressed shadow */
+}
+
+/* ============================================
+   BACK BUTTON
+   ============================================
+   */
+
+/* .player-detail-page .back-button {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;} */
+
+/*display: inline-flex; /* Flexbox for icon + text alignment
+  align-items: center; /* Vertically center content
+  gap: 6px; /* Space between arrow and text
+  margin-bottom: 8px; /* Space below button*/

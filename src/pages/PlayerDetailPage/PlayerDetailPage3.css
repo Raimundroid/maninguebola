@@ -47,28 +47,6 @@
 }
 
 /* ============================================
-   BACK BUTTON
-   ============================================
-   */
-
-.player-detail-page .back-button {
-  background: var(--card-bg);
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  width: fit-content;
-
-  /*display: inline-flex; /* Flexbox for icon + text alignment
-  align-items: center; /* Vertically center content
-  gap: 6px; /* Space between arrow and text
-  margin-bottom: 8px; /* Space below button*/
-}
-
-/* ============================================
    PLAYER HERO SECTION
    ============================================
 

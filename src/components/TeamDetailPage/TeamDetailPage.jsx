@@ -2066,7 +2066,18 @@ const TeamDetailPage = ({
 
   return (
     <div className="teams-detail-page">
-      fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      {/* ===== BACK BUTTON ===== */}
+
+      <div className="back-button-container">
+        <Link
+          to="/equipas"
+          className="back-button"
+          aria-label="Voltar para lista de equipas"
+        >
+          <span className="back-button__icon">←</span>
+          <span className="back-button__text">Voltar para Equipas</span>
+        </Link>
+      </div>
     </div>
   );
 };
@@ -2075,18 +2086,6 @@ export default TeamDetailPage;
 
 //   return (
 //     <div className="team-detail-page">
-//       {/* ===== BACK BUTTON ===== */}
-//       {/* Arrow function () => executes on click, navigates to teams list */}
-//       <div className="back-button-container">
-//         <button
-//           onClick={() => navigate("/equipas")}
-//           className="back-button"
-//           aria-label="Voltar para lista de equipas"
-//         >
-//           <span className="back-button__icon">←</span>
-//           <span className="back-button__text">Voltar para Equipas</span>
-//         </button>
-//       </div>
 
 //       {/* ===== TEAM HEADER WITH GRADIENT BANNER ===== */}
 //       <div className="team-header">
