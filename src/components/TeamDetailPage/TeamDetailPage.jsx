@@ -2088,6 +2088,7 @@ const TeamDetailPage = ({
             background: `linear-gradient(135deg, ${
               colors?.primary || "#3b82f6"
             } 0%, ${colors?.secondary || "#1e40af"} 100%)`,
+            borderRadius: "12px",
           }}
         >
           <div className="team-header__content">
