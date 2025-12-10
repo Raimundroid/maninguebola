@@ -2375,6 +2375,7 @@ const TeamDetailPage = ({
                         <div className="players-grid">
                           {posPlayers.map((player) => (
                             <Link
+                              key={player.id}
                               className="wrapper-Link"
                               to={`/jogadores/${player.id}`}
                             >
