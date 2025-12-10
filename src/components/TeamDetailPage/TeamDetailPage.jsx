@@ -1822,6 +1822,7 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import MatchCard from "../MatchCard/MatchCard";
+import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import "./TeamDetailPage.css";
 
 // ============================================================================
@@ -2062,7 +2063,8 @@ const TeamDetailPage = ({
   // --------------------------------------------------------------------------
 
   return (
-    <div className="teams-detail-page">
+    <div className="team-detail-page">
+      <PageIndicator icon="🎽" title="Perfil da Equipa" />
       {/* ===== BACK BUTTON ===== */}
       <div className="back-button-container">
         <Link

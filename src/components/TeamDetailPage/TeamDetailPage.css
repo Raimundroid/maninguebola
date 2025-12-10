@@ -1220,9 +1220,9 @@
 
 /*
 @media (max-width: 576px) {
-  /* Stack logo and info vertically on very small screens 
+  /* Stack logo and info vertically on very small screens
   .team-header__logo-section {
-    flex-direction: column; /* Changes from row to column 
+    flex-direction: column; /* Changes from row to column
     text-align: center;
   }
 
