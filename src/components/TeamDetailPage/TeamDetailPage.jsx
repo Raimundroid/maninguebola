@@ -2247,7 +2247,9 @@ const TeamDetailPage = ({
                 </div>
 
                 <div className="team-stat-card">
-                  <div className="team-stat-card__label">Diferença</div>
+                  <div className="team-stat-card__label">
+                    Diferença de Golos
+                  </div>
                   <div className="team-stat-card__value">
                     {/* Ternary adds + sign for positive numbers */}
                     {teamStanding.standing?.goalDiff > 0 ? "+" : ""}
