@@ -146,6 +146,13 @@
 }
 
 /* --- CONTACT METHODS --- */
+
+.about-section .free {
+  background-color: var(--success);
+  border-radius: 12px;
+  padding: 2px 5px;
+  color: var(--secondary);
+}
 .contact-methods {
   display: flex;
   flex-direction: column;
@@ -168,10 +175,20 @@
   background: #f1f5f9;
 }
 
-.contact-item .icon {
-  font-size: 24px;
+.contact-item .icon #whatsapp {
+  fill: green;
+  stroke-width: 50px;
 }
 
+.contact-item .icon #email {
+  fill: red;
+  stroke-width: 50px;
+}
+
+.contact-item .icon #phone {
+  fill: brown;
+  stroke-width: 50px;
+}
 .contact-item div {
   display: flex;
   flex-direction: column;
