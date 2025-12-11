@@ -8,8 +8,7 @@ const Hero = () => {
 
       <p>Bem-vindo ao website ManingueBola!!!</p>
       <p>
-        Acompanhe todos os jogos, resultados, e estatisticas do Futebol de
-        MORRUMBENE!
+        Acompanhe todos os jogos, resultados, e estatisticas do Futebol Local!
       </p>
     </div>
   );
