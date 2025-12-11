@@ -19,9 +19,9 @@ const AboutPage = () => {
   ];
   // Donation Info
   const donationInfo = {
-    mpesa: "84 123 4567",
-    emola: "87 987 6543",
-    name: "Pablo ! Picasso", // The name that appears on the transfer
+    mpesa: "84 000 0000",
+    emola: "87 820 3004",
+    name: "Faustino Raimundo", // The name that appears on the transfer
   };
   return (
     <div className="about-page">
@@ -116,7 +116,7 @@ const AboutPage = () => {
           </p>
           <div className="contact-methods">
             {/* Method 1: WhatsApp (Most popular in MZ) */}
-            <a href="https://wa.me/258841234567" className="contact-item">
+            <a href="https://wa.me/258878203004" className="contact-item">
               <span className="icon">
                 <svg
                   id="whatsapp"
@@ -130,7 +130,7 @@ const AboutPage = () => {
               </span>
               <div>
                 <strong>WhatsApp</strong>
-                <span>+258 84 123 4567</span>
+                <span>+258 87 820 3004</span>
               </div>
             </a>
 
@@ -155,7 +155,7 @@ const AboutPage = () => {
             </a>
 
             {/* Method 3: Phone (For non-techies) */}
-            <a href="tel:+258841234567" className="contact-item">
+            <a href="tel:+258878203004" className="contact-item">
               <span className="icon">
                 <svg
                   id="phone"
@@ -174,7 +174,7 @@ const AboutPage = () => {
               </span>
               <div>
                 <strong>Ligar</strong>
-                <span>+258 84 123 4567</span>
+                <span>+258 87 820 3004</span>
               </div>
             </a>
           </div>
@@ -188,16 +188,16 @@ const AboutPage = () => {
             ajuda a fazer a manunteção dele.
           </p>
           <div className="wallets">
-            <div className="wallet mpesa">
+            {/* <div className="wallet mpesa">
               <div className="logo">
                 <img src={mpesa} alt="mpesa" width={48} height={48} />
               </div>
-              {/* <span className="wallet-label">M-Pesa</span> */}
+               *<span className="wallet-label">M-Pesa</span> *
               <span className="wallet-number">
-                <a href="tel:+258841234567">{donationInfo.mpesa}</a>
+                <a href="tel:+258878203004">{donationInfo.mpesa}</a>
               </span>
               <span className="wallet-name">{donationInfo.name}</span>
-            </div>
+            </div> */}
 
             <div className="wallet emola">
               <div className="logo">
@@ -206,7 +206,7 @@ const AboutPage = () => {
 
               {/* <span className="wallet-label">e-Mola</span> */}
               <span className="wallet-number">
-                <a href="tel:+258841234567">{donationInfo.emola}</a>
+                <a href="tel:+258878203004">{donationInfo.emola}</a>
               </span>
               <span className="wallet-name"> {donationInfo.name}</span>
             </div>
@@ -340,7 +340,7 @@ export default AboutPage;
 
 //           <div className="contact-methods">
 //             {/* Method 1: WhatsApp (Most popular in MZ) */}
-//             <a href="https://wa.me/258841234567" className="contact-item">
+//             <a href="https://wa.me/258878203004" className="contact-item">
 //               <span className="icon">📱</span>
 //               <div>
 //                 <strong>WhatsApp</strong>
@@ -358,7 +358,7 @@ export default AboutPage;
 //             </a>
 
 //             {/* Method 3: Phone (For non-techies) */}
-//             <a href="tel:+258841234567" className="contact-item">
+//             <a href="tel:+258878203004" className="contact-item">
 //               <span className="icon">📞</span>
 //               <div>
 //                 <strong>Ligar</strong>
