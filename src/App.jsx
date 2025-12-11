@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Homepage from "./pages/Homepage/Homepage.jsx";
 import Hero from "./components/Hero/Hero.jsx";
@@ -18,6 +19,30 @@ import "./App.css";
 import PlayerDetailPage from "./pages/PlayerDetailPage/PlayerDetailPage.jsx";
 
 import AboutPage from "./pages/AboutPage/AboutPage.jsx";
+
+import ReactGA from "react-ga4";
+
+// 🔴 REPLACE THIS WITH YOUR ACTUAL MEASUREMENT ID
+// Get it from: Google Analytics > Admin > Property > Data Streams
+const MEASUREMENT_ID = "G-MPT58VN5EM";
+
+// Component to track page views
+function PageViewTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Send pageview with current path
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname + location.search,
+      title: document.title,
+    });
+
+    console.log("Page view tracked:", location.pathname);
+  }, [location]);
+
+  return null; // This component doesn't render anything
+}
 
 import {
   players,
@@ -214,6 +239,19 @@ const getEnrichedPlayers = (players, teamLookup) => {
 };
 
 function App() {
+  useEffect(() => {
+    // Initialize Google Analytics once when app loads
+    // 🔴 REPLACE MEASUREMENT_ID with your actual ID
+    ReactGA.initialize(MEASUREMENT_ID, {
+      // Optional: enable debug mode during development
+      // gaOptions: {
+      //   debug_mode: true
+      // }
+    });
+
+    // console.log("Google Analytics initialized");
+  }, []);
+
   // ===============================================
   // Step 2: Create lookup objects (DO THIS ONCE!)
   // ===============================================
@@ -286,6 +324,8 @@ function App() {
 
     // <ThemeProvider>
     <BrowserRouter>
+      {/* This component tracks every route change */}
+      <PageViewTracker />
       <ScrollToTop /> {/* This fixes all navigation scrolling */}
       <div>
         <Navbar />
