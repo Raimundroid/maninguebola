@@ -5,11 +5,11 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero">
-        <h1>ManingueBola⚽</h1>
+        <h1 className="title">ManingueBola⚽</h1>
 
-        <p>Bem-vindo ao website ManingueBola!!!</p>
-        <p>
-          Acompanhe todos os jogos, resultados, e estatisticas do Futebol Local!
+        <p className="heading">Bem-vindo ao website ManingueBola!!!</p>
+        <p className="sub-heading">
+          Acompanhe todos os jogos, resultados, e estatísticas do Futebol Local!
         </p>
       </div>
     </div>
