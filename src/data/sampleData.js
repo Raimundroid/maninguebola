@@ -173,7 +173,7 @@ export const players = [
     name: "Miguel Santos",
     teamId: "eagles", //new
     number: 10, //new
-    position: "Forward", //new Defender || Midfielder || Forward
+    position: "Atacante", //new Defender || Midfielder || Forward
     photo: "/images/players/default-player-1.png", //new
     stats: {
       //new
@@ -189,7 +189,7 @@ export const players = [
     name: "José Lima",
     teamId: "lions",
     number: 7,
-    position: "Forward",
+    position: "Atacante",
     photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 14,
@@ -204,7 +204,7 @@ export const players = [
     name: "Rui Almeida",
     teamId: "tigers",
     number: 10,
-    position: "Forward",
+    position: "Atacante",
     photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 11,
@@ -219,7 +219,7 @@ export const players = [
     name: "Tomás Ferreira",
     teamId: "eagles",
     number: 9,
-    position: "Midfielder",
+    position: "Meio Campista",
     photo: "/images/players/default-player-4.png",
     stats: {
       appearances: 10,
@@ -234,7 +234,7 @@ export const players = [
     name: "Ricardo Nunes",
     teamId: "lions",
     number: 11,
-    position: "Midfielder",
+    position: "Meio Campista",
     photo: "/images/players/default-player-1.png",
     stats: {
       appearances: 13,
@@ -249,7 +249,7 @@ export const players = [
     name: "Jaime Paraiso",
     teamId: "tigers",
     number: 1,
-    position: "Midfielder",
+    position: "Guarda Redes",
     photo: "/images/players/default-player-2.png",
     stats: {
       appearances: 12,
@@ -264,7 +264,7 @@ export const players = [
     name: "Pablo Picasso",
     teamId: "eagles",
     number: 4,
-    position: "Defender",
+    position: "Defesa",
     photo: "/images/players/default-player-3.png",
     stats: {
       appearances: 12,
@@ -274,626 +274,626 @@ export const players = [
       redCards: 0,
     },
   },
-  {
-    id: 8,
-    name: "Domingos Samuel",
-    teamId: "lions",
-    number: 1,
-    position: "Defender",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 10,
-      goals: 5,
-      assists: 2,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 9,
-    name: "Armando Titos",
-    teamId: "tigers",
-    number: 1,
-    position: "Defender",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 10,
-    name: "Carlos Mendes",
-    teamId: "eagles",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 11,
-    name: "Manuel Paredes",
-    teamId: "lions",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 10,
-      goals: 5,
-      assists: 2,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 12,
-    name: "Alfredo Maestro",
-    teamId: "tigers",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 13,
-    name: "Peter Parker",
-    teamId: "cats",
-    number: 2,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 10,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 14,
-    name: "Tony Stark",
-    teamId: "cats",
-    number: 4,
-    position: "Midfielder",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 11,
-      goals: 5,
-      assists: 8,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 15,
-    name: "Clark Kent",
-    teamId: "cats",
-    number: 9,
-    position: "Forward",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 9,
-      goals: 20,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 16,
-    name: "Bruce Wayne",
-    teamId: "cats",
-    number: 3,
-    position: "Defender",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 12,
-      goals: 3,
-      assists: 6,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  //===========DUP1==========
-  {
-    id: 17,
-    name: "Miguel Santos",
-    teamId: "eagles", //new
-    number: 10, //new
-    position: "Forward", //new Defender || Midfielder || Forward
-    photo: "/images/players/default-player-1.png", //new
-    stats: {
-      //new
-      appearances: 12,
-      goals: 18,
-      assists: 7,
-      yellowCards: 2,
-      redCards: 0,
-    },
-  },
-  {
-    id: 18,
-    name: "José Lima",
-    teamId: "lions",
-    number: 7,
-    position: "Forward",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 14,
-      goals: 15,
-      assists: 9,
-      yellowCards: 3,
-      redCards: 0,
-    },
-  },
-  {
-    id: 19,
-    name: "Rui Almeida",
-    teamId: "tigers",
-    number: 10,
-    position: "Forward",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 11,
-      goals: 14,
-      assists: 5,
-      yellowCards: 2,
-      redCards: 0,
-    },
-  },
-  {
-    id: 20,
-    name: "Tomás Ferreira",
-    teamId: "eagles",
-    number: 9,
-    position: "Midfielder",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 10,
-      goals: 12,
-      assists: 4,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
-  {
-    id: 21,
-    name: "Ricardo Nunes",
-    teamId: "lions",
-    number: 11,
-    position: "Midfielder",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 13,
-      goals: 10,
-      assists: 3,
-      yellowCards: 1,
-      redCards: 1,
-    },
-  },
-  {
-    id: 22,
-    name: "Jaime Paraiso",
-    teamId: "tigers",
-    number: 1,
-    position: "Midfielder",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 12,
-      goals: 3,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 23,
-    name: "Pablo Picasso",
-    teamId: "eagles",
-    number: 4,
-    position: "Defender",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
-  {
-    id: 24,
-    name: "Domingos Samuel",
-    teamId: "lions",
-    number: 1,
-    position: "Defender",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 10,
-      goals: 5,
-      assists: 2,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 25,
-    name: "Armando Titos",
-    teamId: "tigers",
-    number: 1,
-    position: "Defender",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 26,
-    name: "Carlos Mendes",
-    teamId: "eagles",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 27,
-    name: "Manuel Paredes",
-    teamId: "lions",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 10,
-      goals: 5,
-      assists: 2,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 28,
-    name: "Alfredo Maestro",
-    teamId: "tigers",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 29,
-    name: "Peter Parker",
-    teamId: "cats",
-    number: 2,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 10,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 30,
-    name: "Tony Stark",
-    teamId: "cats",
-    number: 4,
-    position: "Midfielder",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 11,
-      goals: 5,
-      assists: 8,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 31,
-    name: "Clark Kent",
-    teamId: "cats",
-    number: 9,
-    position: "Forward",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 9,
-      goals: 20,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 32,
-    name: "Bruce Wayne",
-    teamId: "cats",
-    number: 3,
-    position: "Defender",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 12,
-      goals: 3,
-      assists: 6,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  //===========DUP2==========
-  //=========================
-  {
-    id: 33,
-    name: "Miguel Santos",
-    teamId: "eagles", //new
-    number: 10, //new
-    position: "Forward", //new Defender || Midfielder || Forward
-    photo: "/images/players/default-player-1.png", //new
-    stats: {
-      //new
-      appearances: 12,
-      goals: 18,
-      assists: 7,
-      yellowCards: 2,
-      redCards: 0,
-    },
-  },
-  {
-    id: 34,
-    name: "José Lima",
-    teamId: "lions",
-    number: 7,
-    position: "Forward",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 14,
-      goals: 15,
-      assists: 9,
-      yellowCards: 3,
-      redCards: 0,
-    },
-  },
-  {
-    id: 35,
-    name: "Rui Almeida",
-    teamId: "tigers",
-    number: 10,
-    position: "Forward",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 11,
-      goals: 14,
-      assists: 5,
-      yellowCards: 2,
-      redCards: 0,
-    },
-  },
-  {
-    id: 36,
-    name: "Tomás Ferreira",
-    teamId: "eagles",
-    number: 9,
-    position: "Midfielder",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 10,
-      goals: 12,
-      assists: 4,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
-  {
-    id: 37,
-    name: "Ricardo Nunes",
-    teamId: "lions",
-    number: 11,
-    position: "Midfielder",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 13,
-      goals: 10,
-      assists: 3,
-      yellowCards: 1,
-      redCards: 1,
-    },
-  },
-  {
-    id: 38,
-    name: "Jaime Paraiso",
-    teamId: "tigers",
-    number: 1,
-    position: "Midfielder",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 12,
-      goals: 3,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 39,
-    name: "Pablo Picasso",
-    teamId: "eagles",
-    number: 4,
-    position: "Defender",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
-  {
-    id: 40,
-    name: "Domingos Samuel",
-    teamId: "lions",
-    number: 1,
-    position: "Defender",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 10,
-      goals: 5,
-      assists: 2,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 41,
-    name: "Armando Titos",
-    teamId: "tigers",
-    number: 1,
-    position: "Defender",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 42,
-    name: "Carlos Mendes",
-    teamId: "eagles",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 43,
-    name: "Manuel Paredes",
-    teamId: "lions",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 10,
-      goals: 5,
-      assists: 2,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 44,
-    name: "Alfredo Maestro",
-    teamId: "tigers",
-    number: 1,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
-  {
-    id: 45,
-    name: "Peter Parker",
-    teamId: "cats",
-    number: 2,
-    position: "Goalkeeper",
-    photo: "/images/players/default-player-1.png",
-    stats: {
-      appearances: 10,
-      goals: 0,
-      assists: 0,
-      yellowCards: 2,
-      redCards: 0,
-    },
-  },
-  {
-    id: 46,
-    name: "Tony Stark",
-    teamId: "cats",
-    number: 4,
-    position: "Midfielder",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      appearances: 11,
-      goals: 5,
-      assists: 8,
-      yellowCards: 2,
-      redCards: 1,
-    },
-  },
-  {
-    id: 47,
-    name: "Clark Kent",
-    teamId: "cats",
-    number: 9,
-    position: "Forward",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 9,
-      goals: 20,
-      assists: 0,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
-  {
-    id: 48,
-    name: "Bruce Wayne",
-    teamId: "cats",
-    number: 3,
-    position: "Defender",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 12,
-      goals: 3,
-      assists: 6,
-      yellowCards: 0,
-      redCards: 0,
-    },
-  },
+  // {
+  //   id: 8,
+  //   name: "Domingos Samuel",
+  //   teamId: "lions",
+  //   number: 1,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 5,
+  //     assists: 2,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 9,
+  //   name: "Armando Titos",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 10,
+  //   name: "Carlos Mendes",
+  //   teamId: "eagles",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 11,
+  //   name: "Manuel Paredes",
+  //   teamId: "lions",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 5,
+  //     assists: 2,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 12,
+  //   name: "Alfredo Maestro",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 13,
+  //   name: "Peter Parker",
+  //   teamId: "cats",
+  //   number: 2,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 14,
+  //   name: "Tony Stark",
+  //   teamId: "cats",
+  //   number: 4,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 11,
+  //     goals: 5,
+  //     assists: 8,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 15,
+  //   name: "Clark Kent",
+  //   teamId: "cats",
+  //   number: 9,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 9,
+  //     goals: 20,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 16,
+  //   name: "Bruce Wayne",
+  //   teamId: "cats",
+  //   number: 3,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 3,
+  //     assists: 6,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // //===========DUP1==========
+  // {
+  //   id: 17,
+  //   name: "Miguel Santos",
+  //   teamId: "eagles", //new
+  //   number: 10, //new
+  //   position: "Forward", //new Defender || Midfielder || Forward
+  //   photo: "/images/players/default-player-1.png", //new
+  //   stats: {
+  //     //new
+  //     appearances: 12,
+  //     goals: 18,
+  //     assists: 7,
+  //     yellowCards: 2,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 18,
+  //   name: "José Lima",
+  //   teamId: "lions",
+  //   number: 7,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 14,
+  //     goals: 15,
+  //     assists: 9,
+  //     yellowCards: 3,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 19,
+  //   name: "Rui Almeida",
+  //   teamId: "tigers",
+  //   number: 10,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 11,
+  //     goals: 14,
+  //     assists: 5,
+  //     yellowCards: 2,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 20,
+  //   name: "Tomás Ferreira",
+  //   teamId: "eagles",
+  //   number: 9,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 12,
+  //     assists: 4,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 21,
+  //   name: "Ricardo Nunes",
+  //   teamId: "lions",
+  //   number: 11,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 13,
+  //     goals: 10,
+  //     assists: 3,
+  //     yellowCards: 1,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 22,
+  //   name: "Jaime Paraiso",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 3,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 23,
+  //   name: "Pablo Picasso",
+  //   teamId: "eagles",
+  //   number: 4,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 24,
+  //   name: "Domingos Samuel",
+  //   teamId: "lions",
+  //   number: 1,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 5,
+  //     assists: 2,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 25,
+  //   name: "Armando Titos",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 26,
+  //   name: "Carlos Mendes",
+  //   teamId: "eagles",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 27,
+  //   name: "Manuel Paredes",
+  //   teamId: "lions",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 5,
+  //     assists: 2,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 28,
+  //   name: "Alfredo Maestro",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 29,
+  //   name: "Peter Parker",
+  //   teamId: "cats",
+  //   number: 2,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 30,
+  //   name: "Tony Stark",
+  //   teamId: "cats",
+  //   number: 4,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 11,
+  //     goals: 5,
+  //     assists: 8,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 31,
+  //   name: "Clark Kent",
+  //   teamId: "cats",
+  //   number: 9,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 9,
+  //     goals: 20,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 32,
+  //   name: "Bruce Wayne",
+  //   teamId: "cats",
+  //   number: 3,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 3,
+  //     assists: 6,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // //===========DUP2==========
+  // //=========================
+  // {
+  //   id: 33,
+  //   name: "Miguel Santos",
+  //   teamId: "eagles", //new
+  //   number: 10, //new
+  //   position: "Forward", //new Defender || Midfielder || Forward
+  //   photo: "/images/players/default-player-1.png", //new
+  //   stats: {
+  //     //new
+  //     appearances: 12,
+  //     goals: 18,
+  //     assists: 7,
+  //     yellowCards: 2,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 34,
+  //   name: "José Lima",
+  //   teamId: "lions",
+  //   number: 7,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 14,
+  //     goals: 15,
+  //     assists: 9,
+  //     yellowCards: 3,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 35,
+  //   name: "Rui Almeida",
+  //   teamId: "tigers",
+  //   number: 10,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 11,
+  //     goals: 14,
+  //     assists: 5,
+  //     yellowCards: 2,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 36,
+  //   name: "Tomás Ferreira",
+  //   teamId: "eagles",
+  //   number: 9,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 12,
+  //     assists: 4,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 37,
+  //   name: "Ricardo Nunes",
+  //   teamId: "lions",
+  //   number: 11,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 13,
+  //     goals: 10,
+  //     assists: 3,
+  //     yellowCards: 1,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 38,
+  //   name: "Jaime Paraiso",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 3,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 39,
+  //   name: "Pablo Picasso",
+  //   teamId: "eagles",
+  //   number: 4,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 40,
+  //   name: "Domingos Samuel",
+  //   teamId: "lions",
+  //   number: 1,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 5,
+  //     assists: 2,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 41,
+  //   name: "Armando Titos",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 42,
+  //   name: "Carlos Mendes",
+  //   teamId: "eagles",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 43,
+  //   name: "Manuel Paredes",
+  //   teamId: "lions",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 5,
+  //     assists: 2,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 44,
+  //   name: "Alfredo Maestro",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 45,
+  //   name: "Peter Parker",
+  //   teamId: "cats",
+  //   number: 2,
+  //   position: "Goalkeeper",
+  //   photo: "/images/players/default-player-1.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 2,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 46,
+  //   name: "Tony Stark",
+  //   teamId: "cats",
+  //   number: 4,
+  //   position: "Midfielder",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 11,
+  //     goals: 5,
+  //     assists: 8,
+  //     yellowCards: 2,
+  //     redCards: 1,
+  //   },
+  // },
+  // {
+  //   id: 47,
+  //   name: "Clark Kent",
+  //   teamId: "cats",
+  //   number: 9,
+  //   position: "Forward",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 9,
+  //     goals: 20,
+  //     assists: 0,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
+  // {
+  //   id: 48,
+  //   name: "Bruce Wayne",
+  //   teamId: "cats",
+  //   number: 3,
+  //   position: "Defender",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 3,
+  //     assists: 6,
+  //     yellowCards: 0,
+  //     redCards: 0,
+  //   },
+  // },
 ];
 
 // ============================================
@@ -1165,6 +1165,7 @@ const calculateStandings = (standings) => {
 const rawStandings = [
   {
     id: "eagles",
+    // Spreading only minimal team details to avoid data bloat.
     // Only spread fields needed for the table display (Name, Abbr, Logo)
     name: teams.eagles.name,
     abbr: teams.eagles.abbr,
@@ -1176,13 +1177,9 @@ const rawStandings = [
     goalsFor: 34,
     goalsAgainst: 12,
     form: ["W", "W", "W", "W", "W"],
-    // goalDiff will be calculated: 34 - 12 = 22
-    // points will be calculated: (9 × 3) + (2 × 1) = 29
   },
   {
     id: "lions",
-    // Spreading only minimal team details to avoid data bloat.
-    // Only spread fields needed for the table display (Name, Abbr, Logo)
     name: teams.lions.name,
     abbr: teams.lions.abbr,
     logo: teams.lions.logo,
@@ -1193,12 +1190,9 @@ const rawStandings = [
     goalsFor: 28,
     goalsAgainst: 15,
     form: ["W", "D", "W", "L", "W"],
-    // goalDiff will be calculated: 28 - 15 = 13
-    // points will be calculated: (8 × 3) + (1 × 1) = 25
   },
   {
     id: "tigers",
-    // Only spread fields needed for the table display (Name, Abbr, Logo)
     name: teams.tigers.name,
     abbr: teams.tigers.abbr,
     logo: teams.tigers.logo,
@@ -1209,25 +1203,20 @@ const rawStandings = [
     goalsFor: 22,
     goalsAgainst: 18,
     form: ["L", "W", "D", "W", "L"],
-    // goalDiff will be calculated: 22 - 18 = 4
-    // points will be calculated: (5 × 3) + (3 × 1) = 18
   },
-  {
-    id: "cats",
-    // Only spread fields needed for the table display (Name, Abbr, Logo)
-    name: teams.cats.name,
-    abbr: teams.cats.abbr,
-    logo: teams.cats.logo,
-    played: 11,
-    wins: 11,
-    draws: 0,
-    losses: 0,
-    goalsFor: 36,
-    goalsAgainst: 8,
-    form: ["W", "W", "W", "W", "L"],
-    // goalDiff will be calculated: 22 - 18 = 4
-    // points will be calculated: (5 × 3) + (3 × 1) = 18
-  },
+  // {
+  //   id: "cats",
+  //   name: teams.cats.name,
+  //   abbr: teams.cats.abbr,
+  //   logo: teams.cats.logo,
+  //   played: 11,
+  //   wins: 11,
+  //   draws: 0,
+  //   losses: 0,
+  //   goalsFor: 36,
+  //   goalsAgainst: 8,
+  //   form: ["W", "W", "W", "W", "L"],
+  // },
 ];
 
 // ============================================
@@ -1308,25 +1297,25 @@ export const standings = calculateStandings(rawStandings);
 //   - 'upcoming': future matches
 
 export const matchesData = [
-  {
-    id: 1, // Unique ID for React keys
-    // homeTeam: teams.lions, // Reference to team object
-    // awayTeam: teams.tigers,
-    homeTeamId: "lions", //new
-    awayTeamId: "tigers", //new
-    homeScore: 1, // Only for live/finished
-    awayScore: 1,
-    date: "2025-11-16", // ISO Format
-    time: "14:00",
-    status: "live", // 'live' | 'finished' | 'upcoming'
-    // minute: 67, // Current minute (only for live)
-    venue: "Campo Principal",
-    info: "85+ espectadores", // Optional extra info
-    // ✅ NEW: Store as Array of Strings
-    // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["José Lima"],
-    awayScorers: ["Rui Almeida"],
-  },
+  // {
+  //   id: 1, // Unique ID for React keys
+  //   // homeTeam: teams.lions, // Reference to team object
+  //   // awayTeam: teams.tigers,
+  //   homeTeamId: "lions", //new
+  //   awayTeamId: "tigers", //new
+  //   homeScore: 1, // Only for live/finished
+  //   awayScore: 1,
+  //   date: "2025-11-16", // ISO Format
+  //   time: "14:00",
+  //   status: "live", // 'live' | 'finished' | 'upcoming'
+  //   // minute: 67, // Current minute (only for live)
+  //   venue: "Campo Principal",
+  //   info: "85+ espectadores", // Optional extra info
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: ["José Lima"],
+  //   awayScorers: ["Rui Almeida"],
+  // },
   {
     id: 2,
     // homeTeam: teams.eagles,
@@ -1345,29 +1334,29 @@ export const matchesData = [
     homeScorers: ["Miguel Santos (2)", "Tomás Ferreira"],
     awayScorers: ["José Lima (2)"],
   },
-  {
-    id: 3,
-    // homeTeam: teams.tigers,
-    // awayTeam: teams.eagles,
-    homeTeamId: "tigers", //new
-    awayTeamId: "eagles", //new
-    homeScore: 1,
-    awayScore: 1,
-    date: "2025-11-03", // ISO Format
-    time: "16:00",
-    status: "finished",
-    venue: "Campo B",
-    // 'info' is optional - can be omitted
-    // ✅ NEW: Store as Array of Strings
-    // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Rui Almeida"],
-    awayScorers: ["Tomás Ferreira"],
-  },
+  // {
+  //   id: 3,
+  //   // homeTeam: teams.tigers,
+  //   // awayTeam: teams.eagles,
+  //   homeTeamId: "tigers", //new
+  //   awayTeamId: "eagles", //new
+  //   homeScore: 1,
+  //   awayScore: 1,
+  //   date: "2025-11-03", // ISO Format
+  //   time: "16:00",
+  //   status: "finished",
+  //   venue: "Campo B",
+  //   // 'info' is optional - can be omitted
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: ["Rui Almeida"],
+  //   awayScorers: ["Tomás Ferreira"],
+  // },
   {
     id: 4,
     // homeTeam: teams.eagles,
     // awayTeam: teams.tigers,
-    homeTeamId: "eagles", //new
+    homeTeamId: "cats", //new
     awayTeamId: "tigers", //new
     // No scores for upcoming matches
     date: "2025-11-23", // ISO Format
@@ -1375,28 +1364,28 @@ export const matchesData = [
     status: "upcoming",
     venue: "Campo A",
   },
-  {
-    id: 5,
-    // homeTeam: teams.lions,
-    // awayTeam: teams.tigers,
-    homeTeamId: "lions", //new
-    awayTeamId: "tigers", //new
-    date: "2025-11-24", // ISO Format
-    time: "16:00",
-    status: "upcoming",
-    venue: "Campo B",
-  },
-  {
-    id: 6,
-    // homeTeam: teams.lions,
-    // awayTeam: teams.tigers,
-    homeTeamId: "cats", //new
-    awayTeamId: "tigers", //new
-    date: "2025-12-25", // ISO Format
-    time: "16:00",
-    status: "canceled",
-    venue: "Campo Central",
-  },
+  // {
+  //   id: 5,
+  //   // homeTeam: teams.lions,
+  //   // awayTeam: teams.tigers,
+  //   homeTeamId: "lions", //new
+  //   awayTeamId: "tigers", //new
+  //   date: "2025-11-24", // ISO Format
+  //   time: "16:00",
+  //   status: "upcoming",
+  //   venue: "Campo B",
+  // },
+  // {
+  //   id: 6,
+  //   // homeTeam: teams.lions,
+  //   // awayTeam: teams.tigers,
+  //   homeTeamId: "cats", //new
+  //   awayTeamId: "tigers", //new
+  //   date: "2025-12-25", // ISO Format
+  //   time: "16:00",
+  //   status: "canceled",
+  //   venue: "Campo Central",
+  // },
 ];
 
 // ============================================

@@ -49,16 +49,12 @@ const Homepage = ({ matches, stats }) => {
       )}
 
       {/* Recent results section */}
-      {/* With React Router, use Link component for navigation */}
+
       <SectionHeader
         title="Resultados Recentes"
         linkTo={"/jogos?filter=finished"}
         linkText={"Ver todos"}
       />
-      {/* <Link to="/jogos" className="link">
-        Ver todos →
-      </Link> */}
-
       <MatchesGrid matches={recentMatches} />
 
       {/* Upcoming matches section */}
@@ -70,16 +66,16 @@ const Homepage = ({ matches, stats }) => {
       <MatchesGrid matches={upcomingMatches} />
 
       {/* Upcoming matches section */}
-      <SectionHeader
+      {/* <SectionHeader
         title="Jogos Cancelados"
         linkTo={"/jogos?filter=canceled"}
         linkText={"Ver todos"}
-      />
-      <MatchesGrid matches={canceledMatches} />
+      /> */}
+      {/* <MatchesGrid matches={canceledMatches} /> */}
 
       {/* Statistics section */}
-      <SectionHeader title="Estatísticas Rápidas" />
-      <StatsGrid stats={stats} />
+      {/* <SectionHeader title="Estatísticas Rápidas" /> */}
+      {/* <StatsGrid stats={stats} /> */}
     </div>
   );
 };

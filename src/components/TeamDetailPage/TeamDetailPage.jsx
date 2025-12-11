@@ -2048,10 +2048,10 @@ const TeamDetailPage = ({
   // Creates object with 4 arrays, one for each position
   // This allows us to display players organized by position in the UI
   const playersByPosition = {
-    Goalkeeper: teamPlayers.filter((p) => p.position === "Goalkeeper"),
-    Defender: teamPlayers.filter((p) => p.position === "Defender"),
-    Midfielder: teamPlayers.filter((p) => p.position === "Midfielder"),
-    Forward: teamPlayers.filter((p) => p.position === "Forward"),
+    Goalkeeper: teamPlayers.filter((p) => p.position === "Guarda Redes"),
+    Defender: teamPlayers.filter((p) => p.position === "Defesa"),
+    Midfielder: teamPlayers.filter((p) => p.position === "Meio Campista"),
+    Forward: teamPlayers.filter((p) => p.position === "Atacante"),
   };
 
   // Extract form array from standing (W/D/L badges)

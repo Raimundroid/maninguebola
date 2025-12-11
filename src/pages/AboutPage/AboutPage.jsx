@@ -55,9 +55,7 @@ const AboutPage = () => {
 
             <div>
               <h3>Desenvolvido por RAIMUNDO</h3>
-              <p className="dev-role">
-                Full Stack Developer • Apaixonado por Desporto
-              </p>
+              <p className="dev-role">Web Developer</p>
             </div>
           </div>
 
@@ -69,7 +67,7 @@ const AboutPage = () => {
 
           {/* Dynamic Tech Stack List */}
           <div className="tech-stack-container">
-            <h4>Desenvolvindo usando:</h4>
+            <h4>Desenvolvido usando:</h4>
             <div className="tech-tags">
               {/* Explanation: .map() loops through your 'techStack' array
                 and creates a span for each item. This is efficient!
@@ -101,9 +99,9 @@ const AboutPage = () => {
               GitHub
             </a> */}
 
-            <a href="mailto:raimundroid@gmail.com" className="btn-link primary">
+            {/* <a href="mailto:raimundroid@gmail.com" className="btn-link primary">
               Contactar Dev
-            </a>
+            </a> */}
           </div>
         </section>
 
@@ -135,7 +133,7 @@ const AboutPage = () => {
             </a>
 
             {/* Method 2: Email (Professional) */}
-            <a href="mailto:raimundroid@gmail.com" className="contact-item">
+            {/* <a href="mailto:raimundroid@gmail.com" className="contact-item">
               <span className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +150,7 @@ const AboutPage = () => {
                 <strong>Email</strong>
                 <span>raimundroid@gmail.com</span>
               </div>
-            </a>
+            </a> */}
 
             {/* Method 3: Phone (For non-techies) */}
             <a href="tel:+258878203004" className="contact-item">
