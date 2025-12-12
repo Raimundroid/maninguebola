@@ -1388,6 +1388,24 @@ export const matchesData = [
   //   homeScorers: ["Miguel Santos (2)", "Tomás Ferreira"],
   //   awayScorers: ["José Lima (2)"],
   // },
+  {
+    id: 222,
+    // homeTeam: teams.eagles,
+    // awayTeam: teams.lions,
+    homeTeamId: "cats", //new
+    awayTeamId: "tigers", //new
+    homeScore: 3,
+    awayScore: 2,
+    date: "2025-11-16", // ISO Format
+    time: "15:00",
+    status: "finished",
+    venue: "Campo A",
+    // info: "⚽ Miguel Santos (2), Tomás Ferreira",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: ["Miguel Santos(2)", "Tomás Ferreira"],
+    awayScorers: ["José Lima (2)"],
+  },
   // {
   //   id: 3,
   //   // homeTeam: teams.tigers,
