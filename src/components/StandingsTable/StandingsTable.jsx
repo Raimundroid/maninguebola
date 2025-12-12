@@ -24,6 +24,7 @@ const StandingsTable = ({ standings }) => {
         </thead>
 
         <tbody>
+          {/* ✅ CONDITIONAL RENDERING */}
           {hasData ? (
             // If data exists, map through it
             standings.map((team, index) => (
