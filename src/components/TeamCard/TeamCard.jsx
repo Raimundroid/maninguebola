@@ -30,29 +30,29 @@ const TeamCard = ({ team }) => {
     // onClick with arrow function: when clicked, call onClick function with team data
     // The ?. is optional chaining - only calls onClick if it exists
 
-    <Link className="wrapper-Link" to={`/equipas/${team.id}`}>
+    <Link className="wrapper-Link" to={`/equipas/${team?.id}`}>
       <div className="team-card">
         {/* Logo box - displays team abbreviation */}
         <div className="team-logo">
-          {team.logo ? (
+          {team?.logo ? (
             <img
               className="team-logo-img"
-              src={team.logo}
-              alt={team.abbr}
+              src={team?.logo}
+              alt={team?.abbr}
               loading="lazy"
               width="64"
               height="64"
             />
           ) : (
             // Fallback if logo path is missing
-            team.abbr
+            team?.abbr
           )}
         </div>
 
         {/* Team name display */}
         <div className="team-name">
           {/* Display the full team name (e.g., "FC Eagles") */}
-          {team.name}
+          {team?.name}
         </div>
 
         {/*
@@ -61,7 +61,7 @@ const TeamCard = ({ team }) => {
 //         The && operator means: if left side is true, render right side
 //         The || operator means: true if EITHER position OR points exist
 //       */}
-        {(team.standing.position || team.standing.points) && (
+        {(team?.standing.position || team?.standing.points) && (
           <div className="team-info">
             {/* Show position if it exists */}
             {/* {team.standing.position && `${team.standing.position}º Lugar`} */}

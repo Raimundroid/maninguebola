@@ -82,7 +82,8 @@ TeamCard Styles
 
 /* Team name styling */
 .team-card .team-name {
-  font-size: 16px;
+  font-size: 12px;
+  font-family: Calibri;
   margin-bottom: 8px;
   font-weight: 600;
   color: var(--text, #333);
@@ -92,6 +93,10 @@ TeamCard Styles
   /* Ensure the element has a width context */
   width: 100%;
   min-width: 0;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 /* Stats info styling (position and points) */
