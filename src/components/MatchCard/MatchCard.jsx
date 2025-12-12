@@ -76,11 +76,11 @@ const MatchCard = ({ match }) => {
           {/* Best practice: Always render the logo, but show the abbreviation
           inside the logo container if the logo is missing. */}
           <div className="team-logo">
-            {homeTeam.logo ? (
+            {homeTeam?.logo ? (
               <img
                 className="team-logo-img"
-                src={homeTeam.logo}
-                alt={homeTeam.abbr}
+                src={homeTeam?.logo}
+                alt={homeTeam?.abbr}
                 loading="lazy"
                 width="48"
                 height="48"

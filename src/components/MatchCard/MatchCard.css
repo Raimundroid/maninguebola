@@ -88,7 +88,7 @@
 }
 
 .match-card .teams .team .team-name {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-align: center;
   color: var(--text);
@@ -108,7 +108,7 @@
 }
 
 .match-card .teams .team .scorers .scorer-name {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-light);
   font-weight: 600;
   display: flex;

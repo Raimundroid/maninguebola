@@ -188,7 +188,7 @@ const getEnrichedTeams = (teamsArray, standingsLookup) => {
         // Default values if this team has no standings yet
         position: "-", //calculated
         points: 0, //calculated
-        played: 10,
+        played: 0,
         wins: 0,
         draws: 0,
         losses: 0,

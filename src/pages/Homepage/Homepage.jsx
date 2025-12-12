@@ -50,12 +50,12 @@ const Homepage = ({ matches, stats }) => {
 
       {/* Recent results section */}
 
-      <SectionHeader
+      {/* <SectionHeader
         title="Resultados Recentes"
         linkTo={"/jogos?filter=finished"}
         linkText={"Ver todos"}
-      />
-      <MatchesGrid matches={recentMatches} />
+      /> */}
+      {/* <MatchesGrid matches={recentMatches} /> */}
 
       {/* Upcoming matches section */}
       <SectionHeader
