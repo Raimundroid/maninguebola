@@ -93,6 +93,7 @@ export const teams = {
   sportingMagumbanaFc: {
     id: "sportingMagumbanaFc", // Unique identifier
     name: "Sporting de Magumbana", // Full team name
+    shortName: "Sport. de Magumbana", // ✅ NEW
     abbr: "SM", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
@@ -110,6 +111,7 @@ export const teams = {
   palmeirasMadangelaFc: {
     id: "palmeirasMadangelaFc", // Unique identifier
     name: "Palmeiras de Madangela", // Full team name
+    shortName: "Palm. de Madangela", // ✅ NEW
     abbr: "PM", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
@@ -1333,8 +1335,6 @@ export const standings = calculateStandings(rawStandings);
 export const matchesData = [
   {
     id: 1, // Unique ID for React keys
-    // homeTeam: teams.lions, // Reference to team object
-    // awayTeam: teams.tigers,
     homeTeamId: "sportingMagumbanaFc", //new
     awayTeamId: "palmeirasMadangelaFc", //new
     // homeScore: 1, // Only for live/finished
@@ -1350,6 +1350,7 @@ export const matchesData = [
     // homeScorers: ["José Lima"],
     // awayScorers: ["Rui Almeida"],
   },
+
   // {
   //   id: 1, // Unique ID for React keys
   //   // homeTeam: teams.lions, // Reference to team object

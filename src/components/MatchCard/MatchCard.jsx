@@ -87,11 +87,20 @@ const MatchCard = ({ match }) => {
               />
             ) : (
               // Fallback if logo path is missing
-              homeTeam.abbr
+              homeTeam?.abbr
             )}
           </div>
 
-          <div className="team-name">{homeTeam.name}</div>
+          {/* <div className="team-name">{homeTeam?.name}</div> */}
+          <div className="team-name">
+            {/* Show on large screens */}
+            <span className="name-full">{homeTeam?.name}</span>
+
+            {/* Show on mobile screens (fallback to full name if shortName is missing) */}
+            <span className="name-short">
+              {homeTeam?.shortName || homeTeam?.name}
+            </span>
+          </div>
 
           {(status === "finished" || status === "live") &&
             homeScorers.length > 0 && (
@@ -127,21 +136,31 @@ const MatchCard = ({ match }) => {
           {/* Best practice: Always render the logo, but show the abbreviation
           inside the logo container if the logo is missing. */}
           <div className="team-logo">
-            {awayTeam.logo ? (
+            {awayTeam?.logo ? (
               <img
                 className="team-logo-img"
-                src={awayTeam.logo}
-                alt={awayTeam.abbr}
+                src={awayTeam?.logo}
+                alt={awayTeam?.abbr}
                 loading="lazy"
                 width="48"
                 height="48"
               />
             ) : (
               // Fallback if logo path is missing
-              awayTeam.abbr
+              awayTeam?.abbr
             )}
           </div>
-          <div className="team-name">{awayTeam.name}</div>
+          {/* <div className="team-name">{awayTeam?.name}</div> */}
+
+          <div className="team-name">
+            {/* Show on large screens */}
+            <span className="name-full">{awayTeam?.name}</span>
+
+            {/* Show on mobile screens (fallback to full name if shortName is missing) */}
+            <span className="name-short">
+              {awayTeam?.shortName || awayTeam?.name}
+            </span>
+          </div>
 
           {(status === "finished" || status === "live") &&
             awayScorers.length > 0 && (

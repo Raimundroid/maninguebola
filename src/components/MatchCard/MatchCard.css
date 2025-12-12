@@ -65,6 +65,8 @@
 
   /* Allow flex children to shrink when space is limited */
   min-width: 0;
+
+  /* background-color: red; */
 }
 .match-card .teams .team .team-logo {
   width: 48px;
@@ -89,7 +91,8 @@
 
 .match-card .teams .team .team-name {
   font-size: 12px;
-  font-weight: 600;
+  font-family: Calibri;
+  font-weight: 700;
   text-align: center;
   color: var(--text);
   white-space: nowrap;
@@ -98,13 +101,39 @@
   /* Ensure the element has a width context */
   width: 100%;
   min-width: 0;
+  /* background-color: red; */
 }
 
-.match-card .teams .team .scorers {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-top: 8px;
+/* Default: Show Full, Hide Short */
+.match-card .teams .team .team-name .name-full {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden; /* hides the extra text that doesn't fit */
+  text-overflow: ellipsis; /* adds “...” at the end of visible text */
+  /* Ensure the element has a width context */
+  width: 100%;
+  min-width: 0;
+
+  /* Mobile: Show Short, Hide Full */
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.match-card .teams .team .team-name .name-short {
+  display: none;
+
+  /* Mobile: Show Short, Hide Full */
+  @media (max-width: 768px) {
+    display: block;
+    /* Optional: Ensure it handles very long shortNames gracefully */
+    white-space: nowrap;
+    overflow: hidden; /* hides the extra text that doesn't fit */
+    text-overflow: ellipsis; /* adds “...” at the end of visible text *
+  /* Ensure the element has a width context */
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 .match-card .teams .team .scorers .scorer-name {
