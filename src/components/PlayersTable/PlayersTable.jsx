@@ -95,15 +95,15 @@ const PlayersTable = ({ players = [] }) => {
               <td className="number">{index + 1}</td>
 
               <td>
-                <Link className="wrapper-Link" to={`/jogadores/${player.id}`}>
+                <Link className="wrapper-Link" to={`/jogadores/${player?.id}`}>
                   <div className="player-cell">
                     <div className="player-logo">
                       <img
                         className="player-logo-img"
                         src={
-                          player.photo || "/images/players/default-player.png"
+                          player?.photo || "/images/players/default-player.png"
                         }
-                        alt={`Icon for ${player.name}`}
+                        alt={`${player?.name}`}
                         loading="lazy"
                         width="32"
                         height="32"
@@ -121,22 +121,22 @@ const PlayersTable = ({ players = [] }) => {
               <td>
                 <Link
                   className="wrapper-Link"
-                  to={`/equipas/${player.team.id}`}
+                  to={`/equipas/${player?.team.id}`}
                 >
                   <div className="team-cell">
                     <div className="team-logo">
-                      {player.team.logo ? (
+                      {player?.team.logo ? (
                         <img
                           className="team-logo-img"
-                          src={player.team.logo}
-                          alt={player.team.abbr}
+                          src={player?.team.logo}
+                          alt={player?.team.abbr}
                           loading="lazy"
                           width="32"
                           height="32"
                         />
                       ) : (
                         // Fallback if logo path is missing
-                        player.team.abbr
+                        player?.team.abbr
                       )}
                     </div>
 
@@ -149,7 +149,7 @@ const PlayersTable = ({ players = [] }) => {
 
               {/* 3rd Column: Posição (Position) */}
               <td>
-                <span className="player-position">{player.position}</span>
+                <span className="player-position">{player?.position}</span>
               </td>
             </tr>
           ))}

@@ -204,22 +204,22 @@ export const teams = {
 // before: playerData
 
 export const players = [
-  {
-    id: 1,
-    name: "Miguel Santos",
-    teamId: "eagles", //new
-    number: 10, //new
-    position: "Atacante", //new Defender || Midfielder || Forward
-    photo: "/images/players/default-player-1.png", //new
-    stats: {
-      //new
-      appearances: 12,
-      goals: 18,
-      assists: 7,
-      yellowCards: 2,
-      redCards: 0,
-    },
-  },
+  // {
+  //   id: 1,
+  //   name: "Miguel Santos",
+  //   teamId: "eagles", //new
+  //   number: 10, //new
+  //   position: "Atacante", //new Defender || Midfielder || Forward
+  //   photo: "/images/players/default-player-1.png", //new
+  //   stats: {
+  //     //new
+  //     appearances: 12,
+  //     goals: 18,
+  //     assists: 7,
+  //     yellowCards: 2,
+  //     redCards: 0,
+  //   },
+  // },
   {
     id: 2,
     name: "José Lima",
@@ -250,21 +250,21 @@ export const players = [
       redCards: 0,
     },
   },
-  {
-    id: 4,
-    name: "Tomás Ferreira",
-    teamId: "eagles",
-    number: 9,
-    position: "Meio Campista",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      appearances: 10,
-      goals: 12,
-      assists: 4,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
+  // {
+  //   id: 4,
+  //   name: "Tomás Ferreira",
+  //   teamId: "eagles",
+  //   number: 9,
+  //   position: "Meio Campista",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     appearances: 10,
+  //     goals: 12,
+  //     assists: 4,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
   {
     id: 5,
     name: "Ricardo Nunes",
@@ -295,21 +295,21 @@ export const players = [
       redCards: 0,
     },
   },
-  {
-    id: 7,
-    name: "Pablo Picasso",
-    teamId: "eagles",
-    number: 4,
-    position: "Defesa",
-    photo: "/images/players/default-player-3.png",
-    stats: {
-      appearances: 12,
-      goals: 0,
-      assists: 0,
-      yellowCards: 1,
-      redCards: 0,
-    },
-  },
+  // {
+  //   id: 7,
+  //   name: "Pablo Picasso",
+  //   teamId: "eagles",
+  //   number: 4,
+  //   position: "Defesa",
+  //   photo: "/images/players/default-player-3.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 0,
+  //     assists: 0,
+  //     yellowCards: 1,
+  //     redCards: 0,
+  //   },
+  // },
   // {
   //   id: 8,
   //   name: "Domingos Samuel",
