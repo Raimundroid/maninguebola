@@ -168,3 +168,12 @@ if the entire table is scrolled within this container. */
   text-decoration: none;
   cursor: pointer;
 }
+
+.players-stats-table .no-data-message {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 0.95rem;
+  /* background: #f9f9f9; */
+}
