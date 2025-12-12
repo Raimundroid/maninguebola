@@ -86,3 +86,12 @@
   font-weight: 700;
   color: var(--primary);
 }
+
+.standings-table .no-data-message {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-light); /* Gray text */
+  font-style: italic;
+  font-size: 0.95rem;
+  /* background: #f9f9f9; */
+}
