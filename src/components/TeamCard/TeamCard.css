@@ -10,7 +10,7 @@ TeamCard Styles
   background: var(--card-bg, #ffffff);
 
   /* Internal spacing inside the card */
-  padding: 16px;
+  padding: 16px 10px;
 
   /* Rounded corners */
   border-radius: 12px;
@@ -28,6 +28,11 @@ TeamCard Styles
   /* Smooth animation for all property changes
     Format: property duration timing-function */
   transition: all 300ms;
+
+  @media (min-width: 768px) {
+    /* Internal spacing inside the card */
+    padding: 16px;
+  }
 }
 
 /* Styles applied when card is hovered */
