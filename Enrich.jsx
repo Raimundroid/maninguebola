@@ -328,6 +328,8 @@ function PlayerCard({ player }) {
   );
 }
 
+
+// 222222222
 //========================================
 //PROMPT: ...so i was thinking, if is it possible, to instead of adding each player who scores to this two keys:homeScorers: awayScorers: , i just provide the id of the player who scored.
 // (some possible issues i notice: the players' ids are integers, it would make it near impossible to associate the id of the ones who score, and i currently do not a loooup for players + matches).

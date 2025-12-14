@@ -25,7 +25,7 @@ TeamsGrid Styles
   @media (min-width: 480px) {
     /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
+    gap: 10px;
   }
 
   @media (min-width: 700px) {

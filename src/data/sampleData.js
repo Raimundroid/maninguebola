@@ -100,7 +100,7 @@ export const teams = {
     // founded: 1000,
     stadium: "Campo de Magumbana",
     // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "#0033cc", secondary: "#ffcc00" },
+    colors: { primary: "blue", secondary: "red" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",
@@ -118,7 +118,44 @@ export const teams = {
     // founded: 1000,
     stadium: "Campo de Madangela",
     // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "#0033cc", secondary: "#ffcc00" },
+    colors: { primary: "red", secondary: "blue" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+
+  rioSambeFc: {
+    id: "rioSambeFc", // Unique identifier
+    name: "Rio Sambe FC", // Full team name
+    shortName: "Rio Sambe FC", // ✅ NEW
+    abbr: "RS", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/teams/rioSambleFc/rioSambeFc.jpg",
+    colors: { primary: "red", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  novoSclonioMaxixe: {
+    id: "novoSclonioMaxixe", // Unique identifier
+    name: "Novo Sclonio da Maxixe", // Full team name
+    shortName: "N. Sclonio da Maxixe", // ✅ NEW
+    abbr: "NSM", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "green", secondary: "red" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",
@@ -143,24 +180,24 @@ export const teams = {
   //     email: "eagles@example.com",
   //   },
   // },
-  lions: {
-    id: "lions",
-    name: "United Lions",
-    abbr: "UL",
-    // position: "2",
-    // points: "75", /////
-    founded: 2015,
-    stadium: "Lions Den",
+  // lions: {
+  //   id: "lions",
+  //   name: "United Lions",
+  //   abbr: "UL",
+  //   // position: "2",
+  //   // points: "75", /////
+  //   founded: 2015,
+  //   stadium: "Lions Den",
 
-    logo: "/images/teams/shield-golden.jpg",
-    colors: { primary: "#FF0000", secondary: "#14ca14ff" },
-    contact: {
-      coach: "Lino Papagaio",
-      captain: "Borge Papalo",
-      phone: "+258 82 12 34 568",
-      email: "lions@example.com",
-    },
-  },
+  //   logo: "/images/teams/shield-golden.jpg",
+  //   colors: { primary: "#FF0000", secondary: "#14ca14ff" },
+  //   contact: {
+  //     coach: "Lino Papagaio",
+  //     captain: "Borge Papalo",
+  //     phone: "+258 82 12 34 568",
+  //     email: "lions@example.com",
+  //   },
+  // },
   tigers: {
     id: "tigers",
     name: "Sporting Tigers",
@@ -1350,6 +1387,23 @@ export const matchesData = [
     // homeScorers: ["José Lima"],
     // awayScorers: ["Rui Almeida"],
   },
+  {
+    id: 2, // Unique ID for React keys
+    homeTeamId: "rioSambeFc", //new
+    awayTeamId: "novoSclonioMaxixe", //new
+    // homeScore: 1, // Only for live/finished
+    // awayScore: 1,
+    date: "2025-12-14", // ISO Format
+    time: "15:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Coche Magumbo",
+    // info: "85+ espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: ["José Lima"],
+    // awayScorers: ["Rui Almeida"],
+  },
 
   // {
   //   id: 1, // Unique ID for React keys
@@ -1388,24 +1442,24 @@ export const matchesData = [
   //   homeScorers: ["Miguel Santos (2)", "Tomás Ferreira"],
   //   awayScorers: ["José Lima (2)"],
   // },
-  {
-    id: 222,
-    // homeTeam: teams.eagles,
-    // awayTeam: teams.lions,
-    homeTeamId: "cats", //new
-    awayTeamId: "tigers", //new
-    homeScore: 3,
-    awayScore: 2,
-    date: "2025-11-16", // ISO Format
-    time: "15:00",
-    status: "finished",
-    venue: "Campo A",
-    // info: "⚽ Miguel Santos (2), Tomás Ferreira",
-    // ✅ NEW: Store as Array of Strings
-    // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Miguel Santos(2)", "Tomás Ferreira"],
-    awayScorers: ["José Lima (2)"],
-  },
+  // {
+  //   id: 001example,
+  //   // homeTeam: teams.eagles,
+  //   // awayTeam: teams.lions,
+  //   homeTeamId: "cats", //new
+  //   awayTeamId: "tigers", //new
+  //   homeScore: 3,
+  //   awayScore: 2,
+  //   date: "2025-11-16", // ISO Format
+  //   time: "15:00",
+  //   status: "finished",
+  //   venue: "Campo A",
+  //   // info: "⚽ Miguel Santos (2), Tomás Ferreira",
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: ["Miguel Santos(2)", "Tomás Ferreira"],
+  //   awayScorers: ["José Lima (2)"],
+  // },
   // {
   //   id: 3,
   //   // homeTeam: teams.tigers,
