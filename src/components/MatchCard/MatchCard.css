@@ -152,6 +152,11 @@
   filter: grayscale(1); /* Optional: makes the emoji blend in better */
 }
 
+/* .match-card .teams .team .scorers {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+} */
 .match-card .teams .team .scorers.home-scorers {
   align-items: flex-end;
 }
