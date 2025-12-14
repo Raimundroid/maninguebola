@@ -1,7 +1,7 @@
 .match-card {
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 16px;
+  padding: 16px 6px;
   box-shadow: 0 2px 8px var(--shadow);
   position: relative;
   transition: all 300ms;
@@ -160,16 +160,18 @@
 }
 
 .match-card .teams .score {
-  font-size: 28px; /*og: 32px*/
+  font-size: 24px; /*og: 32px*/
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   color: var(--text);
+
+  /* background-color: red; */
 }
 
 .match-card .teams .vs {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-light);
 }
 

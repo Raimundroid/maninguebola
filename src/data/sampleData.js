@@ -1374,28 +1374,28 @@ export const matchesData = [
     id: 1, // Unique ID for React keys
     homeTeamId: "sportingMagumbanaFc", //new
     awayTeamId: "palmeirasMadangelaFc", //new
-    // homeScore: 1, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 2, // Only for live/finished
+    awayScore: 2,
     date: "2025-12-14", // ISO Format
     time: "15:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Magumbana",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["José Lima"],
-    // awayScorers: ["Rui Almeida"],
+    homeScorers: ["Tony", "João"],
+    awayScorers: ["Raul", "Gaucho"],
   },
   {
     id: 2, // Unique ID for React keys
     homeTeamId: "rioSambeFc", //new
     awayTeamId: "novoSclonioMaxixe", //new
-    // homeScore: 1, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
     date: "2025-12-14", // ISO Format
     time: "15:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Coche Magumbo",
     // info: "85+ espectadores", // Optional extra info
