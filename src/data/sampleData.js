@@ -1401,8 +1401,8 @@ export const matchesData = [
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["José Lima"],
-    // awayScorers: ["Rui Almeida"],
+    homeScorers: ["Mimi", "José"],
+    awayScorers: [],
   },
 
   // {
