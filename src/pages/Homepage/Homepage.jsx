@@ -23,10 +23,10 @@ const Homepage = ({ matches, stats }) => {
   const liveMatches = matches.filter((m) => m.status === "live");
   const recentMatches = matches
     .filter((m) => m.status === "finished")
-    .slice(0, 2); // Get first 2
+    .slice(0, 4); // Get first 2
   const upcomingMatches = matches
     .filter((m) => m.status === "upcoming")
-    .slice(0, 2);
+    .slice(0, 6);
   const canceledMatches = matches
     .filter((m) => m.status === "canceled")
     .slice(0, 4);
