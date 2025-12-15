@@ -905,7 +905,7 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
     number = "-", // Jersey number (10, 7, etc.)
     position = "Indefinido", // Playing position (Forward, Midfielder)
     photo = "/images/players/default-player.png", // Profile photo URL
-    nationality = "Moçambicano", // Player's nationality
+    residence = "Morrubmene - Inhambane", // Player's residence
     dateOfBirth,
     stats = {}, // Statistics object (goals, assists, etc
     team = {}, // Team object (already enriched!)
@@ -1077,8 +1077,8 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
       // Check 1: Is the player's team involved in this match?
       // We remove the restrictive check for 'playerScored'.
       const isPlayerTeamInvolved =
-        match.homeTeamsId === player.teamsId ||
-        match.awayTeamsId === player.teamId;
+        match.homeTeamId === player.teamId ||
+        match.awayTeamId === player.teamId;
 
       // Only return true if the team played, regardless of whether the player scored.
       return isPlayerTeamInvolved;
@@ -1187,9 +1187,9 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
               {name}
               <span className="player-number">Nº{number}</span>
             </h1>
-            {/* Player metadata: position, age, nationality */}
+            {/* Player metadata: position, age, residence */}
             <div className="player-meta">
-              {position} • {calculateAge()} anos • {nationality}
+              {position} • {calculateAge()} anos • {residence}
             </div>
           </div>
         </div>

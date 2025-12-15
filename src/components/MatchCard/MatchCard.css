@@ -152,11 +152,11 @@
   filter: grayscale(1); /* Optional: makes the emoji blend in better */
 }
 
-/* .match-card .teams .team .scorers {
-  background-color: aqua;
+.match-card .teams .team .scorers {
   display: flex;
   flex-direction: column;
-} */
+}
+
 .match-card .teams .team .scorers.home-scorers {
   align-items: flex-end;
 }
@@ -169,7 +169,7 @@
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   color: var(--text);
 
   /* background-color: red; */

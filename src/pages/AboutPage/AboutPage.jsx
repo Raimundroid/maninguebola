@@ -10,13 +10,7 @@ import mpesa from "/src/assets/images/wallets/m-pesa-logo.png";
 
 const AboutPage = () => {
   // The Tech stack (Add new skills here as you learn them!)
-  const techStack = [
-    "React.js",
-    "Vite",
-    "JavaScript (ES6+)",
-    "CSS",
-    "Git & GitHub",
-  ];
+  const techStack = ["React.js", "Vite", "CSS", "Git & GitHub", "Vercel"];
   // Donation Info
   const donationInfo = {
     mpesa: "84 000 0000",
@@ -60,9 +54,9 @@ const AboutPage = () => {
           </div>
 
           <p className="dev-bio">
-            Sou um desenvolvedor web focado em criar soluções modernas e
-            rápidas. Estou disponível para projetos freelance e oportunidades
-            profissionais.
+            Sou um <strong>DESENVOLVEDOR WEB</strong> focado em criar soluções
+            modernas e rápidas. Estou disponível para projetos freelance e
+            oportunidades profissionais.
           </p>
 
           {/* Dynamic Tech Stack List */}
@@ -109,8 +103,7 @@ const AboutPage = () => {
         <section className="about-section">
           <h3>Quer ver a sua equipa aqui?</h3>
           <p>
-            <span className="free">É gratuito!</span> Envie-nos o logótipo e a
-            lista de jogadores através de:
+            <span className="free">É MAHALA!</span> Contacte-nos através de:
           </p>
           <div className="contact-methods">
             {/* Method 1: WhatsApp (Most popular in MZ) */}

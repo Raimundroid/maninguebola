@@ -176,7 +176,7 @@ const MatchCard = ({ match }) => {
       </div>
       {/* Venue and additional info */}
       <div className="info">
-        🥅 {venue} {info && `• ${info}`}
+        🥅Local: <strong>{venue}</strong> {info && `• ${info}`}
       </div>
     </div>
   );

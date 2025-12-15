@@ -44,13 +44,19 @@ function PageViewTracker() {
   return null; // This component doesn't render anything
 }
 
-import {
-  players,
-  teams,
-  standings,
-  matchesData,
-  statsData,
-} from "./data/sampleData.js";
+import playersData from "./data/playersData.js";
+import teamsData from "./data/teamsData.js";
+import standingsData from "./data/standingsData.js";
+import matchesData from "./data/matchesData.js";
+import statsData from "./data/statsData.js";
+
+// import{
+//   players,
+//   teams,
+//   standings,
+//   matchesData,
+//   statsData,
+// } from "./data/sampleData.js";
 
 // ===============================================
 // 🔑 DATA ENRICHMENT FUNCTIONS
@@ -258,15 +264,15 @@ function App() {
   // These are like fast dictionaries for finding data by ID
 
   // Team lookup: { 1: {team1 data}, 2: {team2 data}, ... }
-  const teamLookup = teams;
+  const teamLookup = teamsData;
 
   // Standings lookup: { 1: {team1 standings}, 2: {team2 standings}, ... }
   // // Note: standings use 'teamId' as the key, not 'id'!
   // const standingsLookup = createLookup(standings, "teamId");
-  const standingsLookup = createLookup(standings, "id");
+  const standingsLookup = createLookup(standingsData, "id");
 
   // Player lookup: { 1: {player1 data}, 2: {player2 data}, ... }
-  const playerLookup = createLookup(players, "id");
+  const playerLookup = createLookup(playersData, "id");
 
   // The playerLookup variable is unused, but that's perfectly acceptable given the current set of enrichment functions. If you later create a function like getMatchMOTM(playerLookup), then the variable would become necessary.
 
@@ -278,7 +284,7 @@ function App() {
   //====================teams + standings==============
 
   // Convert the teams OBJECT into an ARRAY of team objects
-  const teamsArray = Object.values(teams);
+  const teamsArray = Object.values(teamsData);
 
   // Each team now has a .standing property
   const enrichedTeams = getEnrichedTeams(teamsArray, standingsLookup);
@@ -293,7 +299,7 @@ function App() {
 
   //====================players + teams==============
   // Each player now has a .team property
-  const enrichedPlayers = getEnrichedPlayers(players, teamLookup);
+  const enrichedPlayers = getEnrichedPlayers(playersData, teamLookup);
 
   {
     /* ============================================
@@ -380,7 +386,7 @@ function App() {
               path="/classificacao"
               element={
                 <StandingsPage
-                  /*standings={enrichedTeams}*/ standings={standings}
+                  /*standings={enrichedTeams}*/ standings={standingsData}
                 />
               }
             />

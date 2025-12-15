@@ -12,7 +12,7 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
   let sortedPlayers = [];
   if (hasData) {
     // We create a copy using [...playersList] to avoid mutating the original prop.
-    const sortedPlayers = [...players].sort((a, b) => {
+    sortedPlayers = [...players].sort((a, b) => {
       if (activeTab === "goals") {
         // Sort descending by goals
         return (b.stats?.goals || 0) - (a.stats?.goals || 0);
