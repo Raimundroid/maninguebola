@@ -56,8 +56,25 @@ const matchesData = [
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["Mimi", "José"],
-    // awayScorers: [],
+    // homeScorers: ["", ""],
+    // awayScorers: ["", ""],
+  },
+  {
+    id: 4, // Unique ID for React keys
+    homeTeamId: "slowDownFc", //new
+    awayTeamId: "revolutionFc", //new
+    // homeScore: 2, // Only for live/finished
+    // awayScore: 0,
+    date: "2025-12-21", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo de Golo",
+    // info: "85+ espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: ["", ""],
+    // awayScorers: ["", ""],
   },
 
   //   {

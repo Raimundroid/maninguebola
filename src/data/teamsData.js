@@ -110,7 +110,7 @@ const teamsData = {
     // position: "1",
     // points: "99", /////
     // founded: 1000,
-    stadium: "Campo de Madangela",
+    stadium: "Indefinido",
     // logo: "/images/teams/shield-gold.jpg",
     colors: { primary: "red", secondary: "blue" },
     // contact: {
@@ -130,7 +130,7 @@ const teamsData = {
     // points: "99", /////
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/teams/rioSambleFc/rioSambeFc.jpg",
+    logo: "/images/teams/rioSambeFc/rioSambeFc.jpg",
     colors: { primary: "red", secondary: "green" },
     // contact: {
     //   coach: "John Dalton",
@@ -149,7 +149,7 @@ const teamsData = {
     // founded: 1000,
     stadium: "Indefinido",
     // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "green", secondary: "red" },
+    colors: { primary: "green", secondary: "blue" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",
@@ -167,7 +167,43 @@ const teamsData = {
     // founded: 1000,
     stadium: "Indefinido",
     // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "green", secondary: "red" },
+    colors: { primary: "blue", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  slowDownFc: {
+    id: "slowDownFc", // Unique identifier
+    name: "Slow Down FC", // Full team name
+    shortName: "Slow Down FC", // ✅ NEW
+    abbr: "SDFC", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/teams/slowDownFc/slowDownFc.jpg",
+    colors: { primary: "yellow", secondary: "red" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  revolutionFc: {
+    id: "revolutionFc", // Unique identifier
+    name: "Revolution FC", // Full team name
+    shortName: "Revolution FC", // ✅ NEW
+    abbr: "RFC", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "yellow" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",
