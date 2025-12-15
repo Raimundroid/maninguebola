@@ -32,8 +32,11 @@
 
   /* --- Background Image Properties (Best Definitions) --- */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/hero/blue&yellow-half-stadium.jpg"); /* Adds dark overlay for readability */
-  background-position: bottom;
+    url("/images/hero/football-field-upperview.jpg"); /* Adds dark overlay for readability */
+  /* "/images/hero/blue-stadium.jpg" */
+  /* "/images/hero/blue&yellow-half-stadium.jpg"*/
+  /* "/images/hero/football-field-upperview.jpg" */
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover; /* ESSENTIAL: Ensures the image covers the entire area */
 
