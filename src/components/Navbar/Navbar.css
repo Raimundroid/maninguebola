@@ -132,7 +132,7 @@
   Larger than the text for visual impact
 */
 .logo-icon {
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1; /* Prevents extra space above/below */
 }
 /*
@@ -311,8 +311,38 @@
   Larger on mobile for easier tapping
 */
 .nav-link-icon {
-  font-size: 22px;
+  /* font-size: 22px; */
   line-height: 1;
+  /* background-color: red; */
+  flex-shrink: 0; /* Prevents the icon from being crushed */
+  min-width: 14px; /* Enforces a minimum physical size */
+}
+
+.svg-icon {
+  /* Dimensions: CSS overrides the HTML width/height attributes */
+  width: 18px;
+  height: 16px;
+  margin: 0;
+
+  /* Smooth transition for hover/active states */
+  transition: all 300ms ease;
+
+  fill: currentColor;
+  /* stroke: black; */
+}
+
+/*  Hover State */
+/* When hovering the link, effect the icon */
+.nav-link:hover .svg-icon {
+  transform: scale(1.1); /* Subtle zoom effect */
+  color: #3b82f6; /* Icon turns blue on hover */
+}
+
+/* The icon inside the active link will automatically become blue
+   because of currentColor, but you can force specific styles here: */
+.nav-link--active .svg-icon {
+  filter: drop-shadow(0 0 5px rgba(59, 146, 246, 0.5)); /* Glow effect */
+  fill: blue;
 }
 
 /*
@@ -687,14 +717,16 @@
   .nav-link {
     /* Compact padding for desktop */
     width: auto; /* Not full width anymore*/
-    padding: 10px 5px; /*og: 8px 12px*/
+    padding: 10px 4px; /*og: 8px 12px*/
 
     /* Rounded corners for desktop */
     border-radius: 8px;
 
     /* Smaller text and spacing */
     font-size: 14px; /*og: 15px*/
-    gap: 1px; /*og: 6px*/
+    gap: 2px; /*og: 6px*/
+
+    /* background-color: red; */
   }
 
   /* Show text labels on desktop */
@@ -765,13 +797,14 @@
 
   /* More space between navigation links */
   .nav-links {
-    gap: 32px;
+    gap: 22px;
   }
 
   /* Slightly larger text */
   .nav-link {
     font-size: 16px;
   }
+
   .nav-link-text {
     font-size: 16px;
   }
