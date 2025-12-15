@@ -96,7 +96,6 @@ const Navbar = () => {
   const navItems = [
     { id: "home", path: "/", label: "Início", icon: "🏠" },
     { id: "matches", path: "/jogos", label: "Jogos", icon: "🆚" },
-    { id: "players", path: "/jogadores", label: "Jogadores", icon: "👥" },
     {
       id: "standings",
       path: "/classificacao",
@@ -104,16 +103,17 @@ const Navbar = () => {
       icon: "🏆",
     },
     {
-      id: "statistics",
-      path: "/estatisticas",
-      label: "Estatísticas",
-      icon: "📊",
-    },
-    {
       id: "teams",
       path: "/equipas",
       label: "Equipas",
       icon: "🎽",
+    },
+    { id: "players", path: "/jogadores", label: "Jogadores", icon: "👥" },
+    {
+      id: "statistics",
+      path: "/estatisticas",
+      label: "Estatísticas",
+      icon: "📊",
     },
     {
       id: "about",
