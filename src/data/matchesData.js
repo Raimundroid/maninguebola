@@ -49,7 +49,7 @@ const matchesData = [
     // homeScore: 2, // Only for live/finished
     // awayScore: 0,
     date: "2025-12-20", // ISO Format
-    time: "-:-",
+    time: "15:30",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Internacional de Miluge",

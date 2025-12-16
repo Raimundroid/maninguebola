@@ -919,7 +919,7 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
    * So we don't need to look it up manually
    */
   const {
-    name: teamName = "Equipa N/D", // Team's name
+    name: teamName = "Indefinido", // Team's name
     logo: teamLogo = "/images/default-team.png", // Team logo URL
     colors = { primary: "#3b82f6", secondary: "#1e40af" }, // Team colors
     id: enrichedTeamId = null, // Team ID from enriched data
