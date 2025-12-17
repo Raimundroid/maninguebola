@@ -149,6 +149,8 @@
 /* --- CONTACT METHODS --- */
 
 .about-section .free {
+  /* font-size: 18px; */
+  font-weight: 600;
   background-color: var(--success);
   border-radius: 12px;
   padding: 3px 7px;
