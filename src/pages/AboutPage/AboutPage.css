@@ -25,10 +25,12 @@
 /* Generic Section Card Style */
 .about-section {
   background: var(--card-bg);
-  padding: 24px;
+  padding: 18px 15px;
   border-radius: 15px;
   box-shadow: 0 2px 8px var(--shadow);
   border: 1px solid var(--border);
+
+  /* background-color: red; */
 }
 
 .about-section h2,
