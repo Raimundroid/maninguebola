@@ -27,7 +27,7 @@ const AboutPage = () => {
         <section className="about-section mission-card">
           <h2>A Nossa Missão</h2>
           <p>
-            O <strong>ManingueBola</strong> nasceu com um objetivo simples:
+            O <strong>ManingueBola</strong> nasceu com um objectivo simples:
             <strong> digitalizar o futebol local</strong>.
           </p>
           <p>
