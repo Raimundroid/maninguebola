@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* WhatsApp Icon */}
           <a
-            href="https://wa.me/258878203004"
+            href="https://whatsapp.com/channel/0029VbC0BUKCHDyg2YTpu521"
             className="social-link"
             aria-label="WhatsApp"
           >
