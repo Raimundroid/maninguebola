@@ -211,6 +211,24 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
+  costaCoelhoFc: {
+    id: "costaCoelhoFc", // Unique identifier
+    name: "Costa de Coelho Fc", // Full team name
+    shortName: "Costa de Coelho FC", // ✅ NEW
+    abbr: "CC", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Campo de Coelho",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "blue", secondary: "yellow" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
   //   eagles: {
   //     id: "eagles", // Unique identifier
   //     name: "FC Eagles", // Full team name

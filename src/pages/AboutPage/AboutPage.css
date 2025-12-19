@@ -15,10 +15,10 @@
   gap: 24px;
 
   @media (min-width: 768px) {
-    max-width: 700px;
+    max-width: 800px;
   }
   @media (min-width: 992px) {
-    max-width: 800px;
+    max-width: 900px;
   }
 }
 
@@ -47,7 +47,7 @@
 
 /* --- MISSION CARD SPECIFIC --- */
 .mission-card {
-  border-left: 4px solid var(--primary);
+  border-inline: 3px solid var(--primary);
 }
 
 /* --- DEV CARD SPECIFIC --- */
@@ -146,67 +146,6 @@
 
 .btn-link.primary:hover {
   opacity: 0.9;
-}
-
-/* --- CONTACT METHODS --- */
-
-.about-section .free {
-  /* font-size: 18px; */
-  font-weight: 600;
-  background-color: var(--success);
-  border-radius: 12px;
-  padding: 3px 7px;
-  color: var(--secondary);
-}
-.contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-  background: var(--bg);
-  padding: 8px;
-  border-radius: 12px;
-  transition: transform 200ms;
-}
-
-.contact-item:hover {
-  transform: translateX(4px);
-  background: #f1f5f9;
-}
-
-.contact-item .icon #whatsapp {
-  fill: green;
-  stroke-width: 50px;
-}
-
-.contact-item .icon #email {
-  fill: red;
-  stroke-width: 50px;
-}
-
-.contact-item .icon #phone {
-  fill: brown;
-  stroke-width: 50px;
-}
-.contact-item div {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-item strong {
-  color: var(--secondary);
-  font-size: 14px;
-}
-
-.contact-item span {
-  color: var(--text-light);
-  font-size: 13px;
 }
 
 /* --- WALLETS --- */

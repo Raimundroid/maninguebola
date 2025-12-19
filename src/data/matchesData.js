@@ -76,6 +76,23 @@ const matchesData = [
     // homeScorers: ["", ""],
     // awayScorers: ["", ""],
   },
+  {
+    id: 5, // Unique ID for React keys
+    homeTeamId: "costaCoelhoFc", //new
+    awayTeamId: "palmeirasMadangelaFc", //new
+    // homeScore: 2, // Only for live/finished
+    // awayScore: 0,
+    date: "2025-12-21", // ISO Format
+    time: "15:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo de Coelho",
+    // info: "85+ espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: ["", ""],
+    // awayScorers: ["", ""],
+  },
 
   //   {
   //     id: 1000, // Unique ID for React keys

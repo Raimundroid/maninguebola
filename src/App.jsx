@@ -11,6 +11,9 @@ import StatisticsPage from "./pages/StatisticsPage/StatisticsPage.jsx";
 import TeamsPage from "./pages/TeamsPage/TeamsPage.jsx";
 import TeamDetailPage from "./components/TeamDetailPage/TeamDetailPage.jsx";
 
+import ContactPage from "./pages/ContactPage/ContactPage.jsx";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx";
+
 import Footer from "./components/Footer/Footer.jsx";
 import Error404 from "./components/Error404/Error404.jsx";
 import ScrollToTop from "./utils/ScrollToTop/ScrollToTop.jsx";
@@ -22,8 +25,6 @@ import AboutPage from "./pages/AboutPage/AboutPage.jsx";
 
 import ReactGA from "react-ga4";
 
-// 🔴 REPLACE THIS WITH YOUR ACTUAL MEASUREMENT ID
-// Get it from: Google Analytics > Admin > Property > Data Streams
 const MEASUREMENT_ID = "G-MPT58VN5EM";
 
 // Component to track page views
@@ -351,7 +352,6 @@ function App() {
                 />
               }
             />
-
             <Route
               path="/"
               element={
@@ -418,6 +418,11 @@ function App() {
               }
             />
             <Route path="/sobre" element={<AboutPage />} />
+            <Route path="/contacto" element={<ContactPage />} />
+            <Route
+              path="/politica-privacidade"
+              element={<PrivacyPolicyPage />}
+            />
 
             {/* 404 - Catch all unmatched routes */}
             <Route path="*" element={<Error404 />} />
