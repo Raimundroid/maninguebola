@@ -39,7 +39,7 @@ const AboutPage = () => {
           <p>
             Queremos manter os fãs do <strong>futebol local</strong> sempre
             informados com informacões actualizadas, claras, confiáveis, e
-            rapidas.
+            rápidas.
           </p>
         </section>
 
