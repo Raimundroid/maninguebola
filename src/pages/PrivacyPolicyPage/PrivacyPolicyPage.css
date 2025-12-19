@@ -6,3 +6,322 @@
 .privacy-policy-page-content {
   background-color: gainsboro;
 }
+
+/* ============================================
+   POLÍTICA DE PRIVACIDADE PAGE STYLES
+   ============================================
+
+   PURPOSE:
+   Styles for the privacy policy page showing:
+   - Page header with title
+   - Multiple content sections
+   - Lists and text formatting
+   - Info boxes and service cards
+
+   DESIGN APPROACH:
+   - Mobile-first responsive design
+   - Clean, readable typography
+   - Uses CSS variables for theming
+   - Proper spacing for long-form content
+
+   ============================================ */
+
+/* ============================================
+   BASE CONTAINER
+   ============================================ */
+
+/**
+ * MAIN PAGE CONTAINER
+ *
+ * Sets up the page background and spacing
+ * Ensures page fills screen height
+ */
+.privacy-page {
+  padding: 16px; /* Space around content */
+  padding-bottom: 80px; /* Extra space for footer */
+  background-color: var(--bg); /* Page background from theme */
+  min-height: 100vh; /* Full screen height minimum */
+}
+
+/**
+ * CONTENT CONTAINER
+ *
+ * Centers content and limits width for readability
+ * Long-form text should never be too wide
+ */
+.privacy-content {
+  max-width: 700px; /* Optimal width for reading */
+  margin: 0 auto; /* Center horizontally */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 24px; /* Space between sections */
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+
+/**
+ * HEADER SECTION
+ *
+ * Contains page title and last updated date
+ * Centered for visual appeal
+ */
+.privacy-header {
+  text-align: center; /* Center all text */
+  margin-bottom: 8px; /* Space below header */
+  padding-bottom: 16px; /* Space inside bottom */
+  border-bottom: 2px solid var(--border); /* Divider line */
+}
+
+/**
+ * PAGE TITLE
+ *
+ * Main heading with lock emoji icon
+ */
+.privacy-title {
+  font-size: 24px; /* Large text for heading */
+  font-weight: 700; /* Bold */
+  color: var(--text); /* Theme text color */
+  margin: 0 0 8px 0; /* Space below only */
+}
+
+/**
+ * LAST UPDATED TEXT
+ *
+ * Shows when policy was last modified
+ */
+.privacy-updated {
+  font-size: 13px; /* Small text */
+  color: var(--text-light); /* Light gray */
+  margin: 0; /* No margin */
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+
+/**
+ * SECTION CONTAINER
+ *
+ * Container for each major section of policy
+ * (Introduction, Data Collection, etc.)
+ */
+.privacy-section {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 12px; /* Space between elements */
+}
+
+/**
+ * LAST SECTION MODIFIER
+ *
+ * Extra bottom spacing for final section
+ */
+.privacy-section--last {
+  margin-bottom: 16px; /* Extra space at bottom */
+}
+
+/**
+ * SECTION TITLE (H2)
+ *
+ * Main heading for each section
+ * Uses emojis for visual interest
+ */
+.section-title {
+  font-size: 18px; /* Medium-large text */
+  font-weight: 700; /* Bold */
+  color: var(--text); /* Theme text color */
+  margin: 0; /* No margin */
+  display: flex; /* Flexbox for emoji + text */
+  align-items: center; /* Vertically center */
+  gap: 8px; /* Space between emoji and text */
+}
+
+/**
+ * SUBSECTION TITLE (H3)
+ *
+ * Secondary heading within sections
+ * Smaller than section title
+ */
+.subsection-title {
+  font-size: 16px; /* Medium text */
+  font-weight: 600; /* Semi-bold */
+  color: var(--text); /* Theme text color */
+  margin: 8px 0 4px 0; /* Small margins */
+}
+
+/**
+ * SECTION TEXT (PARAGRAPHS)
+ *
+ * Body text for policy content
+ * Optimized for readability
+ */
+.section-text {
+  font-size: 14px; /* Standard text size */
+  color: var(--text-light); /* Light gray for body text */
+  line-height: 1.7; /* Generous line spacing for readability */
+  margin: 0; /* No margin */
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+/**
+ * PRIVACY LIST (UL)
+ *
+ * Bulleted lists within sections
+ * Clear spacing and readable text
+ */
+.privacy-list {
+  margin: 8px 0; /* Space above and below */
+  padding-left: 20px; /* Indent for bullets */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  gap: 8px; /* Space between list items */
+}
+
+/**
+ * LIST ITEM
+ *
+ * Individual bullet point
+ */
+.privacy-list li {
+  font-size: 14px; /* Standard text size */
+  color: var(--text-light); /* Light gray */
+  line-height: 1.6; /* Line spacing */
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+/**
+ * PRIVACY LINK
+ *
+ * Links within policy text
+ * Uses primary color and underline
+ */
+.privacy-link {
+  color: var(--primary); /* Primary brand color */
+  text-decoration: underline; /* Underline for clarity */
+  font-weight: 500; /* Medium weight */
+  transition: opacity 0.2s ease; /* Smooth hover effect */
+}
+
+/**
+ * LINK HOVER STATE
+ *
+ * Visual feedback when hovering over links
+ */
+.privacy-link:hover {
+  opacity: 0.8; /* Slightly transparent */
+}
+
+/* ============================================
+   INFO BOXES
+   ============================================ */
+
+/**
+ * INFO BOX
+ *
+ * Highlighted box for important information
+ * Draws attention to key points
+ */
+.info-box {
+  background: var(--card-bg); /* Card background */
+  border: 1px solid var(--border); /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 16px; /* Space inside box */
+  font-size: 13px; /* Small text */
+  color: var(--text-light); /* Light gray */
+  line-height: 1.6; /* Line spacing */
+  margin-top: 8px; /* Space above */
+}
+
+/**
+ * HIGHLIGHTED INFO BOX
+ *
+ * Extra emphasis with primary color border
+ */
+.info-box--highlight {
+  border-color: var(--primary); /* Primary color border */
+  background: rgba(59, 130, 246, 0.05); /* Light blue background */
+}
+
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
+
+/**
+ * SERVICE CARD
+ *
+ * Card highlighting third-party services
+ * (e.g., Google Analytics)
+ */
+.service-card {
+  background: var(--card-bg); /* Card background */
+  border: 1px solid var(--border); /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px; /* Space inside card */
+  margin-top: 8px; /* Space above */
+}
+
+/**
+ * SERVICE TITLE (H4)
+ *
+ * Name of the service
+ */
+.service-title {
+  font-size: 15px; /* Medium text */
+  font-weight: 600; /* Semi-bold */
+  color: var(--text); /* Theme text color */
+  margin: 0 0 8px 0; /* Space below only */
+}
+
+/**
+ * SERVICE TEXT
+ *
+ * Description text for the service
+ */
+.service-text {
+  font-size: 13px; /* Small text */
+  color: var(--text-light); /* Light gray */
+  line-height: 1.6; /* Line spacing */
+  margin: 0; /* No margin */
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET AND UP
+   ============================================ */
+
+/**
+ * TABLET BREAKPOINT (768px and wider)
+ *
+ * On larger screens:
+ * - Slightly wider content container
+ * - Larger text sizes for better readability
+ */
+@media (min-width: 768px) {
+  /* Wider content container */
+  .privacy-content {
+    max-width: 800px; /* Wider than mobile */
+  }
+
+  /* Larger heading on desktop */
+  .privacy-title {
+    font-size: 28px; /* Larger than mobile */
+  }
+
+  /* Larger section titles on desktop */
+  .section-title {
+    font-size: 20px; /* Larger than mobile */
+  }
+
+  /* Slightly larger body text on desktop */
+  .section-text,
+  .privacy-list li {
+    font-size: 15px; /* Slightly larger than mobile */
+  }
+}

@@ -170,7 +170,7 @@ const PlayersTable = ({ players = [] }) => {
             // colSpan="10" matches the number of headers so it spans the full width
             <tr className="no-data-row">
               <td colSpan="4" className="no-data-message">
-                Ainda não há dados disponíveis para a jogadores.
+                Ainda não há dados disponíveis para os jogadores.
               </td>
             </tr>
           )}

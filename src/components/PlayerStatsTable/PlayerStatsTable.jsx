@@ -153,7 +153,7 @@ const PlayerStatsTable = ({ players = {}, teams = [] }) => {
               // colSpan="10" matches the number of headers so it spans the full width
               <tr className="no-data-row">
                 <td colSpan="4" className="no-data-message">
-                  Ainda não há dados disponíveis para a estatísticas dos
+                  Ainda não há dados disponíveis para as estatísticas dos
                   jogadores.
                 </td>
               </tr>

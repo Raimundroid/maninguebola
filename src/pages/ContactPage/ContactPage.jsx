@@ -2,6 +2,41 @@ import React from "react";
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 import "./ContactPage.css";
 
+/**
+ * ============================================
+ * CONTACTO PAGE COMPONENT
+ * ============================================
+ *
+ * WHAT THIS PAGE DOES:
+ * Displays contact information for users to reach out
+ * Shows email, phone, Facebook page, and WhatsApp channel
+ *
+ * PURPOSE:
+ * - Business inquiries
+ * - General support
+ * - User questions about the platform
+ *
+ * HOW TO USE:
+ * <Contacto />
+ *
+ * No props needed - all contact info is hardcoded
+ * Update contact details directly in this file
+ */
+
+/**
+ * CENTRALIZED CONTACT DATA
+ *
+ * UPDATE THESE VALUES with your actual contact information
+ * This makes it easy to change contact details in one place
+ */
+const contactInfo = {
+  email: "contato@footballhub.mz",
+  phone: "+258 84 123 4567",
+  whatsapp: "258841234567", // WhatsApp number (no + or spaces)
+  whatsappDisplay: "+258 84 123 4567", // Display format
+  facebook: "https://facebook.com/footballhub", // Full Facebook page URL
+};
+
 const ContactPage = () => {
   return (
     <div className="contact-page">
@@ -75,6 +110,130 @@ const ContactPage = () => {
           </a>
         </div>
         Obrigado por visistar ManingueBola
+      </div>
+
+      <div className="contacto-page">
+        <div className="contacto-content">
+          {/* ==========================================
+            PAGE HEADER
+            ==========================================
+            Title and introduction text
+        */}
+          <div className="contacto-header">
+            <h1 className="contacto-title">📞 Entre em Contacto</h1>
+            <p className="contacto-subtitle">
+              Tem alguma questão ou sugestão? Estamos aqui para ajudar! Entre em
+              contacto connosco através de qualquer um dos canais abaixo.
+            </p>
+          </div>
+
+          {/* ==========================================
+            CONTACT CARDS GRID
+            ==========================================
+            Grid of contact method cards
+            Each card shows icon, label, and clickable link
+        */}
+          <div className="contact-cards">
+            {/* EMAIL CARD
+              mailto: link opens user's email client
+              Example: clicking opens Gmail/Outlook with email pre-filled
+          */}
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className="contact-card"
+              aria-label="Enviar email"
+            >
+              <div className="contact-card__icon">📧</div>
+              <div className="contact-card__content">
+                <h3 className="contact-card__title">Email</h3>
+                <p className="contact-card__value">{contactInfo.email}</p>
+                <span className="contact-card__action">Enviar email →</span>
+              </div>
+            </a>
+
+            {/* PHONE CARD
+              tel: link opens phone dialer on mobile devices
+              On desktop, may open Skype or other calling apps
+          */}
+            <a
+              href={`tel:${contactInfo.phone}`}
+              className="contact-card"
+              aria-label="Ligar"
+            >
+              <div className="contact-card__icon">📱</div>
+              <div className="contact-card__content">
+                <h3 className="contact-card__title">Telefone</h3>
+                <p className="contact-card__value">{contactInfo.phone}</p>
+                <span className="contact-card__action">Ligar agora →</span>
+              </div>
+            </a>
+
+            {/* WHATSAPP CARD
+              WhatsApp API link opens WhatsApp app/web
+              Opens chat with pre-filled number
+              Works on both mobile and desktop (WhatsApp Web)
+          */}
+            <a
+              href={`https://wa.me/${contactInfo.whatsapp}`}
+              className="contact-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir WhatsApp"
+            >
+              <div className="contact-card__icon">💬</div>
+              <div className="contact-card__content">
+                <h3 className="contact-card__title">WhatsApp</h3>
+                <p className="contact-card__value">
+                  {contactInfo.whatsappDisplay}
+                </p>
+                <span className="contact-card__action">Enviar mensagem →</span>
+              </div>
+            </a>
+
+            {/* FACEBOOK CARD
+              Opens Facebook page in new tab
+              target="_blank" opens in new tab
+              rel="noopener noreferrer" for security
+          */}
+            <a
+              href={contactInfo.facebook}
+              className="contact-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar página do Facebook"
+            >
+              <div className="contact-card__icon">👍</div>
+              <div className="contact-card__content">
+                <h3 className="contact-card__title">Facebook</h3>
+                <p className="contact-card__value">Football Hub</p>
+                <span className="contact-card__action">Visitar página →</span>
+              </div>
+            </a>
+          </div>
+
+          {/* ==========================================
+            ADDITIONAL INFO SECTION
+            ==========================================
+            Extra information about response times, etc.
+        */}
+          <div className="contacto-footer">
+            <div className="info-box">
+              <h3 className="info-box__title">⏰ Horário de Atendimento</h3>
+              <p className="info-box__text">
+                Respondemos a todas as mensagens dentro de 24-48 horas durante
+                os dias úteis.
+              </p>
+            </div>
+
+            <div className="info-box">
+              <h3 className="info-box__title">💡 Dica</h3>
+              <p className="info-box__text">
+                Para um atendimento mais rápido, utilize o WhatsApp ou Facebook
+                Messenger.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

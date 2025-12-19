@@ -5,3 +5,298 @@
 .contact-page-content {
   background-color: gainsboro;
 }
+
+/* ============================================
+   CONTACTO PAGE STYLES
+   ============================================
+
+   PURPOSE:
+   Styles for the contact page showing:
+   - Page header with title and subtitle
+   - Grid of contact method cards
+   - Additional info boxes at bottom
+
+   DESIGN APPROACH:
+   - Mobile-first responsive design
+   - Clean, minimalistic cards
+   - Uses CSS variables for theming
+   - Clickable cards with hover effects
+
+   ============================================ */
+
+/* ============================================
+   BASE CONTAINER
+   ============================================ */
+
+/**
+ * MAIN PAGE CONTAINER
+ *
+ * Sets up the page background and spacing
+ * Ensures page fills screen height
+ */
+.contacto-page {
+  padding: 16px; /* Space around content */
+  padding-bottom: 80px; /* Extra space for footer */
+  background-color: var(--bg); /* Page background from theme */
+  min-height: 100vh; /* Full screen height minimum */
+}
+
+/**
+ * CONTENT CONTAINER
+ *
+ * Centers content and limits width for readability
+ * Stacks sections vertically with spacing
+ */
+.contacto-content {
+  max-width: 600px; /* Max width for mobile-first */
+  margin: 0 auto; /* Center horizontally */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 24px; /* Space between sections */
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+
+/**
+ * HEADER SECTION
+ *
+ * Contains page title and introductory text
+ * Centered text for clean appearance
+ */
+.contacto-header {
+  text-align: center; /* Center all text */
+  margin-bottom: 8px; /* Space below header */
+}
+
+/**
+ * PAGE TITLE
+ *
+ * Main heading with emoji icon
+ */
+.contacto-title {
+  font-size: 24px; /* Large text for heading */
+  font-weight: 700; /* Bold */
+  color: var(--text); /* Theme text color */
+  margin: 0 0 12px 0; /* Space below only */
+}
+
+/**
+ * SUBTITLE TEXT
+ *
+ * Introductory paragraph explaining the page
+ */
+.contacto-subtitle {
+  font-size: 14px; /* Standard text size */
+  color: var(--text-light); /* Lighter color for secondary text */
+  line-height: 1.6; /* Space between lines for readability */
+  margin: 0; /* No margin */
+}
+
+/* ============================================
+   CONTACT CARDS GRID
+   ============================================ */
+
+/**
+ * CARDS CONTAINER
+ *
+ * Grid layout for contact method cards
+ * Automatically adjusts columns based on space
+ */
+.contact-cards {
+  display: grid; /* CSS Grid layout */
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 12px; /* Space between cards */
+}
+
+/**
+ * INDIVIDUAL CONTACT CARD
+ *
+ * Clickable card for each contact method
+ * Shows icon, title, value, and action text
+ * Full card is clickable as a link
+ */
+.contact-card {
+  background: var(--card-bg); /* Card background */
+  border: 1px solid var(--border); /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px; /* Space inside card */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically center content */
+  gap: 16px; /* Space between icon and content */
+  text-decoration: none; /* Remove link underline */
+  transition: all 0.2s ease; /* Smooth hover animation */
+  cursor: pointer; /* Show hand cursor */
+  box-shadow: 0 1px 2px var(--shadow); /* Subtle shadow */
+}
+
+/**
+ * CARD HOVER STATE
+ *
+ * Visual feedback when user hovers over card
+ * Lifts card up slightly and increases shadow
+ */
+.contact-card:hover {
+  transform: translateY(-2px); /* Move up 2px */
+  box-shadow: 0 4px 8px var(--shadow-hover); /* Larger shadow */
+  border-color: var(--primary); /* Primary color border */
+}
+
+/**
+ * CARD ICON
+ *
+ * Large emoji icon on left side of card
+ * Fixed size and centered
+ */
+.contact-card__icon {
+  font-size: 32px; /* Large emoji */
+  width: 48px; /* Fixed width */
+  height: 48px; /* Fixed height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  flex-shrink: 0; /* Don't shrink icon */
+  background: var(--bg); /* Background color */
+  border-radius: 12px; /* Rounded corners */
+}
+
+/**
+ * CARD CONTENT CONTAINER
+ *
+ * Contains title, value, and action text
+ * Takes remaining space in card
+ */
+.contact-card__content {
+  flex: 1; /* Take remaining space */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 2px; /* Small space between items */
+}
+
+/**
+ * CARD TITLE
+ *
+ * Contact method name (Email, Telefone, etc.)
+ */
+.contact-card__title {
+  font-size: 12px; /* Small text */
+  font-weight: 600; /* Semi-bold */
+  color: var(--text-light); /* Light gray */
+  text-transform: uppercase; /* ALL CAPS */
+  margin: 0; /* No margin */
+  letter-spacing: 0.5px; /* Slightly spaced letters */
+}
+
+/**
+ * CARD VALUE
+ *
+ * Actual contact information (email address, phone number, etc.)
+ */
+.contact-card__value {
+  font-size: 15px; /* Medium text */
+  font-weight: 600; /* Semi-bold */
+  color: var(--text); /* Theme text color */
+  margin: 0; /* No margin */
+}
+
+/**
+ * CARD ACTION TEXT
+ *
+ * Call-to-action text (Enviar email →, Ligar agora →)
+ * Shows what will happen when card is clicked
+ */
+.contact-card__action {
+  font-size: 13px; /* Small text */
+  color: var(--primary); /* Primary brand color */
+  font-weight: 500; /* Medium weight */
+  margin-top: 4px; /* Small space above */
+}
+
+/* ============================================
+   FOOTER INFO BOXES
+   ============================================ */
+
+/**
+ * FOOTER CONTAINER
+ *
+ * Contains additional information boxes
+ * Stacks vertically on mobile
+ */
+.contacto-footer {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 12px; /* Space between boxes */
+  margin-top: 8px; /* Space above footer */
+}
+
+/**
+ * INFO BOX
+ *
+ * Container for additional information
+ * (business hours, tips, etc.)
+ */
+.info-box {
+  background: var(--card-bg); /* Card background */
+  border: 1px solid var(--border); /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px; /* Space inside box */
+}
+
+/**
+ * INFO BOX TITLE
+ *
+ * Title with emoji icon
+ */
+.info-box__title {
+  font-size: 14px; /* Medium text */
+  font-weight: 700; /* Bold */
+  color: var(--text); /* Theme text color */
+  margin: 0 0 8px 0; /* Space below only */
+}
+
+/**
+ * INFO BOX TEXT
+ *
+ * Body text with information
+ */
+.info-box__text {
+  font-size: 13px; /* Small text */
+  color: var(--text-light); /* Light gray */
+  line-height: 1.5; /* Space between lines */
+  margin: 0; /* No margin */
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET AND UP
+   ============================================ */
+
+/**
+ * TABLET BREAKPOINT (768px and wider)
+ *
+ * On larger screens:
+ * - Wider content container
+ * - 2-column grid for contact cards
+ * - Side-by-side info boxes
+ */
+@media (min-width: 768px) {
+  /* Wider content container */
+  .contacto-content {
+    max-width: 800px; /* Wider than mobile */
+  }
+
+  /* 2-column grid for contact cards */
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  }
+
+  /* Horizontal layout for info boxes */
+  .contacto-footer {
+    flex-direction: row; /* Side by side */
+  }
+
+  /* Equal width info boxes */
+  .info-box {
+    flex: 1; /* Equal width */
+  }
+}
