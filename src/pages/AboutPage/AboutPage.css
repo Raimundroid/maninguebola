@@ -35,7 +35,7 @@
 
 .about-section h2,
 .about-section h3 {
-  color: var(--text);
+  color: var(--text-light);
   margin-bottom: 12px;
 }
 
