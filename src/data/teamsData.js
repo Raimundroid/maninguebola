@@ -211,17 +211,53 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  costaCoelhoFc: {
-    id: "costaCoelhoFc", // Unique identifier
-    name: "Costa de Coelho Fc", // Full team name
-    shortName: "Costa de Coelho FC", // ✅ NEW
-    abbr: "CC", // Abbreviation for logos
+  // costaCoelhoFc: {
+  //   id: "costaCoelhoFc", // Unique identifier
+  //   name: "Costa de Coelho Fc", // Full team name
+  //   shortName: "Costa de Coelho FC", // ✅ NEW
+  //   abbr: "CC", // Abbreviation for logos
+  //   // position: "1",
+  //   // points: "99", /////
+  //   // founded: 1000,
+  //   stadium: "Campo de Coelho",
+  //   // logo: "/images/teams/shield-gold.jpg",
+  //   colors: { primary: "blue", secondary: "yellow" },
+  //   // contact: {
+  //   //   coach: "John Dalton",
+  //   //   captain: "Jaime Paulo",
+  //   //   phone: "+258 82 12 34 567",
+  //   //   email: "eagles@example.com",
+  //   // },
+  // },
+  suporteNhachotaFc: {
+    id: "suporteNhachotaFc", // Unique identifier
+    name: "Suporte de Nhachota", // Full team name
+    shortName: " Sup. de Nhachota", // ✅ NEW
+    abbr: "SN", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
     // founded: 1000,
-    stadium: "Campo de Coelho",
+    stadium: "Campo de Nhachota",
     // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "blue", secondary: "yellow" },
+    colors: { primary: "yellow", secondary: "blue" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  madangelaFcMorrumbene: {
+    id: "madangelaFcMorrumbene", // Unique identifier
+    name: "Madangela FC de Morrumbene", // Full team name
+    shortName: "Madangela FC", // ✅ NEW
+    abbr: "MFC", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Campo Desportivo Guigobane",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "yellow", secondary: "orange" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",
