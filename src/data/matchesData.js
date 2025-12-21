@@ -97,18 +97,18 @@ const matchesData = [
     id: 6, // Unique ID for React keys
     homeTeamId: "rioSambeFc", //new
     awayTeamId: "madangelaFcMorrumbene", //new
-    // homeScore: 2, // Only for live/finished
-    // awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 0,
     date: "2025-12-21", // ISO Format
     time: "16:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Desportivo Guigobane",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["", ""],
-    // awayScorers: ["", ""],
+    homeScorers: ["G2"],
+    awayScorers: [],
   },
 
   //   {
