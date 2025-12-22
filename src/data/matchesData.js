@@ -63,18 +63,18 @@ const matchesData = [
     id: 4, // Unique ID for React keys
     homeTeamId: "slowDownFc", //new
     awayTeamId: "revolutionFc", //new
-    // homeScore: 2, // Only for live/finished
-    // awayScore: 0,
+    homeScore: 0, // Only for live/finished
+    awayScore: 0,
     date: "2025-12-21", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Golo",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["", ""],
-    // awayScorers: ["", ""],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 5, // Unique ID for React keys
@@ -217,6 +217,40 @@ const matchesData = [
   //   time: "16:00",
   //   status: "canceled",
   //   venue: "Campo Central",
+  // },
+  // {
+  //   id: sample001, // Unique ID for React keys
+  //   homeTeamId: "rioSambeFc", //new
+  //   awayTeamId: "madangelaFcMorrumbene", //new
+  //   homeScore: 8, // Only for live/finished
+  //   awayScore: 8,
+  //   date: "2025-12-22", // ISO Format
+  //   time: "16:00",
+  //   status: "finished", // 'live' | 'finished' | 'upcoming'
+  //   // minute: 67, // Current minute (only for live)
+  //   venue: "Campo Desportivo de Guigobane",
+  //   // info: "85+ espectadores", // Optional extra info
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: [],
+  //   awayScorers: [],
+  // },
+  // {
+  //   id: sample002, // Unique ID for React keys
+  //   homeTeamId: "rioSambeFc", //new
+  //   awayTeamId: "madangelaFcMorrumbene", //new
+  //   homeScore: 10, // Only for live/finished
+  //   awayScore: 10,
+  //   date: "2025-12-23", // ISO Format
+  //   time: "16:00",
+  //   status: "finished", // 'live' | 'finished' | 'upcoming'
+  //   // minute: 67, // Current minute (only for live)
+  //   venue: "Campo Desportivo de Guigobane",
+  //   // info: "85+ espectadores", // Optional extra info
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: [],
+  //   awayScorers: [],
   // },
 ];
 

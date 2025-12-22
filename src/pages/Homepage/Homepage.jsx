@@ -22,12 +22,25 @@ const Homepage = ({ matches, stats }) => {
   // Filter matches by their status
   // .filter() creates a new array with only items that pass the test
   const liveMatches = matches.filter((m) => m.status === "live");
+
   const recentMatches = matches
     .filter((m) => m.status === "finished")
-    .slice(0, 4); // Get first 2
+    .sort((a, b) => {
+      const timeA = a.time || "00:00";
+      const timeB = b.time || "00:00";
+
+      const dateTimeA = new Date(`${a.date}T${timeA}`);
+      const dateTimeB = new Date(`${b.date}T${timeB}`);
+
+      return dateTimeB - dateTimeA;
+      // new Date(b) - new Date(a);
+    })
+    .slice(0, 6); // Get first 2
+
   const upcomingMatches = matches
     .filter((m) => m.status === "upcoming")
     .slice(0, 6);
+
   const canceledMatches = matches
     .filter((m) => m.status === "canceled")
     .slice(0, 4);

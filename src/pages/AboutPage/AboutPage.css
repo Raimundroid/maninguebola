@@ -126,12 +126,18 @@
 .btn-link {
   text-decoration: none;
   font-size: 14px;
-  padding: 8px;
+  padding: 4px 8px;
   border-radius: 8px;
   border: 1px solid var(--border);
   color: var(--text-light);
   font-weight: 600;
   transition: all 200ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
 }
 
 .btn-link:hover {
@@ -148,12 +154,18 @@
   opacity: 0.9;
 }
 
-/* --- WALLETS --- */
+/* --- DONATION SEECTION / WALLETS --- */
+
+/* .donation-section {
+  background-color: red;
+  padding-inline: 10px;
+} */
+
 .wallets {
   display: grid;
-  grid-template-columns: 300px /*1fr 1fr*/;
+  grid-template-columns: 1fr /*1fr 1fr*/;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .wallet {
@@ -163,7 +175,7 @@
   padding: 12px;
   border-radius: 12px;
   background: var(--bg);
-  border: 1px dashed var(--border);
+  border: 2px dashed var(--border);
 }
 
 .wallet .logo {
@@ -199,4 +211,11 @@
 .wallet-name {
   font-size: 12px;
   color: var(--text-light);
+}
+
+.btn-link .icon #email {
+  fill: rgb(230, 77, 103);
+  stroke-width: 50px;
+  width: 24px;
+  height: 24px;
 }
