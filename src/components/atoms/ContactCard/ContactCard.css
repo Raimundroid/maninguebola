@@ -20,6 +20,8 @@
   border-radius: 15px;
   box-shadow: 0 2px 8px var(--shadow);
   border: 1px solid var(--border);
+
+  /* background-color: red; */
 }
 
 .contact-card-section-content h3 {
@@ -67,6 +69,10 @@
   width: 100%;
 }
 
+.double-items {
+  justify-content: space-between;
+}
+
 .contact-item:hover {
   transform: translateX(4px);
   background: #f1f5f9;
@@ -96,6 +102,11 @@
   fill: brown;
   stroke-width: 50px;
 }
+
+.contact-item .icon #sms {
+  fill: rgb(110, 191, 245);
+  stroke-width: 50px;
+}
 .contact-item div {
   display: flex;
   flex-direction: column;
@@ -109,4 +120,18 @@
 .contact-item span {
   color: var(--text-light);
   font-size: 13px;
+}
+
+.link-to-contact-container {
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  border-radius: 8px;
+}
+.link-to-contact {
+  /* text-decoration: none; */
+  color: var(--text);
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ContactCard.css";
 
 const ContactCard = () => {
@@ -11,8 +12,59 @@ const ContactCard = () => {
           <span className="free">É MAHALA!</span> Contacte-nos através de:
         </p>
         <div className="contact-methods">
-          {/* Method 1: WhatsApp (Most popular in MZ) */}
-          <a href="https://wa.me/258878203004" className="contact-item">
+          {/* Method 1: Phone (For non-techies) */}
+          <a
+            href="tel:+258878203004"
+            className="contact-item double-items"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir Telefone"
+          >
+            <span className="icon">
+              <svg
+                id="phone"
+                xmlns="http://www.w3.org/2000/svg"
+                width={36}
+                height={36}
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <g>
+                  <path d="M14.3308 15.9402L15.6608 14.6101C15.8655 14.403 16.1092 14.2384 16.3778 14.1262C16.6465 14.014 16.9347 13.9563 17.2258 13.9563C17.517 13.9563 17.8052 14.014 18.0739 14.1262C18.3425 14.2384 18.5862 14.403 18.7908 14.6101L20.3508 16.1702C20.5579 16.3748 20.7224 16.6183 20.8346 16.887C20.9468 17.1556 21.0046 17.444 21.0046 17.7351C21.0046 18.0263 20.9468 18.3146 20.8346 18.5833C20.7224 18.8519 20.5579 19.0954 20.3508 19.3L19.6408 20.02C19.1516 20.514 18.5189 20.841 17.8329 20.9541C17.1469 21.0672 16.4427 20.9609 15.8208 20.6501C10.4691 17.8952 6.11008 13.5396 3.35083 8.19019C3.03976 7.56761 2.93414 6.86242 3.04914 6.17603C3.16414 5.48963 3.49384 4.85731 3.99085 4.37012L4.70081 3.65015C5.11674 3.23673 5.67937 3.00464 6.26581 3.00464C6.85225 3.00464 7.41488 3.23673 7.83081 3.65015L9.40082 5.22021C9.81424 5.63615 10.0463 6.19871 10.0463 6.78516C10.0463 7.3716 9.81424 7.93416 9.40082 8.3501L8.0708 9.68018C8.95021 10.8697 9.91617 11.9926 10.9608 13.04C11.9994 14.0804 13.116 15.04 14.3008 15.9102L14.3308 15.9402Z"></path>
+                  <path d="M15.3398 8.66L20.9998 3"></path>
+                  <path d="M16.7598 3H20.9998V7.24"></path>
+                </g>
+              </svg>
+            </span>
+
+            <div>
+              <strong>Ligar / SMS</strong>
+              <span>+258 87 820 3004</span>
+            </div>
+            <span className="icon">
+              <svg
+                id="sms"
+                xmlns="http://www.w3.org/2000/svg"
+                width={36}
+                height={36}
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <g>
+                  <path d="M448,0H64C28.6,0,0,28.6,0,64v256c0,35.4,28.6,64,64,64h128l-42.7,128l192-128H448c35.4,0,64-28.6,64-64V64 C512,28.6,483.4,0,448,0z M128,234.7c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S151.6,234.7,128,234.7z M256,234.7c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S279.6,234.7,256,234.7z M384,234.7 c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S407.6,234.7,384,234.7z"></path>
+                </g>
+              </svg>
+            </span>
+          </a>
+
+          {/* Method 2: WhatsApp (Most popular in MZ) */}
+          <a
+            href="https://wa.me/258878203004"
+            className="contact-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir WhatsApp"
+          >
             <span className="icon">
               <svg
                 id="whatsapp"
@@ -32,8 +84,10 @@ const ContactCard = () => {
             </div>
           </a>
 
-          {/* Method 2: Email (Professional) */}
-          {/* <a href="mailto:raimundroid@gmail.com" className="contact-item">
+          {/* Method 3: Email (Professional) */}
+          {/* <a href="mailto:raimundroid@gmail.com" className="contact-item" target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir Email">
               <span className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,30 +105,12 @@ const ContactCard = () => {
                 <span>raimundroid@gmail.com</span>
               </div>
             </a> */}
+        </div>
 
-          {/* Method 3: Phone (For non-techies) */}
-          <a href="tel:+258878203004" className="contact-item">
-            <span className="icon">
-              <svg
-                id="phone"
-                xmlns="http://www.w3.org/2000/svg"
-                width={36}
-                height={36}
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <g>
-                  <path d="M14.3308 15.9402L15.6608 14.6101C15.8655 14.403 16.1092 14.2384 16.3778 14.1262C16.6465 14.014 16.9347 13.9563 17.2258 13.9563C17.517 13.9563 17.8052 14.014 18.0739 14.1262C18.3425 14.2384 18.5862 14.403 18.7908 14.6101L20.3508 16.1702C20.5579 16.3748 20.7224 16.6183 20.8346 16.887C20.9468 17.1556 21.0046 17.444 21.0046 17.7351C21.0046 18.0263 20.9468 18.3146 20.8346 18.5833C20.7224 18.8519 20.5579 19.0954 20.3508 19.3L19.6408 20.02C19.1516 20.514 18.5189 20.841 17.8329 20.9541C17.1469 21.0672 16.4427 20.9609 15.8208 20.6501C10.4691 17.8952 6.11008 13.5396 3.35083 8.19019C3.03976 7.56761 2.93414 6.86242 3.04914 6.17603C3.16414 5.48963 3.49384 4.85731 3.99085 4.37012L4.70081 3.65015C5.11674 3.23673 5.67937 3.00464 6.26581 3.00464C6.85225 3.00464 7.41488 3.23673 7.83081 3.65015L9.40082 5.22021C9.81424 5.63615 10.0463 6.19871 10.0463 6.78516C10.0463 7.3716 9.81424 7.93416 9.40082 8.3501L8.0708 9.68018C8.95021 10.8697 9.91617 11.9926 10.9608 13.04C11.9994 14.0804 13.116 15.04 14.3008 15.9102L14.3308 15.9402Z"></path>
-                  <path d="M15.3398 8.66L20.9998 3"></path>
-                  <path d="M16.7598 3H20.9998V7.24"></path>
-                </g>
-              </svg>
-            </span>
-            <div>
-              <strong>Ligar</strong>
-              <span>+258 87 820 3004</span>
-            </div>
-          </a>
+        <div className="link-to-contact-container">
+          <Link className="link-to-contact" to="/sobre">
+            Página de Contacto
+          </Link>
         </div>
       </div>
     </section>
