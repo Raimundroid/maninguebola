@@ -35,7 +35,7 @@ const matchesData = [
     time: "15:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
-    venue: "Rio Sambe (Coche Magumbo)",
+    venue: "Campo de Rio Sambe (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
@@ -120,7 +120,7 @@ const matchesData = [
     time: "16:00",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
-    venue: "Rio Sambe (Coche Magumbo)",
+    venue: "Campo de Rio Sambe (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display

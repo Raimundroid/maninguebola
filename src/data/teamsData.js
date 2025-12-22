@@ -129,7 +129,7 @@ const teamsData = {
     // position: "1",
     // points: "99", /////
     // founded: 1000,
-    stadium: "Rio Sambe (Coche Magumbo)",
+    stadium: "Campo de Rio Sambe (Coche Magumbo)",
     logo: "/images/teams/rioSambeFc/rioSambeFc.jpg",
     colors: { primary: "red", secondary: "green" },
     // contact: {
