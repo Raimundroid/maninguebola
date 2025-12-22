@@ -90,6 +90,16 @@
   transform: translateY(-2px);
 }
 
+.social-link #facebook {
+  fill: blue;
+  stroke-width: 50px;
+}
+
+.social-link #whatsapp {
+  fill: green;
+  stroke-width: 50px;
+}
+
 /* 4. Legal / Bottom */
 .footer-legal {
   border-top: 1px solid var(--border);

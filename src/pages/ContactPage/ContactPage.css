@@ -123,6 +123,11 @@
   display: grid; /* CSS Grid layout */
   grid-template-columns: 1fr; /* Single column on mobile */
   gap: 12px; /* Space between cards */
+
+  @media (min-width: 768px) {
+    /* 2-column grid for contact cards */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  }
 }
 
 /**
@@ -136,7 +141,7 @@
   background: var(--card-bg); /* Card background */
   border: 1px solid var(--border); /* Subtle border */
   border-radius: 12px; /* Rounded corners */
-  padding: 16px; /* Space inside card */
+  padding: 10px 16px; /* Space inside card */
   display: flex; /* Flexbox layout */
   align-items: center; /* Vertically center content */
   gap: 16px; /* Space between icon and content */
@@ -155,7 +160,7 @@
  * Lifts card up slightly and increases shadow
  */
 .contact-card:hover {
-  transform: translateY(-2px); /* Move up 2px */
+  transform: translateY(-4px); /* Move up 2px */
   box-shadow: 0 4px 8px var(--shadow-hover); /* Larger shadow */
   border-color: var(--primary); /* Primary color border */
 }
@@ -176,6 +181,24 @@
   flex-shrink: 0; /* Don't shrink icon */
   background: var(--bg); /* Background color */
   border-radius: 12px; /* Rounded corners */
+}
+.contact-card__icon #email {
+  fill: red;
+  stroke-width: 50px;
+}
+.contact-card__icon #phone {
+  fill: brown;
+  stroke-width: 50px;
+}
+
+.contact-card__icon #whatsapp {
+  fill: green;
+  stroke-width: 50px;
+}
+
+.contact-card__icon #facebook {
+  fill: blue;
+  stroke-width: 50px;
 }
 
 /**
@@ -201,7 +224,6 @@
   font-weight: 600; /* Semi-bold */
   color: var(--text-light); /* Light gray */
   text-transform: uppercase; /* ALL CAPS */
-  margin: 0; /* No margin */
   letter-spacing: 0.5px; /* Slightly spaced letters */
 }
 
@@ -211,10 +233,9 @@
  * Actual contact information (email address, phone number, etc.)
  */
 .contact-card__value {
-  font-size: 15px; /* Medium text */
+  font-size: 16px; /* Medium text */
   font-weight: 600; /* Semi-bold */
   color: var(--text); /* Theme text color */
-  margin: 0; /* No margin */
 }
 
 /**
@@ -240,11 +261,16 @@
  * Contains additional information boxes
  * Stacks vertically on mobile
  */
-.contacto-footer {
+.contact-footer {
   display: flex; /* Flexbox layout */
   flex-direction: column; /* Stack vertically on mobile */
   gap: 12px; /* Space between boxes */
   margin-top: 8px; /* Space above footer */
+
+  @media (min-width: 768px) {
+    /* Horizontal layout for info boxes */
+    flex-direction: row; /* Side by side */
+  }
 }
 
 /**
@@ -258,6 +284,11 @@
   border: 1px solid var(--border); /* Subtle border */
   border-radius: 12px; /* Rounded corners */
   padding: 16px; /* Space inside box */
+
+  @media (min-width: 768px) {
+    /* Equal width info boxes */
+    flex: 1; /* Equal width */
+  }
 }
 
 /**
@@ -282,38 +313,4 @@
   color: var(--text-light); /* Light gray */
   line-height: 1.5; /* Space between lines */
   margin: 0; /* No margin */
-}
-
-/* ============================================
-   RESPONSIVE DESIGN - TABLET AND UP
-   ============================================ */
-
-/**
- * TABLET BREAKPOINT (768px and wider)
- *
- * On larger screens:
- * - Wider content container
- * - 2-column grid for contact cards
- * - Side-by-side info boxes
- */
-@media (min-width: 768px) {
-  /* Wider content container */
-  .contacto-content {
-    max-width: 800px; /* Wider than mobile */
-  }
-
-  /* 2-column grid for contact cards */
-  .contact-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-  }
-
-  /* Horizontal layout for info boxes */
-  .contacto-footer {
-    flex-direction: row; /* Side by side */
-  }
-
-  /* Equal width info boxes */
-  .info-box {
-    flex: 1; /* Equal width */
-  }
 }

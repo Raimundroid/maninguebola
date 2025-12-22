@@ -144,6 +144,13 @@
   background: var(--bg);
 }
 
+.btn-link .icon #email {
+  fill: red;
+  stroke-width: 50px;
+  width: 24px;
+  height: 24px;
+}
+
 .btn-link.primary {
   background: var(--primary);
   color: white;
@@ -211,11 +218,4 @@
 .wallet-name {
   font-size: 12px;
   color: var(--text-light);
-}
-
-.btn-link .icon #email {
-  fill: rgb(230, 77, 103);
-  stroke-width: 50px;
-  width: 24px;
-  height: 24px;
 }
