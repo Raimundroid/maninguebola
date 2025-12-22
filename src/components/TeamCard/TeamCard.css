@@ -90,7 +90,7 @@ TeamCard Styles
   font-size: 12px;
   font-family: Calibri;
   margin-bottom: 8px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--text, #333);
   white-space: nowrap;
   overflow: hidden; /* hides the extra text that doesn't fit */

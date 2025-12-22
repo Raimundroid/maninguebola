@@ -185,8 +185,24 @@
   color: var(--text-light);
   padding-top: 12px;
   border-top: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 3px;
 }
 
 .match-card .teams .score .score-separator {
   color: var(--text-light);
+}
+
+/* .match-card .info .stadium-svg-icon {
+  background-color: red;
+} */
+
+.match-card .info .stadium-svg-icon #stadium {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
 }
