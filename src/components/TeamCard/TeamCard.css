@@ -10,7 +10,7 @@ TeamCard Styles
   background: var(--card-bg, #ffffff);
 
   /* Internal spacing inside the card */
-  padding: 16px 10px;
+  padding: 16px 5px;
 
   /* Rounded corners */
   border-radius: 12px;
@@ -50,8 +50,8 @@ TeamCard Styles
 /* Logo box styling */
 .team-card .team-logo {
   /* Fixed dimensions for consistent appearance */
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
 
   /* Center horizontally with auto margins */
   margin: 0 auto 12px;
@@ -90,7 +90,7 @@ TeamCard Styles
   font-size: 12px;
   font-family: Calibri;
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text, #333);
   white-space: nowrap;
   overflow: hidden; /* hides the extra text that doesn't fit */
