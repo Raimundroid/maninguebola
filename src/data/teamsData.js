@@ -123,7 +123,7 @@ const teamsData = {
 
   rioSambeFc: {
     id: "rioSambeFc", // Unique identifier
-    name: "Rio Sambe FC", // Full team name
+    name: "Associação do Rio Sambe", // Full team name
     shortName: "Rio Sambe FC", // ✅ NEW
     abbr: "RS", // Abbreviation for logos
     // position: "1",
