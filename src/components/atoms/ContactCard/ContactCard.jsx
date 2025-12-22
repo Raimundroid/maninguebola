@@ -108,7 +108,7 @@ const ContactCard = () => {
         </div>
 
         <div className="link-to-contact-container">
-          <Link className="link-to-contact" to="/sobre">
+          <Link className="link-to-contact" to="/contacto">
             Página de Contacto
           </Link>
         </div>
