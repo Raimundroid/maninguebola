@@ -122,9 +122,23 @@ const ContactPage = () => {
               </svg>
             </div>
             <div className="contact-card__content">
-              <h3 className="contact-card__title">Telefone</h3>
+              <h3 className="contact-card__title">Telefone / SMS</h3>
               <p className="contact-card__value">{contactInfo.phone}</p>
-              <span className="contact-card__action">Ligar agora →</span>
+              <span className="contact-card__action">Ligar/SMS agora →</span>
+            </div>
+            <div className="contact-card__icon">
+              <svg
+                id="sms"
+                xmlns="http://www.w3.org/2000/svg"
+                width={36}
+                height={36}
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <g>
+                  <path d="M448,0H64C28.6,0,0,28.6,0,64v256c0,35.4,28.6,64,64,64h128l-42.7,128l192-128H448c35.4,0,64-28.6,64-64V64 C512,28.6,483.4,0,448,0z M128,234.7c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S151.6,234.7,128,234.7z M256,234.7c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S279.6,234.7,256,234.7z M384,234.7 c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S407.6,234.7,384,234.7z"></path>
+                </g>
+              </svg>
             </div>
           </a>
 

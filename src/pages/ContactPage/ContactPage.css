@@ -190,6 +190,10 @@
   fill: brown;
   stroke-width: 50px;
 }
+.contact-card__icon #sms {
+  fill: rgb(110, 191, 245);
+  stroke-width: 50px;
+}
 
 .contact-card__icon #whatsapp {
   fill: green;
