@@ -129,7 +129,7 @@ const teamsData = {
     // position: "1",
     // points: "99", /////
     // founded: 1000,
-    stadium: "Indefinido",
+    stadium: "Rio Sambe (Coche Magumbo)",
     logo: "/images/teams/rioSambeFc/rioSambeFc.jpg",
     colors: { primary: "red", secondary: "green" },
     // contact: {
@@ -258,6 +258,24 @@ const teamsData = {
     stadium: "Campo Desportivo Guigobane",
     // logo: "/images/teams/shield-gold.jpg",
     colors: { primary: "yellow", secondary: "orange" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  sportingKhundula: {
+    id: "sportingKhundula", // Unique identifier
+    name: "Sporting de Khundula", // Full team name
+    shortName: "Sport. de Khundula", // ✅ NEW
+    abbr: "SK", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "yellow", secondary: "green" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",

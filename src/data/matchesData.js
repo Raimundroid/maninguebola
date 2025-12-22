@@ -35,7 +35,7 @@ const matchesData = [
     time: "15:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
-    venue: "Coche Magumbo",
+    venue: "Rio Sambe (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
@@ -109,6 +109,23 @@ const matchesData = [
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["G2"],
     awayScorers: [],
+  },
+  {
+    id: 7, // Unique ID for React keys
+    homeTeamId: "rioSambeFc", //new
+    awayTeamId: "sportingKhundula", //new
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2025-12-28", // ISO Format
+    time: "16:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Rio Sambe (Coche Magumbo)",
+    // info: "85+ espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: ["-"],
+    // awayScorers: ["-"],
   },
 
   //   {
