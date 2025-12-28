@@ -326,7 +326,7 @@ const teamsData = {
     // points: "50", /////
     founded: 2012,
     stadium: "Tigers Cave",
-    logo: "/images/teams/shield-png-1.png",
+    logo: "/images/teams/shield-golden.jpg",
     colors: { primary: "#00FF00", secondary: "#000000" },
     contact: {
       coach: "Gomes Boavista",
@@ -343,7 +343,7 @@ const teamsData = {
     // points: "50", /////
     founded: 2009,
     stadium: "Cats House",
-    logo: "/images/teams/shield-png-2.png",
+    logo: "/images/teams/shield-gold.jpg",
     colors: { primary: "#003cffff", secondary: "#df0c0cff" },
     contact: {
       coach: "Marcus Fontes",
