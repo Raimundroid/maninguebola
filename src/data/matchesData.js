@@ -118,14 +118,14 @@ const matchesData = [
     awayScore: 1,
     date: "2025-12-28", // ISO Format
     time: "16:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Rio Sambe (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["-"],
-    // awayScorers: ["-"],
+    homeScorers: ["-"],
+    awayScorers: ["-"],
   },
 
   //   {
