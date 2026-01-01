@@ -17,6 +17,7 @@ import MatchesGrid from "../../components/MatchesGrid/MatchesGrid";
 import StatsGrid from "../../components/StatsGrid/StatsGrid";
 import ContactCard from "../../components/atoms/ContactCard/ContactCard";
 import NewYearBanner from "../../components/atoms/newYearBanner/NewYearBanner";
+// import SeasonalBanner from "../../components/seasonalBanner/SeasonalBanner";
 import "./Homepage.css";
 
 const Homepage = ({ matches, stats }) => {
@@ -50,6 +51,7 @@ const Homepage = ({ matches, stats }) => {
     <div className="homepage-container">
       {/* Your existing Hero component goes here */}
       <NewYearBanner />
+      {/* <SeasonalBanner /> */}
 
       {/* Live matches section - only show if there are live matches */}
       {/* Conditional rendering: {condition && <Component />} */}
