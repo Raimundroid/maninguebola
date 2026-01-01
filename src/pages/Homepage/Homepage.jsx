@@ -16,6 +16,7 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import MatchesGrid from "../../components/MatchesGrid/MatchesGrid";
 import StatsGrid from "../../components/StatsGrid/StatsGrid";
 import ContactCard from "../../components/atoms/ContactCard/ContactCard";
+import NewYearBanner from "../../components/atoms/newYearBanner/NewYearBanner";
 import "./Homepage.css";
 
 const Homepage = ({ matches, stats }) => {
@@ -48,6 +49,8 @@ const Homepage = ({ matches, stats }) => {
   return (
     <div className="homepage-container">
       {/* Your existing Hero component goes here */}
+      <NewYearBanner />
+
       {/* Live matches section - only show if there are live matches */}
       {/* Conditional rendering: {condition && <Component />} */}
       {liveMatches.length > 0 && (
@@ -61,12 +64,14 @@ const Homepage = ({ matches, stats }) => {
         </>
       )}
       {/* Recent results section */}
+
       <SectionHeader
         title="Resultados Recentes"
         linkTo={"/jogos?filter=finished"}
         linkText={"Ver todos"}
       />
       <MatchesGrid matches={recentMatches} />
+
       {/* Upcoming matches section */}
       <SectionHeader
         title="Próximos Jogos"
@@ -74,6 +79,7 @@ const Homepage = ({ matches, stats }) => {
         linkText={"Ver todos"}
       />
       <MatchesGrid matches={upcomingMatches} />
+
       {/* Upcoming matches section */}
       {/* <SectionHeader
         title="Jogos Cancelados"
@@ -81,6 +87,7 @@ const Homepage = ({ matches, stats }) => {
         linkText={"Ver todos"}
       /> */}
       {/* <MatchesGrid matches={canceledMatches} /> */}
+
       {/* Statistics section */}
       {/* <SectionHeader title="Estatísticas Rápidas" /> */}
       {/* <StatsGrid stats={stats} /> */}
