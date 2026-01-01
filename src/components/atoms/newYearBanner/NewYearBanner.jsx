@@ -29,8 +29,9 @@ const NewYearBanner = () => {
         {/* Heading uses h2 because it lives under the main hero section */}
         <h2 className="new-year-banner__title">🎉 Feliz Ano Novo {year} 🎉</h2>
         <p className="new-year-banner__text">
-          Muito sucesso, saúde, paz, e alegria para você e sua família! Que{" "}
-          {year} seja um ano de muitas conquistas e sonhos realizado. ✨
+          Muito sucesso, saúde, paz, e alegria para você e sua família!
+          <br /> Que {year} seja um ano de muitas conquistas e sonhos
+          realizados. ✨
         </p>
       </div>
     </section>

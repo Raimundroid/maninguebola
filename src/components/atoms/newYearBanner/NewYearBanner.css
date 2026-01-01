@@ -1,3 +1,135 @@
+/* Main banner container
 .new-year-banner {
-  background-color: aquamarine;
+  position: relative; /* Needed to layer overlay on top of background image
+  margin: 1rem; /* Space around banner on small screens
+  border-radius: 16px; /* Soft rounded corners for modern UI
+  overflow: hidden; /* Ensures gradient border and image don't overflow
+  background-image: url("/images/hero/football-field-upperview-0.webp"); /* Local image from project
+  background-size: cover; /* Ensures image covers entire section
+  background-position: center; /* Keeps focus centered on all screen sizes
+
+  /* Gradient border using background-clip technique
+  border: 3px solid transparent; /* Required for gradient border trick
+  background-origin: border-box; /* Includes border in background calculation
+  background-clip: padding-box, border-box; /* Separates image and border
+
+  /* Layered background: image + gradient border
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    /* Dark overlay for readability  linear-gradient(135deg, #ffcc00, #ff6600); /* Gradient border colors
+}
+
+/* Overlay content container
+.new-year-banner__overlay {
+  padding: 1.5rem; /* Comfortable spacing for mobile
+  text-align: center; /* Centered text for hero-style presentation
+  color: #ffffff; /* High contrast text for accessibility
+}
+
+/* Title
+.new-year-banner__title {
+  font-size: 1.4rem; /* Mobile-first font size
+  font-weight: 700; /* Strong visual emphasis
+  margin-bottom: 0.5rem; /* Space below heading
+}
+
+/* Supporting text
+.new-year-banner__text {
+  font-size: 1rem; /* Readable base font size
+  line-height: 1.5; /* Improves readability on small screens
+}
+
+/* Tablet and up
+@media (min-width: 768px) {
+  .new-year-banner__title {
+    font-size: 1.8rem; /* Scales nicely on larger screens
+  }
+
+  .new-year-banner__text {
+    font-size: 1.1rem; /* Slightly larger body text
+  }
+} */
+
+/* ====================+++++++=========== */
+
+/* Main banner container */
+.new-year-banner {
+  color: white;
+  text-align: center;
+  margin: 5px auto 10px; /* Centers the container on the page */
+  max-width: var(--page-max-width);
+  width: 100%;
+  height: 180px;
+
+  /* --- Gradient Border Implementation --- */
+  /* 1. Use background-clip to ensure the background only covers the border box (transparent inside) */
+  /* Remove the 'Inner background color' line that filled the interior */
+  background: linear-gradient(-45deg, gold 0, red 100%) border-box;
+
+  /* 2. Set the border-radius */
+  border-radius: 12px;
+
+  /* 3. Set a transparent border width (the gradient will show through this width) */
+  border: 2px solid transparent;
+
+  /* Add position: relative for positioning content absolutely within it, if needed */
+  position: relative;
+
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+
+  @media (min-width: 992px) {
+    height: 220px;
+  }
+  @media (min-width: 1200px) {
+    height: 240px;
+  }
+}
+
+/* Overlay content container */
+.new-year-banner__overlay {
+  /* Ensure the hero fills the entire container */
+  width: 100%;
+  height: 100%;
+  border-radius: 12px; /* Apply the same radius as the container */
+
+  /* --- Background Image Properties (Best Definitions) --- */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hero/football-field-upperview-0.webp"); /* Adds dark overlay for readability */
+  /* "/images/hero/blue-stadium-0.webp" */
+  /* "/images/hero/blue&yellow-half-stadium-0.webp"*/
+  /* "/images/hero/football-field-upperview-0.webp" */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* ESSENTIAL: Ensures the image covers the entire area */
+
+  /* To center the content vertical and horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+}
+
+/* Title */
+.new-year-banner__title {
+  font-size: 1.4rem; /* Mobile-first font size */
+  font-weight: 700; /* Strong visual emphasis */
+  margin-bottom: 0.5rem; /* Space below heading */
+}
+
+/* Supporting text */
+.new-year-banner__text {
+  font-size: 1rem; /* Readable base font size */
+  line-height: 1.5; /* Improves readability on small screens */
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .new-year-banner__title {
+    font-size: 1.8rem; /* Scales nicely on larger screens */
+  }
+
+  .new-year-banner__text {
+    font-size: 1.1rem; /* Slightly larger body text */
+  }
 }

@@ -3,7 +3,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <div className="hero">
         <h1 className="title">ManingueBola⚽</h1>
 
@@ -12,7 +12,7 @@ const Hero = () => {
           Acompanhe todos os jogos, resultados, e estatísticas do Futebol Local!
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
