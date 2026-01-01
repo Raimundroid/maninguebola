@@ -49,7 +49,7 @@ const Homepage = ({ matches, stats }) => {
   return (
     <div className="homepage-container">
       {/* Your existing Hero component goes here */}
-      <NewYearBanner />
+      {/* <NewYearBanner /> */}
 
       {/* Live matches section - only show if there are live matches */}
       {/* Conditional rendering: {condition && <Component />} */}
