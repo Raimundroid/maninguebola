@@ -9,7 +9,7 @@ const Hero = () => {
 
         <p className="heading">Bem-vindo ao website ManingueBola!</p>
         <p className="sub-heading">
-          Acompanhe todos os jogos, resultados, e estatísticas do Futebol Local!
+          Acompanhe jogos, resultados, e estatísticas do Futebol Local!
         </p>
       </div>
     </section>
