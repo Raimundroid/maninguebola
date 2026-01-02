@@ -91,6 +91,7 @@
   /* Ensure the hero fills the entire container */
   width: 100%;
   height: 100%;
+  padding: 0 5px;
   border-radius: 12px; /* Apply the same radius as the container */
 
   /* --- Background Image Properties (Best Definitions) --- */
