@@ -96,10 +96,14 @@
 
   /* --- Background Image Properties (Best Definitions) --- */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/seasonalBanner/la-on-the-night-with-new-year-fireworks.avif"); /* Adds dark overlay for readability */
-  /* "/images/seasonalBanner/london-new-years-eve-fireworks-0.webp") */
-  /* "url(/images/seasonalBanner/la-on-the-night-with-new-year-fireworks.avif") */
-  /* "/images/hero/football-field-upperview-0.webp" */
+    url("/images/seasonalBanner/belgrade-new-year-fireworks-0.webp"); /* Adds dark overlay for readability */
+
+  /* belgrade-new-year-fireworks-0.webp */
+  /* clock-tower-fireworks-0.webp */
+  /* la-new-year-fireworks-0.webp */
+  /* london-new-year-fireworks-0.webp */
+  /* red-fireworks-0.webp */
+
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover; /* ESSENTIAL: Ensures the image covers the entire area */
