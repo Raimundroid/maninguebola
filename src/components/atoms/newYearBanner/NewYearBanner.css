@@ -63,7 +63,7 @@
   /* --- Gradient Border Implementation --- */
   /* 1. Use background-clip to ensure the background only covers the border box (transparent inside) */
   /* Remove the 'Inner background color' line that filled the interior */
-  background: linear-gradient(135deg, rgb(51, 255, 0), orange, blue, cyan)
+  background: linear-gradient(135deg, rgb(51, 255, 0), orange, blue, cyan, red)
     border-box;
   /* background: linear-gradient(-45deg, blue 0, green 100%) border-box; */
 
