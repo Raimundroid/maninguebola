@@ -63,14 +63,14 @@
   /* --- Gradient Border Implementation --- */
   /* 1. Use background-clip to ensure the background only covers the border box (transparent inside) */
   /* Remove the 'Inner background color' line that filled the interior */
-  background: linear-gradient(135deg, gold, blue, cyan) border-box;
+  background: linear-gradient(135deg, aqua, green, orange) border-box;
   /* background: linear-gradient(-45deg, blue 0, green 100%) border-box; */
 
   /* 2. Set the border-radius */
   border-radius: 12px;
 
   /* 3. Set a transparent border width (the gradient will show through this width) */
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 
   /* Add position: relative for positioning content absolutely within it, if needed */
   position: relative;
@@ -97,7 +97,7 @@
 
   /* --- Background Image Properties (Best Definitions) --- */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/seasonalBanner/clock-tower-fireworks-0.webp"); /* Adds dark overlay for readability */
+    url("/images/seasonalBanner/la-new-year-fireworks-0.webp"); /* Adds dark overlay for readability */
 
   /* belgrade-new-year-fireworks-0.webp */
   /* clock-tower-fireworks-0.webp */

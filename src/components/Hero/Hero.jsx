@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero-container">
       <div className="hero">
-        <h1 className="title">ManingueBola⚽</h1>
+        <h1 className="title">⚽ManingueBola⚽</h1>
 
         <p className="heading">Bem-vindo ao website ManingueBola!</p>
         <p className="sub-heading">
