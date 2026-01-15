@@ -14,7 +14,7 @@ const NewYearBanner = () => {
   const year = today.getFullYear();
 
   //   define the visible date range: Jan 1 - Jan 15
-  const isNewYaerPeriod = month === 0 && day >= 1 && day <= 15;
+  const isNewYaerPeriod = month === 0 && day >= 1 && day <= 31;
 
   //   Component always exists, but conditionally renders nothing if outside date range
   if (!isNewYaerPeriod) return null;
@@ -31,7 +31,7 @@ const NewYearBanner = () => {
         <p className="new-year-banner__text">
           Muito sucesso, saúde, paz, e alegria para você e sua família!
           <br /> Que {year} seja um ano de muitas conquistas e sonhos
-          realizados. ✨
+          realizados.✨
         </p>
       </div>
     </section>
