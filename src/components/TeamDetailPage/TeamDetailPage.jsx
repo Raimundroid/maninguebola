@@ -1902,11 +1902,12 @@ const TeamDetailPage = ({
   // Example: If team.name doesn't exist, name = "Nome da Equipa"
   const {
     name = "Nome da Equipa",
-    logo = "/images/teams/default-team.png",
+    // logo = "/images/teams/default-team.png",
+    logo,
     abbr = "XX",
     founded = "Indefinido",
     stadium = "Indefinido",
-    colors = { primary: "#3b82f6", secondary: "#1e40af" },
+    colors = { primary: "#283c5eff", secondary: "#1e40af" },
     contact = {},
   } = team;
 
@@ -2091,14 +2092,42 @@ const TeamDetailPage = ({
             borderRadius: "12px",
           }}
         >
+          {/* Logo box - displays team abbreviation */}
+          {/* <div className="team-logo">
+          {team?.logo ? (
+            <img
+              className="team-logo-img"
+              src={team?.logo}
+              alt={team?.abbr}
+              loading="lazy"
+              width="64"
+              height="64"
+            />
+          ) : (
+            // Fallback if logo path is missing
+            team?.abbr
+          )}
+        </div> */}
+
           <div className="team-header__content">
             {/* Logo and basic info section */}
             <div className="team-header__logo-section">
-              <img
-                src={logo || "/images/teams/default-team-logo.png"}
-                alt={abbr || name}
-                className="team-header__logo"
-              />
+              <div className="team-logo">
+                {logo ? (
+                  <img
+                    src={logo}
+                    // src={logo || "/images/teams/default-team-logo.png"}
+                    alt={abbr || name}
+                    loading="lazy"
+                    width="96"
+                    height="96"
+                    className="team-header__logo team-logo-img"
+                  />
+                ) : (
+                  abbr
+                )}
+              </div>
+
               <div className="team-header__info">
                 <h1 className="team-header__name">{name}</h1>
                 <div className="team-header__meta">
