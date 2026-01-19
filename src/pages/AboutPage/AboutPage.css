@@ -33,6 +33,10 @@
   /* background-color: red; */
 }
 
+/* use clamp() to adjust the size of this h2 "Bem-vindo(a) ao ManingueBola" depending on the screen size */
+/* .about-section h2 {
+  font-size: 20px;
+} */
 .about-section h2,
 .about-section h3 {
   color: var(--text-light);

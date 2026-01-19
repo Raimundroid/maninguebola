@@ -58,7 +58,7 @@ TeamCard Styles
   margin: 0 auto 12px;
 
   /* Text size for abbreviation */
-  font-size: 24px;
+  font-size: 32px;
 
   /* Background color */
   background: var(--border, #e0e0e0);
@@ -76,6 +76,8 @@ TeamCard Styles
 
   /* Text color */
   color: var(--text-light, #666);
+
+  border: 1px solid black;
 }
 
 /*.team-card*/

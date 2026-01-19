@@ -5,8 +5,12 @@
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  display: inline-block;
   margin-bottom: 24px;
   width: fit-content;
   white-space: nowrap;
+
+  display: inline-flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }

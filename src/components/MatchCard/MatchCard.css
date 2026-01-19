@@ -77,8 +77,12 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
+  font-size: 18px;
+  /* padding-inline: 5px; */
   color: var(--text-light);
+  border: 1px solid black;
 }
+
 /* }==== */
 .match-card .teams .team .team-logo .team-logo-img {
   border-radius: 8px;

@@ -96,6 +96,15 @@
   font-weight: 700; /* Bold */
   color: var(--text); /* Theme text color */
   margin: 0 0 12px 0; /* Space below only */
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-title .phone-svg {
+  width: 500px;
 }
 
 /**

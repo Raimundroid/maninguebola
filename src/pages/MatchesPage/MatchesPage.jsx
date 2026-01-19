@@ -98,6 +98,25 @@ const complexMatchSorter = (a, b) => {
   }
 };
 
+const MatchIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    height="18px"
+    width="18px"
+    fill="currentColor"
+    stroke="currentColor"
+    // strokeWidth="2"
+    // strokeLinecap="round"
+    // strokeLinejoin="round"
+    className={className}
+  >
+    <g>
+      <path d="M0,71.442v369.116h512V71.442H0z M273.86,205.491c20.788,7.373,35.721,27.225,35.721,50.509s-14.933,43.137-35.721,50.509 V205.491z M35.721,190.512h47.628v130.977H35.721V190.512z M238.14,306.509c-20.788-7.373-35.721-27.225-35.721-50.509 c0-23.284,14.933-43.137,35.721-50.509V306.509z M238.14,168.494c-40.712,8.297-71.442,44.38-71.442,87.506 s30.729,79.208,71.442,87.506v61.332H35.721v-47.628h59.535c13.131,0,23.814-10.683,23.814-23.814V178.605 c0-13.131-10.683-23.814-23.814-23.814H35.721v-47.628H238.14V168.494z M476.279,321.488h-47.628V190.512h47.628V321.488z M476.279,154.791h-59.535c-13.131,0-23.814,10.683-23.814,23.814v154.791c0,13.131,10.683,23.814,23.814,23.814h59.535v47.628 H273.86v-61.332c40.712-8.297,71.442-44.38,71.442-87.506s-30.73-79.208-71.442-87.506v-61.332h202.419V154.791z"></path>
+    </g>
+  </svg>
+);
+
 const MatchesPage = ({ matches }) => {
   // 1. Hook to read the URL query parameters
   const [searchParams] = useSearchParams();
@@ -163,7 +182,8 @@ const MatchesPage = ({ matches }) => {
   return (
     <div className="matches-page-container">
       {/* Page title badge */}
-      <PageIndicator icon="📅" title="Todos os Jogos" />
+      {/* 📅 */}
+      <PageIndicator icon=<MatchIcon /> title="Todos os Jogos" />
 
       {/* Filter buttons */}
       {/* When user clicks a filter, setActiveFilter is called */}
