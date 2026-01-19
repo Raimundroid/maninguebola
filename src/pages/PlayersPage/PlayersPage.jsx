@@ -28,7 +28,8 @@ const PlayersPage = ({ players = [] /*,teams = {}*/ }) => {
   return (
     <div className="players-page-container">
       {/* icon="👥" */}
-      <PageIndicator icon=<PlayersIcon /> title="Tabela dos Jogadores" />
+      <PageIndicator icon=<PlayersIcon /> title="Jogadores" />
+      {/* title="Tabela dos Jogadores" / */}
 
       <PlayersTable players={players} /*teams={teams}*/ />
       {/* TableCaption is used with the OG PlayersTable */}

@@ -183,7 +183,8 @@ const MatchesPage = ({ matches }) => {
     <div className="matches-page-container">
       {/* Page title badge */}
       {/* 📅 */}
-      <PageIndicator icon=<MatchIcon /> title="Todos os Jogos" />
+      <PageIndicator icon=<MatchIcon /> title="Jogos" />
+      {/* title="Todos os Jogos" /> */}
 
       {/* Filter buttons */}
       {/* When user clicks a filter, setActiveFilter is called */}

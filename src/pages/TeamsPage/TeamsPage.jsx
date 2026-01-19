@@ -34,7 +34,7 @@ const TeamsPage = ({ teams }) => {
   return (
     <div className="teams-page-container">
       {/* 🎽 */}
-      <PageIndicator icon=<TeamsIcon /> title="Todos os Jogos" />
+      <PageIndicator icon=<TeamsIcon /> title="Equipas" />
 
       <TeamsGrid teams={teams} />
     </div>
