@@ -63,7 +63,8 @@
   /* --- Gradient Border Implementation --- */
   /* 1. Use background-clip to ensure the background only covers the border box (transparent inside) */
   /* Remove the 'Inner background color' line that filled the interior */
-  background: linear-gradient(90deg, blue 0%, gold, magenta 100%) border-box;
+  background: linear-gradient(90deg, blue 0%, rgb(255, 218, 11), lime 100%)
+    border-box;
   /* background: linear-gradient(-45deg, blue 0, green 100%) border-box; */
 
   /* 2. Set the border-radius */
@@ -141,5 +142,13 @@
 }
 
 .current-year {
-  color: green;
+  background: linear-gradient(
+    180deg,
+    lime 0%,
+    aqua 45% 55%,
+    blue 100%
+  ); /* Gradient color */
+  background-clip: text; /* Standard property for background clip */
+  -webkit-background-clip: text; /* Webkit-specific property for background clip */
+  color: transparent; /* Make the text color tranparent to show the gradient color */
 }
