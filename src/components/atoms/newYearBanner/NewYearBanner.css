@@ -63,7 +63,7 @@
   /* --- Gradient Border Implementation --- */
   /* 1. Use background-clip to ensure the background only covers the border box (transparent inside) */
   /* Remove the 'Inner background color' line that filled the interior */
-  background: linear-gradient(90deg, green 0%, white, yellow 100%) border-box;
+  background: linear-gradient(90deg, blue 0%, gold, magenta 100%) border-box;
   /* background: linear-gradient(-45deg, blue 0, green 100%) border-box; */
 
   /* 2. Set the border-radius */
@@ -97,7 +97,7 @@
 
   /* --- Background Image Properties (Best Definitions) --- */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/seasonalBanner/red-fireworks-0.webp"); /* Adds dark overlay for readability */
+    url("/images/seasonalBanner/belgrade-new-year-fireworks-0.webp"); /* Adds dark overlay for readability */
 
   /* belgrade-new-year-fireworks-0.webp */
   /* clock-tower-fireworks-0.webp */
@@ -138,4 +138,8 @@
   .new-year-banner__text {
     font-size: 1.1rem; /* Slightly larger body text */
   }
+}
+
+.current-year {
+  color: green;
 }
