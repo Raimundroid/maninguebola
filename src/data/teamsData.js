@@ -229,10 +229,10 @@ const teamsData = {
   //   //   email: "eagles@example.com",
   //   // },
   // },
-  suporteNhachotaFc: {
-    id: "suporteNhachotaFc", // Unique identifier
-    name: "Suporte de Nhachota", // Full team name
-    shortName: " Sup. de Nhachota", // ✅ NEW
+  sportNhachotaFc: {
+    id: "sportingNhachotaFc", // Unique identifier
+    name: "Sporting de Nhachota", // Full team name
+    shortName: " Sport. de Nhachota", // ✅ NEW
     abbr: "SN", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
@@ -276,6 +276,42 @@ const teamsData = {
     stadium: "Indefinido",
     // logo: "/images/teams/shield-gold.jpg",
     colors: { primary: "yellow", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  benficaIlhaInhambane: {
+    id: "benficaIlhaInhambane", // Unique identifier
+    name: "Benfica da Ilha de Inhambane", // Full team name
+    shortName: "Benf. da Ilha de I'mbane", // ✅ NEW
+    abbr: "BII", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "orange", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  santoAntonioMongue: {
+    id: "santoAntonioMongue", // Unique identifier
+    name: "Santo Antônio de Mongue", // Full team name
+    shortName: "S. Antônio de Mongue", // ✅ NEW
+    abbr: "SAM", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "green", secondary: "orange" },
     // contact: {
     //   coach: "John Dalton",
     //   captain: "Jaime Paulo",

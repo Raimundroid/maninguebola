@@ -36,6 +36,7 @@ const MatchCard = ({ match }) => {
     weekday: "long",
     day: "numeric",
     month: "short",
+    year: "numeric",
   }).format(matchDate);
 
   // Capitalize first letter (just in case locale returns lowercase)

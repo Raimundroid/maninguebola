@@ -52,7 +52,7 @@ const matchesData = [
     time: "15:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
-    venue: "Campo Internacional de Miluge",
+    venue: "Campo do Internacional de Miluge",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
@@ -78,7 +78,7 @@ const matchesData = [
   },
   {
     id: 5, // Unique ID for React keys
-    homeTeamId: "suporteNhachotaFc", //new
+    homeTeamId: "sportNhachotaFc", //new
     awayTeamId: "palmeirasMadangelaFc", //new
     homeScore: 1, // Only for live/finished
     awayScore: 1,
@@ -126,6 +126,40 @@ const matchesData = [
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["-"],
     awayScorers: ["-"],
+  },
+  {
+    id: 8, // Unique ID for React keys
+    homeTeamId: "rioSambeFc", //new
+    awayTeamId: "benficaIlhaInhambane", //new
+    // homeScore: 1, // Only for live/finished
+    // awayScore: 1,
+    date: "2026-02-07", // ISO Format
+    time: "16:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo do Internacional de Miluge",
+    // info: "85+ espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: ["-"],
+    // awayScorers: ["-"],
+  },
+  {
+    id: 9, // Unique ID for React keys
+    homeTeamId: "rioSambeFc", //new
+    awayTeamId: "santoAntonioMongue", //new
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-02-08", // ISO Format
+    time: "14:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo do Internacional de Miluge",
+    // info: "85+ espectadores", // Optional extra info
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: ["-"],
+    // awayScorers: ["-"],
   },
 
   //   {
