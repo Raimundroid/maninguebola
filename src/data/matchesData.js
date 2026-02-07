@@ -132,7 +132,7 @@ const matchesData = [
     homeTeamId: "rioSambeFc", //new
     awayTeamId: "benficaIlhaInhambane", //new
     homeScore: 1, // Only for live/finished
-    // awayScore: 2,
+    awayScore: 2,
     date: "2026-02-07", // ISO Format
     time: "16:00",
     status: "finished", // 'live' | 'finished' | 'upcoming'
@@ -146,10 +146,10 @@ const matchesData = [
   },
   {
     id: 9, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
-    awayTeamId: "santoAntonioMongue", //new
-    homeScore: 1, // Only for live/finished
-    awayScore: 1,
+    homeTeamId: "santoAntonioMongue", //new
+    awayTeamId: "rioSambeFc", //new
+    // homeScore: 1, // Only for live/finished
+    // awayScore: 1,
     date: "2026-02-08", // ISO Format
     time: "14:00",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
@@ -242,7 +242,7 @@ const matchesData = [
     homeTeamId: "cats", //new
     awayTeamId: "tigers", //new
     // No scores for upcoming matches
-    date: "2026-02-15", // ISO Format
+    date: "2026-02-22", // ISO Format
     time: "16:15",
     status: "upcoming",
     venue: "Campo Principal",
