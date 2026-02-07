@@ -286,7 +286,7 @@ const teamsData = {
   benficaIlhaInhambane: {
     id: "benficaIlhaInhambane", // Unique identifier
     name: "Benfica da Ilha de Inhambane", // Full team name
-    shortName: "Benf. da Ilha de I'mbane", // ✅ NEW
+    shortName: "Benf. d' Ilha d' I'mbane", // ✅ NEW
     abbr: "BII", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
