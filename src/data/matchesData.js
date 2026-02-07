@@ -131,18 +131,18 @@ const matchesData = [
     id: 8, // Unique ID for React keys
     homeTeamId: "rioSambeFc", //new
     awayTeamId: "benficaIlhaInhambane", //new
-    // homeScore: 1, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 1, // Only for live/finished
+    // awayScore: 2,
     date: "2026-02-07", // ISO Format
     time: "16:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo do Internacional de Miluge",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["-"],
-    // awayScorers: ["-"],
+    homeScorers: ["-", "-"],
+    awayScorers: ["-"],
   },
   {
     id: 9, // Unique ID for React keys
