@@ -57,7 +57,7 @@ const matchesData = [
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["G2 (2)", "Leuss"],
-    awayScorers: ["-"],
+    awayScorers: [],
   },
   {
     id: 4, // Unique ID for React keys
@@ -90,8 +90,8 @@ const matchesData = [
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["-"],
-    awayScorers: ["-"],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 6, // Unique ID for React keys
@@ -124,8 +124,8 @@ const matchesData = [
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["-"],
-    awayScorers: ["-"],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 8, // Unique ID for React keys
@@ -141,25 +141,25 @@ const matchesData = [
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["-"],
-    awayScorers: ["-", "-"],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 9, // Unique ID for React keys
     homeTeamId: "santoAntonioMongue", //new
     awayTeamId: "rioSambeFc", //new
-    // homeScore: 1, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 2, // Only for live/finished
+    awayScore: 1,
     date: "2026-02-08", // ISO Format
     time: "14:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo do Internacional de Miluge",
     // info: "85+ espectadores", // Optional extra info
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: ["-"],
-    // awayScorers: ["-"],
+    homeScorers: [],
+    awayScorers: [],
   },
 
   //   {
