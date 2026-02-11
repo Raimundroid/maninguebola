@@ -191,8 +191,15 @@
   border-top: 1px solid var(--border);
 
   display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-items: center; */
+  gap: 3px;
+}
+
+.match-card .info .match-location {
+  display: flex;
   align-items: center;
-  justify-items: center;
   gap: 3px;
 }
 
@@ -209,4 +216,12 @@
   width: 20px;
   height: 20px;
   margin-left: 5px;
+}
+
+.match-card .competition {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 8px;
 }
