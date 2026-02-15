@@ -10,7 +10,7 @@
   /* --- Gradient Border Implementation --- */
   /* 1. Use background-clip to ensure the background only covers the border box (transparent inside) */
   /* Remove the 'Inner background color' line that filled the interior */
-  background: linear-gradient(180deg, red 0%, blue, yellow 100%) border-box;
+  background: linear-gradient(180deg, yellow 0%, aqua, gold 100%) border-box;
 
   /* 2. Set the border-radius */
   border-radius: 12px;
@@ -43,7 +43,7 @@
 
   /* --- Background Image Properties (Best Definitions) --- */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/hero/blue-stadium-0.webp"); /* Adds dark overlay for readability */
+    url("/images/hero/blue&yellow-half-stadium-0.webp"); /* Adds dark overlay for readability */
   /* "blue-stadium-0.webp" */
   /* "blue&yellow-half-stadium-0.webp"*/
   /* "football-field-upperview-0.webp" */

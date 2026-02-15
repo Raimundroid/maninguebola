@@ -165,73 +165,73 @@ const matchesData = [
     id: 10, // Unique ID for React keys
     homeTeamId: "UDChimedje", //new
     awayTeamId: "kakanavas", //new
-    // homeScore: 2, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
     date: "2026-02-14", // ISO Format
     time: "06:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
     competition: "Pande Wafa-Wafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    //   homeScorers: [],
-    //   awayScorers: [],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 11, // Unique ID for React keys
     homeTeamId: "rebentaFogo", //new
     awayTeamId: "bingaFC", //new
-    // homeScore: 2, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
     date: "2026-02-14", // ISO Format
     time: "08:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
     competition: "Pande Wafa-Wafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    //   homeScorers: [],
-    //   awayScorers: [],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 12, // Unique ID for React keys
     homeTeamId: "realPande", //new
     awayTeamId: "onzeIrmaos", //new
-    // homeScore: 2, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 0, // Only for live/finished
+    awayScore: 1,
     date: "2026-02-14", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
     competition: "Pande Wafa-Wafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    //   homeScorers: [],
-    //   awayScorers: [],
+    homeScorers: [],
+    awayScorers: [],
   },
   {
     id: 13, // Unique ID for React keys
     homeTeamId: "teamBebado", //new
     awayTeamId: "associacaoDesortivaPande", //new
-    // homeScore: 2, // Only for live/finished
-    // awayScore: 1,
+    homeScore: 1, // Only for live/finished
+    awayScore: 0,
     date: "2026-02-14", // ISO Format
     time: "16:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
     competition: "Pande Wafa-Wafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    //   homeScorers: [],
-    //   awayScorers: [],
+    homeScorers: [],
+    awayScorers: [],
   },
 
   //   {
