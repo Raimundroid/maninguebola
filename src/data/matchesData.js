@@ -253,8 +253,8 @@ const matchesData = [
   },
   {
     id: 15, // Unique ID for React keys
-    homeTeamId: "ferroviarioFC", //new
-    awayTeamId: "guihambuaneFC", //new
+    homeTeamId: "ferroviarioCocheMagumbo", //new
+    awayTeamId: "guihambuaneNhaka", //new
     // homeScore: 1, // Only for live/finished
     // awayScore: 0,
     date: "2026-03-07", // ISO Format

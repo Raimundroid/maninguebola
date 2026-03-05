@@ -499,8 +499,8 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  ferroviarioFC: {
-    id: "ferroviarioFC", // Unique identifier
+  ferroviarioCocheMagumbo: {
+    id: "ferroviarioCocheMagumbo", // Unique identifier
     name: "Ferroviário de Coche Magumbo", // Full team name
     shortName: "Ferroviário de Coche", // ✅ NEW
     abbr: "FCM", // Abbreviation for logos
@@ -517,11 +517,11 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  guihambuaneFC: {
-    id: "Guihambuane FC", // Unique identifier
-    name: "Guihambuane FC", // Full team name
-    shortName: "Guihambuane FC", // ✅ NEW
-    abbr: "GFC", // Abbreviation for logos
+  guihambuaneNhaka: {
+    id: "guihambuaneNhaka", // Unique identifier
+    name: "Guihambuane de Nhaka", // Full team name
+    shortName: "Guihambuane de Nhaka", // ✅ NEW
+    abbr: "GN", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
     // founded: 1000,
