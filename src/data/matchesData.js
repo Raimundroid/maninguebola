@@ -233,7 +233,44 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
+  {
+    id: 14, // Unique ID for React keys
+    homeTeamId: "internacionalMiluge", //new
+    awayTeamId: "eduardoMondlaneLingaLinga", //new
+    // homeScore: 1, // Only for live/finished
+    // awayScore: 0,
+    date: "2026-03-07", // ISO Format
+    time: "14:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo do Internacional de Miluge",
+    // info: "85+ espectadores", // Optional extra info
+    // competition: "",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: [],
+    // awayScorers: [],
+  },
+  {
+    id: 15, // Unique ID for React keys
+    homeTeamId: "feroviarioFC", //new
+    awayTeamId: "guihambuaneFC", //new
+    // homeScore: 1, // Only for live/finished
+    // awayScore: 0,
+    date: "2026-03-07", // ISO Format
+    time: "15:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Campo do Internacional de Miluge",
+    // info: "85+ espectadores", // Optional extra info
+    // competition: "",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    // homeScorers: [],
+    // awayScorers: [],
+  },
 
+  //-----------------------------
   //   {
   //     id: 1000, // Unique ID for React keys
   //     // homeTeam: teams.lions, // Reference to team object
@@ -314,7 +351,7 @@ const matchesData = [
     homeTeamId: "cats", //new
     awayTeamId: "tigers", //new
     // No scores for upcoming matches
-    date: "2026-03-15", // ISO Format
+    date: "2026-03-29", // ISO Format
     time: "16:15",
     status: "upcoming",
     venue: "Campo Principal",

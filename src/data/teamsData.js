@@ -463,6 +463,79 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
+  internacionalMiluge: {
+    id: "internacionalMiluge", // Unique identifier
+    name: "Internacional de Miluge", // Full team name
+    shortName: "Inter de Miluge", // ✅ NEW
+    abbr: "IM", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Campo do Internacional de Miluge",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "brown" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  eduardoMondlaneLingaLinga: {
+    id: "eduardoMondlaneLingaLinga", // Unique identifier
+    name: "Eduardo Mondlane de Linga-Linga", // Full team name
+    shortName: "E.M. de Linga-Linga", // ✅ NEW
+    abbr: "EML", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "brown", secondary: "red" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  feroviarioFC: {
+    id: "feroviarioFC", // Unique identifier
+    name: "Feroviário FC", // Full team name
+    shortName: "Feroviário FC", // ✅ NEW
+    abbr: "FFC", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "brown", secondary: "gold" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  guihambuaneFC: {
+    id: "Guihambuane FC", // Unique identifier
+    name: "Guihambuane FC", // Full team name
+    shortName: "Guihambuane FC", // ✅ NEW
+    abbr: "GFC", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "gold", secondary: "red" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
+  // -------------------------------------
   //   eagles: {
   //     id: "eagles", // Unique identifier
   //     name: "FC Eagles", // Full team name
