@@ -243,7 +243,7 @@ const matchesData = [
     time: "14:00",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
-    venue: "Campo do Internacional de Miluge",
+    venue: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // competition: "",
     // ✅ NEW: Store as Array of Strings
@@ -261,7 +261,7 @@ const matchesData = [
     time: "15:30",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
-    venue: "Campo do Internacional de Miluge",
+    venue: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // competition: "",
     // ✅ NEW: Store as Array of Strings

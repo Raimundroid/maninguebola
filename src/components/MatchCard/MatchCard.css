@@ -203,6 +203,11 @@
   gap: 3px;
 }
 
+.match-card .info .match-location .local {
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+
 .match-card .teams .score .score-separator {
   color: var(--text-light);
 }

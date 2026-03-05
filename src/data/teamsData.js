@@ -501,13 +501,13 @@ const teamsData = {
   },
   ferroviarioFC: {
     id: "ferroviarioFC", // Unique identifier
-    name: "Ferroviário FC", // Full team name
-    shortName: "Ferroviário FC", // ✅ NEW
-    abbr: "FFC", // Abbreviation for logos
+    name: "Ferroviário de Coche Magumbo", // Full team name
+    shortName: "Ferroviário de Coche", // ✅ NEW
+    abbr: "FCM", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
     // founded: 1000,
-    stadium: "Indefinido",
+    stadium: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // logo: "/images/teams/shield-gold.jpg",
     colors: { primary: "brown", secondary: "gold" },
     // contact: {

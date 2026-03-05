@@ -335,7 +335,7 @@ const MatchCard = ({ match }) => {
               </g>
             </svg>
           </span>
-          <p>
+          <p className="local">
             Local: <strong>{venue}</strong> {info && `• ${info}`}
           </p>
         </div>
