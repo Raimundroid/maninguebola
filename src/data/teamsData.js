@@ -499,10 +499,10 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  feroviarioFC: {
-    id: "feroviarioFC", // Unique identifier
-    name: "Feroviário FC", // Full team name
-    shortName: "Feroviário FC", // ✅ NEW
+  ferroviarioFC: {
+    id: "ferroviarioFC", // Unique identifier
+    name: "Ferroviário FC", // Full team name
+    shortName: "Ferroviário FC", // ✅ NEW
     abbr: "FFC", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
