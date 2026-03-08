@@ -237,37 +237,37 @@ const matchesData = [
     id: 14, // Unique ID for React keys
     homeTeamId: "internacionalMiluge", //new
     awayTeamId: "eduardoMondlaneLingaLinga", //new
-    // homeScore: 1, // Only for live/finished
-    // awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 0,
     date: "2026-03-07", // ISO Format
     time: "14:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // competition: "",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: [],
-    // awayScorers: [],
+    homeScorers: ["Meck"],
+    awayScorers: [],
   },
   {
     id: 15, // Unique ID for React keys
     homeTeamId: "ferroviarioCocheMagumbo", //new
     awayTeamId: "guihambuaneNhaka", //new
-    // homeScore: 1, // Only for live/finished
-    // awayScore: 0,
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
     date: "2026-03-07", // ISO Format
     time: "15:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
     // competition: "",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    // homeScorers: [],
-    // awayScorers: [],
+    homeScorers: ["Mateus", "Mimi"],
+    awayScorers: [],
   },
 
   //-----------------------------
