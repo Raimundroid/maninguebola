@@ -237,8 +237,8 @@ const matchesData = [
     id: 14, // Unique ID for React keys
     homeTeamId: "internacionalMiluge", //new
     awayTeamId: "eduardoMondlaneLingaLinga", //new
-    homeScore: 1, // Only for live/finished
-    awayScore: 0,
+    homeScore: 0, // Only for live/finished
+    awayScore: 1,
     date: "2026-03-07", // ISO Format
     time: "14:00",
     status: "finished", // 'live' | 'finished' | 'upcoming'
