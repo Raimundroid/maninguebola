@@ -535,6 +535,24 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
+  costaSolMagumbo: {
+    id: "costaSolMagumbo", // Unique identifier
+    name: "Costa do Sol de Magumbo", // Full team name
+    shortName: "Costa d'Sol d'Magumbo", // ✅ NEW
+    abbr: "CSM", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    // founded: 1000,
+    stadium: "Campo do Costa do Sol de Magumbo (Beito)",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "aqua", secondary: "red" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+  },
   // -------------------------------------
   //   eagles: {
   //     id: "eagles", // Unique identifier
