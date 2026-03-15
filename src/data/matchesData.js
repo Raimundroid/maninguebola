@@ -269,24 +269,24 @@ const matchesData = [
     homeScorers: ["Mateus", "Mimi"],
     awayScorers: [],
   },
-  {
-    id: 16, // Unique ID for React keys
-    homeTeamId: "costaSolMagumbo", //new
-    awayTeamId: "rioSambeFc", //new
-    homeScore: 2, // Only for live/finished
-    awayScore: 0,
-    date: "2026-03-15", // ISO Format
-    time: "16:00",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
-    // minute: 67, // Current minute (only for live)
-    venue: "Campo do Costa do Sol de Magumbo (Beito)",
-    // info: "85+ espectadores", // Optional extra info
-    // competition: "",
-    // ✅ NEW: Store as Array of Strings
-    // Note: You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: [],
-    awayScorers: [],
-  },
+  // {
+  //   id: 16, // Unique ID for React keys
+  //   homeTeamId: "costaSolMagumbo", //new
+  //   awayTeamId: "rioSambeFc", //new
+  //   homeScore: 2, // Only for live/finished
+  //   awayScore: 0,
+  //   date: "2026-03-15", // ISO Format
+  //   time: "16:00",
+  //   status: "upcoming", // 'live' | 'finished' | 'upcoming'
+  //   // minute: 67, // Current minute (only for live)
+  //   venue: "Campo do Costa do Sol de Magumbo (Beito)",
+  //   // info: "85+ espectadores", // Optional extra info
+  //   // competition: "",
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: [],
+  //   awayScorers: [],
+  // },
 
   //-----------------------------
   //   {
