@@ -1,18 +1,34 @@
 <!doctype html>
 <html lang="pt">
   <head>
+    <!--Character Encoding - Must be first in <head> -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico+xml" href="/favicon-v2.svg" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+
+    <!-- Responsive Design - Critical for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Meta tags-->
+    <!--Meta tags: -->
+
+    <!--SEO -  Appears in search result snippets -->
     <meta
       name="description"
-      content="Um website para digitalizar o futebol local de Morrumbene."
+      content="Um website para promover e digitalizar o futebol local de Moçambique."
     />
-    <meta name="title" content="Maningue Bola" />
+
+    <!-- Crawling instructions for search engines-->
+    <meta name="robots" content="index, follow" />
+
+    <!--  Authorship -->
     <meta name="author" content="RAIMUNDO" />
+
+    <!--  Prevent Google auto-translation (useful for language-specific content ) -->
+    <meta name="googlebot" content="notranslate" />
+
+    <!--  Cache Control (useful for SPAs or frequently updated pages) -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+
+    <!-- Telephone detection on mobile (useful for contact/business pages) -->
+    <meta name="format-detection" content="telephone=yes" />
 
     <!--Open Graph Protocol-->
     <meta property="og:title" content="Maningue Bola" />
@@ -26,9 +42,10 @@
 
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/LL-logo-2.ico" /> -->
 
-    <meta name="google" content="notranslate" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon-v2.svg" />
 
-    <title>ManingueBola</title>
+    <title>Maningue Bola</title>
 
     <link
       rel="preload"
