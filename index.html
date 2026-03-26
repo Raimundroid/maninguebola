@@ -27,23 +27,44 @@
     <!--  Cache Control (useful for SPAs or frequently updated pages) -->
     <meta http-equiv="Cache-Control" content="no-cache" />
 
-    <!-- Telephone detection on mobile (useful for contact/business pages) -->
+    <!-- Telephone detection on mobile (useful for contact/business pages, but it could format strings of random numbers as telephone numbers, reason why = no) -->
     <meta name="format-detection" content="telephone=no" />
 
-    <!--Open Graph Protocol-->
+    <!--Open Graph Protocol - Controls how a page looks when shared on Facebook/WhatsApp -->
+
+    <!-- 1. the name that will be displayed in the preview (must reflet the content of the individual web page, not the website as a whole) -->
     <meta property="og:title" content="Maningue Bola" />
-    <meta
-      property="og:description"
-      content="Somos um website com a missão de digitalizar o futebol local do distrito de Morrumbene e outros distritos e ajudar a dar destaque aos jogadores talentosos locais."
-    />
-    <!-- <meta property="og:image" content="http://localhost:3000/imgs/LLLogo.jpg" /> -->
-    <meta property="og:url" content="https://maninguebola.com" />
+
+    <!--2. informs the social media platform, that the content being shared is a website  -->
     <meta property="og:type" content="website" />
 
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/LL-logo-2.ico" /> -->
+    <!-- 3. informs the social media platform what the prefered preview image is -->
+    <meta property="og:image" content="/maningue-bola-logo-white-bg-v1.png" />
 
-    <!-- Favicon -->
+    <!-- 4. url of the website -->
+    <meta property="og:url" content="https://maninguebola.com" />
+
+    <!-- 5. if the social media platform displays a description of the page when it is shared, this text will be displayed to inform the users waht the web -->
+    <meta
+      property="og:description"
+      content="Somos um website com a missão de promover e digitalizar o futebol local do distrito de Morrumbene e outros distritos e ajudar a dar destaque aos jogadores talentosos locais."
+    />
+
+    <!-- 6. informs the SM pltaform that the locale isMoçambique Portuguese  -->
+    <meta property="og:locale" content="pt_MZ" />
+
+    <!-- 7.  some SM platfroms will also display the website name beside the page title, so this will ensure that the website title is correct -->
+    <meta property="og:site_name" content="Maningue Bola" />
+
+    <!-- Canonical URL - Prevents duplicate content (SEO issues) -->
+    <link rel="canonical" href="https://maninguebola.com" />
+
+    <!-- Theme color - Colors the browser bar on Android Chrome -->
+    <meta name="theme-color" content="#0000ff" />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon-v2.svg?v=2" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/LL-logo-2.ico" /> -->
 
     <title>Maningue Bola</title>
 
