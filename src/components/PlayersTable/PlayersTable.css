@@ -98,8 +98,17 @@
   gap: 4px; /*og: 8px*/
 }
 
-.player-table .player-cell .player-logo,
-.player-table .team-cell .team-logo {
+.player-table .player-cell .player-logo {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  background: var(--border);
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--shadow);
+}
+
+.player-table .team-cell .pt-team-logo {
   width: 32px;
   height: 32px;
   font-size: 12px;
@@ -113,8 +122,9 @@
   flex-shrink: 0;
   border: 1px solid var(--shadow);
 }
+
 .player-table .player-logo .player-logo-img,
-.player-table .team-logo .team-logo-img {
+.player-table .pt-team-logo .team-logo-img {
   border-radius: 8px;
   object-position: center;
   object-fit: contain; /* Fit logo without cropping */
@@ -122,9 +132,10 @@
 .player-table .player-cell .player-name,
 .player-table .team-cell .team-name,
 .player-table .player-position {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--primary);
+  /* white-space: nowrap; */
 }
 .player-table .team-cell .team-name {
   font-weight: 600;

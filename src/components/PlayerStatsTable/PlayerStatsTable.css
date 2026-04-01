@@ -140,19 +140,20 @@ if the entire table is scrolled within this container. */
 .players-stats-table .players-name-team-wrapper .team-info .team-logo {
   width: 24px;
   height: 24px;
-  font-size: 12px;
+  font-size: 10px;
   background: var(--border);
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-light);
   flex-shrink: 0;
   border: 1px solid var(--shadow);
+  /* background: aqua; */
 }
 .players-stats-table .players-name-team-wrapper .team-info .team-logo-img {
-  border-radius: 8px;
+  border-radius: 6px;
   object-position: center;
   object-fit: contain; /* Fit logo without cropping */
 }

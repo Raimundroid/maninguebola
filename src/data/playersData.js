@@ -5,22 +5,22 @@
 // before: playerData
 
 const playersData = [
-  //   {
-  //     id: 1,
-  //     name: "Miguel Santos",
-  //     teamId: "eagles", //new
-  //     number: 10, //new
-  //     position: "Atacante", //new Defender || Midfielder || Forward
-  //     photo: "/images/players/default-player-1.png", //new
-  //     stats: {
-  //       //new
-  //       appearances: 12,
-  //       goals: 18,
-  //       assists: 7,
-  //       yellowCards: 2,
-  //       redCards: 0,
-  //     },
+  // {
+  //   id: 1,
+  //   name: "Miguel Santos",
+  //   teamId: "eagles", //new
+  //   number: 10, //new
+  //   position: "Atacante", //new Defender || Midfielder || Forward
+  //   photo: "/images/players/default-player-1.png", //new
+  //   stats: {
+  //     //new
+  //     appearances: 12,
+  //     goals: 18,
+  //     assists: 7,
+  //     yellowCards: 2,
+  //     redCards: 0,
   //   },
+  // },
   // {
   //   id: 2,
   //   name: "José Lima",
@@ -36,21 +36,21 @@ const playersData = [
   //     redCards: 0,
   //   },
   // },
-  //   {
-  //     id: 3,
-  //     name: "Rui Almeida",
-  //     teamId: "tigers",
-  //     number: 10,
-  //     position: "Atacante",
-  //     photo: "/images/players/default-player-2.png",
-  //     stats: {
-  //       appearances: 11,
-  //       goals: 14,
-  //       assists: 5,
-  //       yellowCards: 2,
-  //       redCards: 0,
-  //     },
+  // {
+  //   id: 3,
+  //   name: "Rui Almeida",
+  //   teamId: "tigers",
+  //   number: 10,
+  //   position: "Atacante",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 11,
+  //     goals: 14,
+  //     assists: 5,
+  //     yellowCards: 2,
+  //     redCards: 0,
   //   },
+  // },
   // {
   //   id: 4,
   //   name: "Tomás Ferreira",
@@ -81,21 +81,21 @@ const playersData = [
   //     redCards: 1,
   //   },
   // },
-  //   {
-  //     id: 6,
-  //     name: "Jaime Paraiso",
-  //     teamId: "tigers",
-  //     number: 1,
-  //     position: "Guarda Redes",
-  //     photo: "/images/players/default-player-2.png",
-  //     stats: {
-  //       appearances: 12,
-  //       goals: 3,
-  //       assists: 0,
-  //       yellowCards: 0,
-  //       redCards: 0,
-  //     },
+  // {
+  //   id: 6,
+  //   name: "Jaime Paraiso",
+  //   teamId: "tigers",
+  //   number: 1,
+  //   position: "Guarda Redes",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     appearances: 12,
+  //     goals: 3,
+  //     assists: 0,
+  //     yellowCards: 0,
+  //     redCards: 0,
   //   },
+  // },
   // {
   //   id: 7,
   //   name: "Pablo Picasso",
@@ -723,7 +723,9 @@ const playersData = [
   //   name: "Bruce Wayne",
   //   teamId: "cats",
   //   number: 3,
-  //   position: "Defender",
+  //   position: "Defesa",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2000-10-30",
   //   photo: "/images/players/default-player-4.png",
   //   stats: {
   //     appearances: 12,
@@ -733,6 +735,109 @@ const playersData = [
   //     redCards: 0,
   //   },
   // },
+  // --------------
+  {
+    id: 48,
+    name: "Wayne",
+    teamId: "cats",
+    number: 3,
+    position: "Defesa",
+    residence: "Pande, Govuro",
+    dateOfBirth: "2000-10-30",
+    photo: "/images/players/default-player-4.png",
+    stats: {
+      appearances: 9,
+      goals: 3,
+      assists: 0,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 49,
+    name: "Armando",
+    teamId: "realPande",
+    number: 10,
+    position: "Atacante",
+    residence: "Pande, Govuro",
+    dateOfBirth: "2002-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      appearances: 11,
+      goals: 10,
+      assists: 1,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 50,
+    name: "Paulo",
+    teamId: "kakanavas",
+    number: 6,
+    position: "Meio-Campista",
+    residence: "Pande, Govuro",
+    dateOfBirth: "2004-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      appearances: 10,
+      goals: 7,
+      assists: 8,
+      yellowCards: 1,
+      redCards: 0,
+    },
+  },
+  {
+    id: 51,
+    name: "Marcos",
+    teamId: "rebentaFogo",
+    number: 9,
+    position: "Atacante",
+    residence: "Pande, Govuro",
+    dateOfBirth: "2006-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      appearances: 9,
+      goals: 6,
+      assists: 3,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 52,
+    name: "Ramos",
+    teamId: "bingaFC",
+    number: 1,
+    position: "Atacante",
+    residence: "Pande, Govuro",
+    dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      appearances: 8,
+      goals: 3,
+      assists: 2,
+      yellowCards: 0,
+      redCards: 0,
+    },
+  },
+  {
+    id: 53,
+    name: "Manuel",
+    teamId: "UDChimedje",
+    number: 11,
+    position: "Atacante",
+    residence: "Chimedje, Govuro",
+    dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      appearances: 11,
+      goals: 15,
+      assists: 2,
+      yellowCards: 0,
+      redCards: 2,
+    },
+  },
 ];
 
 export default playersData;

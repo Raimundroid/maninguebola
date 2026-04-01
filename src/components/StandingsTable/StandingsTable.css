@@ -61,7 +61,20 @@
   gap: 4px; /*og: 8px*/
 }
 
-.standings-table .team-cell .team-logo {
+.standings-table .team-cell .standings-team-logo {
+  /* width: 32px;
+  height: 32px;
+  font-size: 12px;
+  background: var(--border);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text-light);
+  flex-shrink: 0;
+  border: 1px solid var(--shadow); */
+
   width: 32px;
   height: 32px;
   font-size: 12px;
@@ -74,16 +87,19 @@
   color: var(--text-light);
   flex-shrink: 0;
   border: 1px solid var(--shadow);
+
+  
 }
-.standings-table .team-cell .team-logo .team-logo-img {
+.standings-table .team-cell .standings-team-logo .team-logo-img {
+  /* width: 100%; */
   border-radius: 8px;
   object-position: center;
   object-fit: contain; /* Fit logo without cropping */
 }
 
 .standings-table .team-cell .team-name {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 600;
   color: var(--primary);
 }
 

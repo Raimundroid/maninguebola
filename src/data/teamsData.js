@@ -413,7 +413,7 @@ const teamsData = {
     id: "onzeIrmaos", // Unique identifier
     name: "Onze Irmãos", // Full team name
     shortName: "Onze Irmãos", // ✅ NEW
-    abbr: "11I", // Abbreviation for logos
+    abbr: "11i", // Abbreviation for logos
     // position: "1",
     // points: "99", /////
     // founded: 1000,

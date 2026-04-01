@@ -941,7 +941,8 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
    */
   const {
     name: teamName = "Indefinido", // Team's name
-    logo: teamLogo = "/images/default-team.png", // Team logo URL
+    logo: teamLogo = null, // "/images/default-team.png", // Team logo URL
+    abbr: teamAbbr,
     colors = { primary: "#3b82f6", secondary: "#1e40af" }, // Team colors
     id: enrichedTeamId = null, // Team ID from enriched data
   } = team;
@@ -1200,7 +1201,22 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
               <img src={photo} alt={name} className="player-avatar-large" />
               {/* Team badge in corner */}
               <div className="team-badge-overlap">
-                <img src={teamLogo} alt={teamName} />
+                {/* <img src={teamLogo} alt={teamName} /> */}
+
+                {teamLogo ? (
+                  <img
+                    src={teamLogo}
+                    alt={teamName}
+                    loading="lazy"
+                    width="32"
+                    height="32"
+                  />
+                ) : (
+                  // Fallback if logo path is missing; wrapping in a <span> gives you something to style, and the ?? "?" handles the case where abbr itself is also undefined
+                  <span className="players-team-abbr-logo">
+                    {teamAbbr ?? "?"}
+                  </span>
+                )}
               </div>
             </div>
 
@@ -1317,7 +1333,25 @@ const PlayerDetailPage = ({ players = [], matches = [] }) => {
             className="team-info-card wrapper-Link"
           >
             {/* Team logo */}
-            <img src={teamLogo} alt={teamName} className="team-info__logo" />
+
+            {teamLogo ? (
+              <img
+                src={teamLogo}
+                alt={teamName}
+                loading="lazy"
+                width="32"
+                height="32"
+                className="team-info__logo"
+              />
+            ) : (
+              // Fallback if logo path is missing; wrapping in a <span> gives you something to style, and the ?? "?" handles the case where abbr itself is also undefined
+              <span className="players-team-abbr-logo-sqaure">
+                {teamAbbr ?? "?"}
+              </span>
+            )}
+            {/* ------------ */}
+            {/* <img src={teamLogo} alt={teamName} className="team-info__logo" /> */}
+
             {/* Team details */}
             <div className="team-info__details">
               <h3 className="team-info__name">{teamName}</h3>

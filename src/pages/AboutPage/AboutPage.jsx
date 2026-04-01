@@ -51,7 +51,7 @@ const AboutPage = () => {
           <h2>Bem-vindo(a) ao ManingueBola</h2>
           <p>
             O <strong>ManingueBola</strong> é um website com o objectivo de
-            <strong> digitalizar o futebol local</strong>.
+            <strong> promover e digitalizar o futebol local</strong>.
           </p>
           {/* <p>
             Queremos dar visibilidade ao talento local que muitas vezes não
@@ -146,10 +146,10 @@ const AboutPage = () => {
 
         {/* --- DONATION SECTION --- */}
         <section className="about-section donation-section">
-          <h3>Apoie o Projeto ☕</h3>
+          <h3>Apoie o Projecto ☕</h3>
           <p>
-            Este projeto é mantido de forma independente. Qualquer contribuição
-            ajuda a fazer a manunteção dele.
+            Este projecto é mantido de forma independente. Qualquer contribuição
+            ajuda a fazer a manunteção e melhoramento dele.
           </p>
           <div className="wallets">
             {/* <div className="wallet mpesa">

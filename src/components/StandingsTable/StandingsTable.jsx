@@ -33,9 +33,12 @@ const StandingsTable = ({ standings }) => {
                   <span className="position">{team.position}</span>
                 </td>
                 <td>
-                  <Link className="wrapper-Link" to={`/equipas/${team.id}`}>
-                    <div className="team-cell">
-                      <div className="team-logo">
+                  <Link
+                    className="wrapper-Link team-cell"
+                    to={`/equipas/${team.id}`}
+                  >
+
+                      <div className="standings-team-logo">
                         {team.logo ? (
                           <img
                             className="team-logo-img"
@@ -53,7 +56,7 @@ const StandingsTable = ({ standings }) => {
                       <span className="team-name">
                         <strong>{team.name}</strong>
                       </span>
-                    </div>
+
                   </Link>
                 </td>
                 <td>{team.played}</td>

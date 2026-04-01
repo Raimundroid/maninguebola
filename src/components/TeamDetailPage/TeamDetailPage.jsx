@@ -1923,7 +1923,7 @@ const TeamDetailPage = ({
     name = "Nome da Equipa",
     // logo = "/images/teams/default-team.png",
     logo,
-    abbr = "XX",
+    abbr = "X",
     founded = "Indefinido",
     stadium = "Indefinido",
     colors = { primary: "#283c5eff", secondary: "#1e40af" },
@@ -2031,12 +2031,12 @@ const TeamDetailPage = ({
   // If player.stats is undefined, returns undefined instead of error
   const totalGoals = teamPlayers.reduce(
     (sum, p) => sum + (p.stats?.goals || 0),
-    0 // Start counting from 0
+    0, // Start counting from 0
   );
 
   const totalAssists = teamPlayers.reduce(
     (sum, p) => sum + (p.stats?.assists || 0),
-    0
+    0,
   );
 
   // --------------------------------------------------------------------------
@@ -2068,10 +2068,10 @@ const TeamDetailPage = ({
   // Creates object with 4 arrays, one for each position
   // This allows us to display players organized by position in the UI
   const playersByPosition = {
-    Goalkeeper: teamPlayers.filter((p) => p.position === "Guarda Redes"),
-    Defender: teamPlayers.filter((p) => p.position === "Defesa"),
-    Midfielder: teamPlayers.filter((p) => p.position === "Meio Campista"),
-    Forward: teamPlayers.filter((p) => p.position === "Atacante"),
+    "Guarda-Redes": teamPlayers.filter((p) => p.position === "Guarda-Redes"),
+    Defesa: teamPlayers.filter((p) => p.position === "Defesa"),
+    "Meio-Campistas": teamPlayers.filter((p) => p.position === "Meio-Campista"),
+    Atacantes: teamPlayers.filter((p) => p.position === "Atacante"),
   };
 
   // Extract form array from standing (W/D/L badges)
@@ -2470,7 +2470,7 @@ const TeamDetailPage = ({
                           ))}
                         </div>
                       </div>
-                    ) : null // Return null if no players in this position
+                    ) : null, // Return null if no players in this position
                 )
               )}
             </div>

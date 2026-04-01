@@ -102,60 +102,59 @@ const PlayersTable = ({ players = [] }) => {
               <tr key={player.id || index}>
                 <td className="number">{index + 1}</td>
 
+                {/* 1st Column: Player (Team) */}
                 <td>
                   <Link
-                    className="wrapper-Link"
+                    className="wrapper-Link player-cell"
                     to={`/jogadores/${player?.id}`}
                   >
-                    <div className="player-cell">
-                      <div className="player-logo">
+                    <div className="player-logo">
+                      <img
+                        className="player-logo-img"
+                        src={
+                          player?.photo || "/images/players/default-player.png"
+                        }
+                        alt={`${player?.name}`}
+                        loading="lazy"
+                        width="32"
+                        height="32"
+                      />
+                    </div>
+                    <span>
+                      <strong className="player-name">
+                        {player?.name ?? "-"}
+                      </strong>
+                    </span>
+                  </Link>
+                </td>
+
+                {/* 2nd Column: Equipa (Team) */}
+                <td>
+                  <Link
+                    className="wrapper-Link team-cell "
+                    to={`/equipas/${player?.team.id}`}
+                  >
+                    <div className="pt-team-logo">
+                      {player?.team?.logo ? (
                         <img
-                          className="player-logo-img"
-                          src={
-                            player?.photo ||
-                            "/images/players/default-player.png"
-                          }
-                          alt={`${player?.name}`}
+                          className="team-logo-img"
+                          src={player?.team?.logo}
+                          alt={player?.team?.abbr}
                           loading="lazy"
                           width="32"
                           height="32"
                         />
-                      </div>
-                      <span>
-                        <strong className="player-name">
-                          {player?.name ?? "-"}
-                        </strong>
-                      </span>
+                      ) : (
+                        // Fallback if logo path is missing
+                        player?.team?.abbr
+                      )}
                     </div>
-                  </Link>
-                </td>
 
-                <td>
-                  <Link
-                    className="wrapper-Link"
-                    to={`/equipas/${player?.team.id}`}
-                  >
-                    <div className="team-cell">
-                      <div className="team-logo">
-                        {player?.team.logo ? (
-                          <img
-                            className="team-logo-img"
-                            src={player?.team.logo}
-                            alt={player?.team.abbr}
-                            loading="lazy"
-                            width="32"
-                            height="32"
-                          />
-                        ) : (
-                          // Fallback if logo path is missing
-                          player?.team.abbr
-                        )}
-                      </div>
-
-                      <span className="team-name">
-                        {player?.team.name ?? "-"}
-                      </span>
-                    </div>
+                    <span>
+                      <strong className="team-name">
+                        {player?.team?.name ?? "-"}
+                      </strong>
+                    </span>
                   </Link>
                 </td>
 
@@ -181,3 +180,36 @@ const PlayersTable = ({ players = [] }) => {
 };
 
 export default PlayersTable;
+
+//
+//
+//
+//
+//
+
+//  <td>
+//                   <Link
+//                     className="wrapper-Link team-cell"
+//                     to={`/equipas/${player?.team.id}`}
+//                   >
+//                     <div className="team-logo">
+//                       {player?.team?.logo ? (
+//                         <img
+//                           className="team-logo-img"
+//                           src={player?.team?.logo}
+//                           alt={player?.team?.abbr}
+//                           loading="lazy"
+//                           width="32"
+//                           height="32"
+//                         />
+//                       ) : (
+//                         // Fallback if logo path is missing
+//                         player?.team?.abbr
+//                       )}
+//                     </div>
+
+//                     <span className="team-name">
+//                       {player?.team?.name ?? "-"}
+//                     </span>
+//                   </Link>
+//                 </td>

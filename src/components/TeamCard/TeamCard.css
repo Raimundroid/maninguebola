@@ -6,6 +6,7 @@ TeamCard Styles
 
 /* Base card styling */
 .team-card {
+  width: 100%;
   /* Background color (uses CSS variable with fallback) */
   background: var(--card-bg, #ffffff);
 

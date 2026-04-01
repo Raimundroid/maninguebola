@@ -5,9 +5,12 @@
    Styles for anchor tags
 */
 .wrapper-Link {
-  color: currentColor;
+  /* display: flex; */
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
+
+  /* align-items: center; */
 }
 /* a {
   font-weight: 500;
