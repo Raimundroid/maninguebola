@@ -37,26 +37,24 @@ const StandingsTable = ({ standings }) => {
                     className="wrapper-Link team-cell"
                     to={`/equipas/${team.id}`}
                   >
-
-                      <div className="standings-team-logo">
-                        {team.logo ? (
-                          <img
-                            className="team-logo-img"
-                            src={team.logo}
-                            alt={team.abbr}
-                            loading="lazy"
-                            width="32"
-                            height="32"
-                          />
-                        ) : (
-                          // Fallback if logo path is missing
-                          team.abbr
-                        )}
-                      </div>
-                      <span className="team-name">
-                        <strong>{team.name}</strong>
-                      </span>
-
+                    <div className="standings-team-logo">
+                      {team.logo ? (
+                        <img
+                          className="team-logo-img"
+                          src={team.logo}
+                          alt={team.abbr}
+                          loading="lazy"
+                          width="32"
+                          height="32"
+                        />
+                      ) : (
+                        // Fallback if logo path is missing
+                        team.abbr
+                      )}
+                    </div>
+                    <span className="team-name">
+                      <strong>{team.name}</strong>
+                    </span>
                   </Link>
                 </td>
                 <td>{team.played}</td>
@@ -81,9 +79,9 @@ const StandingsTable = ({ standings }) => {
           ) : (
             // ✅ IF NO DATA: Show this row
             // colSpan="10" matches the number of headers so it spans the full width
-            <tr className="no-data-row">
-              <td colSpan="10" className="no-data-message">
-                Ainda não há dados disponíveis para a classificação.
+            <tr>
+              <td colSpan="10" className="table-empty-state-message">
+                Desculpa. Dados Indisponíveis.
               </td>
             </tr>
           )}

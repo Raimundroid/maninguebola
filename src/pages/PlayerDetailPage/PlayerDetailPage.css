@@ -1,20 +1,62 @@
-/* .player-page {
-  padding: 16px;
-  padding-bottom: 80px; /* Space for footer
-  background-color: var(--bg);
-  min-height: 100vh;
+/* ============================================
+   PLAYER DETAIL PAGE STYLES - MINIMALISTIC
+   ============================================
+
+   PURPOSE:
+   Styles for the player detail page showing:
+   - Player profile with photo and info
+   - Season statistics in a grid
+   - Recent match history
+   - Team information card
+
+   DESIGN APPROACH:
+   - Mobile-first (styles for small screens first)
+   - Minimalistic and clean
+   - Uses CSS variables for consistent theming
+   - Responsive design that works on all screen sizes
+
+   ============================================
+*/
+
+/* ============================================
+   BASE CONTAINER STYLES
+   ============================================
+*/
+.player-detail-page {
+  padding: 24px 16px;
+  min-height: 60vh;
+  padding-bottom: 50px;
+  background: var(--bg);
 }
 
-.player-content {
-  max-width: 500px;
+/* CONTENT CONTAINER */
+
+.player-detail-page .player-content {
+  max-width: var(--page-max-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+  @media (min-width: 992px) {
+    max-width: 800px;
+  }
 }
 
-/* --- HERO SECTION ---
-.player-hero {
+/* ============================================
+   PLAYER HERO SECTION
+   ============================================
+
+   EXPLANATION:
+   The main profile card at the top showing player photo,
+   name, number, and basic information
+
+*/
+
+.player-detail-page .player-hero {
   background: var(--card-bg);
   border-radius: 16px;
   overflow: hidden;
@@ -22,15 +64,29 @@
   border: 1px solid var(--border);
 }
 
-.hero-bg {
+/*
+  HERO BACKGROUND BAND
+
+  EXPLANATION:
+  Colored band at top using team colors
+  Created with inline styles (gradient) in JSX
+*/
+.player-detail-page .hero-bg {
   height: 80px;
   width: 100%;
-  /* Uses inline style for dynamic team color
   opacity: 0.9;
 }
 
-.hero-content {
-  margin-top: -40px; /* Pull content up over the background
+/*
+  HERO CONTENT CONTAINER
+
+  EXPLANATION:
+  Container for player photo and info
+  Pulled up over the background with negative margin
+*/
+
+.player-detail-page .hero-content {
+  margin-top: -40px;
   padding: 0 16px 24px 16px;
   display: flex;
   flex-direction: column;
@@ -38,74 +94,179 @@
   text-align: center;
 }
 
-.player-avatar-container {
+/*
+  PLAYER AVATAR CONTAINER
+
+  EXPLANATION:
+  Container for player photo and team badge
+  Uses position: relative for badge positioning
+*/
+.player-detail-page .player-avatar-container {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 12px;
 }
 
-.player-avatar-large {
+/*
+  PLAYER PHOTO
+
+  EXPLANATION:
+  Circular player photo with border
+*/
+.player-detail-page .player-avatar-large {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--card-bg); /* White ring around photo
+  object-fit: cover; /* Crop image to fit without distortion */
+  border: 4px solid var(--card-bg);
   background: var(--bg);
 }
 
-.team-badge-overlap {
+/*
+  TEAM BADGE OVERLAY
+
+  EXPLANATION:
+  Small team badge shown in corner of player photo
+  Uses position: absolute to position over photo
+*/
+.player-detail-page .team-badge-overlap {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   background: var(--card-bg);
   border-radius: 50%;
-  padding: 4px;
+  padding: 2px;
   box-shadow: 0 2px 4px var(--shadow);
 }
 
-.team-badge-overlap img {
+.player-detail-page .team-badge-overlap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border-radius: 50%;
+  object-fit: contain; /* Fit logo without cropping*/
 }
 
-.player-name {
+/* ========================== */
+.player-detail-page .team-badge-overlap .players-team-abbr-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--card-bg);
+  border-radius: 50%;
+  /* padding: 2px; */
+  box-shadow: 0 2px 4px var(--shadow);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
   font-size: 20px;
   font-weight: 800;
-  color: var(--secondary);
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
+  border: 1px solid var(--shadow);
+  color: var(--text-light);
 }
 
-.player-number {
+/* ========================== */
+/*
+  PLAYER NAME
+
+  EXPLANATION:
+  Player's name with jersey number badge
+*/
+.player-detail-page .player-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/*
+  PLAYER NUMBER BADGE
+
+  EXPLANATION:
+  Small badge showing jersey number next to name
+*/
+.player-detail-page .player-number {
   font-size: 14px;
   color: var(--primary);
   background: rgba(59, 130, 246, 0.1);
   padding: 2px 8px;
   border-radius: 12px;
+  font-weight: 600;
 }
 
-.player-meta {
+/*
+  PLAYER METADATA
+
+  EXPLANATION:
+  Line showing position, age, nationality
+  Example: "Forward • 25 anos • Moçambicano"
+*/
+.player-detail-page .player-meta {
   color: var(--text-light);
   font-size: 14px;
   margin-top: 4px;
   font-weight: 500;
 }
 
-/* --- STATS GRID ---
-.stats-grid {
+/* ============================================
+   CONTENT SECTIONS
+   ============================================
+
+   EXPLANATION:
+   Reusable container for different sections
+   (statistics, match history, team info)
+
+*/
+.player-detail-page .content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/*
+  SECTION TITLE
+
+  EXPLANATION:
+  Title for each section (📊 Estatísticas, etc.)
+*/
+.player-detail-page .section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ============================================
+   STATISTICS GRID
+   ============================================
+
+   EXPLANATION:
+   Grid of stat cards showing player performance
+   Uses CSS Grid for automatic layout
+*/
+
+.player-detail-page .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
 }
 
-.stat-card {
+/*
+  INDIVIDUAL STAT CARD
+
+  EXPLANATION:
+  Container for one statistic (goals, assists, etc.)
+  Shows label above value
+*/
+.player-detail-page .stat-card {
   background: var(--card-bg);
   padding: 12px 8px;
   border-radius: 12px;
@@ -117,29 +278,46 @@
   box-shadow: 0 1px 2px var(--shadow);
 }
 
-.stat-card.highlight {
+/*
+  HIGHLIGHTED STAT CARD
+
+  EXPLANATION:
+  Special styling for important stats (usually goals)
+  Uses primary color for emphasis
+*/
+.player-detail-page .stat-card--highlight {
   border-color: var(--primary);
   background: rgba(59, 130, 246, 0.05);
 }
 
-.stat-label {
+/* Stat label (top text)*/
+.player-detail-page .stat-card__label {
   font-size: 10px;
   text-transform: uppercase;
   color: var(--text-light);
   font-weight: 600;
   margin-bottom: 4px;
+  text-align: center;
 }
 
-.stat-value {
+/* Stat value (large number)*/
+.player-detail-page .stat-card__value {
   font-size: 18px;
   font-weight: 800;
-  color: var(--secondary);
+  color: var(--text);
 }
 
-/* --- DISCIPLINE ---
-.discipline-row {
+/* ============================================
+   DISCIPLINE ROW
+   ============================================
+
+   EXPLANATION:
+   Shows yellow and red cards in a horizontal row
+*/
+
+.player-detail-page .discipline-row {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   background: var(--card-bg);
   padding: 12px;
   border-radius: 12px;
@@ -147,87 +325,126 @@
   justify-content: center;
 }
 
-.discipline-item {
+/* Individual discipline item (yellow or red cards)*/
+.player-detail-page .discipline-item {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: var(--secondary);
+  color: var(--text);
   font-weight: 500;
 }
 
-.card-icon {
+/*
+  CARD ICON
+
+  EXPLANATION:
+  Colored rectangle representing yellow/red card
+*/
+.player-detail-page .card-icon {
   width: 12px;
   height: 16px;
   border-radius: 2px;
 }
 
-.card-icon.yellow-card {
+/* Yellow card color*/
+.player-detail-page .card-icon.yellow-card {
   background: #facc15;
 }
-.card-icon.red-card {
+
+/* Red card color*/
+.player-detail-page .card-icon.red-card {
   background: #ef4444;
 }
 
-/* --- MATCH HISTORY ---
-.player-history h3 {
-  font-size: 16px;
-  color: var(--secondary);
-  margin-bottom: 12px;
+/* ============================================
+   MATCH HISTORY
+   ============================================
+
+   EXPLANATION:
+   List of recent matches where player participated
+   Uses MatchCard component for each match
+
+*/
+.player-detail-page .matches-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
 }
 
-.history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/*
+  DESKTOP TABLE VIEW
+
+  EXPLANATION:
+  Hidden on mobile (for future desktop version)
+  Currently not used since we use MatchCard
+
+.player-detail-page .matches-table-wrapper {
+  display: none; /* Hidden
 }
 
-.history-item {
-  display: flex;
-  align-items: center;
+/* ============================================
+   TEAM INFO CARD
+   ============================================
+
+   EXPLANATION:
+   Clickable card showing player's team
+   Links to team detail page
+
+*/
+.player-detail-page .team-info-card {
   background: var(--card-bg);
-  padding: 12px;
-  border-radius: 10px;
   border: 1px solid var(--border);
-}
-
-.history-date {
-  font-size: 12px;
-  color: var(--text-light);
-  width: 50px;
-  font-weight: 500;
-}
-
-.history-info {
-  flex: 1;
+  border-radius: 12px;
+  padding: 16px;
   display: flex;
   align-items: center;
   gap: 12px;
+  box-shadow: 0 1px 2px var(--shadow);
 }
 
-.history-vs {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--secondary);
+/* Team logo image */
+.player-detail-page .team-info__logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain; /* Fit without cropping */
+  flex-shrink: 0; /* Don't shrink logo */
+  border-radius: 8px;
+  border: 2px solid black;
 }
 
-.history-result {
-  font-size: 14px;
+.player-detail-page .players-team-abbr-logo-sqaure {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background: var(--border);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text-light);
+  flex-shrink: 0;
+  /* border: 1px solid var(--shadow); */
+  border: 2px solid black;
+}
+
+/* Container for team name and link text */
+.player-detail-page .team-info__details {
+  flex: 1; /* Take remaining space */
+}
+
+/* Team name */
+.player-detail-page .team-info__name {
+  font-size: 18px;
   font-weight: 700;
   color: var(--text);
+  margin: 0 0 4px 0;
 }
 
-.history-badge {
-  font-size: 16px;
+/* "Ver página da equipa" text*/
+.player-detail-page .team-info__text {
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 500;
 }
-
-/* Error State
-.player-not-found {
-  text-align: center;
-  padding: 40px;
-}
-.back-link {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-} */

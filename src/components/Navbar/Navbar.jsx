@@ -90,9 +90,6 @@ const Navbar = () => {
       width="20px"
       fill="currentColor"
       stroke="currentColor"
-      // strokeWidth="2"
-      // strokeLinecap="round"
-      // strokeLinejoin="round"
       className={className}
     >
       <path
@@ -110,9 +107,6 @@ const Navbar = () => {
       width="20px"
       fill="currentColor"
       stroke="currentColor"
-      // strokeWidth="2"
-      // strokeLinecap="round"
-      // strokeLinejoin="round"
       className={className}
     >
       <path d="M0,71.442v369.116h512V71.442H0z M273.86,205.491c20.788,7.373,35.721,27.225,35.721,50.509s-14.933,43.137-35.721,50.509 V205.491z M35.721,190.512h47.628v130.977H35.721V190.512z M238.14,306.509c-20.788-7.373-35.721-27.225-35.721-50.509 c0-23.284,14.933-43.137,35.721-50.509V306.509z M238.14,168.494c-40.712,8.297-71.442,44.38-71.442,87.506 s30.729,79.208,71.442,87.506v61.332H35.721v-47.628h59.535c13.131,0,23.814-10.683,23.814-23.814V178.605 c0-13.131-10.683-23.814-23.814-23.814H35.721v-47.628H238.14V168.494z M476.279,321.488h-47.628V190.512h47.628V321.488z M476.279,154.791h-59.535c-13.131,0-23.814,10.683-23.814,23.814v154.791c0,13.131,10.683,23.814,23.814,23.814h59.535v47.628 H273.86v-61.332c40.712-8.297,71.442-44.38,71.442-87.506s-30.73-79.208-71.442-87.506v-61.332h202.419V154.791z"></path>
@@ -127,9 +121,6 @@ const Navbar = () => {
       width="20px"
       fill="currentColor"
       stroke="currentColor"
-      // strokeWidth="2"
-      // strokeLinecap="round"
-      // strokeLinejoin="round"
       className={className}
     >
       <polygon points="266.24,143.36 245.76,81.92 226.427,143.36 163.84,143.36 214.467,178.217 195.133,237.732 245.76,204.8 296.387,237.732 277.053,178.217 327.68,143.36 "></polygon>{" "}
@@ -145,9 +136,6 @@ const Navbar = () => {
       width="20px"
       fill="currentColor"
       stroke="currentColor"
-      // strokeWidth="2"
-      // strokeLinecap="round"
-      // strokeLinejoin="round"
       className={className}
     >
       <path d="M461.944,110.436C453.52,83.74,434.32,61.252,409.28,48.732L315.96,2.076H184.184L90.864,48.74 C65.824,61.26,46.632,83.748,38.2,110.444L0,231.412l95.44,28.632l18.632-62.128v300.16h272v-300.16l18.64,62.12l95.44-28.632 L461.944,110.436z M303.256,18.076c-5.136,12.2-18.752,32-53.184,32c-34.128,0-47.856-19.784-53.104-32H303.256z M114.072,162.076 h-5.952l-23.408,78.04l-64.56-19.368l5.808-18.384l53.92,15.408l4.4-15.384L30.784,187.1l22.688-71.84 C60.6,92.668,76.84,73.636,98.032,63.052l16.04-8.032V162.076z M162.072,482.076h-32v-312v-8V47.02l19.304-9.656 c2.4,6.288,6.408,14.96,12.696,24.144V482.076z M202.072,482.076h-24V79.924c6.624,6.04,14.592,11.52,24,15.952V482.076z M242.072,482.076h-24V101.804c7.264,2.008,15.28,3.28,24,3.816V482.076z M282.072,482.076h-24V105.62 c8.72-0.528,16.736-1.8,24-3.816V482.076z M322.072,482.076h-24v-386.2c9.408-4.432,17.376-9.912,24-15.952V482.076z M250.072,90.076c-60.32,0-80.872-43.696-86.424-59.848l17.584-8.792c6.128,15.784,23.48,44.64,68.84,44.64 s62.712-28.856,68.832-44.64l17.544,8.776C330.76,46.284,309.784,90.076,250.072,90.076z M370.072,162.076v8v312h-32V61.508 c6.288-9.184,10.296-17.848,12.696-24.144l19.304,9.656V162.076z M392.024,162.076h-5.952V55.02l16.056,8.024 c21.184,10.592,37.432,29.624,44.56,52.208l22.688,71.84L415.88,202.38l4.4,15.384l53.92-15.408l5.808,18.384l-64.56,19.368 L392.024,162.076z"></path>
@@ -162,9 +150,6 @@ const Navbar = () => {
       width="20px"
       fill="currentColor"
       stroke="currentColor"
-      // strokeWidth="2"
-      // strokeLinecap="round"
-      // strokeLinejoin="round"
       className={className}
     >
       <g>
@@ -403,7 +388,12 @@ const Navbar = () => {
         Uses NavLink for routning, styles as a logo */}
         <NavLink to="/" className="logo" onClick={handleNavClick}>
           {/* Soccer ball Emoji as logo icon */}
-          <span className="logo-icon">⚽</span>
+          <span className="logo-icon">
+            <img
+              src="/mbLogo/ManingueBola-logo-website-v3.png"
+              alt="Logo do ManingueBola"
+            />
+          </span>
 
           {/* Brand name text
         Hidden on every small screens (xs), shown on sm and up */}

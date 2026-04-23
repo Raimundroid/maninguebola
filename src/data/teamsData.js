@@ -229,7 +229,7 @@ const teamsData = {
   //   //   email: "eagles@example.com",
   //   // },
   // },
-  sportNhachotaFc: {
+  sportingNhachotaFc: {
     id: "sportingNhachotaFc", // Unique identifier
     name: "Sporting de Nhachota", // Full team name
     shortName: " Sport. de Nhachota", // ✅ NEW
@@ -553,42 +553,44 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  // -------------------------------------
-  //   eagles: {
-  //     id: "eagles", // Unique identifier
-  //     name: "FC Eagles", // Full team name
-  //     abbr: "FE", // Abbreviation for logos
-  //     // position: "1",
-  //     // points: "99", /////
-  //     founded: 2010,
-  //     stadium: "Eagles Arena A",
-  //     logo: "/images/teams/shield-gold.jpg",
-  //     colors: { primary: "#0033cc", secondary: "#ffcc00" },
-  //     contact: {
-  //       coach: "John Dalton",
-  //       captain: "Jaime Paulo",
-  //       phone: "+258 82 12 34 567",
-  //       email: "eagles@example.com",
-  //     },
-  //   },
-  // lions: {
-  //   id: "lions",
-  //   name: "United Lions",
-  //   abbr: "UL",
-  //   // position: "2",
-  //   // points: "75", /////
-  //   founded: 2015,
-  //   stadium: "Lions Den",
+  //================ // ------DEMO DATA--------================
+  eagles: {
+    id: "eagles", // Unique identifier
+    name: "FC Eagles", // Full team name
+    abbr: "FE", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    founded: 2010,
+    stadium: "Eagles Arena A",
+    logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "#0033cc", secondary: "#ffcc00" },
+    contact: {
+      coach: "John Dalton",
+      captain: "Jaime Paulo",
+      phone: "+258 82 12 34 567",
+      email: "eagles@example.com",
+    },
+    competitions: ["morrumbene"],
+  },
+  lions: {
+    id: "lions",
+    name: "United Lions",
+    abbr: "UL",
+    // position: "2",
+    // points: "75", /////
+    founded: 2015,
+    stadium: "Lions Den",
 
-  //   logo: "/images/teams/shield-golden.jpg",
-  //   colors: { primary: "#FF0000", secondary: "#14ca14ff" },
-  //   contact: {
-  //     coach: "Lino Papagaio",
-  //     captain: "Borge Papalo",
-  //     phone: "+258 82 12 34 568",
-  //     email: "lions@example.com",
-  //   },
-  // },
+    logo: "/images/teams/shield-golden.jpg",
+    colors: { primary: "#FF0000", secondary: "#14ca14ff" },
+    contact: {
+      coach: "Lino Papagaio",
+      captain: "Borge Papalo",
+      phone: "+258 82 12 34 568",
+      email: "lions@example.com",
+    },
+    competitions: ["morrumbene"],
+  },
   tigers: {
     id: "tigers",
     name: "Sporting Tigers",
@@ -605,6 +607,7 @@ const teamsData = {
       phone: "+258 82 12 34 569",
       email: "tigers@example.com",
     },
+    competitions: ["govuro"],
   },
   cats: {
     id: "cats",
@@ -622,7 +625,339 @@ const teamsData = {
       phone: "+258 82 12 34 560",
       email: "cats@example.com",
     },
+    competitions: ["govuro"],
   },
 };
 
 export default teamsData;
+
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// // ============================================
+// // data/teamsData.js
+// // ============================================
+// //
+// // ARCHITECTURE NOTE — competitions field:
+// // ----------------------------------------
+// // `competitions` is the SINGLE SOURCE OF TRUTH for which competition(s)
+// // a team participates in. It must NOT be duplicated in standingsData or
+// // matchesData — those files derive competition context from here via enrichment.
+// //
+// // Format: always an array of strings, even if the team is in only one competition.
+// // Example: competitions: ["Campeonato Distrital de Govuro"]
+// //
+// // WHY an array and not a string?
+// // A team can participate in multiple competitions (league + cup).
+// // An array handles both the single and multi-competition cases uniformly.
+
+// const teamsData = {
+//   // ── Campeonato Distrital de Govuro ───────────────────────────────────────
+
+//   UDChimedje: {
+//     id: "UDChimedje",
+//     name: "UD de Chimedje",
+//     shortName: "UD de Chimedje",
+//     abbr: "UDC",
+//     stadium: "Indefinido",
+//     colors: { primary: "red", secondary: "orange" },
+//     competitions: ["govuro"],
+//   },
+//   kakanavas: {
+//     id: "kakanavas",
+//     name: "Kakanavas",
+//     shortName: "Kakanavas",
+//     abbr: "KKV",
+//     stadium: "Indefinido",
+//     colors: { primary: "red", secondary: "blue" },
+//     competitions: ["govuro"],
+//   },
+//   rebentaFogo: {
+//     id: "rebentaFogo",
+//     name: "Rebenta Fogo",
+//     shortName: "Rebenta Fogo",
+//     abbr: "RB",
+//     stadium: "Indefinido",
+//     colors: { primary: "orange", secondary: "blue" },
+//     competitions: ["govuro"],
+//   },
+//   bingaFC: {
+//     id: "bingaFC",
+//     name: "Binga FC",
+//     shortName: "Binga FC",
+//     abbr: "BFC",
+//     stadium: "Indefinido",
+//     colors: { primary: "orange", secondary: "pink" },
+//     competitions: ["govuro"],
+//   },
+//   realPande: {
+//     id: "realPande",
+//     name: "Real de Pande",
+//     shortName: "Real de Pande",
+//     abbr: "RP",
+//     stadium: "Indefinido",
+//     colors: { primary: "orange", secondary: "grey" },
+//     competitions: ["govuro"],
+//   },
+//   onzeIrmaos: {
+//     id: "onzeIrmaos",
+//     name: "Onze Irmãos",
+//     shortName: "Onze Irmãos",
+//     abbr: "11i",
+//     stadium: "Indefinido",
+//     colors: { primary: "black", secondary: "pink" },
+//     competitions: ["govuro"],
+//   },
+//   teamBebado: {
+//     id: "teamBebado",
+//     name: "Team Bêbado",
+//     shortName: "Team Bêbado",
+//     abbr: "TB",
+//     stadium: "Indefinido",
+//     colors: { primary: "red", secondary: "black" },
+//     competitions: ["govuro"],
+//   },
+//   associacaoDesortivaPande: {
+//     id: "associacaoDesortivaPande",
+//     name: "Associação Desortiva de Pande",
+//     shortName: "ADP",
+//     abbr: "APD",
+//     stadium: "Indefinido",
+//     colors: { primary: "pink", secondary: "green" },
+//     competitions: ["govuro"],
+//   },
+//   internacionalMiluge: {
+//     id: "internacionalMiluge",
+//     name: "Internacional de Miluge",
+//     shortName: "Inter de Miluge",
+//     abbr: "IM",
+//     stadium: "Campo do Internacional de Miluge",
+//     colors: { primary: "red", secondary: "brown" },
+//     competitions: ["govuro"],
+//   },
+//   ferroviarioCocheMagumbo: {
+//     id: "ferroviarioCocheMagumbo",
+//     name: "Ferroviário de Coche Magumbo",
+//     shortName: "Ferroviário de Coche",
+//     abbr: "FCM",
+//     stadium: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
+//     colors: { primary: "brown", secondary: "gold" },
+//     competitions: ["govuro"],
+//   },
+//   guihambuaneNhaka: {
+//     id: "guihambuaneNhaka",
+//     name: "Guihambuane de Nhaka",
+//     shortName: "Guihambuane de Nhaka",
+//     abbr: "GN",
+//     stadium: "Indefinido",
+//     colors: { primary: "gold", secondary: "red" },
+//     competitions: ["govuro"],
+//   },
+//   costaSolMagumbo: {
+//     id: "costaSolMagumbo",
+//     name: "Costa do Sol de Magumbo",
+//     shortName: "Costa d'Sol d'Magumbo",
+//     abbr: "CSM",
+//     stadium: "Campo do Costa do Sol de Magumbo (Beito)",
+//     colors: { primary: "aqua", secondary: "red" },
+//     competitions: ["govuro"],
+//   },
+//   rioSambeFc: {
+//     id: "rioSambeFc",
+//     name: "Rio Sambe FC",
+//     shortName: "Rio Sambe FC",
+//     abbr: "RS",
+//     stadium: "Campo de Rio Sambe (Coche Magumbo)",
+//     logo: "/images/teams/rioSambeFc/rioSambeFc.jpg",
+//     colors: { primary: "red", secondary: "green" },
+//     competitions: ["govuro"],
+//   },
+
+//   // ── Campeonato de Pande ──────────────────────────────────────────────────
+
+//   sportingMagumbanaFc: {
+//     id: "sportingMagumbanaFc",
+//     name: "Sporting de Magumbana",
+//     shortName: "Sport. de Magumbana",
+//     abbr: "SM",
+//     stadium: "Campo de Magumbana",
+//     colors: { primary: "blue", secondary: "red" },
+//     competitions: ["govuro"],
+//   },
+//   palmeirasMadangelaFc: {
+//     id: "palmeirasMadangelaFc",
+//     name: "Palmeiras de Madangela",
+//     shortName: "Palm. de Madangela",
+//     abbr: "PM",
+//     stadium: "Indefinido",
+//     colors: { primary: "red", secondary: "blue" },
+//     competitions: ["govuro"],
+//   },
+//   // ✅ BUG FIX: key was "sportNhachotaFc" but id was "sportingNhachotaFc"
+//   // They must match so that teamLookup[team.id] works correctly.
+//   sportingNhachotaFc: {
+//     id: "sportingNhachotaFc",
+//     name: "Sporting de Nhachota",
+//     shortName: "Sport. de Nhachota",
+//     abbr: "SN",
+//     stadium: "Campo de Nhachota",
+//     colors: { primary: "yellow", secondary: "blue" },
+//     competitions: ["govuro"],
+//   },
+//   slowDownFc: {
+//     id: "slowDownFc",
+//     name: "Slow Down FC",
+//     shortName: "Slow Down FC",
+//     abbr: "SDFC",
+//     stadium: "Indefinido",
+//     logo: "/images/teams/slowDownFc/slowDownFc.jpg",
+//     colors: { primary: "yellow", secondary: "red" },
+//     competitions: ["govuro"],
+//   },
+//   revolutionFc: {
+//     id: "revolutionFc",
+//     name: "Revolution FC",
+//     shortName: "Revolution FC",
+//     abbr: "RFC",
+//     stadium: "Indefinido",
+//     colors: { primary: "red", secondary: "yellow" },
+//     competitions: ["govuro"],
+//   },
+//   academicaMucucune: {
+//     id: "academicaMucucune",
+//     name: "Acadêmica de Mucucune",
+//     shortName: "Acad. de Mucucune",
+//     abbr: "AM",
+//     stadium: "Indefinido",
+//     colors: { primary: "blue", secondary: "green" },
+//     competitions: ["govuro"],
+//   },
+
+//   // ── Campeonato de Morrumbene ─────────────────────────────────────────────
+
+//   novoSclonioMaxixe: {
+//     id: "novoSclonioMaxixe",
+//     name: "Novo Sclonio da Maxixe",
+//     shortName: "N. Sclonio da Maxixe",
+//     abbr: "NSM",
+//     stadium: "Indefinido",
+//     colors: { primary: "green", secondary: "blue" },
+//     competitions: ["govuro"],
+//   },
+//   madangelaFcMorrumbene: {
+//     id: "madangelaFcMorrumbene",
+//     name: "Madangela FC de Morrumbene",
+//     shortName: "Madangela FC",
+//     abbr: "MFC",
+//     stadium: "Campo Desportivo Guigobane",
+//     colors: { primary: "yellow", secondary: "orange" },
+//     competitions: ["govuro"],
+//   },
+//   sportingKhundula: {
+//     id: "sportingKhundula",
+//     name: "Sporting de Khundula",
+//     shortName: "Sport. de Khundula",
+//     abbr: "SK",
+//     stadium: "Indefinido",
+//     colors: { primary: "yellow", secondary: "green" },
+//     competitions: ["govuro"],
+//   },
+//   benficaIlhaInhambane: {
+//     id: "benficaIlhaInhambane",
+//     name: "Benfica da Ilha de Inhambane",
+//     shortName: "Benf. d' Ilha d' I'mbane",
+//     abbr: "BII",
+//     stadium: "Indefinido",
+//     colors: { primary: "orange", secondary: "green" },
+//     competitions: ["govuro"],
+//   },
+//   santoAntonioMongue: {
+//     id: "santoAntonioMongue",
+//     name: "Santo Antônio de Mongue",
+//     shortName: "S. Antônio de Mongue",
+//     abbr: "SAM",
+//     stadium: "Indefinido",
+//     colors: { primary: "green", secondary: "orange" },
+//     competitions: ["govuro"],
+//   },
+//   eduardoMondlaneLingaLinga: {
+//     id: "eduardoMondlaneLingaLinga",
+//     name: "Eduardo Mondlane de Linga-Linga",
+//     shortName: "E.M. de Linga-Linga",
+//     abbr: "EML",
+//     stadium: "Indefinido",
+//     colors: { primary: "brown", secondary: "red" },
+//     competitions: ["govuro"],
+//   },
+
+//   // ── Demo / test data ─────────────────────────────────────────────────────
+//   // These are placeholder teams used during development. Remove when going live.
+
+//   eagles: {
+//     id: "eagles",
+//     name: "FC Eagles",
+//     abbr: "FE",
+//     founded: 2010,
+//     stadium: "Eagles Arena A",
+//     logo: "/images/teams/shield-gold.jpg",
+//     colors: { primary: "#0033cc", secondary: "#ffcc00" },
+//     contact: {
+//       coach: "John Dalton",
+//       captain: "Jaime Paulo",
+//       phone: "+258 82 12 34 567",
+//       email: "eagles@example.com",
+//     },
+//     // ✅ BUG FIX: previously had two `competitions` keys — JS kept only the last.
+//     // Merged into a single array with both competitions.
+//     competitions: ["govuro"],
+//   },
+//   lions: {
+//     id: "lions",
+//     name: "United Lions",
+//     abbr: "UL",
+//     founded: 2015,
+//     stadium: "Lions Den",
+//     logo: "/images/teams/shield-golden.jpg",
+//     colors: { primary: "#FF0000", secondary: "#14ca14ff" },
+//     contact: {
+//       coach: "Lino Papagaio",
+//       captain: "Borge Papalo",
+//       phone: "+258 82 12 34 568",
+//       email: "lions@example.com",
+//     },
+//     competitions: ["govuro"],
+//   },
+//   tigers: {
+//     id: "tigers",
+//     name: "Sporting Tigers",
+//     abbr: "ST",
+//     founded: 2012,
+//     stadium: "Tigers Cave",
+//     logo: "/images/teams/shield-golden.jpg",
+//     colors: { primary: "#00FF00", secondary: "#000000" },
+//     contact: {
+//       coach: "Gomes Boavista",
+//       captain: "Pedro Santos",
+//       phone: "+258 82 12 34 569",
+//       email: "tigers@example.com",
+//     },
+//     competitions: ["govuro"],
+//   },
+//   cats: {
+//     id: "cats",
+//     name: "Thunder Cats",
+//     abbr: "TC",
+//     founded: 2009,
+//     stadium: "Cats House",
+//     logo: "/images/teams/shield-gold.jpg",
+//     colors: { primary: "#003cffff", secondary: "#df0c0cff" },
+//     contact: {
+//       coach: "Marcus Fontes",
+//       captain: "Rafael Montes",
+//       phone: "+258 82 12 34 560",
+//       email: "cats@example.com",
+//     },
+//     competitions: ["govuro"],
+//   },
+// };
+
+// export default teamsData;

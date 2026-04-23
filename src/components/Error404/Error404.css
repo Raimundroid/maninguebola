@@ -3,4 +3,13 @@
   padding: 48px;
   text-align: center;
   min-height: 60vh;
+  /* background: var(--error); */
+  color: var(--error);
+
+  display: grid;
+  place-content: center;
+}
+
+.error404-container h1 {
+  font-size: 6rem;
 }

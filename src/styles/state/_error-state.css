@@ -16,19 +16,23 @@
   padding: 32px 24px;
   border-radius: 16px;
   border: 1px solid var(--border);
+
+  background: var(--error);
 }
 
 /* Error title styling */
 .error-title {
   font-size: 20px;
-  color: var(--text);
+  /* color: var(--text); */
+  color: white;
   margin-bottom: 12px;
   font-weight: 700;
 }
 
 /* Error message text*/
 .error-message {
-  color: var(--text-light);
+  /* color: var(--text-light); */
+  color: white;
   font-size: 14px;
   margin-bottom: 20px;
   line-height: 1.5;

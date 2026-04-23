@@ -78,7 +78,7 @@ const matchesData = [
   },
   {
     id: 5, // Unique ID for React keys
-    homeTeamId: "sportNhachotaFc", //new
+    homeTeamId: "sportingNhachotaFc", //new
     awayTeamId: "palmeirasMadangelaFc", //new
     homeScore: 1, // Only for live/finished
     awayScore: 1,
@@ -173,7 +173,7 @@ const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
-    competition: "Pande Wafa-Wafa",
+    competitionId: "wafawafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -191,7 +191,7 @@ const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
-    competition: "Pande Wafa-Wafa",
+    competitionId: "wafawafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -209,7 +209,7 @@ const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
-    competition: "Pande Wafa-Wafa",
+    competitionId: "wafawafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -227,7 +227,7 @@ const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo Central de Pande",
     // info: "85+ espectadores", // Optional extra info
-    competition: "Pande Wafa-Wafa",
+    competitionId: "wafawafa",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -245,7 +245,7 @@ const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
-    // competition: "",
+    // competitionId: "",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -263,7 +263,7 @@ const matchesData = [
     // minute: 67, // Current minute (only for live)
     venue: "Campo de Ferroviário de Coche Magumbo (Coche Magumbo)",
     // info: "85+ espectadores", // Optional extra info
-    // competition: "",
+    // competitionId: "",
     // ✅ NEW: Store as Array of Strings
     // Note: You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Mateus", "Mimi"],
@@ -281,33 +281,127 @@ const matchesData = [
   //   // minute: 67, // Current minute (only for live)
   //   venue: "Campo do Costa do Sol de Magumbo (Beito)",
   //   // info: "85+ espectadores", // Optional extra info
-  //   // competition: "",
+  //   // competitionId: "",
   //   // ✅ NEW: Store as Array of Strings
   //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: [],
   //   awayScorers: [],
   // },
 
-  //-----------------------------
-  //   {
-  //     id: 1000, // Unique ID for React keys
-  //     // homeTeam: teams.lions, // Reference to team object
-  //     // awayTeam: teams.tigers,
-  //     homeTeamId: "lions", //new
-  //     awayTeamId: "tigers", //new
-  //     homeScore: 1, // Only for live/finished
-  //     awayScore: 1,
-  //     date: "2025-11-16", // ISO Format
-  //     time: "14:00",
-  //     status: "live", // 'live' | 'finished' | 'upcoming'
-  //     // minute: 67, // Current minute (only for live)
-  //     venue: "Campo Principal",
-  //     info: "85+ espectadores", // Optional extra info
-  //     // ✅ NEW: Store as Array of Strings
-  //     // Note: You can still keep "(2)" for multiple goals if you want strict string display
-  //     homeScorers: ["José Lima"],
-  //     awayScorers: ["Rui Almeida"],
-  //   },
+  // ================ // ------DEMO DATA--------================
+  {
+    id: 1000, // Unique ID for React keys
+    homeTeamId: "onzeIrmaos", //new
+    awayTeamId: "bingaFC", //new
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-03-15", // ISO Format
+    time: "16:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Hello Stadium",
+    // info: "85+ espectadores", // Optional extra info
+    competitionId: "govuro",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1001, // Unique ID for React keys
+    homeTeamId: "rioSambeFc", //new
+    awayTeamId: "costaSolMagumbo", //new
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-03-15", // ISO Format
+    time: "16:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Hello Stadium",
+    // info: "85+ espectadores", // Optional extra info
+    competitionId: "morrumbene",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1002, // Unique ID for React keys
+    homeTeamId: "guihambuaneNhaka", //new
+    awayTeamId: "internacionalMiluge", //new
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-03-15", // ISO Format
+    time: "16:00",
+    status: "live", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Hello Stadium",
+    // info: "85+ espectadores", // Optional extra info
+    competitionId: "morrumbene",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1003, // Unique ID for React keys
+    homeTeamId: "realPande", //new
+    awayTeamId: "kakanavas", //new
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-03-15", // ISO Format
+    time: "16:00",
+    status: "finished", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Hello Stadium",
+    // info: "85+ espectadores", // Optional extra info
+    competitionId: "govuro",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1004, // Unique ID for React keys
+    homeTeamId: "ferroviarioCocheMagumbo", //new
+    awayTeamId: "sportingMagumbanaFc", //new
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-03-15", // ISO Format
+    time: "15:00",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    // minute: 67, // Current minute (only for live)
+    venue: "Hello Stadium",
+    // info: "85+ espectadores", // Optional extra info
+    competitionId: "morrumbene",
+    // ✅ NEW: Store as Array of Strings
+    // Note: You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+
+  //============================================
+
+  // {
+  //   id: 1000, // Unique ID for React keys
+  //   // homeTeam: teams.lions, // Reference to team object
+  //   // awayTeam: teams.tigers,
+  //   homeTeamId: "lions", //new
+  //   awayTeamId: "tigers", //new
+  //   homeScore: 1, // Only for live/finished
+  //   awayScore: 1,
+  //   date: "2025-11-16", // ISO Format
+  //   time: "14:00",
+  //   status: "live", // 'live' | 'finished' | 'upcoming'
+  //   // minute: 67, // Current minute (only for live)
+  //   venue: "Campo Municipal",
+  //   info: "85+ espectadores", // Optional extra info
+  //   competitionId: "morrumbene",
+  //   // ✅ NEW: Store as Array of Strings
+  //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
+  //   homeScorers: ["José Lima"],
+  //   awayScorers: ["Rui Almeida"],
+  // },
   // {
   //   id: 2,
   //   // homeTeam: teams.eagles,
@@ -321,6 +415,7 @@ const matchesData = [
   //   status: "finished",
   //   venue: "Campo A",
   //   // info: "⚽ Miguel Santos (2), Tomás Ferreira",
+  // competitionId: "morrumbene",
   //   // ✅ NEW: Store as Array of Strings
   //   // Note: You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Miguel Santos (2)", "Tomás Ferreira"],

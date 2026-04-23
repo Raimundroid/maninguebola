@@ -44,7 +44,9 @@
 */
 .navbar {
   /* Use CSS variable for background color (theme-aware) */
-  background: var(--card-bg);
+  /* background: var(--card-bg); */
+  background: green;
+  /* background: yellow; */
 
   /* Drop shadow for depth perception */
   box-shadow: 0 2px 8px var(--shadow);
@@ -60,7 +62,9 @@
   z-index: 1000;
 
   /* Smooth trnsitions when theme changes */
-  transition: background 300ms ease, box-shadow 300ms ease;
+  transition:
+    background 300ms ease,
+    box-shadow 300ms ease;
 }
 
 /* ============================================
@@ -128,13 +132,22 @@
 }
 
 /*
-  LOGO ICON: Soccer ball emoji
+  LOGO ICON: Soccer ball emoji(Not anymore)❌
+  LOGO ICON: ManingueBola png logo
   Larger than the text for visual impact
 */
 .logo-icon {
-  font-size: 26px;
-  line-height: 1; /* Prevents extra space above/below */
+  /* font-size: 26px; */
+  /* line-height: 1;*/ /* Prevents extra space above/below */
+  width: 45px;
+  height: 45px;
 }
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+}
+
 /*
   LOGO TEXT: "ManingueBola" brand name
   MOBILE-FIRST: Hidden on xs screens to save space
@@ -674,7 +687,9 @@
 
   /* Resize the logo icon size */
   .logo-icon {
-    font-size: 20px;
+    /* font-size: 20px; */
+    width: 48px;
+    height: 48px;
   }
   /* Resize the logo text size */
   .logo-text {
@@ -792,7 +807,9 @@
   }
 
   .logo-icon {
-    font-size: 30px;
+    /* font-size: 30px; */
+    width: 55px;
+    height: 55px;
   }
 
   /* More space between navigation links */
@@ -825,6 +842,11 @@
   /* Largest logo size */
   .logo {
     font-size: 24px;
+  }
+
+  .logo-icon {
+    width: 60px;
+    height: 60px;
   }
 
   /* Largest theme toggle */

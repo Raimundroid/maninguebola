@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Homepage from "./pages/Homepage/Homepage.jsx";
@@ -47,7 +47,7 @@ function PageViewTracker() {
 
 import playersData from "./data/playersData.js";
 import teamsData from "./data/teamsData.js";
-import standingsData from "./data/standingsData.js";
+import standingsData from "./data/standingsDataOG.js";
 import matchesData from "./data/matchesData.js";
 import statsData from "./data/statsData.js";
 
@@ -245,6 +245,53 @@ const getEnrichedPlayers = (players, teamLookup) => {
   });
 };
 
+// ===============================================
+// 🔎 FILTER: Players by Competition
+// ===============================================
+/**
+ * Extracts stats for a specific competition
+ *
+ * WHY HERE?
+ * - This is data processing logic (same level as enrichment)
+ * - Keeps components clean
+ * - Reusable anywhere (StatisticsPage, Leaderboards, etc.)
+ */
+const getPlayersByCompetition = (players, competitionId) => {
+  if (!competitionId) return [];
+
+  return (
+    players
+      .map((player) => {
+        const compStats = player.stats?.byCompetition?.[competitionId];
+
+        return {
+          ...player,
+          filteredStats: compStats || {
+            appearances: 0,
+            goals: 0,
+            assists: 0,
+          },
+        };
+      })
+
+      // ✅ REMOVE players that didn’t play or have no contribution
+      .filter((player) => {
+        const stats = player.filteredStats;
+
+        return (
+          stats &&
+          stats.appearances > 0 &&
+          (stats.goals > 0 || stats.assists > 0)
+        );
+      })
+  );
+};
+
+// const filteredPlayers = getPlayersByCompetition(
+//   enrichedPlayers,
+//   selectedCompetition,
+// );
+
 function App() {
   useEffect(() => {
     // Initialize Google Analytics once when app loads
@@ -295,7 +342,7 @@ function App() {
   const enrichedMatches = getEnrichedMatches(
     matchesData,
     teamLookup,
-    standingsLookup
+    standingsLookup,
   );
 
   //====================players + teams==============
@@ -314,6 +361,8 @@ function App() {
               path="/teams/:id" → Team detail (dynamic route)
   */
   }
+
+  const [selectedCompetition, setSelectedCompetition] = useState("govuro");
 
   // ===============================================
   // Step 4: Pass enriched data to your components
@@ -393,10 +442,13 @@ function App() {
             <Route
               path="/estatisticas"
               element={
+               
+
                 <StatisticsPage
-                  // players={players}
-                  // teams={teams}
-                  players={enrichedPlayers} //players + teams
+                  players={enrichedPlayers}
+                  teams={enrichedTeams}
+                  selectedCompetition={selectedCompetition}
+                  onCompetitionChange={setSelectedCompetition}
                 />
               }
             />

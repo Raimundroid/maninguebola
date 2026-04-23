@@ -11,8 +11,10 @@ import "./PageIndicator.css";
 
 const PageIndicator = ({ icon, title }) => {
   return (
-    <div className="badge">
-      {icon} {title}
+    <div className="badge-container">
+      <div className="badge">
+        {icon} {title}
+      </div>
     </div>
   );
 };

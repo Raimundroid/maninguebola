@@ -61,7 +61,7 @@ const TeamCard = ({ team }) => {
 //         The && operator means: if left side is true, render right side
 //         The || operator means: true if EITHER position OR points exist
 //       */}
-        {(team?.standing.position || team?.standing.points) && (
+        {(team?.standing?.position || team?.standing?.points) && (
           <div className="team-info">
             {/* Show position if it exists */}
             {/* {team.standing.position && `${team.standing.position}º Lugar`} */}

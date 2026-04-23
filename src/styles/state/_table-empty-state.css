@@ -1,0 +1,10 @@
+.standings-table .table-empty-state-message,
+.player-table .table-empty-state-message,
+.players-stats-table .table-empty-state-message {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: white;
+  font-style: italic;
+  font-size: 0.95rem;
+  background: var(--error);
+}

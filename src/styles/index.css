@@ -22,9 +22,12 @@
 @import "./base/_typography.css";
 @import "./base/_buttons.css";
 @import "./base/_links.css";
-@import "./base/_error-state.css";
 
-/* 4. Utilities */
+/* 4. State styles */
+@import "./state/_error-state.css";
+@import "./state/_table-empty-state.css";
+
+/* 5. Utilities */
 @import "./utilities/_accessibility.css";
 @import "./utilities/_animations.css";
 @import "./utilities/_reduced-motion.css";

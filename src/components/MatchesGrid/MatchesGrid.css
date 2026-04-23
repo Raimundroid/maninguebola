@@ -2,8 +2,5 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
-  margin-bottom: 32px;
-  /* CSS Grid will show 2 columns on larger screens
-   This would typically be handled with media queries in CSS
-   For inline styles; you'd need a resize listener or CSS classes */
+  margin-block: 46px;
 }

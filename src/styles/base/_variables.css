@@ -25,6 +25,7 @@
 
   /* Primary brand color: used for buttons, links, active states */
   --primary: #3b82f6;
+  /* --primary: gold; */
 
   /* Secondary color: used for headings, important text */
   --secondary: #1e293b;
@@ -61,6 +62,8 @@
   --color-link-hover */
   /* --color-button-bg */
   /* --bt-border-color */
+  --contrast-black-white: black;
+  --contrast-white-black: white;
 }
 
 /* ============================================
@@ -95,4 +98,7 @@
 
   /* Even darker shadow for hover effects */
   --shadow-hover: rgba(0, 0, 0, 0.4);
+
+  --contrast-black-white: white;
+  --contrast-white-black: black;
 }

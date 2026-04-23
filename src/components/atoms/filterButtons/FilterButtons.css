@@ -2,21 +2,29 @@
    FilterButtons.css
    ============================================
    Styles for filter button group component
-   ============================================ 
+   ============================================
 */
 
 /* Container for all filter buttons */
 .filter-buttons-container {
   display: flex;
-  gap: 12px; /* Space between buttons */
-  margin-bottom: 24px;
+  margin-bottom: 5px;
   flex-wrap: wrap; /* Wrap to next line on small screens */
+
+  row-gap: 5px;
+  column-gap: 2px; /* Space between buttons */
+
+  border-block: 1px solid silver;
+  box-shadow: 0 2px 6px var(--shadow);
+  padding-block: 3px;
+  background: white;
+  background: var(--contrast-white-black);
 }
 
 /* Base button styles (inactive state) */
 .filter-buttons-container .filter-button {
   /* Spacing */
-  padding: 8px 16px;
+  padding: 8px 4px;
 
   /* Border and background */
   border: 2px solid var(--border);
@@ -26,6 +34,7 @@
 
   /* Typography */
   font-weight: 500;
+  font-size: 12px;
 
   /* Animation */
   transition: all 300ms;

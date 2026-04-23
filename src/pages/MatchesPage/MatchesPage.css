@@ -6,9 +6,9 @@
 }
 
 .matches-page-container .empty-state {
-  background: var(--card-bg);
+  background: var(--error);
   padding: 24px 48px;
   border-radius: 12px;
   text-align: center;
-  color: var(--text-light);
+  color: white;
 }
