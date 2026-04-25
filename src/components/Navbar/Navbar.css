@@ -45,8 +45,8 @@
 .navbar {
   /* Use CSS variable for background color (theme-aware) */
   /* background: var(--card-bg); */
-  background: green;
-  /* background: yellow; */
+  /* background: green; */
+  background: var(--navbar-bg-color);
 
   /* Drop shadow for depth perception */
   box-shadow: 0 2px 8px var(--shadow);
@@ -139,8 +139,8 @@
 .logo-icon {
   /* font-size: 26px; */
   /* line-height: 1;*/ /* Prevents extra space above/below */
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo-icon img {
@@ -688,8 +688,8 @@
   /* Resize the logo icon size */
   .logo-icon {
     /* font-size: 20px; */
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
   }
   /* Resize the logo text size */
   .logo-text {
@@ -808,8 +808,8 @@
 
   .logo-icon {
     /* font-size: 30px; */
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
   }
 
   /* More space between navigation links */
@@ -845,8 +845,8 @@
   }
 
   .logo-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   /* Largest theme toggle */

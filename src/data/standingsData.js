@@ -164,7 +164,12 @@ export const calculateStandings = (rawStandings, competitionId) => {
   withStats.sort((a, b) => {
     if (b.points !== a.points) return b.points - a.points;
     if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
-    return b.goalsFor - a.goalsFor;
+    return a.name.localeCompare(b.name, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    });
+
+    // return b.goalsFor - a.goalsFor;
   });
 
   // 4. Assign position relative to THIS competition's table
@@ -178,6 +183,11 @@ export const calculateStandings = (rawStandings, competitionId) => {
 // RAW STANDINGS DATA
 // ============================================
 export const rawStandings = [
+  // ================================================================
+  // ================ Classificação do "Campeonato do Núcleo de Pande" ================
+  // ================================================================
+
+  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
   {
     id: "UDChimedje",
     name: teamsData.UDChimedje.name,
@@ -185,33 +195,33 @@ export const rawStandings = [
     logo: teamsData.UDChimedje.logo,
     stats: {
       byCompetition: {
-        govuro: {
-          played: 11,
-          wins: 6,
-          draws: 5,
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
           losses: 0,
-          goalsFor: 12,
-          goalsAgainst: 4,
-          form: ["W", "W", "D", "W", "W"],
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
         },
       },
     },
   },
   {
-    id: "kakanavas",
-    name: teamsData.kakanavas.name,
-    abbr: teamsData.kakanavas.abbr,
-    logo: teamsData.kakanavas.logo,
+    id: "kakanavasFC",
+    name: teamsData.kakanavasFC.name,
+    abbr: teamsData.kakanavasFC.abbr,
+    logo: teamsData.kakanavasFC.logo,
     stats: {
       byCompetition: {
-        govuro: {
-          played: 11,
-          wins: 1,
-          draws: 5,
-          losses: 5,
-          goalsFor: 19,
-          goalsAgainst: 20,
-          form: ["W", "D", "L", "L", "D"],
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
         },
       },
     },
@@ -223,14 +233,14 @@ export const rawStandings = [
     logo: teamsData.rebentaFogo.logo,
     stats: {
       byCompetition: {
-        morrumbene: {
-          played: 11,
-          wins: 5,
-          draws: 2,
-          losses: 4,
-          goalsFor: 15,
-          goalsAgainst: 11,
-          form: ["W", "W", "L", "W", "D"],
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
         },
       },
     },
@@ -242,92 +252,176 @@ export const rawStandings = [
     logo: teamsData.bingaFC.logo,
     stats: {
       byCompetition: {
-        govuro: {
-          played: 11,
-          wins: 3,
-          draws: 5,
-          losses: 3,
-          goalsFor: 18,
-          goalsAgainst: 10,
-          form: ["D", "W", "D", "W", "L"],
-        },
-      },
-    },
-  },
-  {
-    id: "realPande",
-    name: teamsData.realPande.name,
-    abbr: teamsData.realPande.abbr,
-    logo: teamsData.realPande.logo,
-    stats: {
-      byCompetition: {
-        govuro: {
-          played: 11,
-          wins: 9,
-          draws: 1,
-          losses: 1,
-          goalsFor: 36,
-          goalsAgainst: 8,
-          form: ["W", "W", "W", "W", "W"],
-        },
-      },
-    },
-  },
-  {
-    id: "cats",
-    name: teamsData.cats.name,
-    abbr: teamsData.cats.abbr,
-    logo: teamsData.cats.logo,
-    stats: {
-      byCompetition: {
-        morrumbene: {
-          played: 11,
+        pande: {
+          played: 0,
           wins: 0,
-          draws: 5,
-          losses: 6,
-          goalsFor: 10,
-          goalsAgainst: 28,
-          form: ["L", "D", "L", "L", "D"],
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
         },
       },
     },
   },
   {
-    id: "rioSambeFc",
-    name: teamsData.rioSambeFc.name,
-    abbr: teamsData.rioSambeFc.abbr,
-    logo: teamsData.rioSambeFc.logo,
+    id: "realChibuca",
+    name: teamsData.realChibuca.name,
+    abbr: teamsData.realChibuca.abbr,
+    logo: teamsData.realChibuca.logo,
     stats: {
       byCompetition: {
-        morrumbene: {
-          played: 11,
+        pande: {
+          played: 0,
           wins: 0,
-          draws: 2,
-          losses: 9,
-          goalsFor: 4,
-          goalsAgainst: 18,
-          form: ["L", "L", "D", "L", "L"],
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+
+  {
+    id: "onzeIrmaos",
+    name: teamsData.onzeIrmaos.name,
+    abbr: teamsData.onzeIrmaos.abbr,
+    logo: teamsData.onzeIrmaos.logo,
+    stats: {
+      byCompetition: {
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
         },
       },
     },
   },
   {
-    id: "tigers",
-    name: teamsData.tigers.name,
-    abbr: teamsData.tigers.abbr,
-    logo: teamsData.tigers.logo,
+    id: "teamBebado",
+    name: teamsData.teamBebado.name,
+    abbr: teamsData.teamBebado.abbr,
+    logo: teamsData.teamBebado.logo,
     stats: {
       byCompetition: {
-        example: {
-          played: 8,
-          wins: 4,
-          draws: 2,
-          losses: 2,
-          goalsFor: 10,
-          goalsAgainst: 6,
-          form: ["W", "L", "W", "D", "W"],
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
         },
       },
     },
   },
+
+  {
+    id: "associacaoDesportivaPande",
+    name: teamsData.associacaoDesportivaPande.name,
+    abbr: teamsData.associacaoDesportivaPande.abbr,
+    logo: teamsData.associacaoDesportivaPande.logo,
+    stats: {
+      byCompetition: {
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "SFCSave",
+    name: teamsData.SFCSave.name,
+    abbr: teamsData.SFCSave.abbr,
+    logo: teamsData.SFCSave.logo,
+    stats: {
+      byCompetition: {
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "kingOfTheJungle",
+    name: teamsData.kingOfTheJungle.name,
+    abbr: teamsData.kingOfTheJungle.abbr,
+    logo: teamsData.kingOfTheJungle.logo,
+    stats: {
+      byCompetition: {
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+
+  {
+    id: "UDMaluvane",
+    name: teamsData.UDMaluvane.name,
+    abbr: teamsData.UDMaluvane.abbr,
+    logo: teamsData.UDMaluvane.logo,
+    stats: {
+      byCompetition: {
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "machacameFC",
+    name: teamsData.machacameFC.name,
+    abbr: teamsData.machacameFC.abbr,
+    logo: teamsData.machacameFC.logo,
+    stats: {
+      byCompetition: {
+        pande: {
+          played: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
 ];
+
+// // Keep default export for backwards compatibility if needed
+const standingsData = calculateStandings(rawStandings);
+export default standingsData;

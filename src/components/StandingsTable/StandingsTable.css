@@ -96,7 +96,7 @@
 }
 
 .standings-table .team-cell .team-name {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--primary);
 }

@@ -47,7 +47,7 @@ function PageViewTracker() {
 
 import playersData from "./data/playersData.js";
 import teamsData from "./data/teamsData.js";
-import standingsData from "./data/standingsDataOG.js";
+import standingsData from "./data/standingsData.js";
 import matchesData from "./data/matchesData.js";
 import statsData from "./data/statsData.js";
 
@@ -362,7 +362,7 @@ function App() {
   */
   }
 
-  const [selectedCompetition, setSelectedCompetition] = useState("govuro");
+  const [selectedCompetition, setSelectedCompetition] = useState("pande");
 
   // ===============================================
   // Step 4: Pass enriched data to your components
@@ -442,8 +442,6 @@ function App() {
             <Route
               path="/estatisticas"
               element={
-               
-
                 <StatisticsPage
                   players={enrichedPlayers}
                   teams={enrichedTeams}

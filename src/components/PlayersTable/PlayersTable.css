@@ -132,18 +132,17 @@
 .player-table .player-cell .player-name,
 .player-table .team-cell .team-name,
 .player-table .player-position {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--primary);
   /* white-space: nowrap; */
 }
 .player-table .team-cell .team-name {
   font-weight: 600;
+  font-size: 10px;
 }
 
 .player-table .player-position {
   font-weight: 500;
   color: var(--text);
 }
-
-

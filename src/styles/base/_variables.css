@@ -10,7 +10,7 @@
 
 :root {
   /* Default typography */
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: calibri, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -62,8 +62,11 @@
   --color-link-hover */
   /* --color-button-bg */
   /* --bt-border-color */
+
   --contrast-black-white: black;
   --contrast-white-black: white;
+
+  --navbar-bg-color: yellow;
 }
 
 /* ============================================
@@ -101,4 +104,6 @@
 
   --contrast-black-white: white;
   --contrast-white-black: black;
+
+  --navbar-bg-color: gold;
 }

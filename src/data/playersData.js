@@ -736,184 +736,237 @@ const playersData = [
   //   },
   // },
   //================ // ------DEMO DATA--------================
-  {
-    id: 48,
-    name: "Wayne",
-    teamId: "cats",
-    number: 3,
-    position: "Defesa",
-    residence: "Pande, Govuro",
-    dateOfBirth: "2000-10-30",
-    photo: "/images/players/default-player-4.png",
-    stats: {
-      byCompetition: {
-        morrumbene: {
-          appearances: 3,
-          goals: 2,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 49,
-    name: "Armando",
-    teamId: "realPande",
-    number: 10,
-    position: "Atacante",
-    residence: "Pande, Govuro",
-    dateOfBirth: "2002-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        govuro: {
-          appearances: 11,
-          goals: 10,
-          assists: 1,
-        },
-        wafawafa: {
-          appearances: 3,
-          goals: 2,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 50,
-    name: "Paulo",
-    teamId: "kakanavas",
-    number: 6,
-    position: "Meio-Campista",
-    residence: "Pande, Govuro",
-    dateOfBirth: "2004-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        govuro: {
-          appearances: 11,
-          goals: 4,
-          assists: 1,
-        },
-        wafawafa: {
-          appearances: 3,
-          goals: 2,
-          assists: 0,
-        },
-        example: {
-          appearances: 3,
-          goals: 6,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 51,
-    name: "Marcos",
-    teamId: "rebentaFogo",
-    number: 9,
-    position: "Atacante",
-    residence: "Pande, Govuro",
-    dateOfBirth: "2006-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        govuro: {
-          appearances: 11,
-          goals: 2,
-          assists: 1,
-        },
-        wafawafa: {
-          appearances: 3,
-          goals: 2,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 52,
-    name: "Ramos",
-    teamId: "sportingMagumbanaFc",
-    number: 1,
-    position: "Atacante",
-    residence: "Pande, Govuro",
-    dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        morrumbene: {
-          appearances: 3,
-          goals: 2,
-          assists: 0,
-        },
-        example: {
-          appearances: 3,
-          goals: 5,
-          assists: 2,
-        },
-      },
-    },
-  },
-  {
-    id: 53,
-    name: "Manuel",
-    teamId: "rioSambeFc",
-    number: 11,
-    position: "Atacante",
-    residence: "Chimedje, Govuro",
-    dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        morrumbene: {
-          appearances: 11,
-          goals: 10,
-          assists: 1,
-        },
-      },
-    },
-  },
+  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
+  // {
+  //   id: 45,
+  //   name: "Bruce Barner",
+  //   teamId: "associacaoDesportivaPande",
+  //   number: 3,
+  //   position: "Defesa",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2000-10-30",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 3,
+  //         goals: 50,
+  //         assists: 10,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 46,
+  //   name: "Peter Parker",
+  //   teamId: "UDMaluvane",
+  //   number: 3,
+  //   position: "Defesa",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2000-10-30",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 3,
+  //         goals: 2,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 47,
+  //   name: "Bruce Wayne",
+  //   teamId: "kakanavasFC",
+  //   number: 3,
+  //   position: "Defesa",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2000-10-30",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 3,
+  //         goals: 90,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 48,
+  //   name: "Bruce Wayne",
+  //   teamId: "kakanavasFC",
+  //   number: 3,
+  //   position: "Defesa",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2000-10-30",
+  //   photo: "/images/players/default-player-4.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 3,
+  //         goals: 20,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 49,
+  //   name: "Armando Constatino",
+  //   teamId: "realChibuca",
+  //   number: 10,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2002-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 11,
+  //         goals: 10,
+  //         assists: 1,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 50,
+  //   name: "Paulo",
+  //   teamId: "kakanavasFC",
+  //   number: 6,
+  //   position: "Meio-Campista",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2004-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 11,
+  //         goals: 4,
+  //         assists: 1,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 51,
+  //   name: "Marcos",
+  //   teamId: "rebentaFogo",
+  //   number: 9,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2006-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 11,
+  //         goals: 2,
+  //         assists: 1,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 52,
+  //   name: "Ramos",
+  //   teamId: "sportingMagumbanaFc",
+  //   number: 1,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 3,
+  //         goals: 2,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 53,
+  //   name: "Manuel",
+  //   teamId: "rioSambeFc",
+  //   number: 11,
+  //   position: "Atacante",
+  //   residence: "Chimedje, Govuro",
+  //   dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 11,
+  //         goals: 10,
+  //         assists: 1,
+  //       },
+  //     },
+  //   },
+  // },
 
-  {
-    id: 54,
-    name: "Picasso",
-    teamId: "slowDownFc",
-    number: 6,
-    position: "Atacante",
-    residence: "Chimedje, Govuro",
-    dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        morrumbene: {
-          appearances: 5,
-          goals: 100,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 55,
-    name: "Da Vinci",
-    teamId: "sportingNhachotaFc",
-    number: 6,
-    position: "Atacante",
-    residence: "Chimedje, Govuro",
-    dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        morrumbene: {
-          appearances: 5,
-          goals: 100,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 54,
+  //   name: "Picasso",
+  //   teamId: "slowDownFc",
+  //   number: 6,
+  //   position: "Atacante",
+  //   residence: "Chimedje, Govuro",
+  //   dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 5,
+  //         goals: 100,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 55,
+  //   name: "Da Vinci",
+  //   teamId: "sportingNhachotaFc",
+  //   number: 6,
+  //   position: "Atacante",
+  //   residence: "Chimedje, Govuro",
+  //   dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 5,
+  //         goals: 100,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 56,
+  //   name: "Da Vinci",
+  //   teamId: "sportingNhachotaFc",
+  //   number: 6,
+  //   position: "Atacante",
+  //   residence: "Chimedje, Govuro",
+  //   dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 5,
+  //         goals: 59,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+
   //================================
 ];
 

@@ -248,13 +248,13 @@ const StatisticsPage = ({
       />
 
       {/* 📘 Table Legend */}
-      <TableCaption
+      {/* <TableCaption
         dash={"-"}
         items={[
           { abbr: "J", text: "Jogos" },
           { abbr: "Assists", text: "Assistências" },
         ]}
-      />
+      /> */}
     </div>
   );
 };

@@ -51,7 +51,9 @@
 
 /* --- MISSION CARD SPECIFIC --- */
 .mission-card {
-  border-inline: 3px solid var(--primary);
+  border-inline: 3px solid var(--navbar-bg-color);
+  outline: 1px solid black;
+  outline-offset: 1px;
 }
 
 /* --- DEV CARD SPECIFIC --- */

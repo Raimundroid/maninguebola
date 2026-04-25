@@ -319,150 +319,7 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  UDChimedje: {
-    id: "UDChimedje", // Unique identifier
-    name: "UD de Chimedje", // Full team name
-    shortName: "UD de Chimedje", // ✅ NEW
-    abbr: "UDC", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "red", secondary: "orange" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  kakanavas: {
-    id: "kakanavas", // Unique identifier
-    name: "Kakanavas", // Full team name
-    shortName: "Kakanavas", // ✅ NEW
-    abbr: "KKV", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "red", secondary: "blue" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  rebentaFogo: {
-    id: "rebentaFogo", // Unique identifier
-    name: "Rebenta Fogo", // Full team name
-    shortName: "Rebenta Fogo", // ✅ NEW
-    abbr: "RB", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "orange", secondary: "blue" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  bingaFC: {
-    id: "bingaFC", // Unique identifier
-    name: "Binga FC", // Full team name
-    shortName: "Binga FC", // ✅ NEW
-    abbr: "BFC", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "orange", secondary: "pink" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  realPande: {
-    id: "realPande", // Unique identifier
-    name: "Real de Pande", // Full team name
-    shortName: "Real de Pande", // ✅ NEW
-    abbr: "RP", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "orange", secondary: "grey" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  onzeIrmaos: {
-    id: "onzeIrmaos", // Unique identifier
-    name: "Onze Irmãos", // Full team name
-    shortName: "Onze Irmãos", // ✅ NEW
-    abbr: "11i", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "black", secondary: "pink" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  teamBebado: {
-    id: "teamBebado", // Unique identifier
-    name: "Team Bêbado", // Full team name
-    shortName: "Team Bêbado", // ✅ NEW
-    abbr: "TB", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "red", secondary: "black" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
-  associacaoDesortivaPande: {
-    id: "associacaoDesortivaPande", // Unique identifier
-    name: "Associação Desortiva de Pande", // Full team name
-    shortName: "ADP", // ✅ NEW
-    abbr: "APD", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    // founded: 1000,
-    stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "pink", secondary: "green" },
-    // contact: {
-    //   coach: "John Dalton",
-    //   captain: "Jaime Paulo",
-    //   phone: "+258 82 12 34 567",
-    //   email: "eagles@example.com",
-    // },
-  },
+
   internacionalMiluge: {
     id: "internacionalMiluge", // Unique identifier
     name: "Internacional de Miluge", // Full team name
@@ -553,79 +410,215 @@ const teamsData = {
     //   email: "eagles@example.com",
     // },
   },
-  //================ // ------DEMO DATA--------================
-  eagles: {
-    id: "eagles", // Unique identifier
-    name: "FC Eagles", // Full team name
-    abbr: "FE", // Abbreviation for logos
-    // position: "1",
-    // points: "99", /////
-    founded: 2010,
-    stadium: "Eagles Arena A",
-    logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "#0033cc", secondary: "#ffcc00" },
-    contact: {
-      coach: "John Dalton",
-      captain: "Jaime Paulo",
-      phone: "+258 82 12 34 567",
-      email: "eagles@example.com",
-    },
-    competitions: ["morrumbene"],
-  },
-  lions: {
-    id: "lions",
-    name: "United Lions",
-    abbr: "UL",
-    // position: "2",
-    // points: "75", /////
-    founded: 2015,
-    stadium: "Lions Den",
 
-    logo: "/images/teams/shield-golden.jpg",
-    colors: { primary: "#FF0000", secondary: "#14ca14ff" },
-    contact: {
-      coach: "Lino Papagaio",
-      captain: "Borge Papalo",
-      phone: "+258 82 12 34 568",
-      email: "lions@example.com",
-    },
-    competitions: ["morrumbene"],
+  // ================================================================
+  // ================ Equipas do "Campeonato do Núcleo de Pande" ================
+  // ================================================================
+
+  UDChimedje: {
+    id: "UDChimedje", // Unique identifier
+    name: "União Desportiva de Chimedje", // Full team name
+    shortName: "UD de Chimedje",
+    abbr: "UDC", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "orange" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
   },
-  tigers: {
-    id: "tigers",
-    name: "Sporting Tigers",
-    abbr: "ST",
-    // position: "3",
-    // points: "50", /////
-    founded: 2012,
-    stadium: "Tigers Cave",
-    logo: "/images/teams/shield-golden.jpg",
-    colors: { primary: "#00FF00", secondary: "#000000" },
-    contact: {
-      coach: "Gomes Boavista",
-      captain: "Pedro Santos",
-      phone: "+258 82 12 34 569",
-      email: "tigers@example.com",
-    },
-    competitions: ["govuro"],
+  kakanavasFC: {
+    id: "kakanavasFC", // Unique identifier
+    name: "Kakanavas FC", // Full team name
+    shortName: "Kakanavas FC",
+    abbr: "KFC", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "blue" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
   },
-  cats: {
-    id: "cats",
-    name: "Thunder Cats",
-    abbr: "TC",
-    // position: "3",
-    // points: "50", /////
-    founded: 2009,
-    stadium: "Cats House",
-    logo: "/images/teams/shield-gold.jpg",
-    colors: { primary: "#003cffff", secondary: "#df0c0cff" },
-    contact: {
-      coach: "Marcus Fontes",
-      captain: "Rafael Montes",
-      phone: "+258 82 12 34 560",
-      email: "cats@example.com",
-    },
-    competitions: ["govuro"],
+  rebentaFogo: {
+    id: "rebentaFogo", // Unique identifier
+    name: "Rebenta Fogo", // Full team name
+    shortName: "Rebenta Fogo",
+    abbr: "RB", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "orange", secondary: "blue" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  bingaFC: {
+    id: "bingaFC", // Unique identifier
+    name: "Binga FC", // Full team name
+    shortName: "Binga FC",
+    abbr: "BFC", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "orange", secondary: "pink" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  realChibuca: {
+    id: "realChibuca", // Unique identifier
+    name: "Real de Chibuca", // Full team name
+    shortName: "Real de Chibuca",
+    abbr: "RC", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/campNucleoPande/realChibuca/real-de-chibuca-RM-water-chosen-final-version.png",
+    colors: { primary: "orange", secondary: "grey" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  onzeIrmaos: {
+    id: "onzeIrmaos", // Unique identifier
+    name: "11 Irmãos", // Full team name
+    shortName: "11 Irmãos",
+    abbr: "11i", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "black", secondary: "pink" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  teamBebado: {
+    id: "teamBebado", // Unique identifier
+    name: "Team Bêbado", // Full team name
+    shortName: "Team Bêbado",
+    abbr: "TB", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "black" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  associacaoDesportivaPande: {
+    id: "associacaoDesportivaPande", // Unique identifier
+    name: "Associação Desportiva de Pande", // Full team name
+    shortName: "A.D.P.",
+    abbr: "APD", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "pink", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  SFCSave: {
+    id: "SFCSave", // Unique identifier
+    name: "Sporting FC de Save", // Full team name
+    shortName: "S. FC de Save",
+    abbr: "SFCS", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "brown", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  kingOfTheJungle: {
+    id: "kingOfTheJungle", // Unique identifier
+    name: "King Of The Jungle", // Full team name
+    shortName: "King Of The Jungle",
+    abbr: "KOTJ", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "black" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+
+  UDMaluvane: {
+    id: "UDMaluvane", // Unique identifier
+    name: "União Desportiva de Maluvane", // Full team name
+    shortName: "U.D. de Maluvane",
+    abbr: "UDM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "red", secondary: "gold" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
+  },
+  machacameFC: {
+    id: "machacameFC", // Unique identifier
+    name: "Machacame FC", // Full team name
+    shortName: "Machacame FC",
+    abbr: "MFC", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pande"],
   },
 };
 
@@ -961,3 +954,83 @@ export default teamsData;
 // };
 
 // export default teamsData;
+
+{
+  /**
+   *
+   //================ // ------DEMO DATA--------================
+  eagles: {
+    id: "eagles", // Unique identifier
+    name: "FC Eagles", // Full team name
+    abbr: "FE", // Abbreviation for logos
+    // position: "1",
+    // points: "99", /////
+    founded: 2010,
+    stadium: "Eagles Arena A",
+    logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "#0033cc", secondary: "#ffcc00" },
+    contact: {
+      coach: "John Dalton",
+      captain: "Jaime Paulo",
+      phone: "+258 82 12 34 567",
+      email: "eagles@example.com",
+    },
+    competitions: ["pande"],
+  },
+  lions: {
+    id: "lions",
+    name: "United Lions",
+    abbr: "UL",
+    // position: "2",
+    // points: "75", /////
+    founded: 2015,
+    stadium: "Lions Den",
+
+    logo: "/images/teams/shield-golden.jpg",
+    colors: { primary: "#FF0000", secondary: "#14ca14ff" },
+    contact: {
+      coach: "Lino Papagaio",
+      captain: "Borge Papalo",
+      phone: "+258 82 12 34 568",
+      email: "lions@example.com",
+    },
+    competitions: ["pande"],
+  },
+  tigers: {
+    id: "tigers",
+    name: "Sporting Tigers",
+    abbr: "ST",
+    // position: "3",
+    // points: "50", /////
+    founded: 2012,
+    stadium: "Tigers Cave",
+    logo: "/images/teams/shield-golden.jpg",
+    colors: { primary: "#00FF00", secondary: "#000000" },
+    contact: {
+      coach: "Gomes Boavista",
+      captain: "Pedro Santos",
+      phone: "+258 82 12 34 569",
+      email: "tigers@example.com",
+    },
+    competitions: ["pande"],
+  },
+  cats: {
+    id: "cats",
+    name: "Thunder Cats",
+    abbr: "TC",
+    // position: "3",
+    // points: "50", /////
+    founded: 2009,
+    stadium: "Cats House",
+    logo: "/images/teams/shield-gold.jpg",
+    colors: { primary: "#003cffff", secondary: "#df0c0cff" },
+    contact: {
+      coach: "Marcus Fontes",
+      captain: "Rafael Montes",
+      phone: "+258 82 12 34 560",
+      email: "cats@example.com",
+    },
+    competitions: ["pande"],
+  },
+   */
+}

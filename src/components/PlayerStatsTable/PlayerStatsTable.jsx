@@ -46,7 +46,7 @@ const PlayerStatsTable = ({
               <th>#</th>
               <th>Jogador</th>
               <th>{activeTab === "goals" ? "Golos" : "Assistências"}</th>
-              <th>J</th>
+              {/* <th>J</th> */}
             </tr>
           </thead>
 
@@ -114,7 +114,7 @@ const PlayerStatsTable = ({
                                   )}
                                 </div>
                                 <span className="team-name">
-                                  {player.team.name}
+                                  {player.team.shortName}
                                 </span>
                               </div>
                             </Link>
@@ -127,9 +127,9 @@ const PlayerStatsTable = ({
                       <strong>{displayStat}</strong>
                     </td>
 
-                    <td className="games-col">
+                    {/* <td className="games-col">
                       {player.stats?.appearances || 0}
-                    </td>
+                    </td> */}
                   </tr>
                 );
               })

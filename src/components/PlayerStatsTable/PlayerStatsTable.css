@@ -124,7 +124,7 @@ if the entire table is scrolled within this container. */
 }
 
 .players-stats-table .players-name-team-wrapper .player-name {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--primary);
 }
@@ -159,8 +159,7 @@ if the entire table is scrolled within this container. */
 }
 
 .players-stats-table .players-name-team-wrapper .team-info .team-name {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--primary);
 }
-
