@@ -315,7 +315,7 @@ const matchesData = [
   {
     id: 2,
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
-    homeTeamId: "UDMaluvane",
+    homeTeamId: "UDChimedje",
     awayTeamId: "kingOfTheJungle",
     homeScore: 0, // Only for live/finished
     awayScore: 0,

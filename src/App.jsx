@@ -468,7 +468,9 @@ function App() {
               }
             />
             <Route path="/sobre" element={<AboutPage />} />
+
             <Route path="/contacto" element={<ContactPage />} />
+
             <Route
               path="/politica-privacidade"
               element={<PrivacyPolicyPage />}

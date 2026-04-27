@@ -73,7 +73,7 @@ if the entire table is scrolled within this container. */
 }
 
 .players-stats-table td {
-  padding: 12px 6px; /*og: 12px 8px*/
+  padding: 5px 6px; /*og: 12px 8px*/
   border-bottom: 1px solid var(--border);
   font-size: 14px;
   color: var(--text);

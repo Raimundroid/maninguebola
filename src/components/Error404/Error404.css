@@ -1,7 +1,7 @@
 .error404-container {
   max-width: var(--page-max-width);
   padding: 48px;
-  text-align: center;
+  /* text-align: center; */
   min-height: 60vh;
   /* background: var(--error); */
   color: var(--error);
@@ -12,4 +12,5 @@
 
 .error404-container h1 {
   font-size: 6rem;
+  text-align: center;
 }

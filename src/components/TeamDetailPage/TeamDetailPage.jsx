@@ -2414,7 +2414,9 @@ const TeamDetailPage = ({
 
               {/* Conditional rendering: Show message if no players */}
               {teamPlayers.length === 0 ? (
-                <p className="empty-message">Nenhum jogador registado ainda.</p>
+                <p className="empty-message">
+                  Nenhum jogador registado no website ainda.
+                </p>
               ) : (
                 // Object.entries() converts object to array of [key, value] pairs
                 // Example: {Goalkeeper: [...]} → [["Goalkeeper", [...]]]

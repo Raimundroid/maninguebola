@@ -422,7 +422,7 @@ const teamsData = {
     abbr: "UDC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/UDChimedje/UDC-placeholder-v1.png",
     colors: { primary: "red", secondary: "orange" },
     // contact: {
     //   coach: "John Dalton",
@@ -439,7 +439,7 @@ const teamsData = {
     abbr: "KFC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/kakanavasFC/KFC-placeholder-v1.png",
     colors: { primary: "red", secondary: "blue" },
     // contact: {
     //   coach: "John Dalton",
@@ -456,7 +456,7 @@ const teamsData = {
     abbr: "RB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/rebentaFogo/RF-placeholde-logor-v1.png",
     colors: { primary: "orange", secondary: "blue" },
     // contact: {
     //   coach: "John Dalton",
@@ -473,7 +473,7 @@ const teamsData = {
     abbr: "BFC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/bingaFC/BFC-placeholder-v1.png",
     colors: { primary: "orange", secondary: "pink" },
     // contact: {
     //   coach: "John Dalton",
@@ -507,7 +507,7 @@ const teamsData = {
     abbr: "11i", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/onzeIrmaos/11I-placeholde-logor-v1.png",
     colors: { primary: "black", secondary: "pink" },
     // contact: {
     //   coach: "John Dalton",
@@ -524,7 +524,7 @@ const teamsData = {
     abbr: "TB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/teamBebado/tb-placeholder-v1.png",
     colors: { primary: "red", secondary: "black" },
     // contact: {
     //   coach: "John Dalton",
@@ -541,7 +541,7 @@ const teamsData = {
     abbr: "APD", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-placeholder-v1.png",
     colors: { primary: "pink", secondary: "green" },
     // contact: {
     //   coach: "John Dalton",
@@ -558,7 +558,7 @@ const teamsData = {
     abbr: "SFCS", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/SFCSave/SFCS-placeholde-logor-v1.png",
     colors: { primary: "brown", secondary: "green" },
     // contact: {
     //   coach: "John Dalton",
@@ -575,7 +575,7 @@ const teamsData = {
     abbr: "KOTJ", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/kingOfTheJungle/KOTJ-placeholde-logor-v1.png",
     colors: { primary: "red", secondary: "black" },
     // contact: {
     //   coach: "John Dalton",
@@ -593,7 +593,7 @@ const teamsData = {
     abbr: "UDM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/UDMaluvane/UDM-placeholde-logor-v1.png",
     colors: { primary: "red", secondary: "gold" },
     // contact: {
     //   coach: "John Dalton",
@@ -610,7 +610,7 @@ const teamsData = {
     abbr: "MFC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/teams/shield-gold.jpg",
+    logo: "/images/campNucleoPande/MachacameFC/MFC-placeholde-logor-v1.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
