@@ -49,6 +49,8 @@ const Footer = () => {
         </nav>
 
         {/* 3. Social Media & Contact */}
+        <p className="socials-label">Siga o ManingueBola nas redes sociais:</p>
+
         <div className="footer-socials">
           {/* Facebook Icon */}
           <a
@@ -199,7 +201,7 @@ const Footer = () => {
         <div className="footer-legal">
           <div className="legal-links">
             <Link to="/sobre">Sobre</Link> &bull;
-            <Link to="/contacto">Contacto</Link>
+            <Link to="/contacto"> Contacto</Link>
             {/* |
             <Link to="/politica-privacidade">Política de Privacidade</Link> */}
           </div>
