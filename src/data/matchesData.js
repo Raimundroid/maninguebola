@@ -300,11 +300,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
     homeTeamId: "kakanavasFC",
     awayTeamId: "SFCSave",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 2, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-02", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
