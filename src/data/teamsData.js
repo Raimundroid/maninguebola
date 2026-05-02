@@ -553,7 +553,7 @@ const teamsData = {
   },
   SFCSave: {
     id: "SFCSave", // Unique identifier
-    name: ". FC de Save", // Full team name
+    name: "S. FC de Save", // Full team name
     shortName: "S. FC de Save",
     abbr: "SFCS", // Abbreviation for logos
     // founded: 1000,
