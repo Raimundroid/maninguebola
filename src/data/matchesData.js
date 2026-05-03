@@ -317,11 +317,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
     homeTeamId: "UDChimedje",
     awayTeamId: "kingOfTheJungle",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-03", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Chimedje",
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
@@ -338,7 +338,7 @@ const matchesData = [
     awayScore: 0,
     date: "2026-05-03", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Colonga",
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
@@ -351,11 +351,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
     homeTeamId: "rebentaFogo",
     awayTeamId: "teamBebado",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
     date: "2026-05-03", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
@@ -369,11 +369,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
     homeTeamId: "associacaoDesportivaPande",
     awayTeamId: "UDMaluvane",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 2, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-03", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo da Revolução",
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
@@ -386,11 +386,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
     homeTeamId: "bingaFC",
     awayTeamId: "machacameFC",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 3,
     date: "2026-05-03", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo Central de Pande",
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",

@@ -196,12 +196,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
-          draws: 0,
+          draws: 1,
           losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          goalsFor: 1,
+          goalsAgainst: 1,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -234,12 +234,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
           draws: 0,
-          losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          losses: 1,
+          goalsFor: 1,
+          goalsAgainst: 2,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -253,12 +253,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
           draws: 0,
-          losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          losses: 1,
+          goalsFor: 1,
+          goalsAgainst: 3,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -272,9 +272,9 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
-          draws: 0,
+          draws: 1,
           losses: 0,
           goalsFor: 0,
           goalsAgainst: 0,
@@ -292,9 +292,9 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
-          draws: 0,
+          draws: 1,
           losses: 0,
           goalsFor: 0,
           goalsAgainst: 0,
@@ -311,12 +311,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
-          wins: 0,
+          played: 1,
+          wins: 1,
           draws: 0,
           losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          goalsFor: 2,
+          goalsAgainst: 1,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -331,12 +331,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
-          wins: 0,
+          played: 1,
+          wins: 1,
           draws: 0,
           losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          goalsFor: 2,
+          goalsAgainst: 1,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -369,12 +369,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
-          draws: 0,
+          draws: 1,
           losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          goalsFor: 1,
+          goalsAgainst: 1,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -389,12 +389,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
+          played: 1,
           wins: 0,
           draws: 0,
-          losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          losses: 1,
+          goalsFor: 1,
+          goalsAgainst: 2,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
@@ -408,12 +408,12 @@ export const rawStandings = [
     stats: {
       byCompetition: {
         pande: {
-          played: 0,
-          wins: 0,
+          played: 1,
+          wins: 1,
           draws: 0,
           losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
+          goalsFor: 3,
+          goalsAgainst: 1,
           // form: ["W", "W", "D", "W", "W"],
         },
       },
