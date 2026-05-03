@@ -317,8 +317,8 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
     homeTeamId: "UDChimedje",
     awayTeamId: "kingOfTheJungle",
-    homeScore: 1, // Only for live/finished
-    awayScore: 1,
+    homeScore: 2, // Only for live/finished
+    awayScore: 2,
     date: "2026-05-03", // ISO Format
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
