@@ -20,6 +20,8 @@ import NewYearBanner from "../../components/atoms/newYearBanner/NewYearBanner";
 // import SeasonalBanner from "../../components/seasonalBanner/SeasonalBanner";
 import "./Homepage.css";
 
+import StandingsTable from "../../components/StandingsTable/StandingsTable";
+
 const Homepage = ({ matches, stats }) => {
   // Filter matches by their status
   // .filter() creates a new array with only items that pass the test
@@ -75,14 +77,18 @@ const Homepage = ({ matches, stats }) => {
       <MatchesGrid matches={recentMatches} />
 
       {/* Upcoming matches section */}
-      <SectionHeader
-        title="Próximos Jogos"
-        linkTo={"/jogos?filter=upcoming"}
-        linkText={"Ver todos"}
-      />
-      <MatchesGrid matches={upcomingMatches} />
+      {upcomingMatches.length > 0 && (
+        <>
+          <SectionHeader
+            title="Próximos Jogos"
+            linkTo={"/jogos?filter=upcoming"}
+            linkText={"Ver todos"}
+          />
+          <MatchesGrid matches={upcomingMatches} />
+        </>
+      )}
 
-      {/* Upcoming matches section */}
+      {/* Canceled matches section */}
       {/* <SectionHeader
         title="Jogos Cancelados"
         linkTo={"/jogos?filter=canceled"}
@@ -93,6 +99,9 @@ const Homepage = ({ matches, stats }) => {
       {/* Statistics section */}
       {/* <SectionHeader title="Estatísticas Rápidas" /> */}
       {/* <StatsGrid stats={stats} /> */}
+
+      {/* Top 3 StandingsTable */}
+      {/* <StandingsTable standings={standingsData} /> */}
 
       {/* --- TEAM REGISTRATION (ONBOARDING) --- */}
       <ContactCard />

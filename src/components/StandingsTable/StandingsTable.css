@@ -43,7 +43,7 @@
   font-weight: 600;
 }
 .standings-table td {
-  padding: 5px 4px; /*og: 12px 8px*/
+  padding: 2px 6px; /*og: 12px 8px*/
   border-bottom: 1px solid var(--border);
   font-size: 13px; /*og: 14px*/
   color: var(--text);
@@ -79,7 +79,7 @@
   height: 32px;
   font-size: 12px;
   background: var(--border);
-  border-radius: 8px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

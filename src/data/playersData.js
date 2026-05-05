@@ -908,7 +908,6 @@ const playersData = [
   //     },
   //   },
   // },
-
   // {
   //   id: 54,
   //   name: "Picasso",
@@ -966,8 +965,107 @@ const playersData = [
   //     },
   //   },
   // },
-
   //================================
+  // ================================================================
+  // ================ Jogadores das Equipas do "Campeonato do Núcleo de Pande" ================
+  // ================================================================
+
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
+  // {
+  //   id: 1,
+  //   name: "Gesselino da Gilda",
+  //   teamId: "bingaFC",
+  //   // number: 0,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/bingaFC/gesselino-webp-0.webp",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 2,
+  //   name: "Estêvão Alberto",
+  //   teamId: "kakanavasFC",
+  //   // number: 0,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 3,
+  //   name: "Edmilson Tomás",
+  //   teamId: "kakanavasFC",
+  //   // number: 0,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 4,
+  //   name: "Elson Artur",
+  //   teamId: "UDChimedje",
+  //   // number: 0,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 5,
+  //   name: "Kelton Paulito",
+  //   teamId: "UDChimedje",
+  //   // number: 0,
+  //   position: "Atacante",
+  //   residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
 ];
 
 export default playersData;

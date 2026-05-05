@@ -439,7 +439,8 @@ const teamsData = {
     abbr: "KFC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/kakanavasFC/KFC-placeholder-v1.png",
+    // logo: "/images/campNucleoPande/kakanavasFC/KFC-placeholder-v1.png",
+    logo:"/images/campNucleoPande/kakanavasFC/1777983528854.jpg",
     colors: { primary: "red", secondary: "blue" },
     // contact: {
     //   coach: "John Dalton",

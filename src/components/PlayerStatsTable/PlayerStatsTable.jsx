@@ -74,7 +74,7 @@ const PlayerStatsTable = ({
                                 player.photo ||
                                 "/images/players/default-player.png"
                               }
-                              alt={`Icon for ${player.name}`}
+                              alt={`${player.name}`}
                               loading="lazy"
                               width="48"
                               height="48"

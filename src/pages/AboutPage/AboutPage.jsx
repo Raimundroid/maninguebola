@@ -76,16 +76,18 @@ const AboutPage = () => {
             </div>
 
             <div>
-              <h3>Desenvolvido por RAIMUNDO</h3>
+              <p>
+                Desenvolvido por <b>F.A. RAIMUNDO</b>
+              </p>
               <p className="dev-role">💻 Desenvolvedor Web</p>
             </div>
           </div>
-
           <p className="dev-bio">
             Sou um <strong>DESENVOLVEDOR WEB</strong> focado em criar soluções
-            modernas e rápidas. Estou disponível para projetos freelance e
-            oportunidades profissionais.
+            modernas e rápidas.
           </p>
+          {/* Estou disponível para projetos freelance e oportunidades
+          profissionais. */}
 
           {/* Dynamic Tech Stack List */}
           <div className="tech-stack-container">
@@ -101,7 +103,6 @@ const AboutPage = () => {
               ))}
             </div>
           </div>
-
           <div className="dev-links">
             {/* <a
               href="https://linkedin.com"
