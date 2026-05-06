@@ -22,6 +22,7 @@
 @import "./base/_typography.css";
 @import "./base/_buttons.css";
 @import "./base/_links.css";
+@import "./base/_tables.css";
 
 /* 4. State styles */
 @import "./state/_error-state.css";

@@ -91,7 +91,7 @@
 
 // export default StatisticsPage;
 
-import React, { useState, useMemo } from "react";
+// import React, { useState, useMemo } from "react";
 // import "./StatisticsPage.css";
 // import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";
 // import PlayerStatsTable from "../../components/PlayerStatsTable/PlayerStatsTable";
@@ -176,6 +176,7 @@ import React, { useState, useMemo } from "react";
 
 // GTP working code
 
+import React, { useState, useMemo } from "react";
 import "./StatisticsPage.css";
 
 import PageIndicator from "../../components/atoms/pageIndicator/PageIndicator";

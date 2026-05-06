@@ -1,0 +1,15 @@
+table tbody tr:nth-child(1) {
+  background-color: hsl(120, 100%, 25%);
+}
+table tbody tr:nth-child(2) {
+  background-color: hsl(120, 100%, 35%);
+}
+table tbody tr:nth-child(3) {
+  background-color: hsl(120, 100%, 45%);
+}
+
+table tbody td {
+  color: var(--contrast-black-white);
+}
+/* --contrast-black-white
+  --contrast-white-black */

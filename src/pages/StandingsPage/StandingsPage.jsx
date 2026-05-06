@@ -150,14 +150,14 @@ const StandingsPage = () => {
 
   return (
     <div className="standigs-page-container">
-      <PageIndicator icon={<StandingsIcon />} title="Classificação" />
+      <PageIndicator icon={<StandingsIcon />} title="Tabela de Classificação" />
 
       {/* {competitionFilters.length > 1 && ( */}
-        <FilterButtons
-          filters={competitionFilters}
-          activeFilter={activeCompetition}
-          onFilterChange={setActiveCompetition}
-        />
+      <FilterButtons
+        filters={competitionFilters}
+        activeFilter={activeCompetition}
+        onFilterChange={setActiveCompetition}
+      />
       {/* )} */}
 
       <StandingsTable standings={processedStandings} />

@@ -76,13 +76,13 @@ if the entire table is scrolled within this container. */
   padding: 2px 6px; /*og: 12px 8px*/
   border-bottom: 1px solid var(--border);
   font-size: 14px;
-  color: var(--text);
+  /* color: var(--text); */
   vertical-align: middle;
   text-align: left;
 }
 
 .players-stats-table .rank-col {
-  color: var(--primary);
+  /* color: var(--primary); */
   font-size: 12px;
   font-weight: 700;
 }
@@ -128,9 +128,9 @@ if the entire table is scrolled within this container. */
 }
 
 .players-stats-table .players-name-team-wrapper .player-name {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--primary);
+  /* color: var(--primary); */
 }
 
 .players-stats-table .players-name-team-wrapper .team-info {
@@ -166,5 +166,5 @@ if the entire table is scrolled within this container. */
 .players-stats-table .players-name-team-wrapper .team-info .team-name {
   font-size: 10px;
   font-weight: 600;
-  color: var(--primary);
+  /* color: var(--primary); */
 }

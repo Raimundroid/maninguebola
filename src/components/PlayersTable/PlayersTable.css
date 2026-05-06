@@ -82,14 +82,15 @@
   padding: 2px 6px; /*og: 12px 8px*/
   border-bottom: 1px solid var(--border);
   font-size: 14px;
-  color: var(--text);
+  /* color: var(--text); */
   vertical-align: middle;
   text-align: left;
+  background: var(--card-bg);
 }
 
 .player-table .number {
   font-weight: 700;
-  color: var(--primary);
+  /* color: var(--primary); */
 }
 .player-table .player-cell,
 .player-table .team-cell {
@@ -135,9 +136,9 @@
 .player-table .player-cell .player-name,
 .player-table .team-cell .team-name,
 .player-table .player-position {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--primary);
+  /* color: var(--primary); */
   /* white-space: nowrap; */
 }
 .player-table .team-cell .team-name {
@@ -147,5 +148,5 @@
 
 .player-table .player-position {
   font-weight: 500;
-  color: var(--text);
+  /* color: var(--text); */
 }

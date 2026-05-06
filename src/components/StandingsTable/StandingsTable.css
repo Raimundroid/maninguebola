@@ -46,13 +46,13 @@
   padding: 2px 6px; /*og: 12px 8px*/
   border-bottom: 1px solid var(--border);
   font-size: 13px; /*og: 14px*/
-  color: var(--text);
+  /* color: var(--text); */
   text-align: left;
 }
 
 .standings-table .position {
   font-weight: 700;
-  color: var(--primary);
+  /* color: var(--primary); */
 }
 
 .standings-table .team-cell {
@@ -96,7 +96,8 @@
 }
 
 .standings-table .team-cell .team-name {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  color: var(--primary);
+  /* color: var(--primary); */
+  /* color: rgb(255, 239, 18); */
 }

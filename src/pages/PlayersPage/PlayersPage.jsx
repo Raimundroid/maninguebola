@@ -113,7 +113,7 @@ const PlayersPage = () => {
 
   return (
     <div className="players-page-container">
-      <PageIndicator icon={<PlayersIcon />} title="Jogadores" />
+      <PageIndicator icon={<PlayersIcon />} title="Lista de Jogadores" />
 
       <FilterButtons
         filters={filters}

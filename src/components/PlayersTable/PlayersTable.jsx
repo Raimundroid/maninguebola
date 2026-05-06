@@ -233,7 +233,7 @@ const PlayersTable = ({ players = [] }) => {
             <th>#</th>
             <th>Jogador</th>
             <th>Equipa</th>
-            <th>Posição</th>
+            {/* <th>Posição</th> */}
           </tr>
         </thead>
 
@@ -289,17 +289,18 @@ const PlayersTable = ({ players = [] }) => {
                     </div>
                     <span>
                       <strong className="team-name">
-                        {player?.team?.name ?? "-"}
+                        {player?.team?.shortName ?? "-"}
+                        {/* {player?.team?.shortName ?? "-"} */}
                       </strong>
                     </span>
                   </Link>
                 </td>
 
-                <td>
+                {/* <td>
                   <span className="player-position">
                     {player?.position ?? "-"}
                   </span>
-                </td>
+                </td> */}
               </tr>
             ))
           ) : (

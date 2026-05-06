@@ -310,7 +310,7 @@ const matchesData = [
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Estêvão Alberto", "Edmilson Tomás"],
-    awayScorers: [],
+    awayScorers: ["Alfiado Manave"],
   },
   {
     id: 2,
@@ -327,8 +327,9 @@ const matchesData = [
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Elson Artur", "Kelton Paulito"],
-    awayScorers: [],
+    awayScorers: ["António Isac", "AUTO-GOLO"],
   },
+  // 842785594 Lourenco
   {
     id: 3,
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
@@ -360,8 +361,8 @@ const matchesData = [
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: [],
-    awayScorers: [],
+    homeScorers: ["Quelito Amós"],
+    awayScorers: ["Tomás Antônio", "Alexandre André"],
   },
 
   {
@@ -378,8 +379,8 @@ const matchesData = [
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: [],
-    awayScorers: [],
+    homeScorers: ["Osvaldo Amosse", "Hélio Jaime"],
+    awayScorers: ["Salvador Felipe"],
   },
   {
     id: 6,
@@ -396,7 +397,7 @@ const matchesData = [
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Gesselino da Gilda"],
-    awayScorers: [],
+    awayScorers: ["Inácio Luís (2x)", "Zito Salame"],
   },
 
   // ----------------------------Round 2 ---------------------------------

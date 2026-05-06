@@ -62,5 +62,5 @@ export const getTopPlayersByCompetition = (
     return a.name.localeCompare(b.name);
   });
 
-  return sorted.slice(0, 10);
+  return sorted.slice(0, 100);
 };
