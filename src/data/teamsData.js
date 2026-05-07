@@ -440,7 +440,7 @@ const teamsData = {
     // founded: 1000,
     stadium: "Indefinido",
     // logo: "/images/campNucleoPande/kakanavasFC/KFC-placeholder-v1.png",
-    logo:"/images/campNucleoPande/kakanavasFC/1777983528854.jpg",
+    logo: "/images/campNucleoPande/kakanavasFC/KFC-official-logo.jpg",
     colors: { primary: "red", secondary: "blue" },
     // contact: {
     //   coach: "John Dalton",
@@ -542,7 +542,8 @@ const teamsData = {
     abbr: "APD", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-placeholder-v1.png",
+    // logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-placeholder-v1.png",
+    logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-logo-v1.2.png",
     colors: { primary: "pink", secondary: "green" },
     // contact: {
     //   coach: "John Dalton",
@@ -594,7 +595,8 @@ const teamsData = {
     abbr: "UDM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/UDMaluvane/UDM-placeholde-logor-v1.png",
+    // logo: "/images/campNucleoPande/UDMaluvane/UDM-placeholde-logor-v1.png",
+    logo: "/images/campNucleoPande/UDMaluvane/UDM-official-logo.jpg",
     colors: { primary: "red", secondary: "gold" },
     // contact: {
     //   coach: "John Dalton",
