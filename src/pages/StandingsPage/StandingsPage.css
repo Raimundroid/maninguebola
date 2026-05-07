@@ -4,3 +4,23 @@
   padding: 24px 16px;
   min-height: 60vh;
 }
+
+/* =========================Unoffical Standings Table Warning======================= */
+
+.standigs-page-container .standigs-warning {
+  background: var(--error);
+  color: rgb(23, 16, 16);
+  font-size: 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.standigs-page-container .standigs-warning-explanation {
+  background: var(--error);
+  color: rgb(23, 16, 16);
+  font-size: 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 5px;
+}

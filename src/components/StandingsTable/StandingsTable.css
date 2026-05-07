@@ -101,3 +101,7 @@
   /* color: var(--primary); */
   /* color: rgb(255, 239, 18); */
 }
+
+.standings-table tbody tr:nth-last-child(-n + 3) {
+  background: grey;
+}

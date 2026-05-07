@@ -151,7 +151,6 @@ const StandingsPage = () => {
   return (
     <div className="standigs-page-container">
       <PageIndicator icon={<StandingsIcon />} title="Tabela de Classificação" />
-
       {/* {competitionFilters.length > 1 && ( */}
       <FilterButtons
         filters={competitionFilters}
@@ -159,9 +158,11 @@ const StandingsPage = () => {
         onFilterChange={setActiveCompetition}
       />
       {/* )} */}
-
+      <div className="standigs-warning">
+        <p>⚠Aviso: A subsequente tabela classicativa não é oficial.</p>
+        <p>Leia sobre os motivos em baixo, depois da tabela.</p>
+      </div>
       <StandingsTable standings={processedStandings} />
-
       <TableCaption
         dash={"-"}
         items={[
@@ -175,6 +176,22 @@ const StandingsPage = () => {
           { abbr: "Pts", text: "Pontos" },
         ]}
       />
+      <div className="standigs-warning-explanation">
+        <h2>Explicação do aviso acima:</h2>
+        <p>
+          Para duas ou mais equipas com a mesma pontuação, a tabela acima
+          apresentada aplica os seguintes critérios de desempate: <br />
+          1. Diferença/Saldo de Golos (DG); <br />
+          2. Golos Marcados (GM); <br />
+          3. Ordem Alfa-numérica; <br />
+        </p>
+
+        <p>
+          Assim sendo, a tabela ainda não considera o CONFRONTO DIRECTO e o
+          FAIR-PLAY (ou seja cartões não são considerados), o que pode fazer a
+          tabela diferir da tabela oficial providenciada pela ADFG.
+        </p>
+      </div>
     </div>
   );
 };
