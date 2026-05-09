@@ -159,7 +159,7 @@ const StandingsPage = () => {
       />
       {/* )} */}
       <div className="standigs-warning">
-        <p>⚠Aviso: A subsequente tabela classicativa não é oficial.</p>
+        <p>⚠Aviso: A subsequente tabela classificativa não é oficial.</p>
         <p>Leia sobre os motivos em baixo, depois da tabela.</p>
       </div>
       <StandingsTable standings={processedStandings} />

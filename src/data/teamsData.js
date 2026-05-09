@@ -508,7 +508,8 @@ const teamsData = {
     abbr: "11i", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/onzeIrmaos/11I-placeholde-logor-v1.png",
+    // logo: "/images/campNucleoPande/onzeIrmaos/11I-placeholde-logor-v1.png",
+    logo: "/images/campNucleoPande/onzeIrmaos/11i-official-logo.jpg",
     colors: { primary: "black", secondary: "pink" },
     // contact: {
     //   coach: "John Dalton",
