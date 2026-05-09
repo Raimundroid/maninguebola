@@ -443,7 +443,7 @@ const matchesData = [
     awayTeamId: "associacaoDesportivaPande",
     homeScore: 0, // Only for live/finished
     awayScore: 0,
-    date: "2026-05-09", // ISO Format
+    date: "2026-05-10", // ISO Format
     time: "14:30",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Machacame",
