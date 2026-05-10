@@ -1159,8 +1159,8 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 1,
-          goals: 1,
+          appearances: 2,
+          goals: 4,
           assists: 0,
         },
       },
@@ -1178,8 +1178,8 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 1,
-          goals: 1,
+          appearances: 2,
+          goals: 2,
           assists: 0,
         },
       },
@@ -1261,7 +1261,84 @@ const playersData = [
       },
     },
   },
+  {
+    id: 16,
+    name: "Ilordêncio Massambo",
+    teamId: "onzeIrmaos",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 17,
+    name: "Joaquim F. Massingue",
+    teamId: "onzeIrmaos",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 18,
+    name: "Picardo",
+    teamId: "teamBebado",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 19,
+    name: "Ginito",
+    teamId: "teamBebado",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
   // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
 ];
 
 export default playersData;
+//
