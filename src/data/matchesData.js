@@ -433,7 +433,7 @@ const matchesData = [
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Picardo", "Tomás Antônio (3x)", "Alexandre André","Ginito"],
+    homeScorers: ["Picardo", "Tomás Antônio (3x)", "Alexandre André", "Ginito"],
     awayScorers: [],
   },
   {
@@ -441,11 +441,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "machacameFC",
     awayTeamId: "associacaoDesportivaPande",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 2, // Only for live/finished
+    awayScore: 2,
     date: "2026-05-10", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Machacame",
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
@@ -458,11 +458,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "kingOfTheJungle",
     awayTeamId: "UDMaluvane",
-    homeScore: 0, // Only for live/finished
+    homeScore: 1, // Only for live/finished
     awayScore: 0,
     date: "2026-05-10", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Luido",
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
@@ -475,11 +475,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "realChibuca",
     awayTeamId: "kakanavasFC",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 2, // Only for live/finished
+    awayScore: 2,
     date: "2026-05-10", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
@@ -492,11 +492,11 @@ const matchesData = [
     //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "SFCSave",
     awayTeamId: "rebentaFogo",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
     date: "2026-05-10", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Save",
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
