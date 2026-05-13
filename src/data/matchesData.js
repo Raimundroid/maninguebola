@@ -489,7 +489,7 @@ const matchesData = [
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Armando Constantino", "Lindo Vasco (P)"],
+    homeScorers: ["Lindo Vasco (P)","Armando Constantino"],
     awayScorers: [],
   },
   {
