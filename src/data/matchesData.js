@@ -417,7 +417,7 @@ const matchesData = [
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
-    awayScorers: ["Ilordêncio Massambo", "Joaquim F. Massingue"],
+    awayScorers: ["Ilordêncio Massambo", "Joaquim F. Massingue (P)"],
   },
   {
     id: 8,
@@ -433,7 +433,12 @@ const matchesData = [
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Picardo", "Tomás Antônio (3x)", "Alexandre André", "Ginito"],
+    homeScorers: [
+      "Picardo Justino",
+      "Tomás Antônio (3x)",
+      "Alexandre André",
+      "Ginito",
+    ],
     awayScorers: [],
   },
   {
@@ -450,7 +455,7 @@ const matchesData = [
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: [],
+    homeScorers: ["Inácio Luís (2x)"],
     awayScorers: [],
   },
   {
@@ -484,7 +489,7 @@ const matchesData = [
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: [],
+    homeScorers: ["Armando Constantino", "Lindo Vasco (P)"],
     awayScorers: [],
   },
   {

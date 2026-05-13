@@ -1217,7 +1217,7 @@ const playersData = [
       byCompetition: {
         pande: {
           appearances: 1,
-          goals: 2,
+          goals: 4,
           assists: 0,
         },
       },
@@ -1301,7 +1301,7 @@ const playersData = [
   },
   {
     id: 18,
-    name: "Picardo",
+    name: "Picardo Justino",
     teamId: "teamBebado",
     // number: 0,
     // position: "Atacante",
@@ -1322,6 +1322,44 @@ const playersData = [
     id: 19,
     name: "Ginito",
     teamId: "teamBebado",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 20,
+    name: "Armando Constantino",
+    teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 21,
+    name: "Lindo Vasco",
+    teamId: "realChibuca",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
