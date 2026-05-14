@@ -403,7 +403,7 @@ export const rawStandings = [
   // ================ Classificação do "Campeonato do Núcleo de Pande" ================
   // ================================================================
 
-  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
+  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, MachacameFC
   {
     id: "UDChimedje",
     name: teamsData.UDChimedje.name,
@@ -578,10 +578,10 @@ export const rawStandings = [
     },
   },
   {
-    id: "kingOfTheJungle",
-    name: teamsData.kingOfTheJungle.name,
-    abbr: teamsData.kingOfTheJungle.abbr,
-    logo: teamsData.kingOfTheJungle.logo,
+    id: "kingOfJungle",
+    name: teamsData.kingOfJungle.name,
+    abbr: teamsData.kingOfJungle.abbr,
+    logo: teamsData.kingOfJungle.logo,
     stats: {
       byCompetition: {
         pande: {
@@ -635,7 +635,7 @@ export const rawStandings = [
       },
     },
   },
-  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, MachacameFC
+  //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, MachacameFC
 ];
 
 // // Keep default export for backwards compatibility if needed

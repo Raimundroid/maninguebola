@@ -9,8 +9,7 @@
 
 const matchesData = [
   {
-    id: -1, // Unique ID for React keys
-    homeTeamId: "sportingMagumbanaFc", //new
+    id: -1, // Unique ID for React keys homeTeamId: "sportingMagumbanaFc", //new
     awayTeamId: "palmeirasMadangelaFc", //new
     homeScore: 2, // Only for live/finished
     awayScore: 2,
@@ -25,8 +24,7 @@ const matchesData = [
     awayScorers: ["Tony", "João"],
   },
   {
-    id: -2, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
+    id: -2, // Unique ID for React keys homeTeamId: "rioSambeFc", //new
     awayTeamId: "novoSclonioMaxixe", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -41,8 +39,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -3, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
+    id: -3, // Unique ID for React keys homeTeamId: "rioSambeFc", //new
     awayTeamId: "academicaMucucune", //new
     homeScore: 3, // Only for live/finished
     awayScore: 1,
@@ -57,8 +54,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -4, // Unique ID for React keys
-    homeTeamId: "slowDownFc", //new
+    id: -4, // Unique ID for React keys homeTeamId: "slowDownFc", //new
     awayTeamId: "revolutionFc", //new
     homeScore: 0, // Only for live/finished
     awayScore: 0,
@@ -73,8 +69,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -5, // Unique ID for React keys
-    homeTeamId: "sportingNhachotaFc", //new
+    id: -5, // Unique ID for React keys homeTeamId: "sportingNhachotaFc", //new
     awayTeamId: "palmeirasMadangelaFc", //new
     homeScore: 1, // Only for live/finished
     awayScore: 1,
@@ -89,8 +84,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -6, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
+    id: -6, // Unique ID for React keys homeTeamId: "rioSambeFc", //new
     awayTeamId: "madangelaFcMorrumbene", //new
     homeScore: 1, // Only for live/finished
     awayScore: 0,
@@ -105,8 +99,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -7, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
+    id: -7, // Unique ID for React keys homeTeamId: "rioSambeFc", //new
     awayTeamId: "sportingKhundula", //new
     homeScore: 1, // Only for live/finished
     awayScore: 1,
@@ -121,8 +114,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -8, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
+    id: -8, // Unique ID for React keys homeTeamId: "rioSambeFc", //new
     awayTeamId: "benficaIlhaInhambane", //new
     homeScore: 1, // Only for live/finished
     awayScore: 2,
@@ -137,8 +129,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -9, // Unique ID for React keys
-    homeTeamId: "santoAntonioMongue", //new
+    id: -9, // Unique ID for React keys homeTeamId: "santoAntonioMongue", //new
     awayTeamId: "rioSambeFc", //new
     homeScore: 2, // Only for live/finished
     awayScore: 1,
@@ -153,8 +144,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -10, // Unique ID for React keys
-    homeTeamId: "UDChimedje", //new
+    id: -10, // Unique ID for React keys homeTeamId: "UDChimedje", //new
     awayTeamId: "kakanavasFC", //new
     homeScore: 1, // Only for live/finished
     awayScore: 2,
@@ -170,8 +160,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -11, // Unique ID for React keys
-    homeTeamId: "rebentaFogo", //new
+    id: -11, // Unique ID for React keys homeTeamId: "rebentaFogo", //new
     awayTeamId: "bingaFC", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -187,8 +176,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -12, // Unique ID for React keys
-    homeTeamId: "realChibuca", //new
+    id: -12, // Unique ID for React keys homeTeamId: "realChibuca", //new
     awayTeamId: "onzeIrmaos", //new
     homeScore: 0, // Only for live/finished
     awayScore: 1,
@@ -204,8 +192,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -13, // Unique ID for React keys
-    homeTeamId: "teamBebado", //new
+    id: -13, // Unique ID for React keys homeTeamId: "teamBebado", //new
     awayTeamId: "associacaoDesportivaPande", //new
     homeScore: 1, // Only for live/finished
     awayScore: 0,
@@ -221,8 +208,7 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -14, // Unique ID for React keys
-    homeTeamId: "internacionalMiluge", //new
+    id: -14, // Unique ID for React keys homeTeamId: "internacionalMiluge", //new
     awayTeamId: "eduardoMondlaneLingaLinga", //new
     homeScore: 0, // Only for live/finished
     awayScore: 1,
@@ -238,8 +224,7 @@ const matchesData = [
     awayScorers: ["Meck"],
   },
   {
-    id: -15, // Unique ID for React keys
-    homeTeamId: "ferroviarioCocheMagumbo", //new
+    id: -15, // Unique ID for React keys homeTeamId: "ferroviarioCocheMagumbo", //new
     awayTeamId: "guihambuaneNhaka", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -256,7 +241,7 @@ const matchesData = [
   },
   // { // This game's final results are pedding
   //   id: -16, // Unique ID for React keys
-  //   homeTeamId: "costaSolMagumbo", //new
+  // homeTeamId: "costaSolMagumbo", //new
   //   awayTeamId: "rioSambeFc", //new
   //   homeScore: 2, // Only for live/finished
   //   awayScore: 0,
@@ -279,8 +264,8 @@ const matchesData = [
 
   // { TEMPLATE
   //   id: 0,
-  //   //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
-  //   homeTeamId: "",
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
+  // homeTeamId: "",
   //   awayTeamId: "",
   //   homeScore: 0, // Only for live/finished
   //   awayScore: 0,
@@ -297,7 +282,6 @@ const matchesData = [
   // ----------------------------Round 1 ---------------------------------
   {
     id: 1,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "kakanavasFC",
     awayTeamId: "SFCSave",
     homeScore: 2, // Only for live/finished
@@ -314,9 +298,8 @@ const matchesData = [
   },
   {
     id: 2,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "UDChimedje",
-    awayTeamId: "kingOfTheJungle",
+    awayTeamId: "kingOfJungle",
     homeScore: 2, // Only for live/finished
     awayScore: 2,
     date: "2026-05-03", // ISO Format
@@ -326,13 +309,12 @@ const matchesData = [
     info: "CNP - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Elson Artur", "Kelton Paulito"],
+    homeScorers: ["Delso Artur", "Kelton Paulito"],
     awayScorers: ["António Isac", "AUTO-GOLO"],
   },
   // 842785594 Lourenco
   {
     id: 3,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "onzeIrmaos",
     awayTeamId: "realChibuca",
     homeScore: 0, // Only for live/finished
@@ -349,7 +331,6 @@ const matchesData = [
   },
   {
     id: 4,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "rebentaFogo",
     awayTeamId: "teamBebado",
     homeScore: 1, // Only for live/finished
@@ -367,7 +348,6 @@ const matchesData = [
 
   {
     id: 5,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "associacaoDesportivaPande",
     awayTeamId: "UDMaluvane",
     homeScore: 2, // Only for live/finished
@@ -384,7 +364,6 @@ const matchesData = [
   },
   {
     id: 6,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "bingaFC",
     awayTeamId: "machacameFC",
     homeScore: 1, // Only for live/finished
@@ -404,7 +383,6 @@ const matchesData = [
 
   {
     id: 7,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "UDChimedje",
     awayTeamId: "onzeIrmaos",
     homeScore: 0, // Only for live/finished
@@ -417,11 +395,10 @@ const matchesData = [
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
-    awayScorers: ["Ilordêncio Massambo", "Joaquim F. Massingue (P)"],
+    awayScorers: ["Ilordêncio Massambo", "Joaquim Fabião (P)"],
   },
   {
     id: 8,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "teamBebado",
     awayTeamId: "bingaFC",
     homeScore: 6, // Only for live/finished
@@ -443,7 +420,6 @@ const matchesData = [
   },
   {
     id: 9,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "machacameFC",
     awayTeamId: "associacaoDesportivaPande",
     homeScore: 2, // Only for live/finished
@@ -460,8 +436,7 @@ const matchesData = [
   },
   {
     id: 10,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
-    homeTeamId: "kingOfTheJungle",
+    homeTeamId: "kingOfJungle",
     awayTeamId: "UDMaluvane",
     homeScore: 1, // Only for live/finished
     awayScore: 0,
@@ -477,7 +452,6 @@ const matchesData = [
   },
   {
     id: 11,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "realChibuca",
     awayTeamId: "kakanavasFC",
     homeScore: 2, // Only for live/finished
@@ -489,12 +463,11 @@ const matchesData = [
     info: "CNP - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Lindo Vasco (P)","Armando Constantino"],
+    homeScorers: ["Lindo Vasco (P)", "Armando Constantino"],
     awayScorers: [],
   },
   {
     id: 12,
-    //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
     homeTeamId: "SFCSave",
     awayTeamId: "rebentaFogo",
     homeScore: 1, // Only for live/finished
@@ -509,6 +482,107 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
+
+  // ----------------------------Round 2 ---------------------------------
+
+  {
+    id: 13,
+    homeTeamId: "UDMaluvane",
+    awayTeamId: "machacameFC",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-16", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Muzazayila Stadium",
+    info: "CNP - Jornada 3", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 14,
+    homeTeamId: "bingaFC",
+    awayTeamId: "SFCSave",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-16", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Mazino",
+    info: "CNP - Jornada 3", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 15,
+    homeTeamId: "rebentaFogo",
+    awayTeamId: "realChibuca",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-16", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo Central de Pande",
+    info: "CNP - Jornada 3", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 16,
+    homeTeamId: "onzeIrmaos",
+    awayTeamId: "kingOfJungle",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-17", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Colonga",
+    info: "CNP - Jornada 3", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 17,
+    homeTeamId: "associacaoDesportivaPande",
+    awayTeamId: "teamBebado",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-17", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo da Revolução",
+    info: "CNP - Jornada 3", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 18,
+    homeTeamId: "kakanavasFC",
+    awayTeamId: "UDChimedje",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-17", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Mazino",
+    info: "CNP - Jornada 3", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
 ];
 
 export default matchesData;
@@ -519,8 +593,7 @@ export default matchesData;
 
 // ================ // ------DEMO DATA--------================
   {
-    id: 1000, // Unique ID for React keys
-    homeTeamId: "onzeIrmaos", //new
+    id: 1000, // Unique ID for React keys homeTeamId: "onzeIrmaos", //new
     awayTeamId: "bingaFC", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -536,8 +609,7 @@ export default matchesData;
     awayScorers: [],
   },
   {
-    id: 1001, // Unique ID for React keys
-    homeTeamId: "rioSambeFc", //new
+    id: 1001, // Unique ID for React keys homeTeamId: "rioSambeFc", //new
     awayTeamId: "costaSolMagumbo", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -553,8 +625,7 @@ export default matchesData;
     awayScorers: [],
   },
   {
-    id: 1002, // Unique ID for React keys
-    homeTeamId: "guihambuaneNhaka", //new
+    id: 1002, // Unique ID for React keys homeTeamId: "guihambuaneNhaka", //new
     awayTeamId: "internacionalMiluge", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -570,8 +641,7 @@ export default matchesData;
     awayScorers: [],
   },
   {
-    id: 1003, // Unique ID for React keys
-    homeTeamId: "realPande", //new
+    id: 1003, // Unique ID for React keys homeTeamId: "realPande", //new
     awayTeamId: "kakanavas", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -587,8 +657,7 @@ export default matchesData;
     awayScorers: [],
   },
   {
-    id: 1004, // Unique ID for React keys
-    homeTeamId: "ferroviarioCocheMagumbo", //new
+    id: 1004, // Unique ID for React keys homeTeamId: "ferroviarioCocheMagumbo", //new
     awayTeamId: "sportingMagumbanaFc", //new
     homeScore: 2, // Only for live/finished
     awayScore: 0,
@@ -608,8 +677,7 @@ export default matchesData;
    {
     id: "togleForSample",
     // homeTeam: teams.eagles,
-    // awayTeam: teams.tigers,
-    homeTeamId: "cats", //new
+    // awayTeam: teams.tigers, homeTeamId: "cats", //new
     awayTeamId: "tigers", //new
     // No scores for upcoming matches
     date: "2026-04-26", // ISO Format

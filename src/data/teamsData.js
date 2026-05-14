@@ -539,8 +539,8 @@ const teamsData = {
   associacaoDesportivaPande: {
     id: "associacaoDesportivaPande", // Unique identifier
     name: "Associação Desportiva de Pande", // Full team name
-    shortName: "A.D.P.",
-    abbr: "APD", // Abbreviation for logos
+    shortName: "A.D. de Pande",
+    abbr: "ADP", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
     // logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-placeholder-v1.png",
@@ -571,14 +571,14 @@ const teamsData = {
     // },
     competitions: ["pande"],
   },
-  kingOfTheJungle: {
-    id: "kingOfTheJungle", // Unique identifier
-    name: "King Of The Jungle", // Full team name
-    shortName: "King Of The Jungle",
-    abbr: "KOTJ", // Abbreviation for logos
+  kingOfJungle: {
+    id: "kingOfJungle", // Unique identifier
+    name: "King Of Jungle", // Full team name
+    shortName: "King Of Jungle",
+    abbr: "KOJ", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/kingOfTheJungle/KOTJ-placeholde-logor-v1.png",
+    logo: "/images/campNucleoPande/kingOfJungle/KOJ-logo.webp",
     colors: { primary: "red", secondary: "black" },
     // contact: {
     //   coach: "John Dalton",
@@ -627,6 +627,7 @@ const teamsData = {
 };
 
 export default teamsData;
+
 
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

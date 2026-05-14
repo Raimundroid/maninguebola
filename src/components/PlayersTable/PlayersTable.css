@@ -131,7 +131,7 @@
   height: 100%;
   border-radius: 5px;
   object-position: center;
-  object-fit: cover; /* Fit logo without cropping */
+  object-fit: contain; /* Fit logo without cropping */
 }
 .player-table .player-cell .player-name,
 .player-table .team-cell .team-name,

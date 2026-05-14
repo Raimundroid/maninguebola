@@ -739,7 +739,7 @@ const playersData = [
   //   },
   // },
   // ================ // ------DEMO DATA--------================
-  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
   // {
   //   id: 45,
   //   name: "Bruce Barner",
@@ -975,7 +975,7 @@ const playersData = [
   // ================ Jogadores das Equipas do "Campeonato do Núcleo de Pande" ================
   // ================================================================
 
-  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
   {
     id: 1,
     name: "Gesselino da Gilda",
@@ -1035,7 +1035,7 @@ const playersData = [
   },
   {
     id: 4,
-    name: "Elson Artur",
+    name: "Delso Artur",
     teamId: "UDChimedje",
     // number: 0,
     // position: "Atacante",
@@ -1083,8 +1083,8 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 1,
-          goals: 1,
+          appearances: 2,
+          goals: 2,
           assists: 0,
         },
       },
@@ -1112,7 +1112,7 @@ const playersData = [
   {
     id: 8,
     name: "António Isac",
-    teamId: "kingOfTheJungle",
+    teamId: "kingOfJungle",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
@@ -1140,8 +1140,8 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 1,
-          goals: 1,
+          appearances: 2,
+          goals: 2,
           assists: 0,
         },
       },
@@ -1282,7 +1282,7 @@ const playersData = [
   },
   {
     id: 17,
-    name: "Joaquim F. Massingue",
+    name: "Joaquim Fabião",
     teamId: "onzeIrmaos",
     // number: 0,
     // position: "Atacante",
@@ -1318,25 +1318,25 @@ const playersData = [
       },
     },
   },
-  {
-    id: 19,
-    name: "Ginito",
-    teamId: "teamBebado",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 19,
+  //   name: "Ginito",
+  //   teamId: "teamBebado",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   {
     id: 20,
     name: "Armando Constantino",
@@ -1375,7 +1375,140 @@ const playersData = [
       },
     },
   },
-  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfTheJungle, UDMaluvane, machacameFC
+  {
+    id: 22,
+    name: "Simone Pedro",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 23,
+    name: "Tomás Inoque",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 24,
+    name: "Carlos Carlitos",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 25,
+    name: "Dionisio Cossa",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 26,
+    name: "Titos Lucas",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 27,
+    name: "Alexandre Sebastião",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: 28,
+    name: "Lomerson Carlos",
+    // teamId: "realChibuca",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          appearances: 2,
+          goals: 1,
+          assists: 0,
+        },
+      },
+    },
+  },
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
 ];
 
 export default playersData;
