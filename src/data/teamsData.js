@@ -614,7 +614,7 @@ const teamsData = {
     abbr: "MFC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/MachacameFC/MFC-placeholde-logor-v1.png",
+    logo: "/images/campNucleoPande/MachacameFC/MFC-official-logo.jpg",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",

@@ -414,7 +414,7 @@ const matchesData = [
       "Picardo Justino",
       "Tomás Antônio (3x)",
       "Alexandre André",
-      "Ginito",
+      "-",
     ],
     awayScorers: [],
   },
