@@ -635,7 +635,320 @@ export const rawStandings = [
       },
     },
   },
+
+  // ================================================================
+  // ================ Equipas do "Campeonato de Nova Mambone" ================
+  // ================================================================
+
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
+  {
+    id: "ligaDesportiva",
+    name: teamsData.ligaDesportiva.name,
+    abbr: teamsData.ligaDesportiva.abbr,
+    logo: teamsData.ligaDesportiva.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 2,
+          draws: 0,
+          losses: 0,
+          goalsFor: 7,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "sportingMaluvane",
+    name: teamsData.sportingMaluvane.name,
+    abbr: teamsData.sportingMaluvane.abbr,
+    logo: teamsData.sportingMaluvane.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 2,
+          draws: 0,
+          losses: 0,
+          goalsFor: 6,
+          goalsAgainst: 3,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "benficaJenga",
+    name: teamsData.benficaJenga.name,
+    abbr: teamsData.benficaJenga.abbr,
+    logo: teamsData.benficaJenga.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 1,
+          losses: 0,
+          goalsFor: 5,
+          goalsAgainst: 2,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "CDMaxaquene",
+    name: teamsData.CDMaxaquene.name,
+    abbr: teamsData.CDMaxaquene.abbr,
+    logo: teamsData.CDMaxaquene.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 1,
+          losses: 0,
+          goalsFor: 3,
+          goalsAgainst: 2,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "juventosMacomba",
+    name: teamsData.juventosMacomba.name,
+    abbr: teamsData.juventosMacomba.abbr,
+    logo: teamsData.juventosMacomba.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 1,
+          wins: 1,
+          draws: 0,
+          losses: 0,
+          goalsFor: 4,
+          goalsAgainst: 2,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "sulSave",
+    name: teamsData.sulSave.name,
+    abbr: teamsData.sulSave.abbr,
+    logo: teamsData.sulSave.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 1,
+          wins: 1,
+          draws: 0,
+          losses: 0,
+          goalsFor: 3,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "PFCMussassa",
+    name: teamsData.PFCMussassa.name,
+    abbr: teamsData.PFCMussassa.abbr,
+    logo: teamsData.PFCMussassa.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 0,
+          losses: 1,
+          goalsFor: 3,
+          goalsAgainst: 3,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "FCBatata",
+    name: teamsData.FCBatata.name,
+    abbr: teamsData.FCBatata.abbr,
+    logo: teamsData.FCBatata.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 0,
+          losses: 1,
+          goalsFor: 3,
+          goalsAgainst: 3,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "desportivoA",
+    name: teamsData.desportivoA.name,
+    abbr: teamsData.desportivoA.abbr,
+    logo: teamsData.desportivoA.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 0,
+          losses: 1,
+          goalsFor: 3,
+          goalsAgainst: 3,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "sagradoCJesus",
+    name: teamsData.sagradoCJesus.name,
+    abbr: teamsData.sagradoCJesus.abbr,
+    logo: teamsData.sagradoCJesus.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 0,
+          losses: 1,
+          goalsFor: 3,
+          goalsAgainst: 5,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "primeiroMaio",
+    name: teamsData.primeiroMaio.name,
+    abbr: teamsData.primeiroMaio.abbr,
+    logo: teamsData.primeiroMaio.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 1,
+          draws: 0,
+          losses: 1,
+          goalsFor: 2,
+          goalsAgainst: 1,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "FCMataula",
+    name: teamsData.FCMataula.name,
+    abbr: teamsData.FCMataula.abbr,
+    logo: teamsData.FCMataula.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 0,
+          draws: 0,
+          losses: 2,
+          goalsFor: 3,
+          goalsAgainst: 5,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "costaSol",
+    name: teamsData.costaSol.name,
+    abbr: teamsData.costaSol.abbr,
+    logo: teamsData.costaSol.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 0,
+          draws: 0,
+          losses: 2,
+          goalsFor: 2,
+          goalsAgainst: 8,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "escolaBola",
+    name: teamsData.escolaBola.name,
+    abbr: teamsData.escolaBola.abbr,
+    logo: teamsData.escolaBola.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 0,
+          draws: 0,
+          losses: 2,
+          goalsFor: 1,
+          goalsAgainst: 4,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "FCMahave",
+    name: teamsData.FCMahave.name,
+    abbr: teamsData.FCMahave.abbr,
+    logo: teamsData.FCMahave.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 2,
+          wins: 0,
+          draws: 0,
+          losses: 2,
+          goalsFor: 1,
+          goalsAgainst: 7,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+  {
+    id: "desportivoB",
+    name: teamsData.desportivoB.name,
+    abbr: teamsData.desportivoB.abbr,
+    logo: teamsData.desportivoB.logo,
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          played: 0,
+          wins: 0,
+          draws:0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          // form: ["W", "W", "D", "W", "W"],
+        },
+      },
+    },
+  },
+
   //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, MachacameFC
+
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 ];
 
 // // Keep default export for backwards compatibility if needed

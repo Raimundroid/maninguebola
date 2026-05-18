@@ -624,10 +624,286 @@ const teamsData = {
     // },
     competitions: ["pande"],
   },
+
+  // ================================================================
+  // ================ Equipas do "Campeonato de Nova Mambone" ================
+  // ================================================================
+
+  ligaDesportiva: {
+    id: "ligaDesportiva", // Unique identifier
+    name: "Liga Desportiva", // Full team name
+    shortName: "Liga Desportiva",
+    abbr: "LD", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  sportingMaluvane: {
+    id: "sportingMaluvane", // Unique identifier
+    name: "Sporting de Maluvane", // Full team name
+    shortName: "Sporting de Maluvane",
+    abbr: "SM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  benficaJenga: {
+    id: "benficaJenga", // Unique identifier
+    name: "Benfica de Jenga", // Full team name
+    shortName: "Benfica de Jenga",
+    abbr: "BJ", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  CDMaxaquene: {
+    id: "CDMaxaquene", // Unique identifier
+    name: "CD Maxaquene", // Full team name
+    shortName: "CD Maxaquene",
+    abbr: "CDM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  juventosMacomba: {
+    id: "juventosMacomba", // Unique identifier
+    name: "Juventos de Macomba", // Full team name
+    shortName: "Juventos de Macomba",
+    abbr: "JM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  sulSave: {
+    id: "sulSave", // Unique identifier
+    name: "Sul de Save", // Full team name
+    shortName: "Sul de Save",
+    abbr: "SS", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  PFCMussassa: {
+    id: "PFCMussassa", // Unique identifier
+    name: "Porto FC de Mussassa", // Full team name
+    shortName: "P. FC de Mussassa",
+    abbr: "PFCM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  FCBatata: {
+    id: "FCBatata", // Unique identifier
+    name: "FC Batata", // Full team name
+    shortName: "FC Batata",
+    abbr: "FCB", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  desportivoA: {
+    id: "desportivoA", // Unique identifier
+    name: "Desportivo A", // Full team name
+    shortName: "Desportivo A",
+    abbr: "DA", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  sagradoCJesus: {
+    id: "sagradoCJesus", // Unique identifier
+    name: "Sagrado Coração de Jesus", // Full team name
+    shortName: "Sagrado C. de Jesus",
+    abbr: "SCJ", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  primeiroMaio: {
+    id: "primeiroMaio", // Unique identifier
+    name: "1º de Maio", // Full team name
+    shortName: "1º de Maio",
+    abbr: "1M", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  FCMataula: {
+    id: "FCMataula", // Unique identifier
+    name: "FC de Mataula", // Full team name
+    shortName: "FC de Mataula",
+    abbr: "FCM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  costaSol: {
+    id: "costaSol", // Unique identifier
+    name: "Costa de Sol", // Full team name
+    shortName: "Costa de Sol",
+    abbr: "CS", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  escolaBola: {
+    id: "escolaBola", // Unique identifier
+    name: "Escola da Bola", // Full team name
+    shortName: "Escola da Bola",
+    abbr: "EB", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  FCMahave: {
+    id: "FCMahave", // Unique identifier
+    name: "FC Mahave", // Full team name
+    shortName: "FC Mahave",
+    abbr: "FCM", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
+  desportivoB: {
+    id: "desportivoB", // Unique identifier
+    name: "Desportivo B", // Full team name
+    shortName: "Desportivo B",
+    abbr: "DB", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNovaMambone;",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["novaMambone"],
+  },
 };
 
 export default teamsData;
-
 
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

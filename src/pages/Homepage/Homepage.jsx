@@ -89,12 +89,16 @@ const Homepage = ({ matches, stats }) => {
       )}
 
       {/* Canceled matches section */}
-      {/* <SectionHeader
-        title="Jogos Cancelados"
-        linkTo={"/jogos?filter=canceled"}
-        linkText={"Ver todos"}
-      /> */}
-      {/* <MatchesGrid matches={canceledMatches} /> */}
+      {canceledMatches.length > 0 && (
+        <>
+          <SectionHeader
+            title="Jogos Interrompidos"
+            linkTo={"/jogos?filter=upcoming"}
+            linkText={"Ver todos"}
+          />
+          <MatchesGrid matches={canceledMatches} />
+        </>
+      )}
 
       {/* Statistics section */}
       {/* <SectionHeader title="Estatísticas Rápidas" /> */}

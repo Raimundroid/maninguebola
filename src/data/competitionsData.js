@@ -4,6 +4,7 @@ const competitionsData = [
   // { id: "morrumbene", name: "C. Distrital de Morrumbene" },
   // { id: "wafawafa", name: "Pande Wafa-Wafa" },
   // { id: "example", name: "Example Competition" },
+  { id: "novaMambone", name: "Campeonato de Nova Mambone" },
 ];
 
 export default competitionsData;
