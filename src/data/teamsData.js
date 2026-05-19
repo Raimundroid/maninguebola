@@ -636,7 +636,7 @@ const teamsData = {
     abbr: "LD", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/ligaDesportiva/ligaDesportiva-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -653,7 +653,7 @@ const teamsData = {
     abbr: "SM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/sportingMaluvane/sportingMaluvane-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -670,7 +670,7 @@ const teamsData = {
     abbr: "BJ", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/benficaJenga/benficaJenga-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -687,7 +687,7 @@ const teamsData = {
     abbr: "CDM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/CDMaxaquene/CDMaxaquene-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -704,7 +704,7 @@ const teamsData = {
     abbr: "JM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "public/images/campNovaMambone/juventosMacomba/juventosMacomba-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -721,7 +721,7 @@ const teamsData = {
     abbr: "SS", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/sulSave/sulSave-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -738,7 +738,7 @@ const teamsData = {
     abbr: "PFCM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/PFCMussassa/PFCMussassa-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -755,7 +755,7 @@ const teamsData = {
     abbr: "FCB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/FCBatata/FCBatata-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -772,7 +772,7 @@ const teamsData = {
     abbr: "DA", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/desportivoA/desportivoA-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -789,7 +789,7 @@ const teamsData = {
     abbr: "SCJ", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/sagradoCJesus/sagradoCJesus-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -806,7 +806,7 @@ const teamsData = {
     abbr: "1M", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/primeiroMaio/primeiroMaio-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -823,7 +823,7 @@ const teamsData = {
     abbr: "FCM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/FCMataula/FCMataula-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -840,7 +840,7 @@ const teamsData = {
     abbr: "CS", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/costaSol/costaSol-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -857,7 +857,7 @@ const teamsData = {
     abbr: "EB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/escolaBola/escolaBola-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -874,7 +874,7 @@ const teamsData = {
     abbr: "FCM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/FCMahave/FCMahave-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -891,7 +891,7 @@ const teamsData = {
     abbr: "DB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNovaMambone;",
+    logo: "/images/campNovaMambone/desportivoB/desportivoB-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
