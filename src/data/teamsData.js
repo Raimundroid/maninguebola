@@ -704,7 +704,7 @@ const teamsData = {
     abbr: "JM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "public/images/campNovaMambone/juventosMacomba/juventosMacomba-ph-logo.png",
+    logo: "/images/campNovaMambone/juventosMacomba/juventosMacomba-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
