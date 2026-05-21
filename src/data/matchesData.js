@@ -290,7 +290,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
-    info: "CNP - Jornada 1", // Optional extra info
+    info: "CNP 2026 - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Estêvão Alberto", "Edmilson Tomás"],
@@ -306,7 +306,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Estádio da Luz",
-    info: "CNP - Jornada 1", // Optional extra info
+    info: "CNP 2026 - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Delso Artur", "Kelton Paulito"],
@@ -323,7 +323,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Colonga",
-    info: "CNP - Jornada 1", // Optional extra info
+    info: "CNP 2026 - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -339,7 +339,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
-    info: "CNP - Jornada 1", // Optional extra info
+    info: "CNP 2026 - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Quelito Amós"],
@@ -356,7 +356,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo da Revolução",
-    info: "CNP - Jornada 1", // Optional extra info
+    info: "CNP 2026 - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Osvaldo Amosse", "Hélio Jaime"],
@@ -372,7 +372,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo Central de Pande",
-    info: "CNP - Jornada 1", // Optional extra info
+    info: "CNP 2026 - Jornada 1", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Gesselino da Gilda"],
@@ -391,7 +391,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Estádio da Luz",
-    info: "CNP - Jornada 2", // Optional extra info
+    info: "CNP 2026 - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -407,7 +407,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
-    info: "CNP - Jornada 2", // Optional extra info
+    info: "CNP 2026 - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [
@@ -428,7 +428,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Machacame",
-    info: "CNP - Jornada 2", // Optional extra info
+    info: "CNP 2026 - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Inácio Luís (2x)"],
@@ -444,7 +444,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Luido",
-    info: "CNP - Jornada 2", // Optional extra info
+    info: "CNP 2026 - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -460,7 +460,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
-    info: "CNP - Jornada 2", // Optional extra info
+    info: "CNP 2026 - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Lindo Vasco (P)", "Armando Constantino"],
@@ -476,7 +476,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Save",
-    info: "CNP - Jornada 2", // Optional extra info
+    info: "CNP 2026 - Jornada 2", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -495,7 +495,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Muzazayila Stadium",
-    info: "CNP - Jornada 3", // Optional extra info
+    info: "CNP 2026 - Jornada 3", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -511,7 +511,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
-    info: "CNP - Jornada 3", // Optional extra info
+    info: "CNP 2026 - Jornada 3", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: ["Paulo", "Gesselino da Gilda"],
@@ -527,7 +527,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo Central de Pande",
-    info: "CNP - Jornada 3", // Optional extra info
+    info: "CNP 2026 - Jornada 3", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -543,7 +543,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Colonga",
-    info: "CNP - Jornada 3", // Optional extra info
+    info: "CNP 2026 - Jornada 3", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [
@@ -564,7 +564,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo da Revolução",
-    info: "CNP - Jornada 3", // Optional extra info
+    info: "CNP 2026 - Jornada 3", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -580,7 +580,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
-    info: "CNP - Jornada 3", // Optional extra info
+    info: "CNP 2026 - Jornada 3", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -588,7 +588,102 @@ const matchesData = [
   },
 
   // ---------------------------- CNP 2026 Round 4 ---------------------------------
-
+  {
+    id: 19,
+    homeTeamId: "onzeIrmaos",
+    awayTeamId: "kakanavasFC",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Colonga",
+    info: "CNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 20,
+    homeTeamId: "SFCSave",
+    awayTeamId: "associacaoDesportivaPande",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Save",
+    info: "CNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 21,
+    homeTeamId: "teamBebado",
+    awayTeamId: "UDMaluvane",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Mazino",
+    info: "CNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 22,
+    homeTeamId: "kingOfJungle",
+    awayTeamId: "machacameFC",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Luido",
+    info: "CNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 23,
+    homeTeamId: "UDChimedje",
+    awayTeamId: "rebentaFogo",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Estádio da Luz",
+    info: "CNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 24,
+    homeTeamId: "realChibuca",
+    awayTeamId: "bingaFC",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Mazino",
+    info: "CNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pande",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
   // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
 
   // ================================================================
@@ -606,7 +701,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Mazino",
-  //   info: "CFNM - Jornada 1", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 1", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Estêvão Alberto", "Edmilson Tomás"],
@@ -622,7 +717,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Estádio da Luz",
-  //   info: "CFNM - Jornada 1", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 1", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Delso Artur", "Kelton Paulito"],
@@ -639,7 +734,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Colonga",
-  //   info: "CFNM - Jornada 1", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 1", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: [],
@@ -655,7 +750,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Mazino",
-  //   info: "CFNM - Jornada 1", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 1", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Quelito Amós"],
@@ -672,7 +767,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo da Revolução",
-  //   info: "CFNM - Jornada 1", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 1", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Osvaldo Amosse", "Hélio Jaime"],
@@ -688,7 +783,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo Central de Pande",
-  //   info: "CFNM - Jornada 1", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 1", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Gesselino da Gilda"],
@@ -707,7 +802,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Estádio da Luz",
-  //   info: "CFNM - Jornada 2", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 2", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: [],
@@ -723,7 +818,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Mazino",
-  //   info: "CFNM - Jornada 2", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 2", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: [
@@ -744,7 +839,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Machacame",
-  //   info: "CFNM - Jornada 2", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 2", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Inácio Luís (2x)"],
@@ -760,7 +855,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Luido",
-  //   info: "CFNM - Jornada 2", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 2", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: [],
@@ -776,7 +871,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Mazino",
-  //   info: "CFNM - Jornada 2", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 2", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: ["Lindo Vasco (P)", "Armando Constantino"],
@@ -792,7 +887,7 @@ const matchesData = [
   //   time: "14:30",
   //   status: "finished", // 'live' | 'finished' | 'upcoming'
   //   venue: "Campo de Save",
-  //   info: "CFNM - Jornada 2", // Optional extra info
+  //   info: "CFNM 2026 - Jornada 2", // Optional extra info
   //   competitionId: "pande",
   //   // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
   //   homeScorers: [],
@@ -802,7 +897,7 @@ const matchesData = [
   // ---------------------------- CFNM 2026 Round 3 ---------------------------------
 
   {
-    id: -13,
+    id: -14,
     homeTeamId: "sulSave",
     awayTeamId: "sportingMaluvane",
     homeScore: 2, // Only for live/finished
@@ -811,14 +906,14 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Jenga",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
   {
-    id: -14,
+    id: -15,
     homeTeamId: "FCMataula",
     awayTeamId: "primeiroMaio",
     homeScore: 1, // Only for live/finished
@@ -827,7 +922,7 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mataula",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
@@ -835,7 +930,7 @@ const matchesData = [
   },
 
   {
-    id: -15,
+    id: -16,
     homeTeamId: "FCBatata",
     awayTeamId: "FCMahave",
     homeScore: 1, // Only for live/finished
@@ -844,14 +939,14 @@ const matchesData = [
     time: "14:30",
     status: "canceled", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Batata",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
   {
-    id: -16,
+    id: -17,
     homeTeamId: "desportivoA",
     awayTeamId: "CDMaxaquene",
     homeScore: 3, // Only for live/finished
@@ -860,14 +955,14 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Matasse",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
   {
-    id: -17,
+    id: -18,
     homeTeamId: "escolaBola",
     awayTeamId: "costaSol",
     homeScore: 2, // Only for live/finished
@@ -876,14 +971,14 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mataula",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
   {
-    id: -18,
+    id: -19,
     homeTeamId: "benficaJenga",
     awayTeamId: "juventosMacomba",
     homeScore: 2, // Only for live/finished
@@ -892,14 +987,14 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Jenga",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
   {
-    id: -19,
+    id: -20,
     homeTeamId: "sagradoCJesus",
     awayTeamId: "PFCMussassa",
     homeScore: 5, // Only for live/finished
@@ -908,13 +1003,13 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Doane",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
   },
   {
-    id: -20,
+    id: -21,
     homeTeamId: "ligaDesportiva",
     awayTeamId: "desportivoB",
     homeScore: 3, // Only for live/finished
@@ -923,20 +1018,146 @@ const matchesData = [
     time: "14:30",
     status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo das Palmeiras",
-    info: "CFNM - Jornada 3", // Optional extra info
+    info: "CFNM 2026 - Jornada 3", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  // ---------------------------- CFNM 2026 Round 4 ---------------------------------
+  {
+    id: -22,
+    homeTeamId: "primeiroMaio",
+    awayTeamId: "sulSave",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Mussanga",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -23,
+    homeTeamId: "CDMaxaquene",
+    awayTeamId: "FCMataula",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: " Campo das Palmeiras",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -24,
+    homeTeamId: "FCMahave",
+    awayTeamId: "desportivoA",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Mataula",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -25,
+    homeTeamId: "costaSol",
+    awayTeamId: "FCBatata",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-23", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Chimunda",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -26,
+    homeTeamId: "sportingMaluvane",
+    awayTeamId: "sagradoCJesus",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Muzazayila Stadium",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -27,
+    homeTeamId: "desportivoB",
+    awayTeamId: "PFCMussassa",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Matasse",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -28,
+    homeTeamId: "juventosMacomba",
+    awayTeamId: "escolaBola",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo de Macomba",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -9,
+    homeTeamId: "ligaDesportiva",
+    awayTeamId: "benficaJenga",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-05-24", // ISO Format
+    time: "14:30",
+    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    venue: "Campo das Palmeiras",
+    info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
 
-  // ---------------------------- CFNM 2026 Round 4 ---------------------------------
-
   // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 ];
 
 export default matchesData;
-
 {
   /**
 

@@ -1509,6 +1509,298 @@ const playersData = [
     },
   },
   // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
+
+  // ================================================================
+  // ================ Jogadores das Equipas do "Campeonato de Futebol de Nova Mambone" ================
+  // ================================================================
+
+  {
+    id: -1,
+    name: "Agostinho Tomás",
+    teamId: "ligaDesportiva",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 6,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -2,
+    name: "Manuel Joaquím",
+    teamId: "benficaJenga",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -3,
+    name: "Antônio João",
+    teamId: "juventosMacomba",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -4,
+    name: "Brigildo Alberto",
+    teamId: "sportingMaluvane",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -5,
+    name: "Manuel Joaquím",
+    teamId: "sulSave",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -6,
+    name: "Pedro da Almeida",
+    teamId: "primeiroMaio",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -7,
+    name: "Armando Elias",
+    teamId: "CDMaxaquene",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -8,
+    name: "Vasquinho Ricardo",
+    teamId: "sagradoCJesus",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -9,
+    name: "Titos Machava",
+    teamId: "sagradoCJesus",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -10,
+    name: "Edgar Junior",
+    teamId: "ligaDesportiva",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -11,
+    name: "Mário",
+    teamId: "sportingMaluvane",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -12,
+    name: "Fernando Macaraze",
+    teamId: "ligaDesportiva",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -13,
+    name: "Inácio Simão",
+    teamId: "FCMataula",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -14,
+    name: "Armando Jeque",
+    teamId: "juventosMacomba",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  {
+    id: -15,
+    name: "José Simão Pita",
+    teamId: "desportivoA",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        novaMambone: {
+          // appearances: 2,
+          goals: 2,
+          // assists: 0,
+        },
+      },
+    },
+  },
+
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 ];
 
 export default playersData;
