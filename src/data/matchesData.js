@@ -1138,14 +1138,14 @@ const matchesData = [
     awayScorers: [],
   },
   {
-    id: -9,
+    id: -29,
     homeTeamId: "ligaDesportiva",
     awayTeamId: "benficaJenga",
     homeScore: 5, // Only for live/finished
     awayScore: 2,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo das Palmeiras",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
