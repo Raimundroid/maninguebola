@@ -422,7 +422,7 @@ const teamsData = {
     abbr: "UDC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/UDChimedje/UDC-placeholder-v1.png",
+    logo: "/images/campNucleoPande/UDChimedje/UDC-official-logo.webp",
     colors: { primary: "red", secondary: "orange" },
     // contact: {
     //   coach: "John Dalton",
@@ -526,7 +526,7 @@ const teamsData = {
     abbr: "TB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/teamBebado/tb-placeholder-v1.png",
+    logo: "/images/campNucleoPande/teamBebado/TB-official-logo.webp",
     colors: { primary: "red", secondary: "black" },
     // contact: {
     //   coach: "John Dalton",
@@ -648,9 +648,9 @@ const teamsData = {
   },
   sportingMaluvane: {
     id: "sportingMaluvane", // Unique identifier
-    name: "Sporting de Maluvane", // Full team name
-    shortName: "Sporting de Maluvane",
-    abbr: "SM", // Abbreviation for logos
+    name: "Sporting Clube de Maluvane", // Full team name
+    shortName: "Sporting C. de Maluvane",
+    abbr: "SCM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
     logo: "/images/campNovaMambone/sportingMaluvane/sportingMaluvane-logo.png",
@@ -697,14 +697,14 @@ const teamsData = {
     // },
     competitions: ["novaMambone"],
   },
-  juventosMacomba: {
-    id: "juventosMacomba", // Unique identifier
-    name: "Juventos de Macomba", // Full team name
-    shortName: "Juventos de Macomba",
+  juventusMacomba: {
+    id: "juventusMacomba", // Unique identifier
+    name: "Juventus de Macomba", // Full team name
+    shortName: "Juvents de Macomba",
     abbr: "JM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNovaMambone/juventosMacomba/juventosMacomba-ph-logo.png",
+    logo: "/images/campNovaMambone/juventusMacomba/juventusMacomba-ph-logo.png",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",

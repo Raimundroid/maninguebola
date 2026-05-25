@@ -62,7 +62,7 @@ TeamCard Styles
   font-size: 32px;
 
   /* Background color */
-  background: var(--border, #e0e0e0);
+  background: #ffffff;
 
   /* Rounded corners for logo box */
   border-radius: 8px;

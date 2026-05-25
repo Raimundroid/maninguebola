@@ -113,7 +113,8 @@
   width: 32px;
   height: 32px;
   font-size: 12px;
-  background: var(--border);
+  /* background: var(--border); */
+  background: white;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -121,9 +122,12 @@
   font-weight: 700;
   color: var(--text-light);
   flex-shrink: 0;
-  border: 1px solid var(--shadow);
+  border: 2px solid black;
   /* padding: 20px; */
 }
+/*
+ --contrast-black-white: black;
+  --contrast-white-black: white; */
 
 .player-table .player-logo .player-logo-img,
 .player-table .pt-team-logo .team-logo-img {

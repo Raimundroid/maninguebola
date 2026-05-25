@@ -71,7 +71,7 @@
 .match-card .teams .team .team-logo {
   width: 48px;
   height: 48px;
-  background: var(--border);
+  background: #ffffff;
   border-radius: 8px;
   display: flex;
   justify-content: center;

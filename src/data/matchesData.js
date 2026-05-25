@@ -593,10 +593,10 @@ const matchesData = [
     homeTeamId: "onzeIrmaos",
     awayTeamId: "kakanavasFC",
     homeScore: 0, // Only for live/finished
-    awayScore: 2,
+    awayScore: 0,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Colonga",
     info: "CNP 2026 - Jornada 4", // Optional extra info
     competitionId: "pande",
@@ -609,10 +609,10 @@ const matchesData = [
     homeTeamId: "SFCSave",
     awayTeamId: "associacaoDesportivaPande",
     homeScore: 0, // Only for live/finished
-    awayScore: 2,
+    awayScore: 1,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Save",
     info: "CNP 2026 - Jornada 4", // Optional extra info
     competitionId: "pande",
@@ -624,11 +624,11 @@ const matchesData = [
     id: 21,
     homeTeamId: "teamBebado",
     awayTeamId: "UDMaluvane",
-    homeScore: 0, // Only for live/finished
+    homeScore: 2, // Only for live/finished
     awayScore: 2,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
     info: "CNP 2026 - Jornada 4", // Optional extra info
     competitionId: "pande",
@@ -640,11 +640,11 @@ const matchesData = [
     id: 22,
     homeTeamId: "kingOfJungle",
     awayTeamId: "machacameFC",
-    homeScore: 0, // Only for live/finished
+    homeScore: 1, // Only for live/finished
     awayScore: 2,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Luido",
     info: "CNP 2026 - Jornada 4", // Optional extra info
     competitionId: "pande",
@@ -656,11 +656,11 @@ const matchesData = [
     id: 23,
     homeTeamId: "UDChimedje",
     awayTeamId: "rebentaFogo",
-    homeScore: 0, // Only for live/finished
-    awayScore: 2,
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Estádio da Luz",
     info: "CNP 2026 - Jornada 4", // Optional extra info
     competitionId: "pande",
@@ -672,17 +672,17 @@ const matchesData = [
     id: 24,
     homeTeamId: "realChibuca",
     awayTeamId: "bingaFC",
-    homeScore: 0, // Only for live/finished
-    awayScore: 2,
+    homeScore: 3, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mazino",
     info: "CNP 2026 - Jornada 4", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: [],
-    awayScorers: [],
+    homeScorers: ["Miller", "Betinho", "Milton"],
+    awayScorers: ["Gesselino da Gilda"],
   },
   // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
 
@@ -980,7 +980,7 @@ const matchesData = [
   {
     id: -19,
     homeTeamId: "benficaJenga",
-    awayTeamId: "juventosMacomba",
+    awayTeamId: "juventusMacomba",
     homeScore: 2, // Only for live/finished
     awayScore: 3,
     date: "2026-05-17", // ISO Format
@@ -1029,11 +1029,11 @@ const matchesData = [
     id: -22,
     homeTeamId: "primeiroMaio",
     awayTeamId: "sulSave",
-    homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mussanga",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1046,10 +1046,10 @@ const matchesData = [
     homeTeamId: "CDMaxaquene",
     awayTeamId: "FCMataula",
     homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    awayScore: 2,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: " Campo das Palmeiras",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1061,11 +1061,11 @@ const matchesData = [
     id: -24,
     homeTeamId: "FCMahave",
     awayTeamId: "desportivoA",
-    homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    homeScore: 0, // Only for live/finished
+    awayScore: 7,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Mataula",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1077,11 +1077,11 @@ const matchesData = [
     id: -25,
     homeTeamId: "costaSol",
     awayTeamId: "FCBatata",
-    homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 7,
     date: "2026-05-23", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Chimunda",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1093,11 +1093,11 @@ const matchesData = [
     id: -26,
     homeTeamId: "sportingMaluvane",
     awayTeamId: "sagradoCJesus",
-    homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 3,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Muzazayila Stadium",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1109,11 +1109,11 @@ const matchesData = [
     id: -27,
     homeTeamId: "desportivoB",
     awayTeamId: "PFCMussassa",
-    homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    homeScore: 0, // Only for live/finished
+    awayScore: 1,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Matasse",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1123,13 +1123,13 @@ const matchesData = [
   },
   {
     id: -28,
-    homeTeamId: "juventosMacomba",
+    homeTeamId: "juventusMacomba",
     awayTeamId: "escolaBola",
     homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    awayScore: 1,
     date: "2026-05-24", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming'
+    status: "finished", // 'live' | 'finished' | 'upcoming'
     venue: "Campo de Macomba",
     info: "CFNM 2026 - Jornada 4", // Optional extra info
     competitionId: "novaMambone",
@@ -1141,8 +1141,8 @@ const matchesData = [
     id: -9,
     homeTeamId: "ligaDesportiva",
     awayTeamId: "benficaJenga",
-    homeScore: 3, // Only for live/finished
-    awayScore: 0,
+    homeScore: 5, // Only for live/finished
+    awayScore: 2,
     date: "2026-05-24", // ISO Format
     time: "14:30",
     status: "upcoming", // 'live' | 'finished' | 'upcoming'
@@ -1154,7 +1154,7 @@ const matchesData = [
     awayScorers: [],
   },
 
-  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventusMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 ];
 
 export default matchesData;

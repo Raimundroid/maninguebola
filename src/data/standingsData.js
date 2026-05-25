@@ -640,7 +640,7 @@ export const rawStandings = [
   // ================ Equipas do "Campeonato de Nova Mambone" ================
   // ================================================================
 
-  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventusMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
   {
     id: "ligaDesportiva",
     name: teamsData.ligaDesportiva.name,
@@ -718,10 +718,10 @@ export const rawStandings = [
     },
   },
   {
-    id: "juventosMacomba",
-    name: teamsData.juventosMacomba.name,
-    abbr: teamsData.juventosMacomba.abbr,
-    logo: teamsData.juventosMacomba.logo,
+    id: "juventusMacomba",
+    name: teamsData.juventusMacomba.name,
+    abbr: teamsData.juventusMacomba.abbr,
+    logo: teamsData.juventusMacomba.logo,
     stats: {
       byCompetition: {
         novaMambone: {
@@ -948,7 +948,7 @@ export const rawStandings = [
 
   //UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, MachacameFC
 
-  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventusMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 ];
 
 // // Keep default export for backwards compatibility if needed

@@ -78,7 +78,7 @@
   width: 32px;
   height: 32px;
   font-size: 12px;
-  background: var(--border);
+  background: #ffffff;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@
   font-weight: 700;
   color: var(--text-light);
   flex-shrink: 0;
-  border: 1px solid var(--shadow);
+  border: 2px solid black;
 }
 .standings-table .team-cell .standings-team-logo .team-logo-img {
   /* width: 100%; */

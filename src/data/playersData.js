@@ -1555,7 +1555,7 @@ const playersData = [
   {
     id: -3,
     name: "Antônio João",
-    teamId: "juventosMacomba",
+    teamId: "juventusMacomba",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
@@ -1764,7 +1764,7 @@ const playersData = [
   {
     id: -14,
     name: "Armando Jeque",
-    teamId: "juventosMacomba",
+    teamId: "juventusMacomba",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
@@ -1800,7 +1800,7 @@ const playersData = [
     },
   },
 
-  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventosMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
+  // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventusMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 ];
 
 export default playersData;
