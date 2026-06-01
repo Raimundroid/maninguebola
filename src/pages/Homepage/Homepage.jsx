@@ -92,8 +92,8 @@ const Homepage = ({ matches, stats }) => {
       {canceledMatches.length > 0 && (
         <>
           <SectionHeader
-            title="Jogos Interrompidos"
-            linkTo={"/jogos?filter=upcoming"}
+            title="Jogos Não Terminados"
+            linkTo={"/jogos?filter=canceled"}
             linkText={"Ver todos"}
           />
           <MatchesGrid matches={canceledMatches} />

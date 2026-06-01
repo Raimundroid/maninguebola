@@ -457,7 +457,7 @@ const teamsData = {
     abbr: "RB", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/rebentaFogo/RF-placeholde-logor-v1.png",
+    logo: "/images/campNucleoPande/rebentaFogo/RF-official-logo.webp",
     colors: { primary: "orange", secondary: "blue" },
     // contact: {
     //   coach: "John Dalton",

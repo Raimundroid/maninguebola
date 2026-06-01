@@ -64,7 +64,7 @@ const MatchCard = ({ match }) => {
         {formattedDate} • {time}
         {(status === "finished" && " • FINALIZADO") ||
           (status === "upcoming" && " • PRÓXIMO") ||
-          (status === "canceled" && " • CANCELADO")}
+          (status === "canceled" && " • NÃO TERMINADO")}
       </div>
 
       {/* Teams and score section - 3 column grid */}

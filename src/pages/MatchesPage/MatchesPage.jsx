@@ -97,7 +97,7 @@ const MATCH_FILTERS = [
   { value: "live", label: "Ao Vivo" }, // Currently playing
   { value: "finished", label: "Finalizados" }, // Finished/completed
   { value: "upcoming", label: "Próximos" }, // Future matches
-  { value: "canceled", label: "Cancelados" }, // Canceled matches
+  { value: "canceled", label: "Não Terminados" }, // Canceled matches
 ];
 
 // ─── Status priority for sorting ────────────────────────────────
