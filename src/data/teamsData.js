@@ -503,7 +503,7 @@ const teamsData = {
   },
   onzeIrmaos: {
     id: "onzeIrmaos", // Unique identifier
-    name: "11 Irmãos", // Full team name
+    name: "11 Irmãos de Colonga", // Full team name
     shortName: "11 Irmãos",
     abbr: "11i", // Abbreviation for logos
     // founded: 1000,
@@ -539,7 +539,7 @@ const teamsData = {
   associacaoDesportivaPande: {
     id: "associacaoDesportivaPande", // Unique identifier
     name: "Associação Desportiva de Pande", // Full team name
-    shortName: "A.D. de Pande",
+    shortName: "AD de Pande",
     abbr: "ADP", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
@@ -556,7 +556,7 @@ const teamsData = {
   },
   SFCSave: {
     id: "SFCSave", // Unique identifier
-    name: "S. FC de Save", // Full team name
+    name: "Sobreviventes FC de Save", // Full team name
     shortName: "S. FC de Save",
     abbr: "SFCS", // Abbreviation for logos
     // founded: 1000,
@@ -592,7 +592,7 @@ const teamsData = {
   UDMaluvane: {
     id: "UDMaluvane", // Unique identifier
     name: "União Desportiva de Maluvane", // Full team name
-    shortName: "U.D. de Maluvane",
+    shortName: "UD de Maluvane",
     abbr: "UDM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",

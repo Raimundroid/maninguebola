@@ -988,89 +988,89 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
+          // appearances: 1,
+          goals: 4,
+          // assists: 0,
         },
       },
     },
   },
-  {
-    id: 2,
-    name: "Estêvão Alberto",
-    teamId: "kakanavasFC",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Pande, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 3,
-    name: "Edmilson Tomás",
-    teamId: "kakanavasFC",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Pande, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 4,
-    name: "Delso Artur",
-    teamId: "UDChimedje",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Pande, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 5,
-    name: "Kelton Paulito",
-    teamId: "UDChimedje",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Pande, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 2,
+  //   name: "Estêvão Alberto",
+  //   teamId: "kakanavasFC",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 3,
+  //   name: "Edmilson Tomás",
+  //   teamId: "kakanavasFC",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 4,
+  //   name: "Delso Artur",
+  //   teamId: "UDChimedje",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 5,
+  //   name: "Kelton Paulito",
+  //   teamId: "UDChimedje",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   {
     id: 6,
     name: "Osvaldo Amosse",
@@ -1083,51 +1083,51 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 2,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
         },
       },
     },
   },
-  {
-    id: 7,
-    name: "Hélio Jaime",
-    teamId: "associacaoDesportivaPande",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Pande, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 8,
-    name: "António Isac",
-    teamId: "kingOfJungle",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 7,
+  //   name: "Hélio Jaime",
+  //   teamId: "associacaoDesportivaPande",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Pande, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 8,
+  //   name: "António Isac",
+  //   teamId: "kingOfJungle",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   {
     id: 9,
     name: "Quelito Amós",
@@ -1140,16 +1140,16 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 2,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
         },
       },
     },
   },
   {
     id: 10,
-    name: "Tomás Antônio",
+    name: "Tomás Antônio (K-T)",
     teamId: "teamBebado",
     // number: 0,
     // position: "Atacante",
@@ -1159,16 +1159,16 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
+          // appearances: 2,
           goals: 4,
-          assists: 0,
+          // assists: 0,
         },
       },
     },
   },
   {
     id: 11,
-    name: "Alexandre André",
+    name: "Alexandre André (Osmo)",
     teamId: "teamBebado",
     // number: 0,
     // position: "Atacante",
@@ -1178,32 +1178,32 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 2,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
         },
       },
     },
   },
-  {
-    id: 12,
-    name: "Salvador Felipe",
-    teamId: "UDMaluvane",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 12,
+  //   name: "Salvador Felipe",
+  //   teamId: "UDMaluvane",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   {
     id: 13,
     name: "Inácio Luís",
@@ -1216,51 +1216,51 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 1,
+          // appearances: 1,
           goals: 4,
-          assists: 0,
+          // assists: 0,
         },
       },
     },
   },
-  {
-    id: 14,
-    name: "Alfiado Manave",
-    teamId: "SFCSave",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 15,
-    name: "Zito Salame",
-    teamId: "machacameFC",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 1,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 14,
+  //   name: "Alfiado Manave",
+  //   teamId: "SFCSave",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 15,
+  //   name: "Zito Salame",
+  //   teamId: "machacameFC",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 1,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   {
     id: 16,
     name: "Ilordêncio Massambo",
@@ -1273,16 +1273,16 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
         },
       },
     },
   },
   {
     id: 17,
-    name: "Joaquim Fabião",
+    name: "Joaquim Fabião (Miro)",
     teamId: "onzeIrmaos",
     // number: 0,
     // position: "Atacante",
@@ -1292,32 +1292,32 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
+          // appearances: 2,
+          goals: 6,
+          // assists: 0,
         },
       },
     },
   },
-  {
-    id: 18,
-    name: "Picardo Justino",
-    teamId: "teamBebado",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 18,
+  //   name: "Picardo Justino",
+  //   teamId: "teamBebado",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   // {
   //   id: 19,
   //   name: "Ginito",
@@ -1349,112 +1349,112 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
+          // appearances: 2,
+          goals: 4,
+          // assists: 0,
         },
       },
     },
   },
-  {
-    id: 21,
-    name: "Lindo Vasco",
-    teamId: "realChibuca",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 22,
-    name: "Simone Pedro",
-    // teamId: "realChibuca",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 23,
-    name: "Tomás Inoque",
-    // teamId: "realChibuca",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 24,
-    name: "Carlos Carlitos",
-    // teamId: "realChibuca",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
-  {
-    id: 25,
-    name: "Dionisio Cossa",
-    // teamId: "realChibuca",
-    // number: 0,
-    // position: "Atacante",
-    // residence: "Luido, Govuro",
-    // dateOfBirth: "2008-10-30",
-    photo: "/images/players/default-player-2.png",
-    stats: {
-      byCompetition: {
-        pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
-        },
-      },
-    },
-  },
+  // {
+  //   id: 21,
+  //   name: "Lindo Vasco",
+  //   teamId: "realChibuca",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 22,
+  //   name: "Simone Pedro",
+  //   // teamId: "realChibuca",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 23,
+  //   name: "Tomás Inoque",
+  //   // teamId: "realChibuca",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 24,
+  //   name: "Carlos Carlitos",
+  //   // teamId: "realChibuca",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 25,
+  //   name: "Dionisio Cossa",
+  //   // teamId: "rebentaFogo",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
   {
     id: 26,
-    name: "Titos Lucas",
-    // teamId: "realChibuca",
+    name: "Titos Lucas (Enigma)",
+    teamId: "kakanavasFC",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
@@ -1463,17 +1463,74 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
+        },
+      },
+    },
+  },
+  // {
+  //   id: 27,
+  //   name: "Alexandre Sebastião",
+  //   // teamId: "realChibuca",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 28,
+  //   name: "Lomerson Carlos",
+  //   // teamId: "realChibuca",
+  //   // number: 0,
+  //   // position: "Atacante",
+  //   // residence: "Luido, Govuro",
+  //   // dateOfBirth: "2008-10-30",
+  //   photo: "/images/players/default-player-2.png",
+  //   stats: {
+  //     byCompetition: {
+  //       pande: {
+  //         appearances: 2,
+  //         goals: 1,
+  //         assists: 0,
+  //       },
+  //     },
+  //   },
+  // },
+  {
+    id: 29,
+    name: "Amade Jeremias (Isco)",
+    teamId: "teamBebado",
+    // number: 0,
+    // position: "Atacante",
+    // residence: "Luido, Govuro",
+    // dateOfBirth: "2008-10-30",
+    photo: "/images/players/default-player-2.png",
+    stats: {
+      byCompetition: {
+        pande: {
+          // appearances: 2,
+          goals: 4,
+          // assists: 0,
         },
       },
     },
   },
   {
-    id: 27,
-    name: "Alexandre Sebastião",
-    // teamId: "realChibuca",
+    id: 30,
+    name: "Dário Mapungue",
+    teamId: "onzeIrmaos",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
@@ -1482,17 +1539,17 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
         },
       },
     },
   },
   {
-    id: 28,
-    name: "Lomerson Carlos",
-    // teamId: "realChibuca",
+    id: 31,
+    name: "Muanima Lucas",
+    teamId: "SFCSave",
     // number: 0,
     // position: "Atacante",
     // residence: "Luido, Govuro",
@@ -1501,13 +1558,14 @@ const playersData = [
     stats: {
       byCompetition: {
         pande: {
-          appearances: 2,
-          goals: 1,
-          assists: 0,
+          // appearances: 2,
+          goals: 3,
+          // assists: 0,
         },
       },
     },
   },
+
   // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
 
   // ================================================================
