@@ -58,13 +58,16 @@ const MatchCard = ({ match }) => {
       {/* Date and time - show FINALIZADO if match is finished  or (||) show PRÓXIMO if match is upcoming*/}
       <div
         className={`datetime ${
-          status === "canceled" ? "canceled-match-datetime" : ""
+          (status === "canceled") | (status === "postponed")
+            ? "canceledORpostoned-match-datetime"
+            : ""
         }`}
       >
         {formattedDate} • {time}
         {(status === "finished" && " • FINALIZADO") ||
           (status === "upcoming" && " • PRÓXIMO") ||
-          (status === "canceled" && " • NÃO TERMINADO")}
+          (status === "canceled" && " • NÃO TERMINADO") ||
+          (status === "postponed" && " • ADIADO")}
       </div>
 
       {/* Teams and score section - 3 column grid */}
@@ -120,7 +123,7 @@ const MatchCard = ({ match }) => {
         {/* ------------------------CENTER-------------------------------- */}
         {/* -------------------------------------------------------- */}
         <div className="score">
-          {status === "upcoming" ? (
+          {status === "upcoming" || status === "postponed" ? (
             <span className="vs">VS</span>
           ) : (
             <>

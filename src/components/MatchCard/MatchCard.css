@@ -45,9 +45,15 @@
   margin-bottom: 16px;
 }
 
-.match-card .canceled-match-datetime {
+.match-card .canceledORpostoned-match-datetime {
   color: var(--error, red);
 }
+
+/* .match-card .postponed-match-datetime {
+  color: orange;
+} */
+
+
 
 .match-card .teams {
   display: grid;

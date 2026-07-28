@@ -17,7 +17,7 @@ import MatchesGrid from "../../components/MatchesGrid/MatchesGrid";
 import StatsGrid from "../../components/StatsGrid/StatsGrid";
 import ContactCard from "../../components/atoms/ContactCard/ContactCard";
 import NewYearBanner from "../../components/atoms/newYearBanner/NewYearBanner";
-// import SeasonalBanner from "../../components/seasonalBanner/SeasonalBanner";
+import SeasonalBanner from "../../components/seasonalBanner/SeasonalBanner";
 import "./Homepage.css";
 
 import StandingsTable from "../../components/StandingsTable/StandingsTable";
@@ -49,11 +49,18 @@ const Homepage = ({ matches, stats }) => {
     .filter((m) => m.status === "canceled")
     .slice(0, 4);
 
+    const postponedMatches = matches
+      .filter((m) => m.status === "postponed")
+      .slice(0, 4);
+
+
+
+
   return (
     <div className="homepage-container">
       {/* Your existing Hero component goes here */}
       <NewYearBanner />
-      {/* <SeasonalBanner /> */}
+      <SeasonalBanner />
 
       {/* Live matches section - only show if there are live matches */}
       {/* Conditional rendering: {condition && <Component />} */}
@@ -97,6 +104,18 @@ const Homepage = ({ matches, stats }) => {
             linkText={"Ver todos"}
           />
           <MatchesGrid matches={canceledMatches} />
+        </>
+      )}
+
+      {/* Postponed matches section */}
+      {canceledMatches.length > 0 && (
+        <>
+          <SectionHeader
+            title="Jogos Adiados"
+            linkTo={"/jogos?filter=postponed"}
+            linkText={"Ver todos"}
+          />
+          <MatchesGrid matches={postponedMatches} />
         </>
       )}
 

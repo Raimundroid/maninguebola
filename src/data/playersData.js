@@ -1548,7 +1548,7 @@ const playersData = [
   },
   {
     id: 31,
-    name: "Muanima Lucas",
+    name: "Muanima Francisco",
     teamId: "SFCSave",
     // number: 0,
     // position: "Atacante",

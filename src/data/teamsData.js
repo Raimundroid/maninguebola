@@ -474,7 +474,7 @@ const teamsData = {
     abbr: "BFC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/bingaFC/BFC-placeholder-v1.png",
+    logo: "/images/campNucleoPande/bingaFC/BFC-official-logo.webp",
     colors: { primary: "orange", secondary: "pink" },
     // contact: {
     //   coach: "John Dalton",
@@ -700,7 +700,7 @@ const teamsData = {
   juventusMacomba: {
     id: "juventusMacomba", // Unique identifier
     name: "Juventus de Macomba", // Full team name
-    shortName: "Juvents de Macomba",
+    shortName: "Juventus de Macomba",
     abbr: "JM", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",

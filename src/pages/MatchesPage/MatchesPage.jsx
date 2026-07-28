@@ -98,6 +98,7 @@ const MATCH_FILTERS = [
   { value: "finished", label: "Finalizados" }, // Finished/completed
   { value: "upcoming", label: "Próximos" }, // Future matches
   { value: "canceled", label: "Não Terminados" }, // Canceled matches
+  { value: "postponed", label: "Adiados" }, // Postponed matches
 ];
 
 // ─── Status priority for sorting ────────────────────────────────
@@ -171,7 +172,7 @@ const MatchesPage = ({ matches }) => {
   // 3. Determine the initial filter state
   const initialFilter =
     urlFilter &&
-    ["live", "finished", "upcoming", "canceled"].includes(urlFilter)
+    ["live", "finished", "upcoming", "canceled","postponed"].includes(urlFilter)
       ? urlFilter
       : "all";
 
