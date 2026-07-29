@@ -2889,10 +2889,34 @@ const matchesData = [
   // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventusMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 
   // Matasse das Palmeiras Macomba Mahave Chimunda Mussanga Muzazayila Stadium Jenga Batata Mataula Doane
+
+    // ================================================================
+  // ================ Jogos do "Campeonato FEMININO do Núcleo de Pande" ================
+  // ================================================================
+
+  // ---------------------------- CFNP 2026 Round 1 ---------------------------------
+  {
+    id: 1.1,
+    homeTeamId: "costaSol",
+    awayTeamId: "CDMaxaquene",
+    homeScore: 1, // Only for live/finished
+    awayScore: 3,
+    date: "2026-07-26", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Doane",
+    info: "CFNM 2026 - Jornada 12", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+
+  //
 ];
 
 export default matchesData;
-// ---------------------------- CFNM 2026 Round x ---------------------------------
+// ---------------------------- CFNM 2026 Round x --------------------------------- 
 {
   /**
 

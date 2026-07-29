@@ -901,6 +901,188 @@ const teamsData = {
     // },
     competitions: ["novaMambone"],
   },
+
+  // ================================================================
+  // ================ Equipas do "Campeonato FEMININO do Núcleo de Pande" ================
+  // ================================================================
+
+  UDChimedjeF: {
+    id: "UDChimedjeF", // Unique identifier
+    name: "União Desportiva de Chimedje Feminino", // Full team name
+    shortName: "UD de Chimedje F.",
+    abbr: "UDCF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/campNucleoPande/UDChimedje/UDC-official-logo.webp",
+    colors: { primary: "red", secondary: "orange" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  kakanavasFCF: {
+    id: "kakanavasFCF", // Unique identifier
+    name: "Kakanavas FC Feminino", // Full team name
+    shortName: "Kakanavas FC F.",
+    abbr: "KFCF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNucleoPande/kakanavasFC/KFC-placeholder-v1.png",
+    logo: "/images/campNucleoPande/kakanavasFC/KFC-official-logo.jpg",
+    colors: { primary: "red", secondary: "blue" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  rebentaFogoL: {
+    id: "rebentaFogoL", // Unique identifier
+    name: "Rebenta Fogo Ladies", // Full team name
+    shortName: "Rebenta Fogo Ladies",
+    abbr: "RBL", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/campNucleoPande/rebentaFogo/RF-official-logo.webp",
+    colors: { primary: "orange", secondary: "blue" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  realChibucaF: {
+    id: "realChibucaF", // Unique identifier
+    name: "Real de Chibuca Feminino", // Full team name
+    shortName: "Real de Chibuca F.",
+    abbr: "RCF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/campNucleoPande/realChibuca/real-de-chibuca-RM-water-chosen-final-version.png",
+    colors: { primary: "orange", secondary: "grey" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  onzeIrmaosF: {
+    id: "onzeIrmaosF", // Unique identifier
+    name: "11 Irmãos de Colonga Feminino", // Full team name
+    shortName: "11 Irmãos Feminino",
+    abbr: "11iF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNucleoPande/onzeIrmaos/11I-placeholde-logor-v1.png",
+    logo: "/images/campNucleoPande/onzeIrmaos/11i-official-logo.jpg",
+    colors: { primary: "black", secondary: "pink" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  teamBebadoF: {
+    id: "teamBebadoF", // Unique identifier
+    name: "Team Bêbado Feminino", // Full team name
+    shortName: "Team Bêbado Feminino",
+    abbr: "TBF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    logo: "/images/campNucleoPande/teamBebado/TB-official-logo.webp",
+    colors: { primary: "red", secondary: "black" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  associacaoDesportivaPandeF: {
+    id: "associacaoDesportivaPandeF", // Unique identifier
+    name: "Associação Desportiva de Pande Feminino", // Full team name
+    shortName: "AD de Pande Feminino",
+    abbr: "ADPF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-placeholder-v1.png",
+    logo: "/images/campNucleoPande/associacaoDesportivaPande/ADP-logo-v1.2.png",
+    colors: { primary: "pink", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  FCSaveF: {
+    id: "FCSaveF", // Unique identifier
+    name: "FC de Save Feminino", // Full team name
+    shortName: "FC de Save Feminino",
+    abbr: "FCSF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNucleoPande/SFCSave/SFCS-placeholde-logor-v1.png",
+    colors: { primary: "brown", secondary: "green" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  ondasSaberF: {
+    id: "ondasSaberF", // Unique identifier
+    name: "Ondas de Saber", // Full team name
+    shortName: "Ondas de Saber",
+    abbr: "OS", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNucleoPande/UDMaluvane/UDM-placeholde-logor-v1.png",
+    // logo: "/images/campNucleoPande/UDMaluvane/UDM-official-logo.jpg",
+    colors: { primary: "red", secondary: "gold" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+  ESPandeF: {
+    id: "ESPandeF", // Unique identifier
+    name: "Escola Secunária de Pande Feminino", // Full team name
+    shortName: "Escola S de Pande F.",
+    abbr: "ESPF", // Abbreviation for logos
+    // founded: 1000,
+    stadium: "Indefinido",
+    // logo: "/images/campNucleoPande/MachacameFC/MFC-official-logo.jpg",
+    colors: { primary: "pink", secondary: "silver" },
+    // contact: {
+    //   coach: "John Dalton",
+    //   captain: "Jaime Paulo",
+    //   phone: "+258 82 12 34 567",
+    //   email: "eagles@example.com",
+    // },
+    competitions: ["pandeWomen"],
+  },
+
+  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
+  // da Revolução Luído Mazino Colonga Save Machacame Muzazayila Stadium Central de Pande
 };
 
 export default teamsData;

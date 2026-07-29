@@ -12,3 +12,12 @@
   text-align: center;
   color: white;
 }
+
+/* .matches-page-container .round-section {
+  background-color: red;
+} */
+.matches-page-container .round-heading {
+  text-align: center;
+    background: var( --navbar-bg-color);
+  color: black;
+}

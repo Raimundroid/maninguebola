@@ -5,6 +5,7 @@ const competitionsData = [
   // { id: "wafawafa", name: "Pande Wafa-Wafa" },
   // { id: "example", name: "Example Competition" },
   { id: "novaMambone", name: "Campeonato de Nova Mambone" },
+  { id: "pandeWomen", name: "Campeonato FEMININO do Núcleo de Pande" },
 ];
 
 export default competitionsData;
