@@ -926,7 +926,7 @@ const teamsData = {
   kakanavasFCF: {
     id: "kakanavasFCF", // Unique identifier
     name: "Kakanavas FC Feminino", // Full team name
-    shortName: "Kakanavas FC F.",
+    shortName: "Kakanavas FC Feminino",
     abbr: "KFCF", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
@@ -1035,7 +1035,7 @@ const teamsData = {
     abbr: "FCSF", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNucleoPande/SFCSave/SFCS-placeholde-logor-v1.png",
+    logo: "/images/campFEMININONucleoPande/FCSaveF/SFCSW-placeholde-logor-v1.png",
     colors: { primary: "brown", secondary: "green" },
     // contact: {
     //   coach: "John Dalton",
@@ -1052,8 +1052,7 @@ const teamsData = {
     abbr: "OS", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNucleoPande/UDMaluvane/UDM-placeholde-logor-v1.png",
-    // logo: "/images/campNucleoPande/UDMaluvane/UDM-official-logo.jpg",
+    logo: "/images/campFEMININONucleoPande/ondasSaberF/OS-placeholder-logo.png",
     colors: { primary: "red", secondary: "gold" },
     // contact: {
     //   coach: "John Dalton",
@@ -1066,11 +1065,11 @@ const teamsData = {
   ESPandeF: {
     id: "ESPandeF", // Unique identifier
     name: "Escola Secunária de Pande Feminino", // Full team name
-    shortName: "Escola S de Pande F.",
+    shortName: "Escola S. de Pande F.",
     abbr: "ESPF", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    // logo: "/images/campNucleoPande/MachacameFC/MFC-official-logo.jpg",
+    logo: "/images/campFEMININONucleoPande/ESPandeF/ESP.webp",
     colors: { primary: "pink", secondary: "silver" },
     // contact: {
     //   coach: "John Dalton",
@@ -1080,9 +1079,6 @@ const teamsData = {
     // },
     competitions: ["pandeWomen"],
   },
-
-  // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
-  // da Revolução Luído Mazino Colonga Save Machacame Muzazayila Stadium Central de Pande
 };
 
 export default teamsData;

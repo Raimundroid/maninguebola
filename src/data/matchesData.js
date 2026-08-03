@@ -2760,7 +2760,7 @@ const matchesData = [
   {
     id: -86,
     homeTeamId: "FCMahave",
-    awayTeamId: "desportivoA",
+    awayTeamId: "desportivoB",
     homeScore: 0, // Only for live/finished
     awayScore: 2,
     date: "2026-07-25", // ISO Format
@@ -2885,38 +2885,478 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
+  //  ---------------------------- CFNM 2026 Round 13 ---------------------------------
+  {
+    id: -94,
+    homeTeamId: "sulSave",
+    awayTeamId: "desportivoA",
+    homeScore: 1, // Only for live/finished
+    awayScore: 3,
+    date: "2026-08-01", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Jenga",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -95,
+    homeTeamId: "PFCMussassa",
+    awayTeamId: "escolaBola",
+    homeScore: 0, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-01", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Batata",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -96,
+    homeTeamId: "CDMaxaquene",
+    awayTeamId: "juventusMacomba",
+    homeScore: 0, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-01", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo das Palmeiras",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -97,
+    homeTeamId: "primeiroMaio",
+    awayTeamId: "ligaDesportiva",
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-01", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mussanga",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -98,
+    homeTeamId: "sagradoCJesus",
+    awayTeamId: "FCBatata",
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Doane",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -99,
+    homeTeamId: "sportingMaluvane",
+    awayTeamId: "benficaJenga",
+    homeScore: 7, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Muzazayila Stadium",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -100,
+    homeTeamId: "desportivoB",
+    awayTeamId: "FCMataula",
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Matasse",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: -101,
+    homeTeamId: "FCMahave",
+    awayTeamId: "costaSol",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mahave",
+    info: "CFNM 2026 - Jornada 13", // Optional extra info
+    competitionId: "novaMambone",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  //  ---------------------------- CFNM 2026 Round 14 ---------------------------------
 
   // ligaDesportiva sportingMaluvane benficaJenga CDMaxaquene juventusMacomba sulSave PFCMussassa FCBatata desportivoA  sagradoCJesus primeiroMaio FCMataula costaSol escolaBola FCMahave desportivoB
 
   // Matasse das Palmeiras Macomba Mahave Chimunda Mussanga Muzazayila Stadium Jenga Batata Mataula Doane
 
-    // ================================================================
+  // ================================================================
   // ================ Jogos do "Campeonato FEMININO do Núcleo de Pande" ================
   // ================================================================
 
   // ---------------------------- CFNP 2026 Round 1 ---------------------------------
   {
     id: 1.1,
-    homeTeamId: "costaSol",
-    awayTeamId: "CDMaxaquene",
+    homeTeamId: "associacaoDesportivaPandeF",
+    awayTeamId: "kakanavasFCF",
     homeScore: 1, // Only for live/finished
     awayScore: 3,
-    date: "2026-07-26", // ISO Format
-    time: "14:30",
+    date: "2026-07-11", // ISO Format
+    time: "07:00",
     status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
-    venue: "Campo de Doane",
-    info: "CFNM 2026 - Jornada 12", // Optional extra info
-    competitionId: "novaMambone",
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 1", // Optional extra info
+    competitionId: "pandeWomen",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
     awayScorers: [],
   },
+  {
+    id: 1.2,
+    homeTeamId: "onzeIrmaosF",
+    awayTeamId: "rebentaFogoL",
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-07-12", // ISO Format
+    time: "07:00",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Colonga",
+    info: "CFNP 2026 - Jornada 1", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1.3,
+    homeTeamId: "ondasSaberF",
+    awayTeamId: "UDChimedjeF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-12", // ISO Format
+    time: "07:00",
+    status: "postponed", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Muzazayila Stadium",
+    info: "CFNP 2026 - Jornada 1", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1.4,
+    homeTeamId: "FCSaveF",
+    awayTeamId: "ESPandeF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-12", // ISO Format
+    time: "07:00",
+    status: "postponed", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Save",
+    info: "CFNP 2026 - Jornada 1", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1.5,
+    homeTeamId: "realChibucaF",
+    awayTeamId: "teamBebadoF",
+    homeScore: 1, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-12", // ISO Format
+    time: "07:00",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 1", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  // ---------------------------- CFNP 2026 Round 2 ---------------------------------
+  {
+    id: 1.6,
+    homeTeamId: "ESPandeF",
+    awayTeamId: "ondasSaberF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-18", // ISO Format
+    time: "14:30",
+    status: "postponed", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo Central de Pande",
+    info: "CFNP 2026 - Jornada 2", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1.7,
+    homeTeamId: "UDChimedjeF",
+    awayTeamId: "associacaoDesportivaPandeF",
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-07-19", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Estádio da Luz",
+    info: "CFNP 2026 - Jornada 2", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1.8,
+    homeTeamId: "rebentaFogoL",
+    awayTeamId: "realChibucaF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 3,
+    date: "2026-07-18", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 2", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 1.9,
+    homeTeamId: "kakanavasFCF",
+    awayTeamId: "onzeIrmaosF",
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-19", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 2", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: ["Linda Sérgio (2x)"],
+    awayScorers: [],
+  },
+  {
+    id: 2.0,
+    homeTeamId: "teamBebadoF",
+    awayTeamId: "FCSaveF",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-19", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo Central de Pande",
+    info: "CFNP 2026 - Jornada 2  || F. de Comparrência", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  // ---------------------------- CFNP 2026 Round 3 ---------------------------------
+  {
+    id: 2.1,
+    homeTeamId: "associacaoDesportivaPandeF",
+    awayTeamId: "ESPandeF",
+    homeScore: 7, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-25", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo da Revolução",
+    info: "CFNP 2026 - Jornada 3", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 2.2,
+    homeTeamId: "realChibucaF",
+    awayTeamId: "kakanavasFCF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-25", // ISO Format
+    time: "14:30",
+    status: "postponed", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 3", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 2.3,
+    homeTeamId: "ondasSaberF",
+    awayTeamId: "FCSaveF",
+    homeScore: 5, // Only for live/finished
+    awayScore: 1,
+    date: "2026-07-25", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Muzazayila Stadium",
+    info: "CFNP 2026 - Jornada 3", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 2.4,
+    homeTeamId: "onzeIrmaosF",
+    awayTeamId: "UDChimedjeF",
+    homeScore: 2, // Only for live/finished
+    awayScore: 0,
+    date: "2026-07-26", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Colonga",
+    info: "CFNP 2026 - Jornada 3", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 2.5,
+    homeTeamId: "rebentaFogoL",
+    awayTeamId: "teamBebadoF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 1,
+    date: "2026-07-26", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 3", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  // ---------------------------- CFNP 2026 Round 4 ---------------------------------
+  {
+    id: 2.6,
+    homeTeamId: "UDChimedjeF",
+    awayTeamId: "realChibucaF",
+    homeScore: 1, // Only for live/finished
+    awayScore: 3,
+    date: "2026-08-01", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Estádio da Luz",
+    info: "CFNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 2.7,
+    homeTeamId: "teamBebadoF",
+    awayTeamId: "ondasSaberF",
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
+    date: "2026-08-01", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 2.8,
+    homeTeamId: "ESPandeF",
+    awayTeamId: "onzeIrmaosF",
+    homeScore: 0, // Only for live/finished
+    awayScore: 2,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo Central de Pande",
+    info: "CFNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: ["Lídia João (46', 84')"],
+  },
+  {
+    id: 2.9,
+    homeTeamId: "FCSaveF",
+    awayTeamId: "associacaoDesportivaPandeF",
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Save",
+    info: "CFNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  {
+    id: 3.0,
+    homeTeamId: "kakanavasFCF",
+    awayTeamId: "rebentaFogoL",
+    homeScore: 3, // Only for live/finished
+    awayScore: 0,
+    date: "2026-08-02", // ISO Format
+    time: "14:30",
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    venue: "Campo de Mazino",
+    info: "CFNP 2026 - Jornada 4", // Optional extra info
+    competitionId: "pandeWomen",
+    // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
+    homeScorers: [],
+    awayScorers: [],
+  },
+  // UDChimedjeF kakanavasFCF rebentaFogoL realChibucaF onzeIrmaosF teamBebadoF associacaoDesportivaPandeF FCSaveF ondasSaberF ESPandeF
 
-  //
+  // da Revolução Mazino Colonga Save Muzazayila Stadium Central de Pande Estádio da Luz
 ];
 
 export default matchesData;
-// ---------------------------- CFNM 2026 Round x --------------------------------- 
+// ---------------------------- CFNM 2026 Round x ---------------------------------
+
+// ---------------------------- CFNP 2026 Round y ---------------------------------
 {
   /**
 
