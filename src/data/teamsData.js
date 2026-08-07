@@ -491,7 +491,7 @@ const teamsData = {
     abbr: "RC", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/realChibuca/real-de-chibuca-RM-water-chosen-final-version.png",
+    logo: "/images/campNucleoPande/realChibuca/RC-official-logo-50.webp",
     colors: { primary: "orange", secondary: "grey" },
     // contact: {
     //   coach: "John Dalton",
@@ -965,7 +965,7 @@ const teamsData = {
     abbr: "RCF", // Abbreviation for logos
     // founded: 1000,
     stadium: "Indefinido",
-    logo: "/images/campNucleoPande/realChibuca/real-de-chibuca-RM-water-chosen-final-version.png",
+    logo: "/images/campNucleoPande/realChibuca/RC-official-logo-50.webp",
     colors: { primary: "orange", secondary: "grey" },
     // contact: {
     //   coach: "John Dalton",
