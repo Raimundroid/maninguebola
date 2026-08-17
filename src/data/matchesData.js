@@ -1489,11 +1489,11 @@ const matchesData = [
     id: 73,
     homeTeamId: "bingaFC",
     awayTeamId: "teamBebado",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 6,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Mazino",
     info: "CNP 2026 - Jornada 13", // Optional extra info
     competitionId: "pande",
@@ -1505,11 +1505,11 @@ const matchesData = [
     id: 74,
     homeTeamId: "onzeIrmaos",
     awayTeamId: "UDChimedje",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 6, // Only for live/finished
+    awayScore: 1,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Colonga",
     info: "CNP 2026 - Jornada 13", // Optional extra info
     competitionId: "pande",
@@ -1522,10 +1522,10 @@ const matchesData = [
     homeTeamId: "UDMaluvane",
     awayTeamId: "kingOfJungle",
     homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    awayScore: 1,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Muzazayila Stadium",
     info: "CNP 2026 - Jornada 13", // Optional extra info
     competitionId: "pande",
@@ -1537,11 +1537,11 @@ const matchesData = [
     id: 76,
     homeTeamId: "rebentaFogo",
     awayTeamId: "SFCSave",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 3, // Only for live/finished
+    awayScore: 2,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo Central de Pande",
     info: "CNP 2026 - Jornada 13", // Optional extra info
     competitionId: "pande",
@@ -1554,10 +1554,10 @@ const matchesData = [
     homeTeamId: "associacaoDesportivaPande",
     awayTeamId: "machacameFC",
     homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    awayScore: 1,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo da Revolução",
     info: "CNP 2026 - Jornada 13", // Optional extra info
     competitionId: "pande",
@@ -1569,11 +1569,11 @@ const matchesData = [
     id: 78,
     homeTeamId: "kakanavasFC",
     awayTeamId: "realChibuca",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 2,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Mazino",
     info: "CNP 2026 - Jornada 13", // Optional extra info
     competitionId: "pande",
