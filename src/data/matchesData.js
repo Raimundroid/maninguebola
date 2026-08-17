@@ -1382,7 +1382,7 @@ const matchesData = [
     awayScorers: [],
   },
   // ---------------------------- CNP 2026 Round 12 ---------------------------------
-    {
+  {
     id: 67,
     homeTeamId: "realChibuca",
     awayTeamId: "onzeIrmaos",
@@ -1395,10 +1395,10 @@ const matchesData = [
     info: "CNP 2026 - Jornada 12", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Lindo Vasco (39', 17')","Milton Bento 81'"],
+    homeScorers: ["Lindo Vasco (39', 17')", "Milton Bento 81'"],
     awayScorers: [],
   },
-   {
+  {
     id: 68,
     homeTeamId: "machacameFC",
     awayTeamId: "bingaFC",
@@ -1411,10 +1411,15 @@ const matchesData = [
     info: "CNP 2026 - Jornada 12", // Optional extra info
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
-    homeScorers: ["Gimo Remédio (2x)","José Simão (2x)","Calton Felipe","Pedro Alexandre"],
+    homeScorers: [
+      "Gimo Remédio (2x)",
+      "José Simão (2x)",
+      "Calton Felipe",
+      "Pedro Alexandre",
+    ],
     awayScorers: [],
   },
-   {
+  {
     id: 69,
     homeTeamId: "UDMaluvane",
     awayTeamId: "associacaoDesportivaPande",
@@ -1430,7 +1435,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: 70,
     homeTeamId: "kingOfJungle",
     awayTeamId: "UDChimedje",
@@ -1444,7 +1449,7 @@ const matchesData = [
     competitionId: "pande",
     // Note:  Store as Array of Strings; You can still keep "(2)" for multiple goals if you want strict string display
     homeScorers: [],
-    awayScorers: ["Santos Xadreque","Alves Januário","Celso Raiva"],
+    awayScorers: ["Santos Xadreque", "Alves Januário", "Celso Raiva"],
   },
   {
     id: 71,
@@ -1528,7 +1533,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: 76,
     homeTeamId: "rebentaFogo",
     awayTeamId: "SFCSave",
@@ -1560,7 +1565,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-    {
+  {
     id: 78,
     homeTeamId: "kakanavasFC",
     awayTeamId: "realChibuca",
@@ -1577,7 +1582,7 @@ const matchesData = [
     awayScorers: [],
   },
 
-    // ---------------------------- CNP 2026 Round 14 ---------------------------------
+  // ---------------------------- CNP 2026 Round 14 ---------------------------------
 
   // UDChimedje, kakanavasFC, rebentaFogo, bingaFC, realChibuca, onzeIrmaos, teamBebado, associacaoDesportivaPande, SFCSave, kingOfJungle, UDMaluvane, machacameFC
 
@@ -3228,7 +3233,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-    {
+  {
     id: -103,
     homeTeamId: "ligaDesportiva",
     awayTeamId: "CDMaxaquene",
@@ -3244,7 +3249,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-      {
+  {
     id: -104,
     homeTeamId: "benficaJenga",
     awayTeamId: "primeiroMaio",
@@ -3276,7 +3281,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: -106,
     homeTeamId: "FCBatata",
     awayTeamId: "PFCMussassa",
@@ -3308,7 +3313,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: -108,
     homeTeamId: "FCMataula",
     awayTeamId: "sulSave",
@@ -3324,7 +3329,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: -109,
     homeTeamId: "juventusMacomba",
     awayTeamId: "FCMahave",
@@ -3346,11 +3351,11 @@ const matchesData = [
     id: -110,
     homeTeamId: "PFCMussassa",
     awayTeamId: "sulSave",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Batata",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3358,15 +3363,15 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-    {
+  {
     id: -111,
     homeTeamId: "primeiroMaio",
     awayTeamId: "desportivoA",
     homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    awayScore: 1,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Mussanga",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3379,10 +3384,10 @@ const matchesData = [
     homeTeamId: "CDMaxaquene",
     awayTeamId: "FCBatata",
     homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    awayScore: 2,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "canceled", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo das Palmeiras",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3395,10 +3400,10 @@ const matchesData = [
     homeTeamId: "FCMahave",
     awayTeamId: "escolaBola",
     homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    awayScore: 1,
     date: "2026-08-15", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Mahave",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3406,15 +3411,15 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: -114,
     homeTeamId: "sportingMaluvane",
     awayTeamId: "FCMataula",
-    homeScore: 0, // Only for live/finished
+    homeScore: 2, // Only for live/finished
     awayScore: 0,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Muzazayila Stadium",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3426,11 +3431,11 @@ const matchesData = [
     id: -115,
     homeTeamId: "costaSol",
     awayTeamId: "benficaJenga",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 4,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Chimunda",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3442,11 +3447,11 @@ const matchesData = [
     id: -116,
     homeTeamId: "juventusMacomba",
     awayTeamId: "ligaDesportiva",
-    homeScore: 0, // Only for live/finished
-    awayScore: 0,
+    homeScore: 1, // Only for live/finished
+    awayScore: 1,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Batata",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3458,11 +3463,11 @@ const matchesData = [
     id: -117,
     homeTeamId: "sagradoCJesus",
     awayTeamId: "desportivoB",
-    homeScore: 0, // Only for live/finished
+    homeScore: 5, // Only for live/finished
     awayScore: 0,
     date: "2026-08-16", // ISO Format
     time: "14:30",
-    status: "upcoming", // 'live' | 'finished' | 'upcoming' | canceled | postponed
+    status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
     venue: "Campo de Doane",
     info: "CFNM 2026 - Jornada 15", // Optional extra info
     competitionId: "novaMambone",
@@ -3827,7 +3832,7 @@ const matchesData = [
     homeTeamId: "FCSaveF",
     awayTeamId: "realChibucaF",
     homeScore: 4, // Only for live/finished
-    awayScore:0,
+    awayScore: 0,
     date: "2026-08-08", // ISO Format
     time: "07:00",
     status: "finished", // 'live' | 'finished' | 'upcoming' | canceled | postponed
@@ -3935,7 +3940,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: 3.9,
     homeTeamId: "rebentaFogoL",
     awayTeamId: "UDChimedjeF",
@@ -3951,7 +3956,7 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-   {
+  {
     id: 4.0,
     homeTeamId: "kakanavasFCF",
     awayTeamId: "teamBebadoF",
@@ -3967,7 +3972,6 @@ const matchesData = [
     homeScorers: [],
     awayScorers: [],
   },
-
 
   // UDChimedjeF kakanavasFCF rebentaFogoL realChibucaF onzeIrmaosF teamBebadoF associacaoDesportivaPandeF FCSaveF ondasSaberF ESPandeF
 
